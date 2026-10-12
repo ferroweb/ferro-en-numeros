@@ -33,8 +33,11 @@ export function resolver(nombre, claves) {
   return null;
 }
 
-// «Racing (Córdoba)» y «Racing de Córdoba» son el mismo rival: se comparan sin paréntesis ni acentos.
-const base = (s) => norm(String(s).replace(/\([^)]*\)/g, ""));
+// «Racing (Córdoba)», «Racing de Córdoba» y «Racing Cordoba» (FútbolTotal) son el mismo rival; también «CA Estudiantes» y
+// «Estudiantes de Caseros», o «Atletico Mitre» y «Mitre (SdE)». Se comparan sin paréntesis, sin acentos y sin las palabras
+// que cada fuente agrega o saca (de, club, CA, atlético, deportivo…).
+const RELLENO = /\b(de|del|la|el|club|ca|cd|sd|atletico|deportivo)\b/g;
+const base = (s) => norm(String(s).replace(/\([^)]*\)/g, "")).replace(RELLENO, " ").replace(/\s+/g, " ").trim();
 export function mismoEquipo(a, b) {
   const x = base(a), y = base(b);
   return x === y || x.startsWith(y + " ") || y.startsWith(x + " ");

@@ -1,3 +1,4 @@
+import { mismoEquipo } from "../../lib/equipos.js";
 import { tarjeta } from "../../components/tarjeta.js";
 import { DATA, prox, TODOS, previaAlDia, escenariosAlDia } from "../../ctx.js";
 import { tabla } from "../../lib/charts.js";
@@ -61,7 +62,7 @@ export function previa() {
   const vs = el("div", "vs");
   const loc = prox.cond === "L" ? "Ferro" : prox.rival, vis = prox.cond === "L" ? prox.rival : "Ferro";
   vs.append(el("span", "eq", loc), el("span", "x", "vs"), el("span", "eq", vis)); box.append(vs);
-  const ida = DATA.partidos.find(p => p.rival === prox.rival);
+  const ida = DATA.partidos.find(p => mismoEquipo(p.rival, prox.rival));
   const rv = DATA.tabla.find(r => r.equipo.toLowerCase().startsWith(prox.rival.split(" ")[0].toLowerCase()));
   const datos = el("div", "datos");
   const d = (l, v) => { const x = el("div", "dato"); x.append(el("div", "l", l), el("div", "v", v)); datos.append(x); };
@@ -69,7 +70,7 @@ export function previa() {
   d("Dónde", prox.estadio || "—");
   if (ida) d("En la ida", `F${ida.fecha}: Ferro ${ida.gf}-${ida.gc}` + (ida.goleadores !== "—" ? ` (${ida.goleadores.replace(/ \d+(pt|st)/g, "")})` : ""));
   if (rv) d(prox.rival + " en la tabla", `${rv.pos}° · ${rv.pts} pts · ${rv.gf} goles`);
-  const h2 = DATA.historico && DATA.historico.h2h && DATA.historico.h2h.find(h => h.rival === prox.rival);
+  const h2 = DATA.historico && DATA.historico.h2h && DATA.historico.h2h.find(h => mismoEquipo(h.rival, prox.rival));
   if (h2) d("Historial 2025-26", `${h2.g}G ${h2.e}E ${h2.p}P`);
   box.append(datos);
   if (prox.forma_rival && prox.forma_rival.length) {

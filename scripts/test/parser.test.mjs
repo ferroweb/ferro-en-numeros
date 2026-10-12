@@ -57,3 +57,11 @@ test("tabla de FútbolTotal: lee el grupo donde está Ferro", () => {
   const r = parseTabla(tabla("Otro Club") + tabla("Ferro Carril Oeste"));
   assert.equal(r[0].equipo, "Ferro Carril Oeste"); assert.equal(r[0].pts, 62); assert.equal(r[0].dg, 9);
 });
+
+// Nombres de equipos según la fuente (FerroWeb, FútbolTotal, el sitio): tienen que reconocerse como el mismo club.
+import { mismoEquipo as mismoEq } from "../lib/texto.mjs";
+test("mismoEquipo reconoce los nombres de FútbolTotal", () => {
+  for (const [a, b] of [["Racing Cordoba", "Racing de Córdoba"], ["Racing (Córdoba)", "Racing de Córdoba"], ["CA Estudiantes", "Estudiantes de Caseros"],
+    ["Atletico Mitre", "Mitre (SdE)"], ["Deportivo Morón", "Morón"], ["Ciudad de Bolívar", "Ciudad de Bolivar"]]) assert.ok(mismoEq(a, b), `${a} = ${b}`);
+  for (const [a, b] of [["Deportivo Morón", "Deportivo Madryn"], ["San Telmo", "San Miguel"], ["Los Andes", "All Boys"], ["Central Norte", "Racing de Córdoba"]]) assert.ok(!mismoEq(a, b), `${a} ≠ ${b}`);
+});

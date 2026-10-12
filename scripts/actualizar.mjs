@@ -121,7 +121,7 @@ try {
   const coincide = f && ["pj", "g", "e", "p", "gf", "gc"].every(k => f[k] === mios[k]) && f.pts === mios.g * 3 + mios.e;
   if (!coincide) aviso(`FútbolTotal todavía no refleja la fecha ${ultimaFecha} de Ferro (muestra PJ ${f?.pj}, ${f?.pts} pts; los partidos cargados dan PJ ${mios.pj}, ${mios.g * 3 + mios.e} pts). Se deja la tabla anterior.`);
   else {
-    const nombres = dt.tabla.map(x => x.equipo);
+    const nombres = [...new Set([...P.map(p => p.rival), ...dt.tabla.map(x => x.equipo)])]; // primero los nombres de los partidos (los del sitio)
     tabla = ft.sort((a, b) => a.pos - b.pos).map(x => ({ e: x.e, equipo: equipoCanonico(x.equipo, nombres) ?? x.equipo, g: x.g, gc: x.gc, gf: x.gf, p: x.p, pj: x.pj, pos: x.pos, pts: x.pts, dg: x.dg }));
     fuente = { fuente: "FútbolTotal", url: URL_TABLA, actualizada: `tras la fecha ${ultimaFecha}` };
   }
