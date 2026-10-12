@@ -16,6 +16,6 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "html2canvas": "^1.4.1"
+    "html2canvas-pro": "2.4.4"
   }
 }

@@ -7,12 +7,15 @@ dialog.des::backdrop { background: rgba(5, 30, 17, .6); }
 .des .cerrar { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: rgba(255,255,255,.18); color: #fff; font-size: 22px; line-height: 1; cursor: pointer; }
 .des .cuerpo { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 12px; }
 .des .cuerpo p { margin: 0; line-height: 1.55; }
-.des .dd { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(46%, 180px), 1fr)); gap: 8px; }
-.des .dd > div { border-top: 2px solid var(--verde); padding-top: 6px; }
-.des .dd .l { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-.des .dd .v { font-weight: 700; }
+.des .dd, .hallazgo-img .dd { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(46%, 180px), 1fr)); gap: 8px; }
+.des .dd > div, .hallazgo-img .dd > div { border-top: 2px solid var(--verde); padding-top: 6px; }
+.des .dd .l, .hallazgo-img .dd .l { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.des .dd .v, .hallazgo-img .dd .v { font-weight: 700; }
 .des h4 { margin: 6px 0 0; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 .des .rel { display: flex; flex-direction: column; gap: 8px; }
 .des .rel > div { border-left: 3px solid var(--line); padding-left: 10px; font-size: 14px; }
 .des .rel b { display: block; }
 section, .pv-fwcaja, .humor { scroll-margin-top: 76px; }
+.hallazgo-img { display: flex; flex-direction: column; gap: 12px; }
+.hallazgo-img h3 { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.05; text-transform: uppercase; color: var(--verde-txt); margin: 0; }
+.hallazgo-img p { margin: 0; line-height: 1.55; }

@@ -11,8 +11,8 @@
 .placa-n .tile { flex: 1; background: #eaf8ef; border-radius: 12px; padding: 10px 14px; min-width: 0; }
 .placa-n .tile b { display: block; font-size: 25px; font-weight: 900; color: #0b5a32; line-height: 1.1; }
 .placa-n .tile span { display: block; font-size: 16px; color: #4b5a51; margin-top: 4px; }
-.placa-n .pie { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
-.placa-n .pie .px { font-size: 26px; font-weight: 700; }
-.placa-n .pie .px em { font-style: normal; color: #ffd400; }
-.placa-n .pie .pu { font-size: 20px; color: #c9f5da; text-align: right; white-space: nowrap; }
-.placa-n .pie .px { flex: 1; }
+.placa-n .pn-pie { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.placa-n .pn-pie .px { font-size: 26px; font-weight: 700; }
+.placa-n .pn-pie .px em { font-style: normal; color: #ffd400; }
+.placa-n .pn-pie .pu { font-size: 20px; color: #c9f5da; text-align: right; white-space: nowrap; }
+.placa-n .pn-pie .px { flex: 1; }

@@ -43,6 +43,7 @@ export async function imagenDe(nodo, titulo) {
   const clon = nodo.cloneNode(true);
   clon.querySelectorAll(".btn-compartir, .menu-comp, .ver-mas, .tip, .acciones-comp").forEach(e => e.remove());
   clon.classList.add("clon");
+  clon.removeAttribute("style");   // el original puede estar fuera de pantalla (position:fixed): el clon va en el flujo de la placa
   const pie = el("div", "pc-pie", `${location.host}${location.pathname.replace(/\/$/, "")}`);
   placa.append(cab, clon, pie); document.body.append(placa);
   try {
@@ -101,8 +102,10 @@ export function accionesDelDetalle(x, contenedor, titulo, enlace) {
   [b1, b2].forEach(b => { b.type = "button"; fila.append(b); });
   b1.addEventListener("click", () => copiar(textoParaTuit(titulo, primero, enlace), "Texto copiado"));
   b2.addEventListener("click", () => {
-    const nodo = el("div", "hallazgo-img"); nodo.append(el("h3", null, titulo), ...[...contenedor.children].filter(c => !c.classList.contains("acciones-comp")).map(c => c.cloneNode(true)));
-    nodo.style.cssText = "position:fixed;left:-9999px;top:0;width:560px;padding:16px"; document.body.append(nodo);
+    // solo el dato: título, cara, cifras y texto (sin relacionados, botones ni links)
+    const nodo = el("div", "hallazgo-img"); nodo.append(el("h3", null, titulo));
+    [...contenedor.children].filter(c => c.matches(".des-jug, .dd, p")).forEach(c => nodo.append(c.cloneNode(true)));
+    nodo.style.cssText = "position:fixed;left:-9999px;top:0;width:560px"; document.body.append(nodo);
     bajarImagen(nodo, titulo).finally(() => nodo.remove());
   });
   return fila;

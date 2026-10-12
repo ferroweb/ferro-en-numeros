@@ -34,7 +34,7 @@ celdas.forEach(([l, v, sub]) => { const c = el("div", "celda"); c.append(el("div
 const cinta = $("#cinta");
 const span = (lbl, val) => { const s = el("span"); s.append(lbl + " "); s.append(el("b", null, val)); return s; };
 cinta.append(span("Último:", `F${ult.fecha} ${ult.condicion === "Local" ? "Ferro " + ult.gf + "-" + ult.gc + " " + ult.rival : ult.rival + " " + ult.gc + "-" + ult.gf + " Ferro"}`));
-if (prox) cinta.append(span("Próximo:", `F${prox.fecha} ${prox.rival} (${prox.cond === "L" ? "local" : "visitante"})${prox.dia ? " · " + fechaLarga(prox.dia) + (prox.hora ? " " + prox.hora : "") : ""}`));
+if (prox) cinta.append(span("Próximo:", `F${prox.fecha} ${prox.rival} (${prox.cond === "L" ? "local" : "visitante"})${prox.dia ? " · " + fechaLarga(prox.dia).replace("-", "\u2011") + (prox.hora ? " " + prox.hora : "") : ""}`));
 cinta.append(span("Hallazgos activos:", String(DATA.hallazgos.length + (DATA.novedades || []).length)));
 }
 
@@ -54,8 +54,8 @@ export function initNovedadesHoy() {
       hoyL.slice(0, 3).forEach(n => { const c = el("div", "card"); const dd = (n.detalle || "").split(/(?<=\.)\s/)[0]; c.append(el("div", "t", n.titulo), el("div", "d", dd.length > 170 ? dd.slice(0, 167).replace(/\s\S*$/, "") + "…" : dd));
         if (n.datos && n.datos.length) { const t = el("div", "tiles"); n.datos.slice(0, 3).forEach(([l, v]) => { const x = el("div", "tile"); x.append(el("b", null, String(v).split(" · ")[0]), el("span", null, l + (String(v).includes(" · ") ? " · " + String(v).split(" · ").slice(1).join(" · ") : ""))); t.append(x); }); c.append(t); }
         P.append(c); });
-      const pie = el("div", "pie"), px = el("div", "px");
-      if (prox) { const F = DATA.fw; px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia) + (prox.hora ? " " + prox.hora : "") : ""}`)); if (F && F.fecha === prox.fecha) { px.append(el("br")); const e = el("em", null, `Pronóstico FW: ${prox.cond === "L" ? `Ferro ${F.gf}-${F.gc} ${prox.rival}` : `${prox.rival} ${F.gc}-${F.gf} Ferro`}${F.autores && F.autores.length ? " (" + F.autores.join(", ") + ")" : ""}`); px.append(e); } }
+      const pie = el("div", "pn-pie"), px = el("div", "px");
+      if (prox) { const F = DATA.fw; px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia).replace("-", "\u2011") + (prox.hora ? " " + prox.hora : "") : ""}`)); if (F && F.fecha === prox.fecha) { px.append(el("br")); const e = el("em", null, `Pronóstico FW: ${prox.cond === "L" ? `Ferro ${F.gf}-${F.gc} ${prox.rival}` : `${prox.rival} ${F.gc}-${F.gf} Ferro`}${F.autores && F.autores.length ? " (" + F.autores.join(", ") + ")" : ""}`); px.append(e); } }
       pie.append(px, el("div", "pu", "ferroweb.github.io/ferro-en-numeros")); P.append(pie);
       document.body.append(P); return P;
     };
@@ -81,7 +81,7 @@ export function initPlaca() {
   const lib = cargarHtml2canvas;
   const armar = () => {
     const P = el("div", "placa-n"); const cab = el("div", "pc"), izq = el("div");
-    izq.append(el("span", "eti", `FECHA ${u.fecha} · ${u.condicion === "Local" ? "EN CABALLITO" : "DE VISITANTE"}`), el("h1", null, `Ferro ${u.gf}-${u.gc} ${u.rival}`), el("div", "f", u.gf > u.gc ? "¡Ganamos! 💚" : u.gf === u.gc ? "Empatamos" : "Perdimos"));
+    izq.append(el("span", "eti", `FECHA ${u.fecha} · ${u.condicion === "Local" ? "EN CABALLITO" : "DE VISITANTE"}`), el("h1", null, u.condicion === "Local" ? `Ferro ${u.gf}-${u.gc} ${u.rival}` : `${u.rival} ${u.gc}-${u.gf} Ferro`), el("div", "f", u.gf > u.gc ? "¡Ganamos! 💚" : u.gf === u.gc ? "Empatamos" : "Perdimos"));
     const lg = document.querySelector(".fwlogo"); cab.append(izq); if (lg) { const im = el("img"); im.src = lg.src; cab.append(im); } P.append(cab);
     const c1 = el("div", "card"); c1.append(el("div", "t", "⚽ Goles de Ferro"), el("div", "d", u.goleadores && u.goleadores !== "—" ? u.goleadores.replace(/(\d+)(pt|st)/g, "$1'$2") : "No hubo goles nuestros.")); P.append(c1);
     const tb = DATA.tabla.slice().sort((a, b) => a.pos - b.pos).slice(0, 4), c2 = el("div", "card"); c2.append(el("div", "t", "📊 Así quedó la punta")); const ti = el("div", "tiles"); tb.forEach(r => { const x = el("div", "tile"); x.append(el("b", null, `${r.pos}° · ${r.pts}`), el("span", null, r.equipo.replace("Deportivo ", "").replace("Ferro Carril Oeste", "Ferro"))); ti.append(x); }); c2.append(ti); P.append(c2);
@@ -94,7 +94,7 @@ export function initPlaca() {
       if (E && E.quedan) { const seg = (E.perseguidores || [])[0]; l.push(`Quedan ${E.quedan.length} ${E.quedan.length === 1 ? "fecha" : "fechas"}${seg ? ` y le llevamos ${E.ferro - seg.pts} a ${seg.equipo.replace("Deportivo ", "")}` : ""}.`); if (E.necesita_para_asegurar != null) l.push(E.necesita_para_asegurar ? `Con ${E.necesita_para_asegurar} de ${3 * E.quedan.length} puntos terminamos primeros sin mirar a nadie.` : "¡Ya no nos alcanza nadie!"); }
       if (prox && F && F.fecha === prox.fecha) l.push(`Pronóstico FW para ${prox.rival}: ${prox.cond === "L" ? `Ferro ${F.gf}-${F.gc}` : `${F.gc}-${F.gf} Ferro`}${F.autores && F.autores.length ? ", gol de " + [...new Set(F.autores)].join(" y ") : ""}.`);
       c4.append(el("div", "d", l.join(" "))); P.append(c4); }
-    const pie = el("div", "pie"), px = el("div", "px"); if (prox) px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia) : ""}`)); pie.append(px, el("div", "pu", "ferroweb.github.io/ferro-en-numeros")); P.append(pie);
+    const pie = el("div", "pn-pie"), px = el("div", "px"); if (prox) px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia).replace("-", "\u2011") : ""}`)); pie.append(px, el("div", "pu", "ferroweb.github.io/ferro-en-numeros")); P.append(pie);
     document.body.append(P); return P;
   };
   const cortoN = n => ({ "Ignacio Carrión": "Nacho" })[n] || n.split(" ")[0];
@@ -135,7 +135,7 @@ function proximoCard() {
   const loc = prox.cond === "L" ? "Ferro" : prox.rival, vis = prox.cond === "L" ? prox.rival : "Ferro";
   const a = el("a", "prox-card"); a.href = "#/partido";
   a.append(el("div", "eti", `Próximo partido · Fecha ${prox.fecha}`), el("div", "vs", `${loc} vs ${vis}`));
-  const cuando = prox.dia ? fechaLarga(prox.dia) + (prox.hora ? ` · ${prox.hora} hs` : "") : "A confirmar";
+  const cuando = prox.dia ? fechaLarga(prox.dia).replace("-", "\u2011") + (prox.hora ? ` · ${prox.hora} hs` : "") : "A confirmar";
   a.append(el("div", "cuando", cuando + (prox.estadio ? ` · ${prox.estadio}` : "")));
   const W = DATA.fw;
   if (W && previaAlDia) { const [gl, gv] = W.cond === "L" ? [W.gf, W.gc] : [W.gc, W.gf]; a.append(el("div", "fw", `Pronóstico FW: ${gl}-${gv}`)); }
