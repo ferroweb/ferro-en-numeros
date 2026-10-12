@@ -1,0 +1,60 @@
+name: Actualizar datos
+
+# Busca partidos nuevos en FerroWeb y la tabla en FútbolTotal. Si hay algo nuevo, guarda los datos y vuelve a publicar el sitio.
+# Cada corrida hace 2 o 3 pedidos livianos; solo baja más cuando hay un partido nuevo.
+on:
+  schedule:
+    - cron: "17 */2 * * *"     # cada 2 horas (UTC)
+  workflow_dispatch:           # también se puede lanzar a mano desde la pestaña Actions
+
+permissions:
+  contents: write              # para guardar los datos
+  actions: write               # para disparar la publicación del sitio
+  issues: write                # para avisar si algo falla
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pruebas del parser
+        run: node --test scripts/test/parser.test.mjs scripts/test/calculos.test.mjs scripts/test/editorial.test.mjs scripts/test/redaccion.test.mjs
+
+      - name: Actualizar datos
+        id: datos
+        run: node scripts/actualizar.mjs
+
+      - name: Guardar y publicar
+        if: steps.datos.outputs.cambios != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUEVOS: ${{ steps.datos.outputs.nuevos }}
+        run: |
+          git config user.name "ferro-en-numeros-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data datos-fuente
+          if git diff --cached --quiet; then echo "Sin cambios para guardar"; exit 0; fi
+          if [ -n "$NUEVOS" ]; then MSG="Actualización automática de datos (fecha $NUEVOS)"; else MSG="Actualización automática de datos"; fi
+          git commit -m "$MSG"
+          git pull --rebase
+          git push
+          gh workflow run deploy.yml --ref "$GITHUB_REF_NAME"
+
+      - name: Avisar si falló
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITULO="La actualización automática de datos falló"
+          ABIERTO=$(gh issue list --state open --search "$TITULO in:title" --json number --jq 'length')
+          if [ "$ABIERTO" = "0" ]; then
+            gh issue create --title "$TITULO" --body "Mirá el detalle en $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID. Lo más común: FerroWeb publicó una síntesis con un dato mal (se corrige en datos-fuente/correcciones.json) o cambió el formato de la página. Mientras tanto el sitio sigue mostrando los últimos datos buenos."
+          fi

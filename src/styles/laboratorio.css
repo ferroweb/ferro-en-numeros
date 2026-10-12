@@ -1,0 +1,47 @@
+.lc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; margin: 10px 0; }
+.lc-eq { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.lc-eq.fe { border-color: var(--verde); border-width: 2px; }
+.lc-eq h4 { margin: 0 0 6px; font-size: 15px; display: flex; justify-content: space-between; }
+.lc-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 13px; margin: 4px 0; }
+.lc-row span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; flex: none; }
+.seg button { border: 0; background: transparent; padding: 4px 9px; font: inherit; font-weight: 700; font-size: 12px; cursor: pointer; color: inherit; }
+.seg button[aria-pressed="true"].G { background: var(--ok); color: #fff; } .seg button[aria-pressed="true"].E { background: var(--lin25); color: #fff; } .seg button[aria-pressed="true"].P { background: var(--bad); color: #fff; }
+.lc-res { border-radius: 12px; padding: 12px 14px; background: var(--chip); font-size: 15px; }
+.lc-res b.big { font-size: 20px; display: block; margin-bottom: 4px; }
+.lc-res ol { margin: 6px 0 0; padding-left: 20px; }
+.le-sel { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.le-g { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.le-g button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 5px 11px; font: inherit; font-size: 13px; cursor: pointer; color: inherit; }
+.le-g button[aria-pressed="true"] { background: var(--verde); color: #fff; border-color: var(--verde); }
+.le-out .bar { display: flex; height: 26px; border-radius: 8px; overflow: hidden; margin: 8px 0 6px; }
+.le-out .bar i { display: flex; align-items: center; justify-content: center; color: #fff; font-style: normal; font-weight: 800; font-size: 12px; }
+.le-out p { margin: 4px 0; }
+.lm { display: grid; grid-template-columns: 90px repeat(6, 1fr); gap: 4px; font-size: 13px; margin: 8px 0; }
+.lm div { border-radius: 6px; padding: 8px 4px; text-align: center; }
+.lm .h { font-weight: 700; color: var(--muted); padding: 2px; }
+.lm .l { text-align: left; font-weight: 700; }
+.ltab { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ltab td, .ltab th { padding: 6px 4px; border-bottom: 1px solid var(--line); text-align: right; }
+.ltab td.l, .ltab th.l { text-align: left; }
+.ltab .caras { display: inline-flex; vertical-align: middle; margin-right: 6px; }
+.ltab .caras .cara-j { width: 26px; height: 26px; font-size: 10px; margin-right: -6px; border: 2px solid var(--panel, #fff); }
+.ltab details summary { cursor: pointer; }
+.lr { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 620px) { .lr { grid-template-columns: 1fr; } }
+.lr h4 { margin: 0 0 6px; }
+.lr ul { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+.lr li { padding: 5px 0; border-bottom: 1px solid var(--line); }
+.lr li small { display: block; color: var(--muted); }
+.tv-q { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+.tv-q p { margin: 0 0 8px; font-weight: 700; }
+.tv-op { display: flex; flex-wrap: wrap; gap: 6px; }
+.tv-op button { border: 1px solid var(--line); background: transparent; border-radius: 10px; padding: 6px 10px; font: inherit; font-size: 14px; cursor: pointer; color: inherit; }
+.tv-op button.ok { background: var(--ok); color: #fff; border-color: var(--ok); }
+.tv-op button.mal { background: var(--bad); color: #fff; border-color: var(--bad); }
+.tv-fin { margin-top: 10px; padding: 10px 12px; background: var(--chip); border-radius: 12px; }
+.tv-caras { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.tv-caras button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 3px 10px 3px 3px; display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px; cursor: pointer; color: inherit; }
+.tv-caras button .cara-j { width: 26px; height: 26px; font-size: 10px; }
+.tv-caras button[aria-pressed="true"] { border-color: var(--verde); background: var(--chip); font-weight: 700; }
+#ld, #lb, #lt, #lcab { overflow-x: auto; }

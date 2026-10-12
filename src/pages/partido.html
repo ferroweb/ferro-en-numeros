@@ -1,0 +1,81 @@
+<div class="view-top">
+<p class="aviso-previa" id="aviso-previa" hidden>Estamos armando la previa de esta fecha: el pronóstico, los escenarios y las claves se publican en breve.</p>
+  <div class="pv-res" id="pv-res">
+    <div class="pv-eti" id="pv-eti">Previa</div>
+    <div class="pv-vs" id="pv-vs"></div>
+    <div class="pv-grid">
+      <div class="pv-pron">
+        <div class="pv-l">Pronóstico FW</div>
+        <div class="pv-fw" id="pv-fw"></div>
+        <div class="pv-big" id="pv-big"></div>
+        <div class="pv-barra" id="pv-barra" aria-hidden="true"></div>
+        <div class="pv-ley" id="pv-ley"></div>
+      </div>
+      <div class="pv-chica">
+        <div class="pv-l">La chicana de la semana</div>
+        <blockquote class="pv-frase" id="pv-frase"></blockquote>
+        <div class="pv-l pv-campeon" id="pv-campeon"></div>
+      </div>
+    </div>
+    <button class="pv-prode" id="pv-prode" type="button">🏆 Prode: cargá tu pronóstico</button>
+  </div>
+</div>
+<div class="tab" data-tab="previa" data-label="Previa" data-desc="El partido de la fecha de un vistazo: dónde, cuándo, cómo llega el rival y qué necesitamos.">
+    <div class="aguante" role="note"><span>¡Aguante el Verdolaga!<small id="aguante-sub">Vamos Ferro, que esta es la nuestra</small></span></div>
+    <div class="grid2">
+      <div class="caja" id="prox"></div>
+      <div class="caja"><h3>La pelea por el primer puesto</h3><div class="nota" id="esc-nota"></div><div class="chart" id="c-esc"></div>
+        <div id="pv-quien1"><h3 style="margin-top:16px">¿Quién termina 1°?</h3><div class="nota">Simulamos 20.000 veces lo que queda del torneo.</div><div class="pv-chances" id="pv-chances"></div></div></div>
+    </div>
+    <div class="caja" id="claves-caja"><h3 id="claves-t">Claves para ganar</h3><div class="nota">Lo que dicen nuestros números para traernos los tres puntos. Se recalculan antes de cada fecha.</div><ol class="claves" id="claves"></ol></div>
+    <div class="hall" id="hall-previa"></div>
+</div>
+<div class="tab" data-tab="pronostico" data-label="Pronóstico FW" data-desc="Cómo armamos el pronóstico y qué pasa en la tabla según el resultado.">
+    <div class="caja pv-fwcaja" id="pv-fwcaja"><h3>Pronóstico FW: cómo lo armamos</h3><div class="nota" id="pv-fw-nota"></div>
+      <div class="grid2"><div><h4 class="pv-h4">Los que pueden meterla</h4><div class="pv-chances" id="pv-gol"></div></div>
+      <div><h4 class="pv-h4">Qué miramos</h4><div class="tw"><table id="pv-fact"></table></div></div></div>
+      <div class="nota" id="pv-hist" style="margin-top:10px"></div></div>
+    <div class="caja" id="pv-esc-caja"><h3>Qué pasa según el resultado</h3><div class="nota" id="pv-esc-nota"></div><div class="pv-escs" id="pv-escs"></div></div>
+    <p class="pv-metodo" id="pv-metodo">Cómo pronosticamos: mezclamos lo que hace y recibe cada equipo en toda la temporada (comparado con el promedio del grupo), cómo nos va de local o de visitante y el momento de los dos en las últimas cinco fechas; corregimos los empates, que en partidos cerrados salen más de lo que dice la teoría, y repartimos nuestros goles según lo que viene metiendo y jugando cada uno. Es un cálculo serio, no una garantía: la pelota no lee estadísticas.</p>
+</div>
+<div class="tab" data-tab="pizarra" data-label="Pizarra de Sara" data-desc="El once probable y las instrucciones que pensamos que puede dar Sara.">
+    <div class="caja pizarra" id="pizarra">
+      <div class="pz-cab"><div class="pz-foto" role="img" aria-label="Juan Manuel Sara, DT de Ferro"></div><div><div class="pz-eti">La pizarra de Sara</div><h3>Las instrucciones que pensamos puede dar Sara para ganar el partido</h3></div></div>
+      <p class="nota" id="pz-intro"></p>
+      <div class="pz-perfil" id="pz-perfil"></div>
+      <div class="pz-grid"><div><h4 class="pv-h4" id="pz-sis"></h4><div class="pz-cancha" id="pz-cancha"></div><div class="nota" id="pz-once-nota"></div></div>
+        <div><h4 class="pv-h4">Las indicaciones en el vestuario</h4><ol class="pz-ins" id="pz-ins"></ol></div></div>
+      <div class="grid2"><div class="pz-lista deb"><h4 class="pv-h4">Por dónde lastimarlos</h4><ul id="pz-deb"></ul></div><div class="pz-lista cui"><h4 class="pv-h4">De qué cuidarnos</h4><ul id="pz-cui"></ul></div></div>
+      <p class="cierre" id="pz-cierre"></p>
+      <figure class="pz-frase" id="pz-frase" hidden><blockquote id="pz-fr-t"></blockquote><figcaption><b id="pz-fr-a"></b><span id="pz-fr-p"></span></figcaption></figure>
+      <p class="pv-metodo">Es nuestra lectura de los números y de cómo viene jugando el equipo, no palabra de Sara ni de su cuerpo técnico.</p>
+    </div>
+</div>
+<div class="tab" data-tab="rival" data-label="El rival" data-desc="La previa en números y las caras conocidas: ex compañeros y ex Ferro.">
+    <div class="caja aten" id="aten-caja" hidden><h3>📊 La previa en números</h3><div class="nota" id="aten-n"></div>
+      <div class="ley2 aten-ley"><span><i style="background:var(--lin25)"></i><b id="aten-riv"></b></span><span><i style="background:var(--verde)"></i><b>Ferro</b></span><span><i class="pr"></i>Promedio del torneo</span></div>
+      <div class="aten-m" id="aten-m"></div>
+      <h4 class="pv-h4">Lo que nos dicen estos números</h4><ol class="hum" id="aten-l"></ol></div>
+    <div class="caja" id="cc-caja" hidden><h3>🤝 Caras conocidas</h3><div class="nota" id="cc-n"></div>
+      <div id="cc-exw"><h4 class="pv-h4">⚠️ La ley del ex</h4><div class="cc-ex" id="cc-ex"></div></div>
+      <div id="cc-parw"><h4 class="pv-h4">Se conocen del vestuario</h4><ul class="cc-par" id="cc-par"></ul></div>
+      <h4 class="pv-h4">Clubes en común</h4><div class="cc-cl" id="cc-cl"></div></div>
+</div>
+<div class="tab" data-tab="chicanas" data-label="Chicanas" data-desc="El manual para cargar al rival, con números reales.">
+    <div class="caja humor" id="humor-caja"><h3 id="humor-t"></h3><p class="nota" id="humor-i"></p><div class="hgraf" id="humor-g"></div><ol class="hum" id="humor-l"></ol><p class="cierre" id="humor-c"></p></div>
+</div>
+<div class="tab" data-tab="arbitro" data-label="Árbitro" data-desc="Quién nos dirige, cómo nos fue con él y qué esperar.">
+  <div class="caja arb-caja" id="arb-caja">
+    <div class="arb-cab"><div class="arb-ico" aria-hidden="true">🟨</div><div><div class="pz-eti" id="arb-eti"></div><h3 id="arb-t"></h3></div></div>
+    <p class="nota" id="arb-i"></p>
+    <div class="kpis" id="arb-kpis"></div>
+    <div class="arb-ps" id="arb-ps"></div>
+    <ol class="hum" id="arb-l"></ol>
+    <div class="pz-lista cui"><h4 class="pv-h4">Recomendaciones para sobrevivirle</h4><ul id="arb-cons"></ul></div>
+    <p class="cierre" id="arb-c"></p>
+    <p class="pv-metodo" id="arb-f"></p>
+  </div>
+</div>
+<div class="tab" data-tab="arbitros" data-label="Árbitros de la temporada" data-desc="Todos los árbitros que nos dirigieron en 2025 y 2026.">
+  <div class="caja"><h3>Todos los árbitros que nos dirigieron</h3><div class="nota">2025 y 2026. Tocá un encabezado para ordenar. En verde, el del domingo.</div><div class="tw"><table id="t-arb"></table></div></div>
+</div>

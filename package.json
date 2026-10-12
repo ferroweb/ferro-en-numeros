@@ -1,0 +1,21 @@
+{
+  "name": "ferro-en-numeros",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Estadísticas de Ferro Carril Oeste · FerroWeb · Hablemos de Ferro",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test scripts/test/parser.test.mjs scripts/test/calculos.test.mjs scripts/test/editorial.test.mjs scripts/test/redaccion.test.mjs",
+    "datos:actualizar": "node scripts/actualizar.mjs",
+    "datos:verificar": "node scripts/verificar.mjs"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  }
+}

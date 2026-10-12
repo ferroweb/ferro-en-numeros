@@ -1,0 +1,17 @@
+@import "./tokens.css";
+@import "./base.css";
+@import "./shell.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./tablas.css";
+@import "./graficos.css";
+@import "./cartel.css";
+@import "./dialogo.css";
+@import "./inicio.css";
+@import "./hallazgos.css";
+@import "./partido.css";
+@import "./temporada.css";
+@import "./jugadores.css";
+@import "./laboratorio.css";
+@import "./prode.css";
+@import "./placa.css";

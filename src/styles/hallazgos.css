@@ -1,0 +1,22 @@
+.h .quien-j { display: flex; align-items: center; gap: 10px; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.buscar { flex: 1 1 180px; max-width: 280px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); }
+.hall { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
+.h { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.h .tg { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.h .tg i { width: 8px; height: 8px; border-radius: 50%; }
+.h .t { font-weight: 700; font-size: 15px; line-height: 1.35; }
+.h .d { font-size: 13.5px; color: var(--muted); }
+.h .who { align-self: flex-start; background: none; border: 0; padding: 0; color: var(--verde-txt); font-weight: 600; font-size: 13px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+@keyframes hoyLatido { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+#lab .caja h3 { margin-top: 0; }
+.h.nov { border-color: var(--warn); }
+.mas { align-self: center; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 8px 18px; font-weight: 600; cursor: pointer; }
+.h.abre { cursor: pointer; }
+.h.abre:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+.h .lee { align-self: flex-start; color: var(--verde-txt); font-weight: 700; font-size: 13px; }
+.h.nov .d.corta { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+@media (prefers-reduced-motion: no-preference) { .h { transition: transform .15s ease; } .h:hover { transform: translateY(-2px); } }

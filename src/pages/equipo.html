@@ -1,0 +1,27 @@
+<div class="tab" data-tab="tabla" data-label="Tabla" data-desc="Posiciones del Grupo 1. Del 2° al 8° juegan el reducido; el 1° va a la final por el ascenso.">
+<p class="nota" id="tabla-p"></p>
+    <div class="caja"><h3>Grupo 1</h3><div class="nota">Del 2° al 8° juegan el reducido; el 1° va a la final por el ascenso.</div><div class="tw"><table id="t-tabla"></table></div></div>
+</div>
+<div class="tab" data-tab="resultados" data-label="Resultados" data-desc="Todos los partidos de la temporada. Tocá la fecha para abrir la síntesis en Ferroweb.">
+    <div class="caja"><h3>Partido por partido</h3><input id="fp-q" class="buscar" type="search" placeholder="Filtrar: rival, árbitro, goleador…" aria-label="Filtrar partidos"><div class="nota">Tocá la fecha para abrir la síntesis en Ferroweb.</div><div class="tw"><table id="t-part"></table></div></div>
+</div>
+<div class="tab" data-tab="goles" data-label="Goles" data-desc="Cuándo hacemos y cuándo recibimos goles: por franja y contra 2025.">
+    <div class="caja"><h3>Goles por franja de 15 minutos</h3><div class="nota">A favor y en contra, todo el torneo.</div>
+      <div class="ley"><span><i style="background:var(--verde)"></i>A favor</span><span><i style="background:var(--bad)"></i>En contra</span></div>
+      <div class="chart" id="c-franjas"></div></div>
+  <div class="caja" id="lab-min"><h3>🔥 Mapa de minutos: 2026 contra 2025</h3><div class="nota">Goles a favor y en contra por cuarto de hora. Más intenso el color, más goles.</div><div class="lm" id="lm"></div><div class="nota" id="lm-nota"></div></div>
+</div>
+<div class="tab" data-tab="puntos" data-label="Puntos" data-desc="Cómo juntamos los puntos, partido a partido, contra 2025.">
+  <div class="caja"><h3>Puntos acumulados, partido a partido</h3><div class="nota">2026 contra 2025, por cantidad de partidos jugados. Cada punto verde, gris o rojo es un partido de este año (la fecha 4 se jugó postergada, entre la 18 y la 19).</div>
+    <div class="ley"><span><i style="background:var(--verde)"></i>2026</span><span><i style="background:var(--lin25)"></i>2025</span></div>
+    <div class="chart" id="c-evol"></div></div>
+</div>
+<div class="tab" data-tab="forma" data-label="Forma y rendimiento" data-desc="Cómo venimos en los últimos partidos y cómo rendimos según la situación.">
+<div class="caja" id="lab-forma"><h3>📈 Índice de forma</h3><div class="nota">Puntos sumados en los últimos 5 partidos, fecha a fecha (máximo 15).</div><div class="chart" id="lf-chart"></div><div class="nota" id="lf-nota"></div></div>
+    <div class="caja"><h3>Rendimiento por situación</h3><div class="nota">Puntos por partido según condición, momento del torneo, quién abre el marcador y sistema.</div>
+      <div class="tw"><table id="t-rend"></table></div></div>
+</div>
+<div class="tab" data-tab="vs-2025" data-label="2026 vs 2025" data-desc="En 2025 terminamos mirando la tabla de abajo. Mirá cómo cambió todo, a la misma altura y en el total.">
+  <div class="caja"><h3>Temporada contra temporada</h3><div class="nota" id="temp-nota"></div><div class="tw"><table id="t-temp"></table></div></div>
+    <div class="caja"><h3>Los que estaban en 2025</h3><div class="nota">Minutos y goles en cada temporada.</div><div class="tw"><table id="t-jt"></table></div></div>
+</div>

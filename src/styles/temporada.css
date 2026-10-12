@@ -1,0 +1,9 @@
+.ult { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px; }
+.u { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.u .s { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.u .q { font-weight: 700; }
+.u .hc { display: flex; align-items: baseline; gap: 6px; }
+.u .hc b { font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; }
+.u .hc span { font-size: 13px; color: var(--muted); }
+.u.nunca { border-style: dashed; }
+.u.ahora b { color: var(--warn); }

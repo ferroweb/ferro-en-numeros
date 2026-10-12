@@ -1,0 +1,24 @@
+.pr-boton { margin: 12px 0 0; }
+.pr-lista { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.pr-it { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.pr-it .mk { margin-left: auto; font-family: var(--display); font-weight: 900; font-size: 20px; }
+.pr-it .g { font-size: 12.5px; color: var(--muted); }
+#t-prode td .cara-j, .pr-it .cara-j { width: 30px; height: 30px; font-size: 11px; }
+#t-prode tr.maq td { font-style: italic; }
+.pd-paso { display: flex; flex-direction: column; gap: 8px; }
+.pd-l { font-weight: 800; font-size: 14px; }
+.pd-caras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.pd-caras button { border: 2px solid var(--line); background: var(--panel); border-radius: 12px; padding: 8px 4px; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; cursor: pointer; color: var(--ink); font-family: var(--body); }
+.pd-caras button[aria-pressed="true"] { border-color: #0b5e30; background: #e3f4e9; }
+.pd-caras .cara-j { width: 46px; height: 46px; }
+.pd-res { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.pd-eq { display: flex; flex-direction: column; align-items: center; gap: 6px; font-weight: 800; font-size: 13px; text-transform: uppercase; }
+.pd-num { display: flex; align-items: center; gap: 8px; }
+.pd-num b { font-family: var(--display); font-size: 40px; min-width: 30px; text-align: center; }
+.pd-num button { width: 36px; height: 36px; border-radius: 50%; border: 2px solid #0b5e30; background: var(--panel); color: #0b5e30; font-size: 20px; font-weight: 900; cursor: pointer; }
+.pd-in { font: inherit; font-size: 16px; padding: 10px 12px; border: 2px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--ink); max-width: 320px; width: 100%; }
+.pd-goles { display: grid; gap: 8px; }
+#pd-clave { max-width: 180px; letter-spacing: .05em; font-weight: 800; text-align: center; }
+.pd-msg { font-weight: 700; min-height: 1.4em; }
+.pd-msg.err { color: var(--bad); } .pd-msg.ok { color: var(--verde-txt); }
+.pd-ok { margin: 0; align-self: center; font-size: 17px; padding: 10px 26px; }

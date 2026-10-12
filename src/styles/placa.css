@@ -1,0 +1,18 @@
+.placa-n { position: fixed; left: -12000px; top: 0; width: 1080px; height: 1350px; background: linear-gradient(160deg, #0b5a32, #08401f); color: #fff; font-family: Inter, system-ui, sans-serif; padding: 48px 52px; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px; }
+.placa-n .pc { display: flex; align-items: center; justify-content: space-between; }
+.placa-n .pc .eti { background: #2ecc71; color: #06301a; font-weight: 900; letter-spacing: 3px; font-size: 22px; padding: 6px 14px; border-radius: 8px; display: inline-block; }
+.placa-n .pc h1 { font-size: 64px; line-height: 1; margin: 14px 0 6px; font-weight: 900; letter-spacing: -1px; }
+.placa-n .pc .f { font-size: 26px; color: #c9f5da; font-weight: 600; }
+.placa-n .pc img { height: 120px; }
+.placa-n .card { background: #fff; color: #142018; border-radius: 22px; padding: 24px 28px; border-left: 12px solid #2ecc71; }
+.placa-n .card .t { font-size: 33px; font-weight: 800; line-height: 1.15; margin-bottom: 8px; }
+.placa-n .card .d { font-size: 22px; line-height: 1.35; color: #3a4a40; }
+.placa-n .tiles { display: flex; gap: 12px; margin-top: 14px; }
+.placa-n .tile { flex: 1; background: #eaf8ef; border-radius: 12px; padding: 10px 14px; min-width: 0; }
+.placa-n .tile b { display: block; font-size: 25px; font-weight: 900; color: #0b5a32; line-height: 1.1; }
+.placa-n .tile span { display: block; font-size: 16px; color: #4b5a51; margin-top: 4px; }
+.placa-n .pie { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.placa-n .pie .px { font-size: 26px; font-weight: 700; }
+.placa-n .pie .px em { font-style: normal; color: #ffd400; }
+.placa-n .pie .pu { font-size: 20px; color: #c9f5da; text-align: right; white-space: nowrap; }
+.placa-n .pie .px { flex: 1; }

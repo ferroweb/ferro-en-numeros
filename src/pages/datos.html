@@ -1,0 +1,34 @@
+<div class="tab" data-tab="redaccion" data-label="De la redacción" data-desc="Lo último que cargó el equipo de Ferroweb.">
+  <div class="hall" id="redaccion-l" hidden></div>
+</div>
+<div class="tab" data-tab="hallazgos" data-label="Hallazgos" data-desc="Récords, rachas, figuras y datos de color de nuestro Ferro. Los recuadros con borde ámbar son las novedades del día.">
+  <div class="filtros"><div id="chips" class="filtros"></div><input id="q" class="buscar" type="search" placeholder="Buscar: Parisi, 1-0, árbitro…" aria-label="Buscar hallazgos"></div>
+  <div class="hall" id="hall"></div>
+  <button class="mas" id="mas" type="button">Ver todos</button>
+</div>
+<div class="tab" data-tab="ultima-vez" data-label="La última vez que…" data-desc="¿Cuándo fue la última vez que goleamos, que dimos vuelta un partido o que nos comimos tres?">
+<p class="nota" id="ult-p">Se recalcula después de cada partido, con todas las temporadas cargadas.</p>
+  <div class="ult" id="ult"></div>
+</div>
+<div class="tab" data-tab="cronicas" data-label="Termómetro de crónicas" data-desc="El tono de las crónicas de Ferroweb según el resultado.">
+    <div class="caja" id="lab-cron"><h3>🌡️ Termómetro de crónicas</h3><div class="nota">El tono de las crónicas de Ferroweb según el resultado.</div><div id="lcr"></div></div>
+</div>
+<div class="tab" data-tab="fuentes" data-label="Fuentes y método" data-desc="De dónde sacamos los datos y cómo se calculan.">
+<div class="caja fuentes">
+  <h3>De dónde salen los números</h3>
+  <ul>
+    <li><b>Partidos, goles, cambios y tarjetas:</b> síntesis y crónicas de <a href="http://www.ferroweb.com.ar" target="_blank" rel="noopener">Ferroweb</a>.</li>
+    <li><b>Tabla de posiciones:</b> FútbolTotal.</li>
+    <li><b>Previas y contexto de los rivales:</b> La Nación y Ateneaid.</li>
+    <li><b>Formato del torneo:</b> Cadena 3.</li>
+    <li><b>Trayectorias de los jugadores:</b> Sofascore (los años son aproximados).</li>
+    <li><b>Designación de árbitros:</b> AFA, publicada por Solo Ascenso.</li>
+  </ul>
+  <h3>Cómo se calcula</h3>
+  <ul>
+    <li><b>Minutos de juego:</b> se calculan con los titulares, cambios y expulsiones informados en cada síntesis.</li>
+    <li><b>Pronóstico FW:</b> mezcla lo que hace y recibe cada equipo en la temporada, cómo nos va de local o de visitante y el momento de los dos en las últimas cinco fechas. Es un cálculo serio, no una garantía.</li>
+    <li><b>Simulación del primer puesto:</b> 20.000 simulaciones de lo que queda del torneo.</li>
+  </ul>
+</div>
+</div>

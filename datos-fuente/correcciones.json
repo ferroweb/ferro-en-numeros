@@ -1,0 +1,25 @@
+{
+  "763": {
+    "gl": 0,
+    "gv": 2,
+    "motivo": "F6 Ferro-Los Andes: el encabezado de FerroWeb dice 0-0, pero la síntesis lista 2 goles de Los Andes (46' PT Rodríguez y 2' ST Ortiz). El resultado real fue 0-2."
+  },
+  "741": {
+    "golesRival": [
+      {
+        "min": 10,
+        "mitad": "st"
+      }
+    ],
+    "motivo": "2025 F17 Patronato 3-0: la síntesis lista solo 2 de los 3 goles del rival. El minuto del tercero es aproximado (46-60'), como en la carga anterior."
+  },
+  "743": {
+    "golesRival": [
+      {
+        "min": 35,
+        "mitad": "st"
+      }
+    ],
+    "motivo": "2025 F19: la síntesis lista solo 1 de los 2 goles del rival. El minuto del segundo es aproximado (76-90'), como en la carga anterior."
+  }
+}

@@ -1,0 +1,6 @@
+section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 70px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 16px; }
+.caja { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; min-width: 0; }
+.caja h3 { font-size: 16px; font-weight: 700; }
+.caja .nota { font-size: 13px; color: var(--muted); margin: 2px 0 12px; }
+footer { border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }

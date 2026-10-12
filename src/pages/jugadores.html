@@ -1,0 +1,23 @@
+<div class="tab" data-tab="plantel" data-label="Plantel" data-desc="Minutos calculados con titulares, cambios y expulsiones de cada síntesis. «Pts/p» es lo que sumamos por partido con cada uno en cancha.">
+  <div class="caja"><h3>Plantel completo</h3><div class="nota">Tocá un encabezado para ordenar.</div>
+    <div class="tw"><table id="t-jug"></table></div></div>
+</div>
+<div class="tab" data-tab="ficha" data-label="Ficha" data-desc="Todo de un jugador: minutos, goles, tarjetas, trayectoria y hallazgos.">
+  <div class="caja" id="ficha">
+    <div class="fila-sel"><div class="cara-j g" id="ficha-cara"></div><h3>Ficha</h3><select id="sel-ficha" aria-label="Elegir jugador"></select></div>
+    <div class="kpis" id="ficha-kpis"></div>
+    <div class="ley"><span><i style="background:var(--ok)"></i>Ganado</span><span><i style="background:var(--lin25)"></i>Empatado</span><span><i style="background:var(--bad)"></i>Perdido</span><span>Barra clara: entró desde el banco · ● gol · ▮ amarilla · ✕ roja</span></div>
+    <div class="chart" id="c-ficha"></div>
+    <div class="hall" id="ficha-h" style="margin-top:12px"></div>
+  </div>
+</div>
+<div class="tab" data-tab="comparador" data-label="Comparador" data-desc="Dos jugadores cara a cara.">
+  <div class="caja">
+    <div class="fila-sel"><h3>Comparador</h3><div class="cara-j" id="cmp-ca"></div><select id="cmp-a" aria-label="Primer jugador"></select><span class="x">vs</span><select id="cmp-b" aria-label="Segundo jugador"></select><div class="cara-j" id="cmp-cb"></div></div>
+    <div class="cmp" id="cmp"></div>
+  </div>
+</div>
+<div class="tab" data-tab="duplas-banco" data-label="Duplas y banco" data-desc="Qué duplas rinden más y qué aporta cada suplente.">
+    <div class="caja" id="lab-duplas"><h3>🤝 Duplas y tridentes</h3><div class="nota" id="ld-nota"></div><div id="ld"></div></div>
+    <div class="caja" id="lab-banco"><h3>🪑 Impacto del banco</h3><div class="nota">Puntos que rescató cada suplente: cómo estaba el partido cuando entró y cómo terminó (mínimo 3 entradas).</div><div id="lb"></div></div>
+</div>

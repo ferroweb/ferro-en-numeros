@@ -1,0 +1,54 @@
+<div class="tab" data-tab="calculadora" data-label="Calculadora del 1°" data-desc="Elegí cómo terminan los partidos que quedan y mirá cómo queda la punta.">
+  <div class="caja lab-calc" id="lab-calc"><h3>🧮 Calculadora del primer puesto</h3><div class="nota">Elegí cómo te parece que terminan los partidos que quedan (nuestros y de los que nos persiguen) y mirá cómo queda la punta.</div>
+    <div class="lc-grid" id="lc-grid"></div><div class="lc-res" id="lc-res"></div></div>
+</div>
+<div class="tab" data-tab="en-vivo" data-label="Durante el partido" data-desc="Para mirar en vivo: qué pasó este torneo cada vez que estuvimos en una situación.">
+    <div class="caja" id="lab-estado"><h3>⏱️ ¿Y si al minuto… vamos…?</h3><div class="nota">Lo que pasó este torneo cada vez que estuvimos en esa situación. Sirve para mirarlo en vivo durante el partido.</div>
+      <div class="le-sel"><div class="le-g" id="le-corte"></div><div class="le-g" id="le-est"></div></div><div class="le-out" id="le-out"></div></div>
+</div>
+<div class="tab" data-tab="cabalas" data-label="Cábalas y curiosidades" data-desc="Situaciones raras de partido y qué pasó en esta misma fecha en años anteriores.">
+    <div class="caja" id="lab-cab"><h3>🍀 Cábalas</h3><div class="nota">Situaciones raras de partido y cómo nos fue cuando pasaron este año (mínimo 3 partidos).</div><div id="lcab"></div></div>
+    <div class="caja" id="lab-tal"><h3>📅 Tal fecha como esta</h3><div class="nota" id="lt-nota"></div><div id="lt"></div></div>
+</div>
+<div class="tab" data-tab="asistente" data-label="Asistente de redacción" data-desc="Armá el pedido para la IA con los datos del sitio ya incluidos: elegís qué querés escribir, lo copiás y lo pegás en Claude.">
+  <div class="caja" id="asistente">
+    <h3>Armá el pedido para la IA</h3>
+    <ol class="as-pasos">
+      <li>Elegí qué querés escribir y completá lo que te pide.</li>
+      <li>Tocá <b>Copiar pedido</b>.</li>
+      <li>Abrí <a href="https://claude.ai/new" target="_blank" rel="noopener">Claude</a> (o la IA que uses), pegá el pedido y enviá.</li>
+      <li>Leé lo que escribió, corregí lo que haga falta y publicalo. Los números ya vienen del sitio: si algo no te cierra, revisalo antes de publicar.</li>
+    </ol>
+    <div class="as-form" id="as-form"></div>
+    <label class="as-campo"><span>Pedido listo para copiar</span><textarea id="as-salida" rows="14" readonly></textarea></label>
+    <div class="as-acciones">
+      <button type="button" id="as-copiar" class="as-principal">Copiar pedido</button>
+      <a href="https://claude.ai/new" target="_blank" rel="noopener" class="as-sec">Abrir Claude ↗</a>
+    </div>
+  </div>
+  <div class="caja" id="guia-redaccion">
+    <h3>Cómo cargar novedades, árbitro y horarios</h3>
+    <p class="nota">No hace falta tocar nada del sitio: se carga en una planilla de Google, como la del Prode.</p>
+    <p><a id="as-planilla" href="#" target="_blank" rel="noopener" class="as-sec" hidden>Abrir la planilla de la redacción ↗</a></p>
+    <ol class="as-pasos">
+      <li>Abrí la planilla y agregá <b>una fila nueva al final</b>.</li>
+      <li>Completá las columnas <b>Fecha</b> (día y hora de hoy), <b>Tipo</b>, <b>Título</b>, <b>Texto</b> y, si querés, <b>Link</b>.</li>
+      <li>Listo. No hay que publicar nada más.</li>
+    </ol>
+    <div class="tw"><table class="as-tipos">
+      <thead><tr><th class="l">Tipo</th><th class="l">Qué poner en Título</th><th class="l">Qué poner en Texto</th><th class="l">Cuándo se ve</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><b>Novedad</b></td><td class="l">El titular, corto</td><td class="l">El detalle, de una a tres frases</td><td class="l">Enseguida en la portada y en «De la redacción», durante 10 días</td></tr>
+        <tr><td class="l"><b>Árbitro</b></td><td class="l">El número de la fecha (ej. 34)</td><td class="l">Nombre y apellido del árbitro</td><td class="l">En la próxima actualización automática (hasta 2 horas)</td></tr>
+        <tr><td class="l"><b>Horario</b></td><td class="l">El número de la fecha (ej. 34)</td><td class="l">Día y hora, por ejemplo <code>17/10 17:30</code></td><td class="l">En la próxima actualización automática (hasta 2 horas)</td></tr>
+        <tr><td class="l"><b>Pedido para la IA</b></td><td class="l">El tema</td><td class="l">Qué querés que se escriba o se destaque en la próxima previa</td><td class="l">La próxima vez que se prepare la previa</td></tr>
+      </tbody>
+    </table></div>
+    <h4 class="pv-h4">Si te equivocás o querés sacar algo</h4>
+    <ul class="as-pasos">
+      <li>Corregí la fila, o escribí otra nueva del mismo tipo y fecha: <b>vale la última</b>.</li>
+      <li>Para que una novedad deje de verse, escribí <b>No</b> en la columna <b>Activo</b>.</li>
+    </ul>
+    <p class="nota">Todo lo demás (resultados, tabla, goles, minutos, árbitros, estadísticas) se actualiza solo cuando FerroWeb publica la síntesis de cada partido.</p>
+  </div>
+</div>

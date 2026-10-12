@@ -1,0 +1,9 @@
+.tw { overflow-x: auto; max-height: 520px; overflow-y: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th { position: sticky; top: 0; background: var(--panel); text-align: right; font-size: 12px; font-weight: 600; color: var(--muted); padding: 7px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th button { all: unset; cursor: pointer; }
+th button:focus-visible { outline: 2px solid var(--verde); }
+td { text-align: right; padding: 7px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th.l, td.l { text-align: left; }
+tr.yo td { background: color-mix(in srgb, var(--verde) 14%, transparent); font-weight: 700; }
+td .barra { display: inline-block; height: 6px; border-radius: 3px; background: var(--verde); vertical-align: middle; margin-left: 6px; }

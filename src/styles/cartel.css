@@ -1,0 +1,17 @@
+.cartel { border: 2px solid var(--verde); border-radius: 12px; padding: 14px 18px; display: flex; flex-direction: column; gap: 6px; background: var(--panel); }
+.cartel-in { display: flex; align-items: center; gap: 16px; }
+.cartel-tx { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.cara { flex: none; width: 78px; height: 78px; border-radius: 50%; border: 3px solid var(--verde); background: var(--verde) center/cover no-repeat; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 900; font-size: 28px; }
+.cara.cambia { animation: aparece .45s ease-out; }
+@media (max-width: 520px) { .cara { width: 60px; height: 60px; font-size: 22px; } }
+.cartel-t { font-family: var(--display); font-weight: 800; font-size: clamp(20px, 3vw, 28px); text-transform: uppercase; line-height: 1.1; }
+.cartel .quien { color: var(--verde-txt); display: inline-block; }
+.cartel-h { font-size: 15px; font-weight: 600; min-height: 2.6em; }
+.cartel.abre { cursor: pointer; transition: box-shadow .2s ease; }
+.cartel.abre:hover { box-shadow: 0 6px 18px rgba(11,94,48,.18); }
+.cartel.abre:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+.cartel .lee { color: var(--verde-txt); font-weight: 800; font-size: 13.5px; }
+@media (prefers-reduced-motion: no-preference) {
+  .cartel .quien.cambia, .cartel-h.cambia { animation: aparece .45s ease-out; }
+  @keyframes aparece { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}

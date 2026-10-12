@@ -1,0 +1,30 @@
+.marcador { background: var(--marcador); color: var(--marcador-ink); border-radius: 16px; padding: 22px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px; }
+@media (max-width: 760px) { .marcador { grid-template-columns: 1fr; } }
+.destacado .eti { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--marcador-dim); }
+.destacado h2 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.2vw, 46px); line-height: 1; margin-top: 8px; text-transform: uppercase; }
+.destacado p { color: var(--marcador-dim); margin: 10px 0 0; max-width: 60ch; }
+.tablero { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: rgba(255,255,255,.12); border-radius: 10px; overflow: hidden; align-self: start; }
+.celda { background: var(--marcador); padding: 12px 12px 10px; min-width: 0; }
+.celda .l { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--marcador-dim); }
+.celda .v { font-family: var(--display); font-weight: 800; font-size: 38px; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.celda .v small { font-size: 18px; color: var(--marcador-dim); font-weight: 600; }
+.cinta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid rgba(255,255,255,.14); padding-top: 14px; font-size: 14px; color: var(--marcador-dim); }
+.cinta b { color: var(--marcador-ink); font-weight: 600; }
+.hoy { margin: 18px 0 8px; padding: 18px 18px 14px; border-radius: 18px; background: linear-gradient(135deg, #0b5a32, #0e7a43); border: 3px solid #2ecc71; box-shadow: 0 6px 20px rgba(0,0,0,.18); color: #fff; }
+.hoy .hoy-cab { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.hoy .hoy-cab h2 { margin: 0; font-size: clamp(20px, 3.4vw, 28px); color: #fff; }
+.hoy .hoy-badge { background: #d62828; color: #fff; font-weight: 900; font-size: 12px; letter-spacing: .12em; padding: 4px 10px; border-radius: 999px; animation: hoyLatido 1.6s ease-in-out infinite; }
+.hoy .hoy-f { font-size: 14px; color: #c9f5da; font-weight: 600; }
+.hoy .hall { margin: 0; }
+.hoy .hoy-wa { margin-left: auto; background: #25d366; color: #073b1e; font-weight: 800; font-size: 14px; padding: 8px 14px; border-radius: 999px; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+.hoy .hoy-wa:hover { filter: brightness(1.05); }
+.hoy button.hoy-wa { border: 0; cursor: pointer; font-family: inherit; }
+.hoy .hoy-wa-msg { width: 100%; font-size: 13px; color: #c9f5da; text-align: right; }
+@media (max-width: 620px) { .hoy .hoy-wa { margin-left: 0; width: 100%; text-align: center; } }
+.hoy .h, .hoy .h.nov { background: #fff; border: 2px solid #2ecc71; color: #1b1b1b; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.hoy .h .t { font-size: 1.08em; }
+@media (prefers-reduced-motion: reduce) { .hoy .hoy-badge { animation: none; } }
+.pp-btn { display: block; margin: 12px auto 0; background: #25d366; color: #073b1e; font-weight: 800; font-size: 14px; padding: 9px 16px; border-radius: 999px; border: 0; cursor: pointer; font-family: inherit; }
+.pp-msg { display: block; text-align: center; font-size: 13px; color: var(--marcador-dim, #8fb7a0); margin-top: 4px; }
+.destacado.abre { cursor: pointer; }
+.destacado .lee { display: inline-block; margin-top: 12px; color: var(--marcador-ink); font-weight: 700; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
