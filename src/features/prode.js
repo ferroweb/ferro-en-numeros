@@ -99,12 +99,16 @@ export function initProde() {
     const hum = filas.filter(t => !t.maq), maqT = filas.find(t => t.maq);
     const H = [];
     if (hum.length) {
-      const lider = hum[0]; H.push({ tipo: "curiosidad", titulo: `${corto(lider.n)} es el que más sabe: ${lider.p} puntos`, detalle: `${lider.ex} ${lider.ex === 1 ? "exacto" : "exactos"}, ${lider.ac} ${lider.ac === 1 ? "acierto" : "aciertos"} y ${lider.go} ${lider.go === 1 ? "goleador" : "goleadores"} en ${lider.pj} ${lider.pj === 1 ? "fecha" : "fechas"}.` });
-      if (maqT) { const leGanan = hum.filter(t => t.p > maqT.p).map(t => corto(t.n)); H.push({ tipo: "comparacion", titulo: leGanan.length ? `Le ganan a la Máquina: ${leGanan.join(", ")}` : `La Máquina le gana a todos: ${maqT.p} puntos`, detalle: leGanan.length ? `La Máquina suma ${maqT.p}. El resto, a estudiar.` : "Ninguno de los ocho le pudo ganar todavía. Algunos deberían pedirle consejos." }); }
-      const conPj = hum.filter(t => t.pj); if (conPj.length > 1) { const prom = t => t.goles / t.pj; const opt = conPj.slice().sort((a, b) => prom(b) - prom(a))[0], pes = conPj.slice().sort((a, b) => prom(a) - prom(b))[0]; H.push({ tipo: "curiosidad", titulo: `El optimista: ${corto(opt.n)}. El pesimista: ${corto(pes.n)}`, detalle: `${corto(opt.n)} pronostica ${prom(opt).toFixed(1).replace(".", ",")} goles nuestros por partido; ${corto(pes.n)}, ${prom(pes).toFixed(1).replace(".", ",")}.` }); }
-      const cero = hum.filter(t => t.pj >= 2 && t.p === 0); if (cero.length) H.push({ tipo: "curiosidad", titulo: `Todavía en cero: ${cero.map(t => corto(t.n)).join(", ")}`, detalle: "Ni un resultado, ni un goleador. La tribuna pide explicaciones." });
+      const lider = hum[0]; H.push({ fw: [lider.n], tipo: "curiosidad", titulo: `${corto(lider.n)} es el que más sabe: ${lider.p} puntos`, detalle: `${lider.ex} ${lider.ex === 1 ? "exacto" : "exactos"}, ${lider.ac} ${lider.ac === 1 ? "acierto" : "aciertos"} y ${lider.go} ${lider.go === 1 ? "goleador" : "goleadores"} en ${lider.pj} ${lider.pj === 1 ? "fecha" : "fechas"}.` });
+      if (maqT) { const leGanan = hum.filter(t => t.p > maqT.p).map(t => corto(t.n)); H.push({ fw: hum.filter(t => t.p > maqT.p).map(t => t.n), maq: true, tipo: "comparacion", titulo: leGanan.length ? `Le ganan a la Máquina: ${leGanan.join(", ")}` : `La Máquina le gana a todos: ${maqT.p} puntos`, detalle: leGanan.length ? `La Máquina suma ${maqT.p}. El resto, a estudiar.` : "Ninguno de los ocho le pudo ganar todavía. Algunos deberían pedirle consejos." }); }
+      const conPj = hum.filter(t => t.pj); if (conPj.length > 1) { const prom = t => t.goles / t.pj; const opt = conPj.slice().sort((a, b) => prom(b) - prom(a))[0], pes = conPj.slice().sort((a, b) => prom(a) - prom(b))[0]; H.push({ fw: [opt.n, pes.n], tipo: "curiosidad", titulo: `El optimista: ${corto(opt.n)}. El pesimista: ${corto(pes.n)}`, detalle: `${corto(opt.n)} pronostica ${prom(opt).toFixed(1).replace(".", ",")} goles nuestros por partido; ${corto(pes.n)}, ${prom(pes).toFixed(1).replace(".", ",")}.` }); }
+      const cero = hum.filter(t => t.pj >= 2 && t.p === 0); if (cero.length) H.push({ fw: cero.map(t => t.n), tipo: "curiosidad", titulo: `Todavía en cero: ${cero.map(t => corto(t.n)).join(", ")}`, detalle: "Ni un resultado, ni un goleador. La tribuna pide explicaciones." });
     }
-    H.forEach(x => hh.append(tarjeta(x)));
+    H.forEach(x => { const c = tarjeta(x);
+      if ((x.fw && x.fw.length) || x.maq) { const fila = el("div", "pr-caras"); (x.fw || []).forEach(n => { const k = caraFW(n); k.title = corto(n); k.setAttribute("aria-hidden", "true"); fila.append(k); });
+        if (x.maq && !(x.fw || []).length) { const k = el("div", "cara-j"); k.textContent = "🤖"; k.setAttribute("aria-hidden", "true"); fila.append(k); }
+        c.insertBefore(fila, c.children[1]); }
+      hh.append(c); });
   }
   async function cargar() {
     if (!listo) { dibujar({}); return; }

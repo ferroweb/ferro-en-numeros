@@ -22,3 +22,7 @@
 .pd-msg { font-weight: 700; min-height: 1.4em; }
 .pd-msg.err { color: var(--bad); } .pd-msg.ok { color: var(--verde-txt); }
 .pd-ok { margin: 0; align-self: center; font-size: 17px; padding: 10px 26px; }
+
+/* caras de los de Ferroweb en los comentarios del Prode */
+.pr-caras { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 4px; }
+.pr-caras .cara-j { width: 40px; height: 40px; font-size: 13px; }

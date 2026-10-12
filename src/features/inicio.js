@@ -143,11 +143,28 @@ function proximoCard() {
   box.append(a);
 }
 
+function ultimoResultado() {
+  const a = $("#ult-res"); if (!a || !ult) return;
+  const vis = ult.condicion !== "Local";
+  const [nl, gl, nv, gv] = vis ? [ult.rival, ult.gc, "Ferro", ult.gf] : ["Ferro", ult.gf, ult.rival, ult.gc];
+  const ver = ult.gf > ult.gc ? "Ganamos" : ult.gf === ult.gc ? "Empatamos" : "Perdimos";
+  a.append(el("div", "eti", `Último resultado · Fecha ${ult.fecha} · ${vis ? "de visitante" : "en Caballito"}`));
+  const m = el("div", "ur-m");
+  const eq = (n, g, fe) => { const d = el("div", "ur-eq" + (fe ? " fe" : "")); d.append(el("span", "ur-n", n), el("b", "ur-g num", String(g))); return d; };
+  m.append(eq(nl, gl, nl === "Ferro"), el("span", "ur-x", "–"), eq(nv, gv, nv === "Ferro")); a.append(m);
+  const pie = el("div", "ur-pie"); pie.append(el("span", "pill " + (ult.resultado || ""), ver));
+  if (ult.goleadores && ult.goleadores !== "—") pie.append(el("span", null, "⚽ " + ult.goleadores.replace(/(\d+)(pt|st)/g, "$1' $2")));
+  if (ferroT) pie.append(el("span", null, `Quedamos ${ferroT.pos}° con ${ferroT.pts} puntos`));
+  a.append(pie, el("span", "lee", "Ver todos los resultados →"));
+  a.setAttribute("aria-label", `Último resultado: ${nl} ${gl}, ${nv} ${gv}. ${ver}.`);
+  a.hidden = false;
+}
+
 function ultimosHallazgos() {
   const box = $("#inicio-hall"); if (!box) return;
-  TODOS.filter(x => x.tipo !== "tabla" && x.tipo !== "novedad").slice(0, 3).forEach(x => box.append(tarjeta(x)));
+  TODOS.filter(x => x.tipo !== "tabla" && x.tipo !== "novedad").slice(0, 4).forEach(x => box.append(tarjeta(x)));
 }
 
 export default {
-  init() { marcador(); initNovedadesHoy(); initPlaca(); initCartel(); proximoCard(); ultimosHallazgos(); },
+  init() { ultimoResultado(); marcador(); initNovedadesHoy(); initPlaca(); initCartel(); proximoCard(); ultimosHallazgos(); },
 };

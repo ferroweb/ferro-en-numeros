@@ -28,3 +28,23 @@
 .pp-msg { display: block; text-align: center; font-size: 13px; color: var(--marcador-dim, #8fb7a0); margin-top: 4px; }
 .destacado.abre { cursor: pointer; }
 .destacado .lee { display: inline-block; margin-top: 12px; color: var(--marcador-ink); font-weight: 700; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Portada: último resultado y hallazgos a la vista apenas se abre */
+.ult-res { display: block; margin: 16px 0 8px; padding: 16px 18px; border-radius: 16px; background: var(--marcador); color: var(--marcador-ink); text-decoration: none; }
+.ult-res .eti { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--marcador-dim); }
+.ur-m { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 10px 0; }
+.ur-eq { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; justify-content: flex-end; }
+.ur-eq + .ur-x + .ur-eq { flex-direction: row-reverse; }
+.ur-n { font-family: var(--display); font-weight: 800; font-size: clamp(20px, 3.4vw, 32px); text-transform: uppercase; line-height: 1; overflow-wrap: anywhere; text-align: right; }
+.ur-eq + .ur-x + .ur-eq .ur-n { text-align: left; }
+.ur-eq.fe .ur-n { color: var(--ok); }
+.ur-g { font-family: var(--display); font-weight: 900; font-size: clamp(44px, 7vw, 64px); line-height: 1; }
+.ur-x { font-family: var(--display); font-size: 32px; color: var(--marcador-dim); }
+.ur-pie { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 16px; font-size: 14px; color: var(--marcador-dim); }
+.ult-res .lee { display: block; text-align: center; margin-top: 10px; color: var(--marcador-ink); font-weight: 700; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.ini-hall-t { margin-top: 18px; }
+@media (max-width: 600px) {
+  .hero .bajada, .hero-meta .frec { display: none; }
+  .hero h1 { font-size: 40px; }
+  .ini-hall-t h2 { font-size: 22px; }
+}
