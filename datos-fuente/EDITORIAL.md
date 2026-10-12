@@ -45,7 +45,7 @@ Todo en `public/data/` (formato compacto, UTF-8). Las reglas completas están en
 ### `hallazgos.json`
 
 - **`hallazgos[]`**: refrescar con los números nuevos. Cada uno `{ id, tipo, jugador, titulo, detalle, relevancia (1 a 10), al_cierre_de: "Fecha N" }`, con `tipo` en `record, jugador, equipo, comparacion, curiosidad, tabla`. Ids únicos (`h01`, `h02`…). Al menos uno debe estar al cierre de la última fecha.
-- **`novedades[]`**: `{ id (n001…), fecha, fuente, titulo, detalle, url, desarrollo?, datos? }` con lo que pasó en el partido y la semana.
+- **`novedades[]`**: `{ id (n001…), fecha, al_cierre_de: "Fecha N", fuente, titulo, detalle, url, desarrollo?, datos? }` con lo que pasó en el partido y la semana. `al_cierre_de` es la **última fecha jugada cuando se escribe** la novedad: el recuadro «Novedades» de la portada solo muestra las que coinciden con la última fecha jugada, así las de la previa dejan de aparecer como nuevas apenas se juega el partido (siguen en el archivo de hallazgos).
 - **`ultimas`**: lo calcula el script. No tocar.
 
 ### `lab.json`

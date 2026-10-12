@@ -1,6 +1,15 @@
 // Estado compartido: los datos cargados y lo que se deriva de ellos. Se completa una sola vez en initCtx().
 import { FERRO } from "./lib/consts.js";
 
+// Una novedad está vigente mientras no se jugó otra fecha desde que se escribió («al_cierre_de»: "Fecha N").
+// Las viejas sin ese campo se toman como vigentes solo si son de los últimos 3 días.
+export function novedadVigente(n) {
+  if (!n || /diferencia a verificar/i.test(n.titulo || "")) return false;
+  const m = /(\d+)/.exec(n.al_cierre_de || "");
+  if (m) return +m[1] === DATA.ultima_fecha;
+  const hoy = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
+  return !!n.fecha && (new Date(hoy) - new Date(n.fecha)) / 864e5 <= 3;
+}
 export let DATA, prox, ult, ferroT, segundo, TODOS, nombres, previaAlDia, escenariosAlDia;
 export let FOTOS_JUG = {}, FOTOS_FW = {}, PRODE_CFG = {}, PRODE_HASH = {};
 

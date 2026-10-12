@@ -1,7 +1,7 @@
 import { PS } from "../lib/prode-state.js";
 import { abrirDesarrollo, tieneDesarrollo } from "../components/desarrollo.js";
 import { tarjeta } from "../components/tarjeta.js";
-import { DATA, prox, ult, ferroT, segundo, TODOS, FOTOS_FW, previaAlDia } from "../ctx.js";
+import { DATA, prox, ult, ferroT, segundo, TODOS, FOTOS_FW, previaAlDia, novedadVigente } from "../ctx.js";
 import { tabla } from "../lib/charts.js";
 import { FERRO } from "../lib/consts.js";
 import { $, el, S } from "../lib/dom.js";
@@ -10,7 +10,7 @@ import { cargarHtml2canvas } from "../lib/html2canvas.js";
 
 function marcador() {
 $("#meta").textContent = `Primera Nacional 2026 · Grupo 1 · al cierre de la fecha ${DATA.ultima_fecha}. Actualizado ${DATA.actualizado}`;
-const dest = (DATA.novedades && DATA.novedades.find(n => !/diferencia a verificar/i.test(n.titulo))) || DATA.hallazgos.find(h => h.tipo !== "tabla") || DATA.hallazgos[0];
+const dest = (DATA.novedades || []).find(novedadVigente) || DATA.hallazgos.find(h => h.tipo !== "tabla") || DATA.hallazgos[0];
 $("#dest-eti").textContent = dest.fuente ? `Novedad · ${dest.fecha}` : "Hallazgo destacado";
 $("#dest-t").textContent = dest.titulo; $("#dest-d").textContent = dest.detalle || "";
 {
@@ -39,10 +39,10 @@ cinta.append(span("Hallazgos activos:", String(DATA.hallazgos.length + (DATA.nov
 }
 
 export function initNovedadesHoy() {
-  const N = (DATA.novedades || []).filter(n => n.fecha && !/diferencia a verificar/i.test(n.titulo)); if (!N.length) return;
+  const N = (DATA.novedades || []).filter(novedadVigente); if (!N.length) return;
   const ult = N.map(n => n.fecha).sort().pop(); const hoyL = N.filter(n => n.fecha === ult);
   const hoyIso = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
-  const dias = Math.round((new Date(hoyIso) - new Date(ult)) / 864e5); if (dias > 3) return;
+  const dias = Math.round((new Date(hoyIso) - new Date(ult)) / 864e5);
   $("#hoy").hidden = false; $("#nav-hoy").hidden = false;
   $("#hoy-t").textContent = dias === 0 ? "Las novedades de hoy" : dias === 1 ? "Las novedades de ayer" : "Las últimas novedades";
   $("#hoy-f").textContent = fechaLarga(ult) + ` · ${hoyL.length} ${hoyL.length === 1 ? "hallazgo nuevo" : "hallazgos nuevos"}`;
