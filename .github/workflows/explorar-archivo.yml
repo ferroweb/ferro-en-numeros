@@ -1,0 +1,35 @@
+name: Explorar archivo de FerroWeb
+
+# Una sola vez (o a mano): recorre las síntesis viejas de FerroWeb y guarda el inventario en datos-fuente/archivo-ferroweb.json.
+# No toca los datos del sitio.
+on:
+  push:
+    paths: ["scripts/explorar-archivo.mjs", ".github/workflows/explorar-archivo.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Recorrer el archivo
+        run: node scripts/explorar-archivo.mjs 700 1
+      - name: Guardar el inventario
+        run: |
+          git config user.name "ferro-en-numeros-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add datos-fuente/archivo-ferroweb.json
+          git commit -m "Inventario del archivo de síntesis de FerroWeb" || exit 0
+          git pull --rebase
+          git push
