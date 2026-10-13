@@ -4,13 +4,16 @@ Esta es la guía de la tarea que prepara **lo que necesita criterio**: la previa
 (resultados, tabla, estadísticas, laboratorio, árbitros, histórico, escenarios) ya los calcula `node scripts/actualizar.mjs`:
 **no se escriben a mano ni se tocan**.
 
-## Rutina (cada vez que se juega un partido, o cuando la persona de la redacción lo pida)
+## Rutina (todos los días, la noche de cada partido y cuando la redacción lo pida)
+
+**No solo cuenta el partido de Ferro.** También hay trabajo cuando cambia la tabla porque jugó otro equipo (un perseguidor, el próximo rival, un partido postergado): eso merece novedad y suele dejar viejos datos de la previa («13°», «cinco sin ganar», «necesitamos 7 de 9»). El validador lo detecta comparando la tabla con la última que se revisó (`hallazgos.tabla_revisada`).
 
 1. `git pull` y `npm install` (si hace falta).
-2. `node scripts/actualizar.mjs`. Trae el partido nuevo y deja los números al día. Si dice que FerroWeb todavía no publicó la síntesis, **esperar**: no se prepara la previa con datos viejos.
+2. `node scripts/actualizar.mjs`. Trae el partido nuevo y deja los números al día. Si dice que FerroWeb todavía no publicó la síntesis de **nuestro** partido, **esperar** para la previa nueva, pero igual atender los cambios de tabla de otros equipos (paso 5 bis).
 3. `node scripts/validar-editorial.mjs`. Lista **exactamente** lo que falta. Ese listado es el trabajo.
 4. Leer `datos-fuente/pedidos-ia.json` (si existe): son pedidos de la redacción para esta previa. Atenderlos con prioridad y, al terminar, agregar sus `id` a `datos-fuente/pedidos-atendidos.json` (una lista de textos).
 5. Escribir lo que falte (ver más abajo) editando **solo** los archivos indicados.
+5 bis. **Si el validador dice «tabla: cambió desde la última revisión editorial»**: confirmar cada resultado nuevo con una fuente (FútbolTotal, Solo Ascenso, diarios) y escribir una novedad con lo que significa para Ferro (diferencia con los de arriba, máximos posibles, puntos que necesitamos, cómo llega el próximo rival). Después buscar en `proximo.json` (humor, pizarra, claves, pronóstico: `escenarios` y `chances_primero`) y en `hallazgos.json` (hallazgos y novedades vigentes) todo dato que haya quedado viejo (posición, puntos, rachas, «últimos cinco», goles recibidos, máximos) y corregirlo. El Pronóstico FW ya publicado (`fw` y `fw_historial`) no se cambia. Recién entonces correr `node scripts/validar-editorial.mjs --tabla-revisada`.
 6. Repetir `node scripts/validar-editorial.mjs` hasta que diga «La parte editorial está completa». Correr también `npm test`.
 7. `git add -A`, commit («Previa fecha N: …») y `git push`. El sitio se publica solo.
 
@@ -58,4 +61,4 @@ Pedirle a Claude Code una tarea programada con este texto:
 
 > Leé `datos-fuente/EDITORIAL.md` y seguí la rutina. Si FerroWeb todavía no publicó la síntesis del último partido, no hagas nada. Si hay una fecha nueva, dejá la previa y los hallazgos completos hasta que `node scripts/validar-editorial.mjs` no marque problemas, corré `npm test` y publicá con `git push`.
 
-Frecuencia sugerida: todos los días a las 9 y la noche de cada partido (la rutina no hace nada si no hay novedades).
+Frecuencia sugerida: todos los días a las 9 y las noches de viernes a lunes (la rutina no hace nada si no hay novedades: ni partido nuestro ni cambios en la tabla).

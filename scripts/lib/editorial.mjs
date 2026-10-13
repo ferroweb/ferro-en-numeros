@@ -15,6 +15,16 @@ export function resolverFwHistorial(historial, partidos, participaciones) {
   });
 }
 
+// Huella de la tabla: partidos jugados y puntos de cada equipo. La parte editorial guarda la que revisó en
+// hallazgos.tabla_revisada; si la tabla cambia (jugó un perseguidor, el próximo rival o cualquiera), hay que
+// escribir la novedad, revisar la previa y las cuentas, y recién ahí actualizar la huella.
+export const huellaTabla = (tabla) => Object.fromEntries((tabla ?? []).map(r => [r.equipo, `${r.pj}-${r.pts}`]));
+export function cambiosDeTabla(tabla, revisada) {
+  const ahora = huellaTabla(tabla);
+  if (!revisada) return Object.keys(ahora);
+  return Object.keys(ahora).filter(k => ahora[k] !== revisada[k]);
+}
+
 // ---------- validador ----------
 const esTexto = (v, min = 1) => typeof v === "string" && v.trim().length >= min;
 const esNum = (v) => typeof v === "number" && Number.isFinite(v);
@@ -26,6 +36,10 @@ export function validarEditorial(d) {
   const errores = [], avisos = [];
   const err = (m) => errores.push(m), aviso = (m) => avisos.push(m);
   const U = d.ultima_fecha, F = U + 1;
+  if (d.tabla) {
+    const c = cambiosDeTabla(d.tabla, d.hallazgos?.tabla_revisada);
+    if (c.length) err(`tabla: cambió desde la última revisión editorial (${c.slice(0, 6).map(k => { const r = d.tabla.find(x => x.equipo === k); return `${k} ${r.pj} PJ ${r.pts} pts`; }).join(", ")}${c.length > 6 ? "…" : ""}). Escribir la novedad de esos partidos (sobre todo si jugaron los de arriba o el próximo rival), corregir en la previa, las claves, los hallazgos y las cuentas todo dato que haya quedado viejo, y después correr «node scripts/validar-editorial.mjs --tabla-revisada».`);
+  }
   if (F > d.calendario.total_fechas) { aviso(`No quedan fechas por jugar (se jugó la ${U} de ${d.calendario.total_fechas}).`); return { errores, avisos }; }
   const prox = d.calendario.proximos.find(p => p.fecha === F);
   if (!prox) { err(`calendario: falta el partido de la fecha ${F}`); return { errores, avisos }; }

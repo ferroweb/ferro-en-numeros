@@ -57,3 +57,13 @@ test("el historial del pronóstico FW se completa solo al jugarse el partido", (
   const acierto = resolverFwHistorial([{ fecha: 33, gf: 1, gc: 1, goleador: "Reniero" }], partidos, [{ fecha: 33, jugador: "Reniero", goles: 1 }])[0];
   assert.ok(acierto.signo_ok && acierto.exacto_ok && acierto.goleador_ok);
 });
+
+test("cambiosDeTabla detecta partidos de otros equipos aunque Ferro no haya jugado", async () => {
+  const { cambiosDeTabla, huellaTabla } = await import("../lib/editorial.mjs");
+  const antes = [{ equipo: "Ferro Carril Oeste", pj: 33, pts: 62 }, { equipo: "Godoy Cruz", pj: 32, pts: 56 }];
+  const despues = [{ equipo: "Ferro Carril Oeste", pj: 33, pts: 62 }, { equipo: "Godoy Cruz", pj: 33, pts: 57 }];
+  const rev = huellaTabla(antes);
+  assert.deepEqual(cambiosDeTabla(antes, rev), []);
+  assert.deepEqual(cambiosDeTabla(despues, rev), ["Godoy Cruz"]);
+  assert.equal(cambiosDeTabla(despues, undefined).length, 2);
+});
