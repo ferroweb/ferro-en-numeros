@@ -1,0 +1,40 @@
+name: Bajar imágenes
+
+# Baja una vez las imágenes listadas en datos-fuente/imagenes-a-bajar.json (fotos de árbitros, etc.) para recortarlas después.
+on:
+  push:
+    paths: ["datos-fuente/imagenes-a-bajar.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bajar
+        run: |
+          node -e '
+            const fs = require("fs"); const path = require("path");
+            const lista = JSON.parse(fs.readFileSync("datos-fuente/imagenes-a-bajar.json", "utf8"));
+            (async () => { for (const x of lista) {
+              if (fs.existsSync(x.destino)) continue;
+              const r = await fetch(x.url, { headers: { "User-Agent": "Mozilla/5.0 (ferro-en-numeros)" } });
+              if (!r.ok) { console.log("No se pudo bajar", x.url, r.status); continue; }
+              fs.mkdirSync(path.dirname(x.destino), { recursive: true });
+              fs.writeFileSync(x.destino, Buffer.from(await r.arrayBuffer())); console.log("OK", x.destino);
+            } })();'
+      - name: Guardar
+        run: |
+          git config user.name "ferro-en-numeros-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add datos-fuente/crudas || true
+          git commit -m "Imágenes bajadas para recortar" || exit 0
+          git pull --rebase
+          git push
