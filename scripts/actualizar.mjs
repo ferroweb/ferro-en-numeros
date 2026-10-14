@@ -152,7 +152,7 @@ aplicado.avisos.forEach(aviso);
 const dproxB = { ...dprox, calendario: aplicado.calendario, arbitros: { ...dprox.arbitros, designado_nombre: aplicado.designado_nombre } };
 const labViejo = leer("public/data/lab.json").lab, hallViejo = leer("public/data/hallazgos.json");
 const proxPendiente = (dproxB.calendario?.proximos ?? []).find(x => x.fecha > ultimaFecha);
-const arb = C.arbitros([...P25, ...P26], dproxB.arbitros?.designado_nombre);
+const arb = C.arbitros([...P24, ...P25, ...P26], dproxB.arbitros?.designado_nombre);   // todas las temporadas cargadas (2024 desde la F15)
 const minutos = C.labMinutos(P26, P25), duplas = C.labDuplas(P26), rivalesLab = C.labRivales([...P24, ...P25, ...P26], [2024, 2025, 2026]);
 const labNuevo = {
   ...labViejo,

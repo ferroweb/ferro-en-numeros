@@ -35,6 +35,12 @@ export function parseGoles(texto) {
   const out = [];
   for (const item of texto.replace(/,\s*([A-ZÁÉÍÓÚÑ])\./g, " $1.").split(/[,\n]/).map(s => s.trim()).filter(Boolean)) {
     const m = item.match(new RegExp(String.raw`^(\d+(?:\s*y\s*\d+)*)\s*${MARCA}\s*(pt|st)\.?\s+(.+)$`, "i"));
+    // «37´st García, Santiago»: la coma separa apellido y nombre, no dos eventos. Se pega al anterior.
+    const ultimo = out.at(-1);
+    if (!m && ultimo && !ultimo.error && /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?$/.test(item)) {
+      for (const g of out.filter(g => g.t === ultimo.t && g.nombre === ultimo.nombre)) g.nombre = `${g.nombre}, ${item}`;
+      continue;
+    }
     if (!m) { out.push({ error: item }); continue; }
     const mitad = m[2].toLowerCase();
     let nombre = m[3].trim();

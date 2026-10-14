@@ -65,3 +65,11 @@ test("mismoEquipo reconoce los nombres de FútbolTotal", () => {
     ["Atletico Mitre", "Mitre (SdE)"], ["Deportivo Morón", "Morón"], ["Ciudad de Bolívar", "Ciudad de Bolivar"]]) assert.ok(mismoEq(a, b), `${a} = ${b}`);
   for (const [a, b] of [["Deportivo Morón", "Deportivo Madryn"], ["San Telmo", "San Miguel"], ["Los Andes", "All Boys"], ["Central Norte", "Racing de Córdoba"]]) assert.ok(!mismoEq(a, b), `${a} ≠ ${b}`);
 });
+
+test("parseTarjetas no parte «García, Santiago» en dos eventos", async () => {
+  const { parseTarjetas } = await import("../lib/ferroweb.mjs");
+  const r = parseTarjetas("36´pt Rodríguez, 48´pt Fernandes Pinto, 37´st García, Santiago, 47´st Mosca");
+  assert.equal(r.length, 4);
+  assert.equal(r[2].nombre, "García, Santiago");
+  assert.ok(r.every(x => !x.error));
+});
