@@ -42,6 +42,8 @@
 .arb-caja { border: 2px solid #e0b100; background: linear-gradient(180deg, #fff9db, var(--panel) 140px); }
 .arb-cab { display: flex; align-items: center; gap: 14px; }
 .arb-ico { font-size: 52px; line-height: 1; transform: rotate(-12deg); }
+.arb-ico.con-foto { transform: none; flex: 0 0 88px; width: 88px; height: 88px; border-radius: 50%; overflow: hidden; border: 3px solid var(--verde); background: var(--panel); }
+.arb-ico.con-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .arb-caja h3 { font-family: var(--display); font-weight: 800; font-size: clamp(22px, 3.4vw, 32px); text-transform: uppercase; line-height: 1.05; margin: 2px 0 0; }
 .arb-ps { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
 .arb-p { border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 13.5px; background: var(--panel); }
