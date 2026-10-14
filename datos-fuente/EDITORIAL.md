@@ -21,6 +21,8 @@ Si algo no se puede resolver (por ejemplo, el árbitro todavía no está designa
 
 ## Reglas de oro
 
+- **Bajas del plantel** (no se usan en previas, pizarra, claves, chicanas, pronóstico ni informes del árbitro; sí pueden aparecer en datos históricos): Benegas (se fue a jugar al exterior) y Campos (separado del plantel). Fuente: la redacción (Gaby, 13/10/2026).
+
 - **Nada inventado.** Todo número sale de `public/data/*.json` o de una fuente citada. Si no hay dato, no se escribe.
 - **No tocar lo calculado:** `partidos`, `jugadores`, `tabla`, `lab`, `equipo`, `arbitros.tabla`, `escenarios`, `ultimas` y `datos-fuente/*.json` (salvo `pedidos-atendidos.json` y `correcciones.json`).
 - Tono de hincha verdolaga, rioplatense, con humor pero sin faltar el respeto. Las chicanas apuntan al juego y a los números, no a las personas.
