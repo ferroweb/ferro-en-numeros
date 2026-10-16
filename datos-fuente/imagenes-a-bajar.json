@@ -251,5 +251,137 @@
 {
 "url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/pages/es/calendario.json",
 "destino": "datos-fuente/crudas/afa/hc-calendario.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794391.json",
+"destino": "datos-fuente/crudas/afa/ev/20260214-794391.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794404.json",
+"destino": "datos-fuente/crudas/afa/ev/20260221-794404.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794426.json",
+"destino": "datos-fuente/crudas/afa/ev/20260228-794426.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794461.json",
+"destino": "datos-fuente/crudas/afa/ev/20260314-794461.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794478.json",
+"destino": "datos-fuente/crudas/afa/ev/20260321-794478.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794493.json",
+"destino": "datos-fuente/crudas/afa/ev/20260328-794493.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794514.json",
+"destino": "datos-fuente/crudas/afa/ev/20260404-794514.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794533.json",
+"destino": "datos-fuente/crudas/afa/ev/20260412-794533.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794549.json",
+"destino": "datos-fuente/crudas/afa/ev/20260419-794549.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794570.json",
+"destino": "datos-fuente/crudas/afa/ev/20260428-794570.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794584.json",
+"destino": "datos-fuente/crudas/afa/ev/20260503-794584.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794607.json",
+"destino": "datos-fuente/crudas/afa/ev/20260511-794607.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794619.json",
+"destino": "datos-fuente/crudas/afa/ev/20260517-794619.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794644.json",
+"destino": "datos-fuente/crudas/afa/ev/20260524-794644.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794654.json",
+"destino": "datos-fuente/crudas/afa/ev/20260529-794654.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794680.json",
+"destino": "datos-fuente/crudas/afa/ev/20260607-794680.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794691.json",
+"destino": "datos-fuente/crudas/afa/ev/20260614-794691.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794441.json",
+"destino": "datos-fuente/crudas/afa/ev/20260621-794441.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794715.json",
+"destino": "datos-fuente/crudas/afa/ev/20260705-794715.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794728.json",
+"destino": "datos-fuente/crudas/afa/ev/20260711-794728.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794750.json",
+"destino": "datos-fuente/crudas/afa/ev/20260717-794750.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794765.json",
+"destino": "datos-fuente/crudas/afa/ev/20260726-794765.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794785.json",
+"destino": "datos-fuente/crudas/afa/ev/20260801-794785.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794802.json",
+"destino": "datos-fuente/crudas/afa/ev/20260809-794802.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794817.json",
+"destino": "datos-fuente/crudas/afa/ev/20260815-794817.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794838.json",
+"destino": "datos-fuente/crudas/afa/ev/20260824-794838.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794857.json",
+"destino": "datos-fuente/crudas/afa/ev/20260830-794857.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794873.json",
+"destino": "datos-fuente/crudas/afa/ev/20260904-794873.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794894.json",
+"destino": "datos-fuente/crudas/afa/ev/20260913-794894.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794908.json",
+"destino": "datos-fuente/crudas/afa/ev/20260919-794908.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794931.json",
+"destino": "datos-fuente/crudas/afa/ev/20260927-794931.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794943.json",
+"destino": "datos-fuente/crudas/afa/ev/20261002-794943.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794968.json",
+"destino": "datos-fuente/crudas/afa/ev/20261011-794968.json"
 }
 ]
