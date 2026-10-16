@@ -3,6 +3,7 @@ import { TODOS } from "../ctx.js";
 import { tabla } from "../lib/charts.js";
 import { CAT } from "../lib/consts.js";
 import { $, el } from "../lib/dom.js";
+import { abrirDesarrollo } from "../components/desarrollo.js";
 
 let filtro = "todos", q = "", todos = false;
 function hallazgos() {
@@ -30,4 +31,12 @@ function init() {
   $("#q").addEventListener("input", e => { q = e.target.value.trim().toLowerCase(); hallazgos(); });
   hallazgos();
 }
-export default { init };
+// Link directo a un dato: #/datos/hallazgos/<id> abre su detalle (lo usan las placas y los botones de compartir).
+let abierto = "";
+function onShow(grupo, pagina, param) {
+  if (grupo !== "datos" || pagina !== "hallazgos" || !param) { abierto = ""; return; }
+  if (param === abierto) return;
+  const x = TODOS.find(h => h.id === param); if (!x) return;
+  abierto = param; abrirDesarrollo(x);
+}
+export default { init, onShow };

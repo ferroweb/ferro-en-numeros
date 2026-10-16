@@ -162,3 +162,9 @@
 .hum b { display: block; }
 .hum span { color: var(--muted); font-size: 14px; }
 .humor .cierre { font-weight: 700; margin: 12px 0 0; }
+.lim-l { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.lim-j { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 4px 12px; }
+.lim-j .cara-j { grid-row: span 2; width: 48px; height: 48px; }
+.lim-j b { font-size: 16px; }
+.lim-j .lim-c { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--warn); grid-row: span 2; }
+.lim-j .nota { grid-column: 2; margin: 0; }

@@ -71,7 +71,7 @@ export function initNovedadesHoy() {
       btn.disabled = false;
     });
   }
-  const box = $("#hoy-l"); hoyL.forEach(n => box.append(tarjeta({ tipo: "novedad", titulo: n.titulo, detalle: n.detalle, extra: n.fecha, url: n.url, fuente: n.fuente, desarrollo: n.desarrollo, datos: n.datos })));
+  const box = $("#hoy-l"); hoyL.forEach(n => box.append(tarjeta({ id: n.id, tipo: "novedad", titulo: n.titulo, detalle: n.detalle, extra: n.fecha, url: n.url, fuente: n.fuente, desarrollo: n.desarrollo, datos: n.datos, partidos: n.partidos })));
 }
 
 export function initPlaca() {

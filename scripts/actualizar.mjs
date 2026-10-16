@@ -175,7 +175,7 @@ equipoNuevo.historico = historicoNuevo;
 // ---------- escritura ----------
 const salidas = {
   "public/data/partidos.json": { partidos: P, participaciones },
-  "public/data/jugadores.json": { jugadores: J },
+  "public/data/jugadores.json": { jugadores: J, limite_amarillas: C.limiteAmarillas(P, DETALLE, participaciones, { bajas: leer("datos-fuente/bajas.json", { bajas: [] }).bajas }) },
   "public/data/equipo.json": equipoNuevo,
   "datos-fuente/detalle.json": DETALLE,
   "datos-fuente/temporadas.json": T,

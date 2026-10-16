@@ -222,3 +222,33 @@ export function escenarios(tabla, calendario, ultimaFecha, ferro) {
   const ferroMax = yo.pts + 3 * restan;
   return { restan, quedan, ferro: yo.pts, ferro_max: ferroMax, perseguidores, necesita_para_asegurar: Math.max(0, Math.max(...perseguidores.map(x => x.maximo)) - yo.pts + 1) };
 }
+
+// ---------- «Al límite»: amarillas acumuladas y suspensión ----------
+// Regla: cada `tope` amarillas (5) se cumple una fecha de suspensión y el conteo vuelve a cero. La amarilla que forma parte de
+// una doble amonestación (amarilla y roja al mismo jugador en el mismo partido) no suma.
+// Fuente: las tarjetas de cada síntesis (detalle.json), incluidas las de jugadores en el banco, en ORDEN DE JUEGO (`n`, no
+// el número de fecha: la F4 se jugó entre la 18 y la 19). Para cada suspensión controla si el jugador jugó el partido
+// siguiente (`jugo_siguiente`): si jugó, el conteo de la síntesis no cierra y el dato se marca para confirmar.
+export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [] } = {}) {
+  const orden = [...partidos].sort((a, b) => a.n - b.n);
+  const jugo = (j, f) => participaciones.some(r => r.jugador === j && r.fecha === f && r.minutos > 0);
+  const por = new Map();
+  orden.forEach((p, i) => {
+    const T = detalle[p.fecha]?.tarjetas ?? [];
+    for (const j of new Set(T.map(t => t.k))) {
+      const a = T.filter(t => t.k === j && t.tipo === "a").length, r = T.some(t => t.k === j && t.tipo === "r");
+      if (!a || r) continue;   // sin amarilla, o doble amonestación (no suma)
+      const x = por.get(j) ?? { jugador: j, amarillas: 0, fechas: [], suspensiones: [] };
+      x.amarillas += 1; x.fechas.push(p.fecha);
+      if (x.amarillas % tope === 0) {
+        const sig = orden[i + 1]?.fecha ?? null;
+        x.suspensiones.push({ fecha: p.fecha, siguiente: sig, jugo_siguiente: sig != null && jugo(j, sig) });
+      }
+      por.set(j, x);
+    }
+  });
+  return [...por.values()]
+    .filter(x => !bajas.includes(x.jugador))
+    .map(x => ({ ...x, ciclo: x.amarillas % tope, faltan: tope - (x.amarillas % tope) }))
+    .sort((a, b) => a.faltan - b.faltan || b.amarillas - a.amarillas || a.jugador.localeCompare(b.jugador, "es"));
+}

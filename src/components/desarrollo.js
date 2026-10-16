@@ -19,6 +19,19 @@ export function abrirDesarrollo(x) {
   if (x.datos && x.datos.length) { const g = el("div", "dd"); x.datos.forEach(([l, v]) => { const d = el("div"); d.append(el("div", "l", l), el("div", "v", v)); g.append(d); }); c.append(g); }
   const pars = x.desarrollo && x.desarrollo.length ? x.desarrollo : (x.detalle ? [x.detalle] : []);
   pars.forEach(t => c.append(el("p", null, t)));
+  // Partido por partido: cuando el dato resume «X ganados, X empatados, X perdidos», la lista que lo respalda.
+  if (Array.isArray(x.partidos) && x.partidos.length) {
+    c.append(el("h4", null, "Partido por partido"));
+    const lp = el("div", "des-ps");
+    x.partidos.forEach(p => {
+      const r = p.gf > p.gc ? "G" : p.gf === p.gc ? "E" : "P";
+      const fila = el("div", "des-p"), txt = el("div", "des-pt", `${p.t} · ${p.rival}${p.c ? ` (${p.c === "L" ? "local" : "visitante"})` : ""}`);
+      if (p.nota) txt.append(el("div", "des-pn", p.nota));
+      fila.append(el("span", "pill " + r, `${p.gf}-${p.gc}`), txt);
+      lp.append(fila);
+    });
+    c.append(lp);
+  }
   // hallazgos relacionados: mismo jugador o mismo rival mencionado
   const claves = [];
   if (x.jugador) claves.push(x.jugador);
@@ -28,7 +41,7 @@ export function abrirDesarrollo(x) {
   if (rel.length) { c.append(el("h4", null, "Hallazgos relacionados")); const r = el("div", "rel"); rel.forEach(h => { const d = el("div"); d.append(el("b", null, h.titulo)); if (h.detalle) d.append(document.createTextNode(h.detalle)); r.append(d); }); c.append(r); }
   if (jug) { const b = el("button", "pv-cerrar", `Ver la ficha completa de ${x.jugador} →`); b.type = "button"; b.addEventListener("click", () => { $("#des").close(); irAFicha(x.jugador); }); c.append(b); }
   if (x.url) { const a = el("a", null, "Ver la fuente →"); a.href = x.url; a.target = "_blank"; a.rel = "noopener"; c.append(a); }
-  c.append(accionesDelDetalle(x, c, x.titulo, location.origin + location.pathname + "#/datos/hallazgos"));
+  c.append(accionesDelDetalle(x, c, x.titulo, location.origin + location.pathname + "#/datos/hallazgos" + (x.id ? "/" + x.id : "")));
   if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
   c.scrollTop = 0; dlg.scrollTop = 0;
 }

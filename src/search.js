@@ -22,6 +22,7 @@ const DESTINOS = [
   ["Chicanas", "#/partido/chicanas", "manual humor cargada", "😜"],
   ["El árbitro del próximo partido", "#/partido/arbitro", "referi designacion", "🟨"],
   ["Árbitros de la temporada", "#/partido/arbitros", "referis todos tabla", "🟨"],
+  ["Los que están al límite de amarillas", "#/partido/al-limite", "amarillas suspension suspendidos tarjetas acumuladas limite cinco", "🟨"],
   ["Plantel completo", "#/jugadores/plantel", "jugadores minutos goles tarjetas", "👟"],
   ["Comparador de jugadores", "#/jugadores/comparador", "comparar versus", "⚖️"],
   ["Duplas, tridentes e impacto del banco", "#/jugadores/duplas-banco", "suplentes cambios titulares", "🤝"],

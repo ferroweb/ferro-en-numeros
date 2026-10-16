@@ -64,3 +64,26 @@ test("árbitros: se unifican tipeos y acentos", () => {
   assert.equal(canonicoArbitro("Alvaro Carranza", conocidos), "Álvaro Carranza");
   assert.equal(canonicoArbitro("Otro Nuevo", conocidos), "Otro Nuevo");
 });
+
+test("limiteAmarillas: orden de juego, banco, ciclo de 5, doble amarilla y aviso si jugó suspendido", async () => {
+  const { limiteAmarillas } = await import("../lib/calculos.mjs");
+  // la fecha 4 se juega última (n = 7)
+  const partidos = [1, 2, 3, 5, 6, 7, 4].map((fecha, i) => ({ fecha, n: i + 1 }));
+  const am = (k) => ({ k, tipo: "a" }), ro = (k) => ({ k, tipo: "r" });
+  const detalle = {
+    1: { tarjetas: [am("Ozuna"), am("Kihm"), am("Canto"), am("Benegas")] },
+    2: { tarjetas: [am("Ozuna"), am("Kihm"), am("Canto"), ro("Canto"), am("Castellani")] },   // Canto: doble amarilla; Castellani en el banco
+    3: { tarjetas: [am("Ozuna"), am("Kihm")] },
+    5: { tarjetas: [am("Ozuna"), am("Kihm")] },
+    6: { tarjetas: [] }, 7: { tarjetas: [] },
+    4: { tarjetas: [am("Ozuna")] },
+  };
+  const participaciones = [{ jugador: "Ozuna", fecha: 6, minutos: 90 }];
+  const L = limiteAmarillas(partidos, detalle, participaciones, { bajas: ["Benegas"] });
+  const k = L.find(x => x.jugador === "Kihm"); assert.equal(k.faltan, 1);
+  const o = L.find(x => x.jugador === "Ozuna"); assert.equal(o.ciclo, 0); assert.deepEqual(o.suspensiones, [{ fecha: 4, siguiente: null, jugo_siguiente: false }]);
+  assert.deepEqual(o.fechas, [1, 2, 3, 5, 4]);
+  assert.equal(L.find(x => x.jugador === "Canto").amarillas, 1);
+  assert.equal(L.find(x => x.jugador === "Castellani").amarillas, 1);
+  assert.ok(!L.some(x => x.jugador === "Benegas"));
+});

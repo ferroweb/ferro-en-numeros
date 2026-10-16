@@ -19,3 +19,6 @@ section, .pv-fwcaja, .humor { scroll-margin-top: 76px; }
 .hallazgo-img { display: flex; flex-direction: column; gap: 12px; }
 .hallazgo-img h3 { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.05; text-transform: uppercase; color: var(--verde-txt); margin: 0; }
 .hallazgo-img p { margin: 0; line-height: 1.55; }
+.des .des-ps { display: flex; flex-direction: column; gap: 6px; }
+.des .des-p { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px; font-size: 14px; }
+.des .des-pn { color: var(--muted); font-size: 13px; }

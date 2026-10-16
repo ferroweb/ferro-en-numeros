@@ -28,7 +28,7 @@ export function initCtx({ data, fotosJug, fotosFw, prodeCfg, prodeHash }) {
   // Los escenarios del primer puesto se calculan solos y traen la fecha a la que corresponden.
   escenariosAlDia = !!(DATA.escenarios && DATA.escenarios.tras_fecha === DATA.ultima_fecha);
   TODOS = [
-    ...(DATA.novedades || []).map(n => ({ tipo: "novedad", titulo: n.titulo, detalle: n.detalle, extra: n.fecha, url: n.url, fuente: n.fuente, desarrollo: n.desarrollo, datos: n.datos })),
-    ...DATA.hallazgos.map(h => ({ tipo: h.tipo, titulo: h.titulo, detalle: h.detalle, jugador: h.jugador, rel: h.relevancia })),
+    ...(DATA.novedades || []).map(n => ({ id: n.id, tipo: "novedad", titulo: n.titulo, detalle: n.detalle, extra: n.fecha, url: n.url, fuente: n.fuente, desarrollo: n.desarrollo, datos: n.datos, partidos: n.partidos })),
+    ...DATA.hallazgos.map(h => ({ id: h.id, tipo: h.tipo, titulo: h.titulo, detalle: h.detalle, jugador: h.jugador, rel: h.relevancia, partidos: h.partidos })),
   ];
 }
