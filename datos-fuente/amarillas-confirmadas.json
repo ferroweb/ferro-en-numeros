@@ -1,4 +1,123 @@
 {
-  "_motivo": "Conteos de amarillas confirmados por una fuente más confiable que la síntesis (el club). Valen por encima de lo que diga Ferroweb: «ciclo» es cuántas amarillas lleva en el ciclo actual al cierre de la fecha indicada; las amarillas de partidos posteriores se suman solas.",
-  "Hoyos": { "ciclo": 4, "al_cierre_de_fecha": 33, "fuente": "confirmado con el club (Gaby, 15/10/2026)", "nota": "La síntesis de Ferroweb registra 3 (F11, F22, F30)." }
+ "_motivo": "Amarillas acumuladas oficiales (informe «Tarjetas Amarillas Acumuladas» del sistema COMET de AFA, emitido el 13/10/2026, después de la fecha 33; lo pasó el club). Valen por encima de las síntesis: «ciclo» es cuántas lleva acumuladas al cierre de la fecha indicada (se limpian al llegar a 5) y las amarillas de partidos posteriores se suman solas. Quien no figura en el informe tiene 0.",
+ "Canto": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Castellani": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Corda": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Dening": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "García": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "González": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Gómez": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Hoyos": {
+  "ciclo": 4,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Kabalín": {
+  "ciclo": 4,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Kihm": {
+  "ciclo": 0,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": "No figura en el informe: 0 acumuladas."
+ },
+ "Marra": {
+  "ciclo": 0,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": "No figura en el informe: 0 acumuladas."
+ },
+ "Monetti": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Obradovich": {
+  "ciclo": 0,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": "No figura en el informe: 0 acumuladas."
+ },
+ "Olguín": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Ozuna": {
+  "ciclo": 4,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Parisi": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Peña Biafore": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Tarón": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Tévez": {
+  "ciclo": 2,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ },
+ "Zubowicz": {
+  "ciclo": 1,
+  "al_cierre_de_fecha": 33,
+  "fuente": "informe oficial de AFA (COMET), 13/10/2026",
+  "nota": ""
+ }
 }

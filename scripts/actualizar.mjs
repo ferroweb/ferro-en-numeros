@@ -227,13 +227,14 @@ for (const [f, a] of Object.entries(AFA)) {
 }
 const BAJAS = leer("datos-fuente/bajas.json", { bajas: [] }).bajas;
 const FILAS_AM = C.amarillasPorFuente(DETALLE, { soloascenso: SA, afa: AFA_K }).filter(f => !BAJAS.includes(f.jugador));
-const LIMITE = C.limiteAmarillas(P, C.aplicarCruce(DETALLE, C.correccionPorMayoria(FILAS_AM)), participaciones, { bajas: BAJAS, confirmadas: leer("datos-fuente/amarillas-confirmadas.json", {}), alternativas: C.lecturasEnMinoria(FILAS_AM) })
+const DET_MAY = C.aplicarCruce(DETALLE, C.correccionPorMayoria(FILAS_AM)), CONF_AM = leer("datos-fuente/amarillas-confirmadas.json", {});
+const LIMITE = C.limiteAmarillas(P, DET_MAY, participaciones, { bajas: BAJAS, confirmadas: leer("datos-fuente/amarillas-confirmadas.json", {}), alternativas: C.lecturasEnMinoria(FILAS_AM) })
   .map(x => { const fs = FILAS_AM.filter(f => f.jugador === x.jugador).map(({ jugador, ...r }) => r); return fs.length ? { ...x, fuentes: fs } : x; });
 
 // ---------- escritura ----------
 const salidas = {
   "public/data/partidos.json": { partidos: P, participaciones },
-  "public/data/jugadores.json": { jugadores: J, limite_amarillas: LIMITE, cruce_amarillas: { fechas: { ferroweb: P.map(p => p.fecha).sort((a, b) => a - b), soloascenso: Object.keys(SA).map(Number).sort((a, b) => a - b), afa: Object.keys(AFA_K).map(Number).sort((a, b) => a - b) }, filas: FILAS_AM } },
+  "public/data/jugadores.json": { jugadores: J, limite_amarillas: LIMITE, cruce_amarillas: { fechas: { ferroweb: P.map(p => p.fecha).sort((a, b) => a - b), soloascenso: Object.keys(SA).map(Number).sort((a, b) => a - b), afa: Object.keys(AFA_K).map(Number).sort((a, b) => a - b) }, filas: C.filasSegunInforme(P, DET_MAY, participaciones, FILAS_AM, CONF_AM) } },
   "public/data/equipo.json": equipoNuevo,
   "datos-fuente/detalle.json": DETALLE,
   "datos-fuente/temporadas.json": T,

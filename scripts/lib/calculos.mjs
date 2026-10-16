@@ -274,7 +274,10 @@ export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, 
         const y = limiteAmarillas(partidos, aplicarCruce(detalle, [c]), participaciones, { tope, hipotesis: false }).find(z => z.jugador === x.jugador);
         const ultima = y?.suspensiones[y.suspensiones.length - 1] ?? null;
         return y && !y.suspensiones.some(z => z.jugo_siguiente) && y.ciclo !== ciclo ? { fecha: c.fecha, ciclo: y.ciclo, suspension: ultima } : null; }).filter(Boolean);
-      return { ...resto, ciclo, faltan: tope - ciclo, ...(otra ? { cruce: otra } : {}), ...(sinUna ? { si_sobra_una: sinUna } : {}), ...(otras.length ? { otras_lecturas: otras } : {}) }; })
+      // Total que suma al acumulado (si el conteo confirmado difiere, se ajusta con la menor cantidad de amarillas que falten o sobren) y cuántas fechas costaría la próxima suspensión:
+      // la primera vez que llega a 5, una fecha; la segunda (10), dos.
+      const calc = x.amarillas % tope, dd = (((ciclo - calc) % tope) + tope) % tope, total = x.amarillas + (dd > tope / 2 ? dd - tope : dd);   // el ajuste más chico (falta o sobra alguna)
+      return { ...resto, ciclo, faltan: tope - ciclo, total, proxima_sancion: Math.floor(total / tope) + 1, ...(otra ? { cruce: otra } : {}), ...(sinUna ? { si_sobra_una: sinUna } : {}), ...(otras.length ? { otras_lecturas: otras } : {}) }; })
     .sort((a, b) => a.faltan - b.faltan || b.amarillas - a.amarillas || a.jugador.localeCompare(b.jugador, "es"));
 }
 
@@ -333,3 +336,15 @@ export function amarillasPorFuente(detalle, fuentes) {
 // Lo contrario: qué cambiar (sobre el detalle ya corregido) para seguir a la fuente en minoría.
 export const lecturasEnMinoria = (filas) => filas.map(f => ({ fecha: f.fecha, jugador: f.jugador, en: f.mayoria ? "ferroweb" : "otra" }));
 export const correccionPorMayoria = (filas) => filas.filter(f => f.mayoria !== f.ferroweb).map(f => ({ fecha: f.fecha, jugador: f.jugador, en: f.ferroweb ? "ferroweb" : "otra" }));
+
+// Para los jugadores con conteo oficial: qué lectura de cada amarilla en disputa es la que da ese conteo.
+// Devuelve las filas con «informe»: true/false (la amarilla existió o no, según el conteo oficial) o null si no lo define.
+export function filasSegunInforme(partidos, detalleMayoria, participaciones, filas, confirmadas, tope = 5) {
+  const cicloCon = (det, j) => limiteAmarillas(partidos, det, participaciones, { tope, hipotesis: false }).find(x => x.jugador === j)?.ciclo ?? 0;
+  return filas.map(f => {
+    const c = confirmadas[f.jugador]; if (!c) return { ...f, informe: null };
+    const base = cicloCon(detalleMayoria, f.jugador) === c.ciclo;
+    const giro = cicloCon(aplicarCruce(detalleMayoria, [{ fecha: f.fecha, jugador: f.jugador, en: f.mayoria ? "ferroweb" : "otra" }]), f.jugador) === c.ciclo;
+    return { ...f, informe: base && !giro ? f.mayoria : giro && !base ? !f.mayoria : null };
+  });
+}

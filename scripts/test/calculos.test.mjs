@@ -152,3 +152,27 @@ test("limiteAmarillas: lecturas de la fuente en minoría que también cierran", 
   assert.deepEqual(m.otras_lecturas.map(o => [o.fecha, o.ciclo]), [[4, 0], [7, 0]]);
   assert.deepEqual(m.otras_lecturas[0].suspension, { fecha: 5, siguiente: 6, jugo_siguiente: false });
 });
+
+test("limiteAmarillas: total ajustado al conteo confirmado y fechas de la próxima suspensión", async () => {
+  const { limiteAmarillas } = await import("../lib/calculos.mjs");
+  const partidos = [...Array(10)].map((_, i) => ({ fecha: i + 1, n: i + 1 }));
+  const am = (...ks) => ({ tarjetas: ks.map(k => ({ k, tipo: "a" })) });
+  const detalle = { 1: am("Ozuna", "Marra"), 2: am("Ozuna", "Hoyos"), 3: am("Ozuna", "Marra"), 4: am("Ozuna"), 5: am("Ozuna", "Marra"),
+    6: am(), 7: am("Ozuna", "Marra"), 8: am("Ozuna"), 9: am("Ozuna"), 10: am("Ozuna") };
+  const conf = { Marra: { ciclo: 0, al_cierre_de_fecha: 10, fuente: "AFA" }, Hoyos: { ciclo: 2, al_cierre_de_fecha: 10, fuente: "AFA" } };
+  const L = limiteAmarillas(partidos, detalle, [], { confirmadas: conf });
+  const o = L.find(x => x.jugador === "Ozuna"), m = L.find(x => x.jugador === "Marra"), h = L.find(x => x.jugador === "Hoyos");
+  assert.deepEqual([o.total, o.ciclo, o.proxima_sancion], [9, 4, 2]);     // la décima son dos fechas
+  assert.deepEqual([m.total, m.ciclo, m.proxima_sancion], [5, 0, 2]);     // el informe dice 0: le falta una amarilla (la más chica corrección), ya cumplió
+  assert.deepEqual([h.total, h.ciclo, h.proxima_sancion], [2, 2, 1]);
+});
+
+test("filasSegunInforme: el conteo oficial decide la amarilla en disputa", async () => {
+  const { filasSegunInforme } = await import("../lib/calculos.mjs");
+  const partidos = [1, 2, 3, 4].map((fecha, n) => ({ fecha, n }));
+  const am = (...ks) => ({ tarjetas: ks.map(k => ({ k, tipo: "a" })) });
+  const det = { 1: am("Marra", "Ozuna"), 2: am("Marra", "Ozuna"), 3: am("Marra"), 4: am() };
+  const filas = [{ fecha: 4, jugador: "Marra", mayoria: false }, { fecha: 3, jugador: "Ozuna", mayoria: false }, { fecha: 4, jugador: "Tévez", mayoria: false }];
+  const F = filasSegunInforme(partidos, det, [], filas, { Marra: { ciclo: 4 }, Ozuna: { ciclo: 2 } });
+  assert.deepEqual(F.map(f => f.informe), [true, false, null]);   // Marra: existió; Ozuna: confirma la mayoría; Tévez: sin informe
+});
