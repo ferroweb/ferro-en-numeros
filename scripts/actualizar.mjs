@@ -14,6 +14,7 @@
 // conocidos se corrigen en datos-fuente/correcciones.json.
 import { readFileSync, writeFileSync, existsSync, appendFileSync, readdirSync, mkdirSync } from "node:fs";
 import { parseSintesisSA, claveDe, bajarSA, linksSintesisSA } from "./lib/soloascenso.mjs";
+import { parseEventoAFA, BASE_AFA, FERRO_AFA } from "./lib/afa.mjs";
 import { bajarSintesis, parseSintesis, corregir, FERRO } from "./lib/ferroweb.mjs";
 import { procesarPartido, acumularPuntos, estadisticasJugadores, rendimiento, franjas } from "./lib/derive.mjs";
 import { bajarTabla, URL_TABLA } from "./lib/futboltotal.mjs";
@@ -198,12 +199,41 @@ for (const f of guardadosSA()) {
   const k = (n) => { const c = claveDe(n, conocidos); if (!c) aviso(`Solo Ascenso F${sa.fecha}: no reconozco a «${n}»`); return c; };
   SA[sa.fecha] = { amarillas: sa.amonestados.map(k).filter(Boolean), rojas: sa.expulsados.map(x => k(x.nombre)).filter(Boolean) };
 }
-const CRUCE = C.cruceAmarillas(DETALLE, SA);
+// ---------- tercera fuente: fichas de AFA (Datafactory) ----------
+const DIR_AFA = "datos-fuente/crudas/afa/ev";
+const guardadosAFA = () => existsSync(ruta(DIR_AFA)) ? readdirSync(ruta(DIR_AFA)).filter(f => /^\d{8}-\d+\.json$/.test(f)) : [];
+const AFA = {}, leerAFA = () => { for (const f of guardadosAFA()) { const a = parseEventoAFA(JSON.parse(readFileSync(ruta(`${DIR_AFA}/${f}`), "utf8"))); if (a?.finalizado) AFA[a.fecha] = a; } };
+leerAFA();
+if (!SECO) try {
+  if (P.some(p => !AFA[p.fecha])) {
+    const ag = JSON.parse(await bajarSA(`${BASE_AFA}/agendaMaM/agenda_${FERRO_AFA}.json`)).events;
+    for (const [k, v] of Object.entries(ag)) {
+      if (v.statusId !== 2) continue;
+      const id = k.split(".").pop(), archivo = `${DIR_AFA}/${v.date}-${id}.json`;
+      const viejo = existsSync(ruta(archivo)) ? parseEventoAFA(JSON.parse(readFileSync(ruta(archivo), "utf8"))) : null;
+      if (viejo?.finalizado) continue;
+      const txt = await bajarSA(`${BASE_AFA}/events/${id}.json`), a = parseEventoAFA(JSON.parse(txt));
+      if (!a?.finalizado) continue;
+      mkdirSync(ruta(DIR_AFA), { recursive: true }); writeFileSync(ruta(archivo), txt);
+      console.log(`AFA: ficha de la F${a.fecha} guardada.`);
+    }
+    leerAFA();
+  }
+} catch (e) { aviso(`AFA no respondió (${e.message}); el cruce de amarillas usa lo ya guardado.`); }
+const AFA_K = {};
+for (const [f, a] of Object.entries(AFA)) {
+  // los nombres que no son jugadores del plantel (el DT) se ignoran
+  AFA_K[f] = { amarillas: a.amarillas.map(n => claveDe(n, conocidos)).filter(Boolean), rojas: a.rojas.map(n => claveDe(n, conocidos)).filter(Boolean) };
+}
+const BAJAS = leer("datos-fuente/bajas.json", { bajas: [] }).bajas;
+const FILAS_AM = C.amarillasPorFuente(DETALLE, { soloascenso: SA, afa: AFA_K }).filter(f => !BAJAS.includes(f.jugador));
+const LIMITE = C.limiteAmarillas(P, C.aplicarCruce(DETALLE, C.correccionPorMayoria(FILAS_AM)), participaciones, { bajas: BAJAS, confirmadas: leer("datos-fuente/amarillas-confirmadas.json", {}), alternativas: C.lecturasEnMinoria(FILAS_AM) })
+  .map(x => { const fs = FILAS_AM.filter(f => f.jugador === x.jugador).map(({ jugador, ...r }) => r); return fs.length ? { ...x, fuentes: fs } : x; });
 
 // ---------- escritura ----------
 const salidas = {
   "public/data/partidos.json": { partidos: P, participaciones },
-  "public/data/jugadores.json": { jugadores: J, limite_amarillas: C.limiteAmarillas(P, DETALLE, participaciones, { bajas: leer("datos-fuente/bajas.json", { bajas: [] }).bajas, confirmadas: leer("datos-fuente/amarillas-confirmadas.json", {}), cruce: CRUCE }), cruce_amarillas: { fuente: "Solo Ascenso", fechas: Object.keys(SA).map(Number).sort((a, b) => a - b), diferencias: CRUCE.filter(d => !leer("datos-fuente/bajas.json", { bajas: [] }).bajas.includes(d.jugador)) } },
+  "public/data/jugadores.json": { jugadores: J, limite_amarillas: LIMITE, cruce_amarillas: { fechas: { ferroweb: P.map(p => p.fecha).sort((a, b) => a - b), soloascenso: Object.keys(SA).map(Number).sort((a, b) => a - b), afa: Object.keys(AFA_K).map(Number).sort((a, b) => a - b) }, filas: FILAS_AM } },
   "public/data/equipo.json": equipoNuevo,
   "datos-fuente/detalle.json": DETALLE,
   "datos-fuente/temporadas.json": T,

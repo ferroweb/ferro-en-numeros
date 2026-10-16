@@ -121,3 +121,34 @@ test("limiteAmarillas: con la otra fuente se recalcula la suspensión (explica u
   assert.equal(c.cruce.ciclo, 1);
   assert.deepEqual(c.si_sobra_una, [4]);                                      // sacando una de FW, también cierra (4)
 });
+
+test("amarillasPorFuente: tres fuentes, mayoría y fuente sin dato", async () => {
+  const { amarillasPorFuente, correccionPorMayoria } = await import("../lib/calculos.mjs");
+  const detalle = { 9: { tarjetas: [] }, 11: { tarjetas: [{ k: "Kihm", tipo: "a" }] }, 14: { tarjetas: [] }, 3: { tarjetas: [{ k: "Hoyos", tipo: "a" }] } };
+  const fuentes = {
+    soloascenso: { 9: { amarillas: ["Kihm"] }, 11: { amarillas: [] }, 14: { amarillas: ["Canto"] }, 3: { amarillas: [] } },
+    afa: { 9: { amarillas: ["Kihm"] }, 11: { amarillas: ["Kihm"] }, 14: { amarillas: [] } },   // la F3 no la tiene
+  };
+  const F = amarillasPorFuente(detalle, fuentes);
+  assert.deepEqual(F, [
+    { fecha: 3, jugador: "Hoyos", ferroweb: true, soloascenso: false, afa: null, mayoria: true },     // empate 1 a 1: queda FerroWeb
+    { fecha: 9, jugador: "Kihm", ferroweb: false, soloascenso: true, afa: true, mayoria: true },
+    { fecha: 11, jugador: "Kihm", ferroweb: true, soloascenso: false, afa: true, mayoria: true },
+    { fecha: 14, jugador: "Canto", ferroweb: false, soloascenso: true, afa: false, mayoria: false },
+  ]);
+  assert.deepEqual(correccionPorMayoria(F), [{ fecha: 9, jugador: "Kihm", en: "otra" }]);
+});
+
+test("limiteAmarillas: lecturas de la fuente en minoría que también cierran", async () => {
+  const { limiteAmarillas } = await import("../lib/calculos.mjs");
+  const partidos = [1, 2, 3, 4, 5, 6, 7].map((fecha, n) => ({ fecha, n }));
+  const am = () => ({ tarjetas: [{ k: "Marra", tipo: "a" }] }), nada = () => ({ tarjetas: [] });
+  const detalle = { 1: am(), 2: am(), 3: am(), 4: nada(), 5: am(), 6: nada(), 7: nada() };   // 4 amarillas
+  const jugo = [1, 2, 3, 4, 5, 7].map(fecha => ({ jugador: "Marra", fecha, minutos: 90 }));       // no jugó la F6
+  const alt = [{ fecha: 4, jugador: "Marra", en: "otra" }, { fecha: 7, jugador: "Marra", en: "otra" }];
+  const m = limiteAmarillas(partidos, detalle, jugo, { alternativas: alt }).find(x => x.jugador === "Marra");
+  assert.equal(m.ciclo, 4);
+  // con la F4 llega a 5 en la F5 y no juega la F6: cierra (0). Con la F7 llega a 5 al final, sin partido siguiente: también (0).
+  assert.deepEqual(m.otras_lecturas.map(o => [o.fecha, o.ciclo]), [[4, 0], [7, 0]]);
+  assert.deepEqual(m.otras_lecturas[0].suspension, { fecha: 5, siguiente: 6, jugo_siguiente: false });
+});

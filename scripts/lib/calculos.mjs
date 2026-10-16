@@ -229,7 +229,7 @@ export function escenarios(tabla, calendario, ultimaFecha, ferro) {
 // Fuente: las tarjetas de cada síntesis (detalle.json), incluidas las de jugadores en el banco, en ORDEN DE JUEGO (`n`, no
 // el número de fecha: la F4 se jugó entre la 18 y la 19). Para cada suspensión controla si el jugador jugó el partido
 // siguiente (`jugo_siguiente`): si jugó, el conteo de la síntesis no cierra y el dato se marca para confirmar.
-export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [], confirmadas = {}, cruce = [], hipotesis = true } = {}) {
+export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [], confirmadas = {}, cruce = [], hipotesis = true, alternativas = [] } = {}) {
   const orden = [...partidos].sort((a, b) => a.n - b.n);
   const jugo = (j, f) => participaciones.some(r => r.jugador === j && r.fecha === f && r.minutos > 0);
   const por = new Map();
@@ -269,7 +269,12 @@ export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, 
       const sinUna = malo ? [...new Set(x.fechas.filter(f => nDe(f) <= nDe(malo.fecha)).map(f => {
         const y = limiteAmarillas(partidos, aplicarCruce(detalle, [{ fecha: f, jugador: x.jugador, en: "ferroweb" }]), participaciones, { tope, hipotesis: false }).find(z => z.jugador === x.jugador);
         return y && !y.suspensiones.some(z => z.jugo_siguiente) ? y.ciclo : null; }).filter(v => v != null))].sort((a, b) => a - b) : null;
-      return { ...resto, ciclo, faltan: tope - ciclo, ...(otra ? { cruce: otra } : {}), ...(sinUna ? { si_sobra_una: sinUna } : {}) }; })
+      // Lecturas de la fuente en minoría (alternativas: amarillas a sacar o agregar): se guardan las que cierran y dan otro conteo.
+      const otras = x.confirmado ? [] : alternativas.filter(c => c.jugador === x.jugador).map(c => {
+        const y = limiteAmarillas(partidos, aplicarCruce(detalle, [c]), participaciones, { tope, hipotesis: false }).find(z => z.jugador === x.jugador);
+        const ultima = y?.suspensiones[y.suspensiones.length - 1] ?? null;
+        return y && !y.suspensiones.some(z => z.jugo_siguiente) && y.ciclo !== ciclo ? { fecha: c.fecha, ciclo: y.ciclo, suspension: ultima } : null; }).filter(Boolean);
+      return { ...resto, ciclo, faltan: tope - ciclo, ...(otra ? { cruce: otra } : {}), ...(sinUna ? { si_sobra_una: sinUna } : {}), ...(otras.length ? { otras_lecturas: otras } : {}) }; })
     .sort((a, b) => a.faltan - b.faltan || b.amarillas - a.amarillas || a.jugador.localeCompare(b.jugador, "es"));
 }
 
@@ -300,3 +305,31 @@ export function aplicarCruce(detalle, cruce) {
   }
   return d;
 }
+
+// Amarillas que no coinciden entre FerroWeb y otras fuentes, con lo que dice cada una y la mayoría.
+// fuentes: { nombre: { fecha: { amarillas: [clave], rojas: [clave] } } }. Una fuente sin esa fecha cuenta como «sin dato» (null).
+// La mayoría se decide entre las fuentes con dato; si empatan, queda lo de FerroWeb.
+export function amarillasPorFuente(detalle, fuentes) {
+  const filas = new Map();
+  for (const [nombre, datos] of Object.entries(fuentes))
+    for (const d of cruceAmarillas(detalle, datos)) {
+      const k = `${d.fecha}|${d.jugador}`;
+      filas.set(k, filas.get(k) ?? { fecha: d.fecha, jugador: d.jugador, ferroweb: d.en === "ferroweb" });
+    }
+  return [...filas.values()].map(f => {
+    const fila = { ...f };
+    for (const [nombre, datos] of Object.entries(fuentes)) {
+      if (!datos[f.fecha]) { fila[nombre] = null; continue; }
+      const otra = cruceAmarillas(detalle, { [f.fecha]: datos[f.fecha] }).some(d => d.jugador === f.jugador);
+      fila[nombre] = otra ? !f.ferroweb : f.ferroweb;
+    }
+    const votos = [f.ferroweb, ...Object.keys(fuentes).map(n => fila[n])].filter(v => v != null);
+    const si = votos.filter(Boolean).length, no = votos.length - si;
+    fila.mayoria = si === no ? f.ferroweb : si > no;
+    return fila;
+  }).sort((a, b) => a.fecha - b.fecha || a.jugador.localeCompare(b.jugador, "es"));
+}
+// Las filas donde la mayoría contradice a FerroWeb, en el formato de aplicarCruce.
+// Lo contrario: qué cambiar (sobre el detalle ya corregido) para seguir a la fuente en minoría.
+export const lecturasEnMinoria = (filas) => filas.map(f => ({ fecha: f.fecha, jugador: f.jugador, en: f.mayoria ? "ferroweb" : "otra" }));
+export const correccionPorMayoria = (filas) => filas.filter(f => f.mayoria !== f.ferroweb).map(f => ({ fecha: f.fecha, jugador: f.jugador, en: f.ferroweb ? "ferroweb" : "otra" }));
