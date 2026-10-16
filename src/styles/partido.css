@@ -168,3 +168,6 @@
 .lim-j b { font-size: 16px; }
 .lim-j .lim-c { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--warn); grid-row: span 2; }
 .lim-j .nota { grid-column: 2; margin: 0; }
+.lim-j .lim-x { grid-column: 2; margin: 0; color: var(--warn); font-size: 13px; }
+.lim-d { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; font-size: 14px; }
+.lim-d > div { border-left: 3px solid var(--warn); padding-left: 10px; }

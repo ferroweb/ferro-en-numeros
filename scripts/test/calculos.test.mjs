@@ -96,3 +96,28 @@ test("limiteAmarillas: un conteo confirmado pisa a la síntesis y suma lo poster
   const h = limiteAmarillas(partidos, detalle, [], { confirmadas: c }).find(x => x.jugador === "Hoyos");
   assert.equal(h.ciclo, 4); assert.equal(h.faltan, 1); assert.equal(h.confirmado.fuente, "club");
 });
+
+test("cruceAmarillas: marca lo que está en una sola fuente e ignora la doble amarilla", async () => {
+  const { cruceAmarillas, limiteAmarillas } = await import("../lib/calculos.mjs");
+  const detalle = { 1: { tarjetas: [{ k: "Kihm", tipo: "a" }, { k: "Canto", tipo: "a" }, { k: "Canto", tipo: "r" }] }, 2: { tarjetas: [{ k: "Parisi", tipo: "a" }] }, 3: { tarjetas: [] } };
+  const otra = { 1: { amarillas: ["Canto"], rojas: ["Canto"] }, 2: { amarillas: ["Parisi", "Ozuna"] } };
+  const dif = cruceAmarillas(detalle, otra);
+  assert.deepEqual(dif, [{ fecha: 1, jugador: "Kihm", en: "ferroweb" }, { fecha: 2, jugador: "Ozuna", en: "otra" }]);
+  const L = limiteAmarillas([1, 2, 3].map((fecha, n) => ({ fecha, n })), detalle, [], { cruce: dif });
+  assert.equal(L.find(x => x.jugador === "Kihm").cruce.ciclo, 0);
+  assert.deepEqual(L.find(x => x.jugador === "Ozuna").cruce, { diferencias: [{ fecha: 2, en: "otra" }], amarillas: 1, ciclo: 1, suspensiones: [] });
+  assert.equal(L.find(x => x.jugador === "Parisi").cruce, undefined);
+});
+
+test("limiteAmarillas: con la otra fuente se recalcula la suspensión (explica un «jugó suspendido»)", async () => {
+  const { limiteAmarillas } = await import("../lib/calculos.mjs");
+  const partidos = [1, 2, 3, 4, 5, 6, 7, 8].map((fecha, n) => ({ fecha, n }));
+  const am = () => ({ tarjetas: [{ k: "Canto", tipo: "a" }] }), nada = () => ({ tarjetas: [] });
+  const detalle = { 1: am(), 2: am(), 3: nada(), 4: am(), 5: am(), 6: nada(), 7: am(), 8: nada() };   // FW: llega a 5 en la F7
+  const jugo = [1, 2, 3, 4, 5, 7, 8].map(fecha => ({ jugador: "Canto", fecha, minutos: 90 }));   // no jugó la F6
+  const c = limiteAmarillas(partidos, detalle, jugo, { cruce: [{ fecha: 3, jugador: "Canto", en: "otra" }] }).find(x => x.jugador === "Canto");
+  assert.equal(c.suspensiones[0].jugo_siguiente, true);                      // con FW, jugó la F8 «suspendido»
+  assert.deepEqual(c.cruce.suspensiones, [{ fecha: 5, siguiente: 6, jugo_siguiente: false }]);   // con la otra, cumplió en la F6
+  assert.equal(c.cruce.ciclo, 1);
+  assert.deepEqual(c.si_sobra_una, [4]);                                      // sacando una de FW, también cierra (4)
+});

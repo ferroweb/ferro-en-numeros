@@ -229,7 +229,7 @@ export function escenarios(tabla, calendario, ultimaFecha, ferro) {
 // Fuente: las tarjetas de cada síntesis (detalle.json), incluidas las de jugadores en el banco, en ORDEN DE JUEGO (`n`, no
 // el número de fecha: la F4 se jugó entre la 18 y la 19). Para cada suspensión controla si el jugador jugó el partido
 // siguiente (`jugo_siguiente`): si jugó, el conteo de la síntesis no cierra y el dato se marca para confirmar.
-export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [], confirmadas = {} } = {}) {
+export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [], confirmadas = {}, cruce = [], hipotesis = true } = {}) {
   const orden = [...partidos].sort((a, b) => a.n - b.n);
   const jugo = (j, f) => participaciones.some(r => r.jugador === j && r.fecha === f && r.minutos > 0);
   const por = new Map();
@@ -255,8 +255,48 @@ export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, 
     const despues = x.fechas.filter(f => nDe(f) > nDe(c.al_cierre_de_fecha)).length;
     por.set(j, { ...x, confirmado: { ciclo: c.ciclo, al_cierre_de_fecha: c.al_cierre_de_fecha, fuente: c.fuente, nota: c.nota ?? "" }, ciclo_confirmado: (c.ciclo + despues) % tope });
   }
+  // Si la otra fuente no coincide, se marca y se recalcula el conteo entero con las amarillas de ella (ALT).
+  let ALT = null;
+  for (const d of cruce) if (!por.has(d.jugador)) por.set(d.jugador, { jugador: d.jugador, amarillas: 0, fechas: [], suspensiones: [] });
   return [...por.values()]
     .filter(x => !bajas.includes(x.jugador))
-    .map(x => { const ciclo = x.ciclo_confirmado ?? x.amarillas % tope; const { ciclo_confirmado, ...resto } = x; return { ...resto, ciclo, faltan: tope - ciclo }; })
+    .map(x => { const ciclo = x.ciclo_confirmado ?? x.amarillas % tope; const { ciclo_confirmado, ...resto } = x;
+      const dif = cruce.filter(d => d.jugador === x.jugador);
+      const alt = dif.length ? (ALT ??= limiteAmarillas(partidos, aplicarCruce(detalle, cruce), participaciones, { tope, hipotesis: false })).find(y => y.jugador === x.jugador) : null;
+      const otra = dif.length ? { diferencias: dif.map(({ fecha, en }) => ({ fecha, en })), amarillas: alt?.amarillas ?? 0, ciclo: alt?.ciclo ?? 0, suspensiones: alt?.suspensiones ?? [] } : null;
+      // «Jugó suspendido»: se prueba sacar cada amarilla anterior y se guardan los conteos con los que las cuentas cierran.
+      const malo = hipotesis && !x.confirmado && x.suspensiones.find(y => y.jugo_siguiente);
+      const sinUna = malo ? [...new Set(x.fechas.filter(f => nDe(f) <= nDe(malo.fecha)).map(f => {
+        const y = limiteAmarillas(partidos, aplicarCruce(detalle, [{ fecha: f, jugador: x.jugador, en: "ferroweb" }]), participaciones, { tope, hipotesis: false }).find(z => z.jugador === x.jugador);
+        return y && !y.suspensiones.some(z => z.jugo_siguiente) ? y.ciclo : null; }).filter(v => v != null))].sort((a, b) => a - b) : null;
+      return { ...resto, ciclo, faltan: tope - ciclo, ...(otra ? { cruce: otra } : {}), ...(sinUna ? { si_sobra_una: sinUna } : {}) }; })
     .sort((a, b) => a.faltan - b.faltan || b.amarillas - a.amarillas || a.jugador.localeCompare(b.jugador, "es"));
+}
+
+// Cruce de amarillas entre dos fuentes, partido por partido. Solo cuentan las amarillas que suman al acumulado
+// (si el jugador terminó expulsado en ese partido, no se cuenta en ninguna de las dos).
+// detalle: el de FerroWeb ({ fecha: { tarjetas } }); otra: { fecha: { amarillas: [clave], rojas: [clave] } } (solo las fechas que tiene la otra fuente).
+// Devuelve [{ fecha, jugador, en: "ferroweb" | "otra" }] con las amarillas que figuran en una sola fuente.
+export function cruceAmarillas(detalle, otra) {
+  const dif = [];
+  for (const [f, o] of Object.entries(otra)) {
+    const T = detalle[f]?.tarjetas; if (!T) continue;
+    const rojasFW = new Set(T.filter(t => t.tipo === "r").map(t => t.k)), rojasO = new Set(o.rojas ?? []);
+    const fw = new Set(T.filter(t => t.tipo === "a" && !rojasFW.has(t.k) && !rojasO.has(t.k)).map(t => t.k));
+    const ot = new Set((o.amarillas ?? []).filter(k => !rojasFW.has(k) && !rojasO.has(k)));
+    for (const k of fw) if (!ot.has(k)) dif.push({ fecha: +f, jugador: k, en: "ferroweb" });
+    for (const k of ot) if (!fw.has(k)) dif.push({ fecha: +f, jugador: k, en: "otra" });
+  }
+  return dif.sort((a, b) => a.fecha - b.fecha || a.jugador.localeCompare(b.jugador, "es"));
+}
+
+// El detalle de FerroWeb con las amarillas corregidas según la otra fuente (para calcular cómo quedaría el conteo con ella).
+export function aplicarCruce(detalle, cruce) {
+  const d = structuredClone(detalle);
+  for (const c of cruce) {
+    const T = d[c.fecha]?.tarjetas; if (!T) continue;
+    if (c.en === "ferroweb") { const i = T.findIndex(t => t.k === c.jugador && t.tipo === "a"); if (i >= 0) T.splice(i, 1); }
+    else T.push({ k: c.jugador, tipo: "a" });
+  }
+  return d;
 }

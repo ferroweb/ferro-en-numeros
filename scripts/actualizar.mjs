@@ -12,7 +12,8 @@
 // Reglas de seguridad: si un partido nuevo no se puede leer o sus números no cierran (marcador contra goles listados,
 // 11 titulares, cambios coherentes), NO se guarda nada y el script falla con un mensaje claro. Los errores de FerroWeb
 // conocidos se corrigen en datos-fuente/correcciones.json.
-import { readFileSync, writeFileSync, existsSync, appendFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, appendFileSync, readdirSync, mkdirSync } from "node:fs";
+import { parseSintesisSA, claveDe, bajarSA, linksSintesisSA } from "./lib/soloascenso.mjs";
 import { bajarSintesis, parseSintesis, corregir, FERRO } from "./lib/ferroweb.mjs";
 import { procesarPartido, acumularPuntos, estadisticasJugadores, rendimiento, franjas } from "./lib/derive.mjs";
 import { bajarTabla, URL_TABLA } from "./lib/futboltotal.mjs";
@@ -172,10 +173,37 @@ const hallNuevo = { ...hallViejo, ultimas: C.ultimas([...P25, ...P26]) };
 const historicoNuevo = { ...de.historico, ...C.historico(P26, P25, de.historico) };
 equipoNuevo.historico = historicoNuevo;
 
+// ---------- segunda fuente de amarillas: Solo Ascenso ----------
+// Se guarda cada síntesis (datos-fuente/crudas/soloascenso/fNN-id.html) y se cruza con FerroWeb. Si falla la descarga, se usa lo guardado.
+const DIR_SA = "datos-fuente/crudas/soloascenso";
+const guardadosSA = () => existsSync(ruta(DIR_SA)) ? readdirSync(ruta(DIR_SA)).filter(f => /^f\d+-\d+\.html$/.test(f)) : [];
+if (!SECO) try {
+  const yaFechas = new Set(guardadosSA().map(f => +f.slice(1, 3)));
+  if (P.some(p => !yaFechas.has(p.fecha))) {
+    const links = linksSintesisSA(await bajarSA("https://www.soloascenso.com.ar/club/ferro-carril-oeste/275"));
+    for (const l of links) {
+      const id = +l.match(/(\d+)$/)[1];
+      if (guardadosSA().some(f => f.endsWith(`-${id}.html`))) continue;
+      const html = await bajarSA(`https://www.soloascenso.com.ar/sintesis/${l.replace(/^.*\/sintesis\//, "")}`), sa = parseSintesisSA(html);
+      if (!sa || !Number.isFinite(sa.fecha) || !P.some(p => p.fecha === sa.fecha) || yaFechas.has(sa.fecha)) continue;
+      mkdirSync(ruta(DIR_SA), { recursive: true });
+      writeFileSync(ruta(`${DIR_SA}/f${String(sa.fecha).padStart(2, "0")}-${id}.html`), html); yaFechas.add(sa.fecha);
+      console.log(`Solo Ascenso: síntesis de la F${sa.fecha} guardada.`);
+    }
+  }
+} catch (e) { aviso(`Solo Ascenso no respondió (${e.message}); el cruce de amarillas usa lo ya guardado.`); }
+const SA = {};
+for (const f of guardadosSA()) {
+  const sa = parseSintesisSA(readFileSync(ruta(`${DIR_SA}/${f}`), "utf8")); if (!sa) continue;
+  const k = (n) => { const c = claveDe(n, conocidos); if (!c) aviso(`Solo Ascenso F${sa.fecha}: no reconozco a «${n}»`); return c; };
+  SA[sa.fecha] = { amarillas: sa.amonestados.map(k).filter(Boolean), rojas: sa.expulsados.map(x => k(x.nombre)).filter(Boolean) };
+}
+const CRUCE = C.cruceAmarillas(DETALLE, SA);
+
 // ---------- escritura ----------
 const salidas = {
   "public/data/partidos.json": { partidos: P, participaciones },
-  "public/data/jugadores.json": { jugadores: J, limite_amarillas: C.limiteAmarillas(P, DETALLE, participaciones, { bajas: leer("datos-fuente/bajas.json", { bajas: [] }).bajas, confirmadas: leer("datos-fuente/amarillas-confirmadas.json", {}) }) },
+  "public/data/jugadores.json": { jugadores: J, limite_amarillas: C.limiteAmarillas(P, DETALLE, participaciones, { bajas: leer("datos-fuente/bajas.json", { bajas: [] }).bajas, confirmadas: leer("datos-fuente/amarillas-confirmadas.json", {}), cruce: CRUCE }), cruce_amarillas: { fuente: "Solo Ascenso", fechas: Object.keys(SA).map(Number).sort((a, b) => a - b), diferencias: CRUCE.filter(d => !leer("datos-fuente/bajas.json", { bajas: [] }).bajas.includes(d.jugador)) } },
   "public/data/equipo.json": equipoNuevo,
   "datos-fuente/detalle.json": DETALLE,
   "datos-fuente/temporadas.json": T,
