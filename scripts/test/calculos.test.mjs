@@ -87,3 +87,12 @@ test("limiteAmarillas: orden de juego, banco, ciclo de 5, doble amarilla y aviso
   assert.equal(L.find(x => x.jugador === "Castellani").amarillas, 1);
   assert.ok(!L.some(x => x.jugador === "Benegas"));
 });
+
+test("limiteAmarillas: un conteo confirmado pisa a la síntesis y suma lo posterior", async () => {
+  const { limiteAmarillas } = await import("../lib/calculos.mjs");
+  const partidos = [1, 2, 3].map((fecha, i) => ({ fecha, n: i + 1 }));
+  const detalle = { 1: { tarjetas: [{ k: "Hoyos", tipo: "a" }] }, 2: { tarjetas: [] }, 3: { tarjetas: [{ k: "Hoyos", tipo: "a" }] } };
+  const c = { Hoyos: { ciclo: 3, al_cierre_de_fecha: 2, fuente: "club" } };
+  const h = limiteAmarillas(partidos, detalle, [], { confirmadas: c }).find(x => x.jugador === "Hoyos");
+  assert.equal(h.ciclo, 4); assert.equal(h.faltan, 1); assert.equal(h.confirmado.fuente, "club");
+});

@@ -229,7 +229,7 @@ export function escenarios(tabla, calendario, ultimaFecha, ferro) {
 // Fuente: las tarjetas de cada síntesis (detalle.json), incluidas las de jugadores en el banco, en ORDEN DE JUEGO (`n`, no
 // el número de fecha: la F4 se jugó entre la 18 y la 19). Para cada suspensión controla si el jugador jugó el partido
 // siguiente (`jugo_siguiente`): si jugó, el conteo de la síntesis no cierra y el dato se marca para confirmar.
-export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [] } = {}) {
+export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, bajas = [], confirmadas = {} } = {}) {
   const orden = [...partidos].sort((a, b) => a.n - b.n);
   const jugo = (j, f) => participaciones.some(r => r.jugador === j && r.fecha === f && r.minutos > 0);
   const por = new Map();
@@ -247,8 +247,16 @@ export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, 
       por.set(j, x);
     }
   });
+  // Conteos confirmados (p. ej. con el club): pisan a la síntesis; se les suman las amarillas de partidos posteriores.
+  const nDe = (f) => orden.find(p => p.fecha === f)?.n ?? Infinity;
+  for (const [j, c] of Object.entries(confirmadas)) {
+    if (j.startsWith("_")) continue;
+    const x = por.get(j) ?? { jugador: j, amarillas: 0, fechas: [], suspensiones: [] };
+    const despues = x.fechas.filter(f => nDe(f) > nDe(c.al_cierre_de_fecha)).length;
+    por.set(j, { ...x, confirmado: { ciclo: c.ciclo, al_cierre_de_fecha: c.al_cierre_de_fecha, fuente: c.fuente, nota: c.nota ?? "" }, ciclo_confirmado: (c.ciclo + despues) % tope });
+  }
   return [...por.values()]
     .filter(x => !bajas.includes(x.jugador))
-    .map(x => ({ ...x, ciclo: x.amarillas % tope, faltan: tope - (x.amarillas % tope) }))
+    .map(x => { const ciclo = x.ciclo_confirmado ?? x.amarillas % tope; const { ciclo_confirmado, ...resto } = x; return { ...resto, ciclo, faltan: tope - ciclo }; })
     .sort((a, b) => a.faltan - b.faltan || b.amarillas - a.amarillas || a.jugador.localeCompare(b.jugador, "es"));
 }
