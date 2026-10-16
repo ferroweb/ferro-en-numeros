@@ -20,6 +20,7 @@ Para quien carga novedades y datos en **Ferro en números** sin tocar código. A
 | **Árbitro** | El número de la fecha (ej. `34`) | Nombre y apellido | En la próxima actualización (hasta 2 horas) |
 | **Horario** | El número de la fecha (ej. `34`) | Día y hora, ej. `17/10 17:30` | En la próxima actualización (hasta 2 horas) |
 | **Pedido para la IA** | El tema | Qué querés que se escriba o se destaque | La próxima vez que se prepare la previa |
+| **Observación táctica** | El rival o el jugador (ej. `Racing de Córdoba · Chavarría`) | Lo que viste, concreto (ej. «baja a buscarla y deja el área vacía») | En las claves de la previa de ese rival, firmada con la columna **Autor** |
 
 **Si te equivocás:** corregí la fila, o escribí otra del mismo tipo y fecha (vale la última).
 **Para sacar una novedad:** escribí `No` en la columna **Activo**.
@@ -42,8 +43,8 @@ Cada tarjeta del sitio también tiene un botón **⤴** para copiar un texto lis
 ## Para quien administra el sitio: armar la planilla (una sola vez, 10 minutos)
 
 1. En Google Sheets creá una hoja nueva: **Ferro en números – Redacción**.
-2. En la primera fila escribí estas columnas, en este orden: `Fecha | Tipo | Título | Texto | Link | Activo`.
-3. *(Opcional)* En la columna **Tipo**: Datos → Validación de datos → «Menú desplegable» con: `Novedad, Árbitro, Horario, Pedido para la IA`.
+2. En la primera fila escribí estas columnas, en este orden: `Fecha | Tipo | Título | Texto | Link | Activo | Autor`.
+3. *(Opcional)* En la columna **Tipo**: Datos → Validación de datos → «Menú desplegable» con: `Novedad, Árbitro, Horario, Pedido para la IA, Observación táctica`.
 4. **Compartir** → «Restringido» → agregá los mails de la redacción como **Editor**. (No hace falta ningún formulario público: así nadie de afuera puede escribir en el sitio.)
 5. **Archivo → Compartir → Publicar en la Web** → elegí esta hoja y el formato **Valores separados por comas (.csv)** → Publicar. Copiá el link.
 6. En `public/data/redaccion-config.json` completá:

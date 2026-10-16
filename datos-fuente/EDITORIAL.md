@@ -26,6 +26,7 @@ Si algo no se puede resolver (por ejemplo, el árbitro todavía no está designa
 
 - **Nada inventado.** Todo número sale de `public/data/*.json` o de una fuente citada. Si no hay dato, no se escribe.
 - **Placas para compartir:** solo datos, sin chistes ni comentarios (pedido de la redacción).
+- **El sitio es interno de la redacción de Ferroweb** (pedido de Gaby, 16/10/2026): en placas, imágenes, textos para tuit y todo lo que salga para afuera, la dirección del sitio (github.io) **no aparece**; a lo sumo, «ferroweb.com.ar».
 - **Nada de memoria:** estadios, barrios, ciudades, fechas y nombres completos tampoco se escriben «de cabeza». El estadio sale del campo `cancha` de la síntesis de Ferroweb (o de la fuente del partido); si no está, se nombra solo al rival («ante Almirante Brown»), sin lugar.
 - **No tocar lo calculado:** `partidos`, `jugadores`, `tabla`, `lab`, `equipo`, `arbitros.tabla`, `escenarios`, `ultimas` y `datos-fuente/*.json` (salvo `pedidos-atendidos.json` y `correcciones.json`).
 - Tono de hincha verdolaga, rioplatense, con humor pero sin faltar el respeto. Las chicanas apuntan al juego y a los números, no a las personas.

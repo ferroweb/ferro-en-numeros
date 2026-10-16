@@ -22,7 +22,7 @@ import { mismoEquipo, equipoCanonico, ahoraArgentina } from "./lib/texto.mjs";
 import { bajarTemporada } from "./lib/temporadas.mjs";
 import * as C from "./lib/calculos.mjs";
 import { resolverFwHistorial } from "./lib/editorial.mjs";
-import { bajarPlanilla, aplicarArbitroYHorario, pedidosPendientes } from "./lib/redaccion.mjs";
+import { bajarPlanilla, aplicarArbitroYHorario, pedidosPendientes, observacionesTacticas } from "./lib/redaccion.mjs";
 
 const args = new Set(process.argv.slice(2));
 const SECO = args.has("--seco"), RECONSTRUIR = args.has("--reconstruir"), RELEER_TEMPORADAS = args.has("--temporadas");
@@ -238,7 +238,7 @@ const salidas = {
   "public/data/equipo.json": equipoNuevo,
   "datos-fuente/detalle.json": DETALLE,
   "datos-fuente/temporadas.json": T,
-  ...(cfgRed.csv ? { "datos-fuente/pedidos-ia.json": pedidosPendientes(filasPlanilla, leer("datos-fuente/pedidos-atendidos.json", [])) } : {}),
+  ...(cfgRed.csv ? { "datos-fuente/pedidos-ia.json": pedidosPendientes(filasPlanilla, leer("datos-fuente/pedidos-atendidos.json", [])), "datos-fuente/observaciones.json": observacionesTacticas(filasPlanilla) } : {}),
   "public/data/lab.json": { lab: labNuevo },
   "public/data/proximo.json": proxNuevo,
   "public/data/hallazgos.json": hallNuevo,

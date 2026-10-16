@@ -28,8 +28,8 @@ export function parsearFecha(t) {
   return null;
 }
 
-const TIPOS = { novedad: "novedad", novedades: "novedad", "pedido para la ia": "pedido", pedido: "pedido", "pedido ia": "pedido", arbitro: "arbitro", horario: "horario" };
-const COLUMNAS = [["fecha", ["marca temporal", "fecha"]], ["tipo", ["tipo", "que queres cargar"]], ["titulo", ["titulo"]], ["texto", ["texto", "detalle", "descripcion"]], ["link", ["link", "enlace", "url"]], ["activo", ["activo", "estado"]]];
+const TIPOS = { novedad: "novedad", novedades: "novedad", "pedido para la ia": "pedido", pedido: "pedido", "pedido ia": "pedido", arbitro: "arbitro", horario: "horario", "observacion tactica": "observacion", observacion: "observacion", "observacion del rival": "observacion" };
+const COLUMNAS = [["fecha", ["marca temporal", "fecha"]], ["tipo", ["tipo", "que queres cargar"]], ["titulo", ["titulo"]], ["texto", ["texto", "detalle", "descripcion"]], ["link", ["link", "enlace", "url"]], ["activo", ["activo", "estado"]], ["autor", ["autor", "quien", "firma"]]];
 
 // Convierte el CSV de la planilla en una lista de pedidos de carga. Reconoce las columnas por su nombre (no por su posición),
 // así que sirve tanto la planilla armada a mano como las respuestas de un formulario de Google.
@@ -41,7 +41,7 @@ export function filasDePlanilla(csv) {
     const v = (campo) => (idx[campo] != null ? (f[idx[campo]] ?? "").trim() : "");
     const tipo = TIPOS[clave(v("tipo"))] ?? null;
     const activo = !/^(no|archivado|archivada|inactivo|0|falso|borrar)$/i.test(sinAcentos(v("activo")).trim());
-    const base = { fechaTexto: v("fecha"), fecha: parsearFecha(v("fecha")), tipo, titulo: v("titulo"), texto: v("texto"), link: v("link"), activo, linea: n + 2 };
+    const base = { fechaTexto: v("fecha"), fecha: parsearFecha(v("fecha")), tipo, titulo: v("titulo"), texto: v("texto"), link: v("link"), autor: v("autor"), activo, linea: n + 2 };
     return { ...base, id: huella(`${base.fechaTexto}|${base.tipo}|${base.titulo}|${base.texto}`) };
   }).filter(f => f.tipo && (f.titulo || f.texto));
 }

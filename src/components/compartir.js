@@ -29,6 +29,7 @@ export function textoParaTuit(titulo, detalle, enlace) {
   return `${cuerpo}\n${enlace}`;
 }
 export const enlaceActual = () => location.href;
+const MARCA = "ferroweb.com.ar";   // el sitio es interno de la redacción: lo que sale para afuera nombra solo a Ferroweb
 
 // ---------- imagen ----------
 const nombreArchivo = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 50) || "dato";
@@ -44,7 +45,7 @@ export async function imagenDe(nodo, titulo) {
   clon.querySelectorAll(".btn-compartir, .menu-comp, .ver-mas, .tip, .acciones-comp").forEach(e => e.remove());
   clon.classList.add("clon");
   clon.removeAttribute("style");   // el original puede estar fuera de pantalla (position:fixed): el clon va en el flujo de la placa
-  const pie = el("div", "pc-pie", `${location.host}${location.pathname.replace(/\/$/, "")}`);
+  const pie = el("div", "pc-pie", "ferroweb.com.ar");   // el sitio es interno de la redacción: en las imágenes va solo Ferroweb
   placa.append(cab, clon, pie); document.body.append(placa);
   try {
     const fondo = getComputedStyle(document.body).backgroundColor;
@@ -72,7 +73,7 @@ function menu(caja, titulo, descripcion) {
   document.querySelectorAll(".menu-comp").forEach(m => m.remove());
   const m = el("div", "menu-comp"); m.setAttribute("role", "menu");
   const item = (texto, fn) => { const b = el("button", null, texto); b.type = "button"; b.setAttribute("role", "menuitem"); b.addEventListener("click", () => { m.remove(); fn(); }); m.append(b); };
-  item("Copiar texto para tuit", () => copiar(textoParaTuit(titulo, descripcion, enlaceActual()), "Texto copiado"));
+  item("Copiar texto para tuit", () => copiar(textoParaTuit(titulo, descripcion, MARCA), "Texto copiado"));
   item("Copiar link", () => copiar(enlaceActual(), "Link copiado"));
   item("Descargar imagen", () => bajarImagen(caja, titulo));
   caja.append(m); m.querySelector("button").focus();
@@ -100,7 +101,7 @@ export function accionesDelDetalle(x, contenedor, titulo, enlace) {
   const primero = (x.detalle || (x.desarrollo && x.desarrollo[0]) || "");
   const b1 = el("button", null, "Copiar texto para tuit"), b2 = el("button", null, "Descargar imagen");
   [b1, b2].forEach(b => { b.type = "button"; fila.append(b); });
-  b1.addEventListener("click", () => copiar(textoParaTuit(titulo, primero, enlace), "Texto copiado"));
+  b1.addEventListener("click", () => copiar(textoParaTuit(titulo, primero, MARCA), "Texto copiado"));
   b2.addEventListener("click", () => {
     // solo el dato: título, cara, cifras y texto (sin relacionados, botones ni links)
     const nodo = el("div", "hallazgo-img"); nodo.append(el("h3", null, titulo));

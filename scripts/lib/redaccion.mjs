@@ -43,6 +43,11 @@ export function aplicarArbitroYHorario(calendario, filas, { ultimaFecha, arbitro
   return { calendario: { ...calendario, proximos }, designado_nombre: designado, avisos };
 }
 
+// Observaciones tácticas de la redacción (para las claves de la previa): Título = rival o jugador, Texto = la observación, Autor = quién la hizo.
+export function observacionesTacticas(filas) {
+  return filas.filter(f => f.tipo === "observacion" && f.activo).map(f => ({ id: f.id, fecha: f.fechaTexto, sobre: f.titulo, texto: f.texto, autor: f.autor || "redacción", link: f.link || "" }));
+}
+
 // Pedidos para la IA que todavía no se atendieron.
 export function pedidosPendientes(filas, atendidos = []) {
   return filas.filter(f => f.tipo === "pedido" && f.activo && !atendidos.includes(f.id)).map(f => ({ id: f.id, fecha: f.fechaTexto, titulo: f.titulo, texto: f.texto }));

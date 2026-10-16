@@ -46,7 +46,8 @@ export function initNovedadesHoy() {
   $("#hoy").hidden = false; $("#nav-hoy").hidden = false;
   $("#hoy-t").textContent = dias === 0 ? "Las novedades de hoy" : dias === 1 ? "Las novedades de ayer" : "Las últimas novedades";
   $("#hoy-f").textContent = fechaLarga(ult) + ` · ${hoyL.length} ${hoyL.length === 1 ? "hallazgo nuevo" : "hallazgos nuevos"}`;
-  { const url = "https://ferroweb.github.io/ferro-en-numeros/", btn = $("#hoy-wa"), msg = $("#hoy-wa-msg");
+  { const url = "ferroweb.com.ar",   // el sitio es interno de la redacción: al compartir se nombra solo Ferroweb
+    btn = $("#hoy-wa"), msg = $("#hoy-wa-msg");
     const armar = () => {
       const P = el("div", "placa-n"); const cab = el("div", "pc"); const izq = el("div");
       izq.append(el("span", "eti", "FERRO EN NÚMEROS"), el("h1", null, dias === 0 ? "Las novedades de hoy" : "Últimas novedades"), el("div", "f", fechaLarga(ult) + " · Hablemos de Ferro"));
@@ -56,7 +57,7 @@ export function initNovedadesHoy() {
         P.append(c); });
       const pie = el("div", "pn-pie"), px = el("div", "px");
       if (prox) { const F = DATA.fw; px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia).replace("-", "\u2011") + (prox.hora ? " " + prox.hora : "") : ""}`)); if (F && F.fecha === prox.fecha) { px.append(el("br")); const e = el("em", null, `Pronóstico FW: ${prox.cond === "L" ? `Ferro ${F.gf}-${F.gc} ${prox.rival}` : `${prox.rival} ${F.gc}-${F.gf} Ferro`}${F.autores && F.autores.length ? " (" + F.autores.join(", ") + ")" : ""}`); px.append(e); } }
-      pie.append(px, el("div", "pu", "ferroweb.github.io/ferro-en-numeros")); P.append(pie);
+      pie.append(px, el("div", "pu", "ferroweb.com.ar")); P.append(pie);
       document.body.append(P); return P;
     };
     const lib = cargarHtml2canvas;
@@ -94,7 +95,7 @@ export function initPlaca() {
       if (E && E.quedan) { const seg = (E.perseguidores || [])[0]; l.push(`Quedan ${E.quedan.length} ${E.quedan.length === 1 ? "fecha" : "fechas"}${seg ? ` y le llevamos ${E.ferro - seg.pts} a ${seg.equipo.replace("Deportivo ", "")}` : ""}.`); if (E.necesita_para_asegurar != null) l.push(E.necesita_para_asegurar ? `Con ${E.necesita_para_asegurar} de ${3 * E.quedan.length} puntos terminamos primeros sin mirar a nadie.` : "¡Ya no nos alcanza nadie!"); }
       if (prox && F && F.fecha === prox.fecha) l.push(`Pronóstico FW para ${prox.rival}: ${prox.cond === "L" ? `Ferro ${F.gf}-${F.gc}` : `${F.gc}-${F.gf} Ferro`}${F.autores && F.autores.length ? ", gol de " + [...new Set(F.autores)].join(" y ") : ""}.`);
       c4.append(el("div", "d", l.join(" "))); P.append(c4); }
-    const pie = el("div", "pn-pie"), px = el("div", "px"); if (prox) px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia).replace("-", "\u2011") : ""}`)); pie.append(px, el("div", "pu", "ferroweb.github.io/ferro-en-numeros")); P.append(pie);
+    const pie = el("div", "pn-pie"), px = el("div", "px"); if (prox) px.append(document.createTextNode(`Próximo: ${prox.cond === "L" ? "Ferro vs " + prox.rival : prox.rival + " vs Ferro"}${prox.dia ? " · " + fechaLarga(prox.dia).replace("-", "\u2011") : ""}`)); pie.append(px, el("div", "pu", "ferroweb.com.ar")); P.append(pie);
     document.body.append(P); return P;
   };
   const cortoN = n => ({ "Ignacio Carrión": "Nacho" })[n] || n.split(" ")[0];
@@ -102,7 +103,7 @@ export function initPlaca() {
     msg.textContent = "Armando la placa…"; btn.disabled = true;
     try { await lib(); const P = armar(); const cv = await window.html2canvas(P, { scale: 1, backgroundColor: null }); P.remove();
       const blob = await new Promise(r => cv.toBlob(r, "image/png")); const file = new File([blob], `ferro-F${u.fecha}.png`, { type: "image/png" });
-      if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text: "Ferro en números 💚 https://ferroweb.github.io/ferro-en-numeros/" }); msg.textContent = ""; }
+      if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text: "Ferro en números 💚 ferroweb.com.ar" }); msg.textContent = ""; }
       else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name; document.body.append(a); a.click(); a.remove(); msg.textContent = "Se descargó la placa: adjuntala en el grupo. (Desde el celu se comparte directo.)"; }
     } catch (e) { msg.textContent = e && e.name === "AbortError" ? "" : "No se pudo armar la placa. Probá de nuevo."; }
     btn.disabled = false;
