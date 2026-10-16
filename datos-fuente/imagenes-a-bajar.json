@@ -139,5 +139,25 @@
 {
 "url": "https://www.soloascenso.com.ar/sintesis/central-norte-salta-ferro-carril-oeste/44413",
 "destino": "datos-fuente/crudas/soloascenso/f33-44413.html"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/page.html?channel=deportes.futbol.nacionalb&lang=es_LA&page=fixture",
+"destino": "datos-fuente/crudas/afa/page-fixture.html"
+},
+{
+"url": "https://info.afa.org.ar/deposito/xml/deportes.futbol.nacionalb.fixture.xml",
+"destino": "datos-fuente/crudas/afa/fixture.xml"
+},
+{
+"url": "https://info.afa.org.ar/deposito/datosweb/deportes.futbol.nacionalb.fixture.xml",
+"destino": "datos-fuente/crudas/afa/datosweb-fixture.xml"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/js/main.js",
+"destino": "datos-fuente/crudas/afa/main.js"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/index.html?channel=deportes.futbol.nacionalb&lang=es_LA",
+"destino": "datos-fuente/crudas/afa/index.html"
 }
 ]
