@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:fb="//ogp.me/ns/fb#">
+    <head>
+        <title>HTML Center Page</title>
+
+        <link rel="dns-prefetch" href="//ssa.datafactory.la">
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//1287719000.rsc.cdn77.org">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+
+        <style type="text/css">
+            .generalBody{
+                padding: 0;
+                margin: 0;
+            }
+
+            #pages-container{
+                clear: both;
+            }
+
+        </style>
+    <script type="text/javascript">
+        const urlParams = new URLSearchParams(window.location.search);
+        const channelParameter = urlParams.get('channel').split(".");
+        const sportChannel = channelParameter[1];
+        const tournamentChannel = channelParameter[2];
+        const lang = urlParams.get('lang');
+        const eventId = channelParameter[3];
+
+        //Redireccionar a la nueva url del index para futbol y rugby que fueron migrados a nueva versión minapp_3.0
+        const redirectIndex = (sportChannel, tournamentChannel, lang) => {
+            //Valida que existan todos los parámetros necesarios
+            if (!sportChannel || !tournamentChannel || !lang) {
+                console.error('Error: Faltan parámetros para la redirección');
+                return
+            } else {
+                if (sportChannel === "futbol" || sportChannel === "rugby") {
+                    const url = `./minapp/init/index.html?channel=deportes.${sportChannel}.${tournamentChannel}`;
+                    const eventIdParam = eventId !== undefined ? `.${eventId}` : '';
+                    window.location.href = `${url}${eventIdParam}&lang=${lang}`;
+                }
+            }
+        }
+        
+        redirectIndex(sportChannel, tournamentChannel, lang);
+       
+    </script>
+    <script defer src="init.min.js"></script></head>
+
+    <body class="generalBody">
+
+        <div class="mc-injectContainer" data-type="module" data-name="gamecast"></div>
+        <!-- SE INCLUYE EL SCRIPT CON LA CONFIGURACIÓN DE LA MINAPP -->
+        <script type="text/javascript" src="./../minapp_3.0/minApp.js"></script>
+
+      <!-- END HTML Center code -->
+      <script src="./../customization/js/mc.googleAnalytics.js"></script>
+
+   </body>
+</html>

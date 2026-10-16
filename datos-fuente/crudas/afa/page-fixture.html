@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:fb="//ogp.me/ns/fb#">
+  <head>
+    <title>HTML Center Page</title>
+
+    <link rel="dns-prefetch" href="//ssa.datafactory.la" />
+    <link rel="dns-prefetch" href="//platform.twitter.com" />
+    <link rel="dns-prefetch" href="//connect.facebook.net" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//1287719000.rsc.cdn77.org" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <!--[if lt IE 9]>
+      <script src="htmlCenter/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      .generalBody {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body class="generalBody"><a href="https://info.afa.org.ar/cdn-cgi/content?id=EjIQmBvhedUny7II6u7LCTPGxF4nCtj14wnPr.aT6zc-1792119244.3434312-1.2.1.1-5SSUYftvQruO1qBuEmjgFEXYNXDcA650BRjrZ5mA28Sqc2wmdacv0_jAv1.c8SPU" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+    <div
+      class="mc-injectContainer dfMc-Page"
+      data-tracking="off"
+      data-event='{"channel": "%%CHANNEL_BY_URL%%"}'
+      data-type="page"
+      data-name="%%PAGE_NAME%%"
+      data-settings="{}"
+    ></div>
+
+    <!-- BEGIN HTML Center code -->
+
+    <!-- SE INCLUYE EL SCRIPT CON LA CONFIGURACIÓN DE LA MINAPP -->
+    <script type="text/javascript" src="./minapp/minApp.js"></script>
+
+    <script type="text/javascript">
+        (() => {
+            //Datos y configuración de la página
+            const page = _dfMc.fn.getParameter("page", false);
+            const pageCtn = document.querySelector(".dfMc-Page");
+            const pageSettings = {
+                detailsLinkTarget: _dfMc.fn.getParameter(
+                    "detailsLinkTarget",
+                    "popup"
+                ),
+            };
+
+            if (_dfMc.fn.getParameter("theme", false)) {
+                pageSettings.theme = _dfMc.fn.getParameter("theme");
+            }
+
+            const preloader =
+                '<style type="text/css">.modulePreloader{\height:30px;width:30px;margin:5px auto;position:relative;-webkit-animation: rotation .6s infinite linear;-moz-animation: rotation .6s infinite linear;-o-animation: rotation .6s infinite linear;animation: rotation .6s infinite linear;border-width:6px;border-style:solid;border-color:#CCC #CCC #000;border-radius:100%; box-sizing:border-box;}\ @-webkit-keyframes rotation {\ from {\ -webkit-transform: rotate(0deg); }\ to {\ -webkit-transform: rotate(359deg); }\ }\ @-moz-keyframes rotation {\ from {\ -moz-transform: rotate(0deg); }\ to {\ -moz-transform: rotate(359deg); }\ }\ @-o-keyframes rotation {\ from {\ -o-transform: rotate(0deg);}\ to {\ -o-transform: rotate(359deg); }\ }\ @keyframes rotation {\ from {\ transform: rotate(0deg); }\ to {\ transform: rotate(359deg);}\ }\ </style><div class="modulePreloader"></div>';
+
+            //Colocar temporalmente el preloader
+            pageCtn.innerHTML = preloader;
+
+            //Función que maneja la aplicación después de que se cargó el core del HTML Center (con acceso a la funcionalidad)
+            _dfMc.appHandlerFunction = () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const channelParameter = urlParams.get("channel").split(".");
+                const sportChannel = channelParameter[1];
+                console.log('sportChannel: ', sportChannel);
+                const tournamentChannel = channelParameter[2];
+                const pageName = urlParams.get("page");
+                const lang = urlParams.get("lang");
+                const sportDirectory =
+                    sportChannel === "todos" ? "futbol" : sportChannel;
+
+                if (sportChannel === "futbol" || sportChannel === "rugby") {
+                    //Redireccionar a la nueva url del módulo page para futbol y rugby que fueron migrados a nueva versión minapp_3.0
+                    const redirectPage = (sportChannel, tournamentChannel, lang) => {
+                        //Valida que existan todos los parámetros necesarios
+                        if (!sportChannel || !tournamentChannel || !lang) {
+                            console.error("Error: Faltan parámetros para la redirección");
+                            return;
+                        } else {
+                            window.location.href = `./minapp/modules/${sportDirectory}/page/page.html?channel=deportes.${sportChannel}.${tournamentChannel}&lang=${lang}&page=${pageName}`;
+                        }
+                    };
+
+                    redirectPage(
+                        sportChannel,
+                        tournamentChannel,
+                        lang,
+                        sportDirectory,
+                        pageName
+                    );
+                }
+            };
+        })();
+    </script>
+
+    <!-- END HTML Center code -->
+
+    <script src="./minapp/customization/js/mc.googleAnalytics.js"></script>
+  </body>
+</html>
