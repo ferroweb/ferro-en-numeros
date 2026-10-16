@@ -175,5 +175,41 @@
 {
 "url": "https://info.afa.org.ar/deposito/html/v3/minapp/init/init.min.js",
 "destino": "datos-fuente/crudas/afa/init.min.js"
+},
+{
+"url": "https://1287719000.rsc.cdn77.org/data/deportes/futbol/nacionalb/agendaMaM/es_LA/agenda.json",
+"destino": "datos-fuente/crudas/afa/cdn-agenda.json"
+},
+{
+"url": "https://1287719000.rsc.cdn77.org/data/deportes/futbol/nacionalb/pages/es_LA/fixture.json",
+"destino": "datos-fuente/crudas/afa/cdn-fixture.json"
+},
+{
+"url": "https://1287719000.rsc.cdn77.org/data/deportes/futbol/nacionalb/statsCenter/playersStats.json",
+"destino": "datos-fuente/crudas/afa/cdn-stats.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/data/deportes/futbol/nacionalb/agendaMaM/es_LA/agenda.json",
+"destino": "datos-fuente/crudas/afa/afa-agenda.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/data/deportes/futbol/nacionalb/pages/es_LA/fixture.json",
+"destino": "datos-fuente/crudas/afa/afa-fixture.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/data/deportes/futbol/nacionalb/statsCenter/playersStats.json",
+"destino": "datos-fuente/crudas/afa/afa-stats.json"
+},
+{
+"url": "https://info.afa.org.ar/data/deportes/futbol/nacionalb/agendaMaM/es_LA/agenda.json",
+"destino": "datos-fuente/crudas/afa/afa2-agenda.json"
+},
+{
+"url": "https://info.afa.org.ar/data/deportes/futbol/nacionalb/pages/es_LA/fixture.json",
+"destino": "datos-fuente/crudas/afa/afa2-fixture.json"
+},
+{
+"url": "https://info.afa.org.ar/data/deportes/futbol/nacionalb/statsCenter/playersStats.json",
+"destino": "datos-fuente/crudas/afa/afa2-stats.json"
 }
 ]
