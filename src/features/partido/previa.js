@@ -100,7 +100,7 @@ export function previa() {
   });
   }
   const ol = $("#claves"); ol.textContent = "";
-  if (previaAlDia && DATA.claves && DATA.claves.length) { $("#claves-t").textContent = `Claves para ganarle a ${prox.rival}`; DATA.claves.forEach(k => { const li = el("li"); li.append(el("span", "kt", k.titulo), el("span", "kd", k.dato), el("span", "kp", k.porque)); ol.append(li); }); }
+  if (previaAlDia && DATA.claves && DATA.claves.length) { $("#claves-t").textContent = `Claves para ganarle a ${prox.rival}`; DATA.claves.forEach(k => { const li = el("li"); const t = el("span", "kt"); if (k.enfoque) t.append(el("span", "ke", k.enfoque)); t.append(k.titulo); li.append(t, el("span", "kd", k.dato), el("span", "kp", k.porque)); ol.append(li); }); }
   else $("#claves-caja").hidden = true;
   limitar(ol, 4);
   const hu = prox.humor;

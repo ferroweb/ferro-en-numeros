@@ -152,6 +152,7 @@
 .claves li { counter-increment: k; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 12px; padding-block: 10px; border-top: 1px solid var(--line); }
 .claves li::before { content: counter(k); grid-row: span 3; font-family: var(--display); font-weight: 800; font-size: 34px; line-height: 1; color: var(--verde-txt); min-width: 1.1em; }
 .claves .kt { font-weight: 700; }
+.claves .ke { display: block; font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--verde-txt); margin-bottom: 2px; }
 .claves .kd { justify-self: start; font-family: var(--mono); font-size: 12px; background: var(--chip); border-radius: 4px; padding: 1px 6px; }
 .claves .kp { font-size: 13.5px; color: var(--muted); }
 .humor { border: 2px dashed var(--verde); margin-bottom: 14px; scroll-margin-top: 70px; }
