@@ -211,5 +211,21 @@
 {
 "url": "https://info.afa.org.ar/data/deportes/futbol/nacionalb/statsCenter/playersStats.json",
 "destino": "datos-fuente/crudas/afa/afa2-stats.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/agendaMaM/es_LA/agenda.json",
+"destino": "datos-fuente/crudas/afa/hc-agenda.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/pages/es_LA/fixture.json",
+"destino": "datos-fuente/crudas/afa/hc-fixture.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/playersStats.json",
+"destino": "datos-fuente/crudas/afa/hc-stats.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/teamsList.json",
+"destino": "datos-fuente/crudas/afa/hc-teams.json"
 }
 ]
