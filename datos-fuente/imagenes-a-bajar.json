@@ -1,1 +1,143 @@
-[{"url":"https://santafedeportivo.com/wp-content/uploads/2025/08/bruno-amiconijpg.webp","destino":"datos-fuente/crudas/bruno-amiconi.webp","credito":"Santa Fe Deportivo"}]
+[
+{
+"url": "https://santafedeportivo.com/wp-content/uploads/2025/08/bruno-amiconijpg.webp",
+"destino": "datos-fuente/crudas/bruno-amiconi.webp",
+"credito": "Santa Fe Deportivo"
+},
+{
+"url": "https://www.soloascenso.com.ar/club/ferro-carril-oeste/275",
+"destino": "datos-fuente/crudas/soloascenso/club-ferro.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/san-telmo-ferro-carril-oeste/43872",
+"destino": "datos-fuente/crudas/soloascenso/f01-43872.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-san-miguel/43885",
+"destino": "datos-fuente/crudas/soloascenso/f02-43885.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/colon-ferro-carril-oeste/43907",
+"destino": "datos-fuente/crudas/soloascenso/f03-43907.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-deportivo-moron/43922",
+"destino": "datos-fuente/crudas/soloascenso/f04-43922.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/godoy-cruz-ferro-carril-oeste/43942",
+"destino": "datos-fuente/crudas/soloascenso/f05-43942.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-los-andes/43959",
+"destino": "datos-fuente/crudas/soloascenso/f06-43959.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/atlanta-ferro-carril-oeste/44478",
+"destino": "datos-fuente/crudas/soloascenso/f07-44478.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/all-boys-ferro-carril-oeste/43977",
+"destino": "datos-fuente/crudas/soloascenso/f08-43977.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-estudiantes/43996",
+"destino": "datos-fuente/crudas/soloascenso/f09-43996.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/mitre-santiago-ferro-carril-oeste/44012",
+"destino": "datos-fuente/crudas/soloascenso/f10-44012.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-almirante-brown/44033",
+"destino": "datos-fuente/crudas/soloascenso/f11-44033.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ciudad-de-bolivar-ferro-carril-oeste/44047",
+"destino": "datos-fuente/crudas/soloascenso/f12-44047.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-defensores-de-belgrano/44070",
+"destino": "datos-fuente/crudas/soloascenso/f13-44070.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/deportivo-madryn-ferro-carril-oeste/44082",
+"destino": "datos-fuente/crudas/soloascenso/f14-44082.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-central-norte-salta/44107",
+"destino": "datos-fuente/crudas/soloascenso/f15-44107.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/racing-de-cordoba-ferro-carril-oeste/44117",
+"destino": "datos-fuente/crudas/soloascenso/f16-44117.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/chaco-for-ever-ferro-carril-oeste/44143",
+"destino": "datos-fuente/crudas/soloascenso/f17-44143.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-acassuso/44154",
+"destino": "datos-fuente/crudas/soloascenso/f18-44154.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-san-telmo/44178",
+"destino": "datos-fuente/crudas/soloascenso/f19-44178.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/san-miguel-ferro-carril-oeste/44191",
+"destino": "datos-fuente/crudas/soloascenso/f20-44191.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-colon/44213",
+"destino": "datos-fuente/crudas/soloascenso/f21-44213.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/deportivo-moron-ferro-carril-oeste/44228",
+"destino": "datos-fuente/crudas/soloascenso/f22-44228.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-godoy-cruz/44248",
+"destino": "datos-fuente/crudas/soloascenso/f23-44248.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/los-andes-ferro-carril-oeste/44265",
+"destino": "datos-fuente/crudas/soloascenso/f24-44265.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-atlanta/44496",
+"destino": "datos-fuente/crudas/soloascenso/f25-44496.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-all-boys/44283",
+"destino": "datos-fuente/crudas/soloascenso/f26-44283.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/estudiantes-ferro-carril-oeste/44302",
+"destino": "datos-fuente/crudas/soloascenso/f27-44302.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-mitre-santiago/44318",
+"destino": "datos-fuente/crudas/soloascenso/f28-44318.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/almirante-brown-ferro-carril-oeste/44339",
+"destino": "datos-fuente/crudas/soloascenso/f29-44339.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-ciudad-de-bolivar/44353",
+"destino": "datos-fuente/crudas/soloascenso/f30-44353.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/defensores-de-belgrano-ferro-carril-oeste/44376",
+"destino": "datos-fuente/crudas/soloascenso/f31-44376.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/ferro-carril-oeste-deportivo-madryn/44388",
+"destino": "datos-fuente/crudas/soloascenso/f32-44388.html"
+},
+{
+"url": "https://www.soloascenso.com.ar/sintesis/central-norte-salta-ferro-carril-oeste/44413",
+"destino": "datos-fuente/crudas/soloascenso/f33-44413.html"
+}
+]
