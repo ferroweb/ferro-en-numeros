@@ -383,5 +383,17 @@
 {
 "url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794968.json",
 "destino": "datos-fuente/crudas/afa/ev/20261011-794968.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/agendaMaM/agenda_141.json",
+"destino": "datos-fuente/crudas/afa/rival/agenda_141.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/teams/141.json",
+"destino": "datos-fuente/crudas/afa/rival/team_141.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/playersStats.json",
+"destino": "datos-fuente/crudas/afa/rival/playersStats.json"
 }
 ]
