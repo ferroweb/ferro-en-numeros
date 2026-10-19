@@ -555,5 +555,13 @@
 {
 "url": "http://www.ferroweb.com.ar/v1/index.php?mod=futbol&sub=cronica",
 "destino": "datos-fuente/crudas/fw/cronicas-index.html"
+},
+{
+"url": "https://futboltotal.futbol/league/primera-nacional/clasificacion",
+"destino": "datos-fuente/crudas/ft/clasificacion-2026-10-19.html"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/teamsList.json",
+"destino": "datos-fuente/crudas/afa/hc-teams2.json"
 }
 ]
