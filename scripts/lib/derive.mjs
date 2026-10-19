@@ -11,7 +11,7 @@ const redondear = (v, d = 2) => {   // mitad hacia el par, igual que los datos y
 
 // Procesa UNA síntesis. Devuelve { partido, participaciones, goles, avisos, errores }.
 // `errores` impide guardar el partido (datos incompletos o incoherentes); `avisos` se informan pero no frenan.
-export function procesarPartido(s, { fecha, rival, n, view, conocidos = [] }) {
+export function procesarPartido(s, { fecha, rival, n, view, conocidos = [], alias = {} }) {
   const avisos = [], errores = [];
   const ferroLocal = mismoEquipo(s.local, FERRO);
   if (!ferroLocal && !mismoEquipo(s.visitante, FERRO)) errores.push(`La síntesis ${view} no es de Ferro (${s.local} - ${s.visitante})`);
@@ -21,7 +21,7 @@ export function procesarPartido(s, { fecha, rival, n, view, conocidos = [] }) {
 
   if (pl.jugadores.length !== 11) errores.push(`Ferro tiene ${pl.jugadores.length} titulares en la formación (deberían ser 11)`);
   // FerroWeb a veces escribe mal un apellido en la formación: se lo lleva al nombre que ya usa el sitio.
-  const canonico = (k) => { const c = buscar(k, conocidos); if (!c && conocidos.length) avisos.push(`Jugador nuevo o nombre dudoso: «${k}»`); return c ?? k; };
+  const canonico = (k) => { if (alias[k]) return alias[k]; const c = buscar(k, conocidos); if (!c && conocidos.length) avisos.push(`Jugador nuevo o nombre dudoso: «${k}»`); return c ?? k; };
   const titulares = pl.jugadores.map(j => canonico(j.clave)), banco = ev.suplentes.map(canonico);
   const todos = [...titulares, ...banco];
   const clave = (nombre, contexto) => {

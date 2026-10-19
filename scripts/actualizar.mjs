@@ -41,6 +41,7 @@ let DETALLE = RECONSTRUIR ? {} : leer("datos-fuente/detalle.json", {});   // por
 
 let partidos = RECONSTRUIR ? [] : dp.partidos.slice(), participaciones = RECONSTRUIR ? [] : dp.participaciones.slice();
 const conocidos = dj.jugadores.map(j => j.jugador);
+const ALIAS_JUG = Object.fromEntries(Object.entries(leer("datos-fuente/alias-jugadores.json", {})).filter(([k]) => !k.startsWith("_")));   // homónimos: «García F.» → «García»
 const nuevos = [];
 
 async function incorporar({ view, fecha, rival, n, nota = "" }) {
@@ -48,7 +49,7 @@ async function incorporar({ view, fecha, rival, n, nota = "" }) {
   const s0 = parseSintesis(html);
   if (!s0) return null;                                   // todavía no hay síntesis publicada
   const s = corregir(s0, CORR[view]);
-  const r = procesarPartido(s, { fecha, rival, n, view, conocidos });
+  const r = procesarPartido(s, { fecha, rival, n, view, conocidos, alias: ALIAS_JUG });
   r.avisos.forEach(a => aviso(`F${fecha} (síntesis ${view}): ${a}`));
   if (r.errores.length) {
     r.errores.forEach(e => { errores.push(`F${fecha} (síntesis ${view}): ${e}`); console.log(`❌ F${fecha} (síntesis ${view}): ${e}`); });
@@ -94,7 +95,7 @@ async function main() {
   for (const p of partidos) {
     if (DETALLE[p.fecha] && DETALLE[p.fecha].tarjetas) continue;
     const s = parseSintesis(await bajarSintesis(viewDe(p)));
-    const r = s && procesarPartido(corregir(s, CORR[viewDe(p)]), { fecha: p.fecha, rival: p.rival, n: p.n, view: viewDe(p), conocidos });
+    const r = s && procesarPartido(corregir(s, CORR[viewDe(p)]), { fecha: p.fecha, rival: p.rival, n: p.n, view: viewDe(p), conocidos, alias: ALIAS_JUG });
     if (!r) { aviso(`No pude leer los goles de F${p.fecha}`); continue; }
     DETALLE[p.fecha] = { goles: r.goles, entradas: r.entradas, tarjetas: r.tarjetas }; if (r.errores.length) aviso(`F${p.fecha}: ${r.errores.join("; ")}`);
   }

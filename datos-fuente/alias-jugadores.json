@@ -1,0 +1,5 @@
+{
+ "_motivo": "Jugadores con el mismo apellido en una síntesis (el parser les agrega la inicial del nombre). Se lleva cada uno a la clave que usa el sitio. García F. = Franco García (la clave «García» de siempre); García S. = Santiago García, suplente desde la F34.",
+ "García F.": "García",
+ "García S.": "García S."
+}

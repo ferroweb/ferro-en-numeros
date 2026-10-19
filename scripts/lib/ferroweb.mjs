@@ -72,8 +72,15 @@ export function parseCambios(texto) {
 }
 
 // «Suplentes: 12- Ruiz, Lucas 13- Tarán, Misael» (a veces sin coma o con guiones sueltos)
+// Si dos suplentes comparten apellido («García, Franco» y «García, Santiago») se distinguen con la inicial: «García F.», «García S.».
 export function parseSuplentes(texto) {
-  return texto.split(/\b\d{1,2}\s*-\s*/).map(s => s.replace(/\s*-\s*$/, "").trim()).filter(Boolean).map(claveJugador);
+  const crudos = texto.split(/\b\d{1,2}\s*-\s*/).map(s => s.replace(/\s*-\s*$/, "").trim()).filter(Boolean);
+  const claves = crudos.map(claveJugador);
+  return claves.map((k, i) => {
+    if (claves.filter(x => x === k).length < 2) return k;
+    const nombre = (crudos[i].split(",")[1] || "").replace(/\(c\)/i, "").trim();
+    return nombre ? `${k} ${nombre[0].toUpperCase()}.` : k;
+  });
 }
 
 // Clave de jugador: el apellido tal como lo escribe la formación («Monetti, Fernando (c)» → «Monetti»).

@@ -73,3 +73,8 @@ test("parseTarjetas no parte «García, Santiago» en dos eventos", async () => 
   assert.equal(r[2].nombre, "García, Santiago");
   assert.ok(r.every(x => !x.error));
 });
+
+test("parseSuplentes: dos con el mismo apellido se distinguen con la inicial", async () => {
+  const { parseSuplentes } = await import("../lib/ferroweb.mjs");
+  assert.deepEqual(parseSuplentes("12- Ruiz, Lucas 17- García, Franco 18- Dening, Emanuel 19- García, Santiago"), ["Ruiz", "García F.", "Dening", "García S."]);
+});
