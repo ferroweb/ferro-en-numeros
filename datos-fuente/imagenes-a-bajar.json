@@ -667,5 +667,69 @@
 {
 "url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794930.json",
 "destino": "datos-fuente/crudas/afa/rival853/ev/794930.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Adri%C3%A1n%20Giampietri",
+"destino": "datos-fuente/crudas/chaco/art/es0.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Adri%C3%A1n%20Taffarel",
+"destino": "datos-fuente/crudas/chaco/art/es1.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Dimas%20Morales",
+"destino": "datos-fuente/crudas/chaco/art/es2.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Gabriel%20Ram%C3%ADrez",
+"destino": "datos-fuente/crudas/chaco/art/es3.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Gast%C3%B3n%20Ada",
+"destino": "datos-fuente/crudas/chaco/art/es4.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Juan%20Sotelo",
+"destino": "datos-fuente/crudas/chaco/art/es5.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Mariano%20Barale",
+"destino": "datos-fuente/crudas/chaco/art/es6.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Roberto%20Gargini",
+"destino": "datos-fuente/crudas/chaco/art/es7.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Adri%C3%A1n%20Taffarel",
+"destino": "datos-fuente/crudas/chaco/art/en0.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Gabriel%20Ram%C3%ADrez%20%28footballer%2C%20born%201995%29",
+"destino": "datos-fuente/crudas/chaco/art/en1.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Gast%C3%B3n%20Ada",
+"destino": "datos-fuente/crudas/chaco/art/en2.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Dimas%20Morales",
+"destino": "datos-fuente/crudas/chaco/art/en3.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Juan%20Sotelo",
+"destino": "datos-fuente/crudas/chaco/art/en4.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Mariano%20Barale",
+"destino": "datos-fuente/crudas/chaco/art/en5.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Adri%C3%A1n%20Giampietri",
+"destino": "datos-fuente/crudas/chaco/art/en6.json"
+},
+{
+"url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Roberto%20Gargini",
+"destino": "datos-fuente/crudas/chaco/art/en7.json"
 }
 ]
