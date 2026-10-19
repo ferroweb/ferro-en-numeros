@@ -1,0 +1,36 @@
+name: Buscar en LaFerropedia
+
+# A mano: recorre las fichas de LaFerropedia y guarda las que mencionan un texto.
+on:
+  workflow_dispatch:
+    inputs:
+      texto:
+        description: "Texto a buscar (regex, sin distinguir mayúsculas)"
+        default: "Chaco"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Recorrer
+        run: node scripts/buscar-laferropedia.mjs "${{ github.event.inputs.texto }}"
+      - name: Guardar
+        run: |
+          git config user.name "ferro-en-numeros-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add datos-fuente/crudas/chaco/lfp
+          git commit -m "Menciones en LaFerropedia" || exit 0
+          git pull --rebase
+          git push
