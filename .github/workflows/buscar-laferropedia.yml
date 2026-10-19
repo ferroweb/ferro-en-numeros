@@ -26,11 +26,5 @@ jobs:
           node-version: 22
       - name: Recorrer
         run: node scripts/buscar-laferropedia.mjs "${{ github.event.inputs.texto }}"
-      - name: Guardar
-        run: |
-          git config user.name "ferro-en-numeros-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add datos-fuente/crudas/chaco/lfp
-          git commit -m "Menciones en LaFerropedia" || exit 0
-          git pull --rebase
-          git push
+      - name: Mostrar en el log (no se guarda en el repo)
+        run: cat datos-fuente/crudas/chaco/lfp/menciones.json

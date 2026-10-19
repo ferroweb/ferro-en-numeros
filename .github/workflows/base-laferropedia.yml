@@ -1,0 +1,43 @@
+name: Base interna de LaFerropedia
+
+# A mano (o una vez por mes): baja todas las fichas de LaFerropedia, las cifra con la clave
+# pública del repo y guarda solo el archivo cifrado. Uso interno de Ferroweb.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  base:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Bajar fichas
+        run: node scripts/base-laferropedia.mjs /tmp/lfp.json.gz
+      - name: Cifrar
+        run: |
+          mkdir -p datos-fuente/laferropedia
+          openssl rand -out /tmp/k.bin 32
+          openssl enc -aes-256-cbc -pbkdf2 -salt -pass file:/tmp/k.bin -in /tmp/lfp.json.gz -out datos-fuente/laferropedia/fichas.enc
+          openssl pkeyutl -encrypt -pubin -inkey datos-fuente/laferropedia-publica.pem -pkeyopt rsa_padding_mode:oaep -in /tmp/k.bin -out datos-fuente/laferropedia/clave.enc
+          rm -f /tmp/k.bin /tmp/lfp.json.gz
+          ls -la datos-fuente/laferropedia
+      - name: Guardar
+        run: |
+          git config user.name "ferro-en-numeros-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add datos-fuente/laferropedia
+          git commit -m "Base interna de LaFerropedia (cifrada)" || exit 0
+          git pull --rebase
+          git push
