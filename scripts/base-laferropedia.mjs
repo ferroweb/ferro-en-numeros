@@ -3,6 +3,7 @@
 // pública de datos-fuente/laferropedia-publica.pem (uso interno: no se publica en claro).
 import fs from "node:fs"; import zlib from "node:zlib";
 const SAL = process.argv[2] || "lfp-fichas.json.gz";
+const SOLO_FICHAS = (process.argv[3] || "fichas") === "fichas"; // "todo" incluye efemérides y notas
 const UA = { headers: { "User-Agent": "Mozilla/5.0 (ferro-en-numeros; base interna)" } };
 const dormir = ms => new Promise(r => setTimeout(r, ms));
 async function texto(u) { for (let i = 0; i < 3; i++) { try { const r = await fetch(u, UA); if (r.ok) return await r.text(); console.log("HTTP", r.status, u); } catch (e) { console.log("ERR", u, e.message); } await dormir(2000); } return null; }
@@ -12,6 +13,7 @@ const mapas = locs(idx || ""); console.log("sitemaps:", mapas.join(" "));
 let urls = [];
 for (const m of mapas) { if (/category|tag|author/.test(m)) continue; const x = await texto(m); urls.push(...locs(x || "").map(u => ({ u, mapa: m }))); await dormir(400); }
 const vistos = new Set(); urls = urls.filter(x => !vistos.has(x.u) && vistos.add(x.u));
+if (SOLO_FICHAS) urls = urls.filter(x => /\/persona\/|\/jugador-|\/director-tecnico-/.test(x.u));
 console.log("urls:", urls.length);
 const limpiar = h => {
   const m = h.match(/<article[\s\S]*?<\/article>/i) || h.match(/<main[\s\S]*?<\/main>/i) || h.match(/<body[\s\S]*?<\/body>/i) || [h];
@@ -21,7 +23,7 @@ const limpiar = h => {
 };
 const fichas = []; let n = 0;
 for (const { u, mapa } of urls) {
-  n++; const h = await texto(u); await dormir(350); if (!h) continue;
+  n++; const h = await texto(u); await dormir(250); if (!h) continue;
   fichas.push({ url: u, mapa, titulo: (h.match(/<title>([^<]*)<\/title>/) || [])[1] || "", html: limpiar(h) });
   if (n % 100 === 0) console.log(n, "/", urls.length);
 }
