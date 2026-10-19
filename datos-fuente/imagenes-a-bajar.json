@@ -731,5 +731,41 @@
 {
 "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&redirects=1&titles=Roberto%20Gargini",
 "destino": "datos-fuente/crudas/chaco/art/en7.json"
+},
+{
+"url": "https://laferropedia.com/robots.txt",
+"destino": "datos-fuente/crudas/chaco/lfp/robots.txt"
+},
+{
+"url": "https://laferropedia.com/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s1.html"
+},
+{
+"url": "https://laferropedia.com/page/2/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s2.html"
+},
+{
+"url": "https://laferropedia.com/page/3/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s3.html"
+},
+{
+"url": "https://laferropedia.com/page/4/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s4.html"
+},
+{
+"url": "https://laferropedia.com/page/5/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s5.html"
+},
+{
+"url": "https://laferropedia.com/page/6/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s6.html"
+},
+{
+"url": "https://laferropedia.com/page/7/?s=%22Chaco+For+Ever%22",
+"destino": "datos-fuente/crudas/chaco/lfp/s7.html"
+},
+{
+"url": "https://laferropedia.com/wp-json/wp/v2/search?search=Chaco%20For%20Ever&per_page=100",
+"destino": "datos-fuente/crudas/chaco/lfp/api-search.json"
 }
 ]
