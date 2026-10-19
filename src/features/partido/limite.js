@@ -41,7 +41,13 @@ function fila(x, extra, cuenta) {
 export function initLimite() {
   const L = DATA.limite_amarillas;
   const caja = $("#lim-caja"), c2 = $("#lim-caja2"), c3 = $("#lim-caja3"), c4 = $("#lim-caja4");
-  if (!Array.isArray(L) || !L.length) { [caja, c2, c3, c4, $("#lim-regla")].forEach(e => { e.hidden = true; }); return; }
+  if (!Array.isArray(L) || !L.length) { [caja, c2, c3, c4, $("#lim-caja0"), $("#lim-regla")].forEach(e => { e.hidden = true; }); return; }
+  // Los que llegaron a 5 (o 10) en el último partido: se pierden el próximo.
+  const ult = DATA.ultima_fecha, susp = L.filter(x => x.suspensiones.some(s => s.fecha === ult));
+  if (susp.length && prox) {
+    $("#lim-n0").textContent = `Llegaron a una nueva tanda de 5 amarillas en la fecha ${ult} y no pueden jugar ante ${prox.rival} (fecha ${prox.fecha}).`;
+    susp.forEach(x => $("#lim-0").append(fila(x, `Vio la amarilla en la fecha ${ult} y completó ${x.total} en el torneo.${x.confirmado ? " Conteo base: " + x.confirmado.fuente + "." : ""}`, "Suspendido")));
+  } else $("#lim-caja0").hidden = true;
   const dudosos = L.filter(x => !x.confirmado && x.suspensiones.some(s => s.jugo_siguiente));
   const ok = L.filter(x => !dudosos.includes(x));
   const sig = prox && (DATA.calendario.proximos || []).find(p => p.fecha === prox.fecha + 1);

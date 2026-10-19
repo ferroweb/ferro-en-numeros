@@ -176,3 +176,12 @@ test("filasSegunInforme: el conteo oficial decide la amarilla en disputa", async
   const F = filasSegunInforme(partidos, det, [], filas, { Marra: { ciclo: 4 }, Ozuna: { ciclo: 2 } });
   assert.deepEqual(F.map(f => f.informe), [true, false, null]);   // Marra: existió; Ozuna: confirma la mayoría; Tévez: sin informe
 });
+
+test("limiteAmarillas: con el conteo confirmado en 4, la amarilla siguiente es suspensión", async () => {
+  const { limiteAmarillas } = await import("../lib/calculos.mjs");
+  const partidos = [1, 2, 3].map((fecha, n) => ({ fecha, n }));
+  const detalle = { 1: { tarjetas: [{ k: "Hoyos", tipo: "a" }] }, 2: { tarjetas: [{ k: "Hoyos", tipo: "a" }] }, 3: { tarjetas: [] } };
+  const h = limiteAmarillas(partidos, detalle, [], { confirmadas: { Hoyos: { ciclo: 4, al_cierre_de_fecha: 1, fuente: "AFA" } } }).find(x => x.jugador === "Hoyos");
+  assert.equal(h.ciclo, 0);
+  assert.deepEqual(h.suspensiones, [{ fecha: 2, siguiente: 3, jugo_siguiente: false }]);
+});

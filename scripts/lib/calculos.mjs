@@ -252,8 +252,14 @@ export function limiteAmarillas(partidos, detalle, participaciones, { tope = 5, 
   for (const [j, c] of Object.entries(confirmadas)) {
     if (j.startsWith("_")) continue;
     const x = por.get(j) ?? { jugador: j, amarillas: 0, fechas: [], suspensiones: [] };
-    const despues = x.fechas.filter(f => nDe(f) > nDe(c.al_cierre_de_fecha)).length;
-    por.set(j, { ...x, confirmado: { ciclo: c.ciclo, al_cierre_de_fecha: c.al_cierre_de_fecha, fuente: c.fuente, nota: c.nota ?? "" }, ciclo_confirmado: (c.ciclo + despues) % tope });
+    const post = x.fechas.filter(f => nDe(f) > nDe(c.al_cierre_de_fecha)), despues = post.length;
+    // Suspensiones posteriores al conteo confirmado: cuando las amarillas nuevas completan otro ciclo de 5.
+    const susp = post.map((f, i) => ({ f, k: c.ciclo + i + 1 })).filter(({ k }) => k % tope === 0).map(({ f }) => {
+      const i = orden.findIndex(p => p.fecha === f), sig = orden[i + 1]?.fecha ?? null;
+      return { fecha: f, siguiente: sig, jugo_siguiente: sig != null && jugo(j, sig) };
+    });
+    const previas = x.suspensiones.filter(s => nDe(s.fecha) <= nDe(c.al_cierre_de_fecha));
+    por.set(j, { ...x, suspensiones: [...previas, ...susp], confirmado: { ciclo: c.ciclo, al_cierre_de_fecha: c.al_cierre_de_fecha, fuente: c.fuente, nota: c.nota ?? "" }, ciclo_confirmado: (c.ciclo + despues) % tope });
   }
   // Si la otra fuente no coincide, se marca y se recalcula el conteo entero con las amarillas de ella (ALT).
   let ALT = null;
