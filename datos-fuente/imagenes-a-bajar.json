@@ -595,5 +595,77 @@
 {
 "url": "https://petscan.wmflabs.org/?language=en&project=wikipedia&depth=0&combination=subset&format=json&doit=1&categories=Chaco%20For%20Ever%20footballers%0AFerro%20Carril%20Oeste%20footballers",
 "destino": "datos-fuente/crudas/chaco/petscan-en.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201900",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub00.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201910",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub01.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201920",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub02.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201930",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub03.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201940",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub04.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201950",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub05.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201960",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub06.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201970",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub07.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201980",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub08.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%201990",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub09.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%202000",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub10.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%202010",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub11.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20del%20Club%20Ferro%20Carril%20Oeste%20en%20los%20a%C3%B1os%202020",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub12.json"
+},
+{
+"url": "https://es.wikipedia.org/w/api.php?action=query&list=categorymembers&cmlimit=500&format=json&cmtitle=Categor%C3%ADa%3AFutbolistas%20de%20las%20inferiores%20del%20Club%20Ferro%20Carril%20Oeste",
+"destino": "datos-fuente/crudas/chaco/wiki-es-ferro-sub13.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794979.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794979.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794967.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794967.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794944.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794944.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794930.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794930.json"
 }
 ]
