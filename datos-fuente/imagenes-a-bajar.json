@@ -563,5 +563,13 @@
 {
 "url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/teamsList.json",
 "destino": "datos-fuente/crudas/afa/hc-teams2.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/agendaMaM/agenda_853.json",
+"destino": "datos-fuente/crudas/afa/rival853/agenda_853.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/statsCenter/teams/853.json",
+"destino": "datos-fuente/crudas/afa/rival853/team_853.json"
 }
 ]
