@@ -927,5 +927,10 @@
 {
 "url": "https://www.fotmob.com/api/teams?id=161733",
 "destino": "datos-fuente/crudas/sofa/fotmob-team.json"
+},
+{
+"url": "https://media.todojujuy.com/p/af97e8b9c7f60e1a774e37076f2b0ee7/adjuntos/227/imagenes/003/462/0003462400/1200x675/smart/javier-delbarba-arbitro.jpg",
+"destino": "datos-fuente/crudas/javier-delbarba.jpg",
+"credito": "TodoJujuy"
 }
 ]
