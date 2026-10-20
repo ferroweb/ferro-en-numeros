@@ -911,5 +911,21 @@
 {
 "url": "https://ferrocarriloeste.com.ar/m_plantel.php",
 "destino": "datos-fuente/crudas/oficial/m_plantel.html"
+},
+{
+"url": "https://api.sofascore.com/api/v1/team/36841/events/last/0",
+"destino": "datos-fuente/crudas/sofa/last0.json"
+},
+{
+"url": "https://api.sofascore.com/api/v1/team/36841/events/last/1",
+"destino": "datos-fuente/crudas/sofa/last1.json"
+},
+{
+"url": "https://www.sofascore.com/api/v1/team/36841/events/last/0",
+"destino": "datos-fuente/crudas/sofa/www-last0.json"
+},
+{
+"url": "https://www.fotmob.com/api/teams?id=161733",
+"destino": "datos-fuente/crudas/sofa/fotmob-team.json"
 }
 ]
