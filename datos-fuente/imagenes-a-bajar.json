@@ -887,5 +887,29 @@
 {
 "url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794909.json",
 "destino": "datos-fuente/crudas/afa/rival853/ev/794909.json"
+},
+{
+"url": "https://api.sofascore.com/api/v1/team/36841/events/last/0",
+"destino": "datos-fuente/crudas/sofa/last0.json"
+},
+{
+"url": "https://api.sofascore.com/api/v1/team/36841/events/last/1",
+"destino": "datos-fuente/crudas/sofa/last1.json"
+},
+{
+"url": "https://www.sofascore.com/api/v1/team/36841/events/last/0",
+"destino": "datos-fuente/crudas/sofa/www-last0.json"
+},
+{
+"url": "https://www.fotmob.com/api/teams?id=161733",
+"destino": "datos-fuente/crudas/sofa/fotmob-team.json"
+},
+{
+"url": "https://www.ferrocarriloeste.com.ar/plantel.php",
+"destino": "datos-fuente/crudas/oficial/plantel.html"
+},
+{
+"url": "https://ferrocarriloeste.com.ar/m_plantel.php",
+"destino": "datos-fuente/crudas/oficial/m_plantel.html"
 }
 ]
