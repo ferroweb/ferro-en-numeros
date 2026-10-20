@@ -767,5 +767,125 @@
 {
 "url": "https://laferropedia.com/wp-json/wp/v2/search?search=Chaco%20For%20Ever&per_page=100",
 "destino": "datos-fuente/crudas/chaco/lfp/api-search.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794392.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794392.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794403.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794403.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794427.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794427.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794462.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794462.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794477.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794477.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794495.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794495.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794515.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794515.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794532.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794532.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794550.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794550.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794569.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794569.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794585.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794585.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794606.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794606.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794620.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794620.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794643.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794643.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794655.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794655.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794680.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794680.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794690.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794690.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794440.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794440.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794716.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794716.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794727.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794727.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794764.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794764.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794786.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794786.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794801.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794801.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794819.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794819.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794839.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794839.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794751.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794751.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794856.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794856.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794874.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794874.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794893.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794893.json"
+},
+{
+"url": "https://info.afa.org.ar/deposito/html/v3/htmlCenter/data/deportes/futbol/nacionalb/events/794909.json",
+"destino": "datos-fuente/crudas/afa/rival853/ev/794909.json"
 }
 ]
