@@ -8,7 +8,8 @@ export function initArbitro() {
   const caja = $("#arb-caja");
   if (!nom || !previaAlDia) { caja.hidden = true; }
   else {
-    $("#arb-eti").textContent = `El árbitro del domingo · F${prox.fecha} vs ${prox.rival}`;
+    const dia = (() => { try { return ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"][new Date(prox.dia + "T12:00:00").getDay()]; } catch { return null; } })();
+    $("#arb-eti").textContent = `El árbitro ${dia ? "del " + dia : "de la fecha"} · F${prox.fecha} vs ${prox.rival}`;
     $("#arb-t").textContent = hu && hu.titulo ? hu.titulo : nom;
     if (prox.arbitro_foto) {   // foto recortada en public/img/arbitros (con crédito del medio)
       const ico = caja.querySelector(".arb-ico"), im = el("img");
@@ -27,7 +28,7 @@ export function initArbitro() {
     const l = $("#arb-l"); (hu && hu.puntos || []).forEach(([a, b]) => { const li = el("li"); li.append(el("b", null, a), el("span", null, b)); l.append(li); });
     const cs = $("#arb-cons"); (hu && hu.consejos || []).forEach(t => cs.append(el("li", null, t))); if (!(hu && hu.consejos && hu.consejos.length)) cs.parentElement.hidden = true;
     $("#arb-c").textContent = hu && hu.cierre || "";
-    const medio = (() => { try { return new URL(prox.arbitro_fuente).hostname.replace(/^www\./, ""); } catch { return "Solo Ascenso"; } })();
+    const medio = (() => { try { return new URL(prox.arbitro_fuente).hostname.replace(/^www\./, ""); } catch { return prox.arbitro_fuente || "Solo Ascenso"; } })();
     $("#arb-f").textContent = `Humor de tribuna con números reales: es cábala y estadística, no una acusación. Designación: AFA, publicada por ${medio}.` + (prox.arbitro_foto_credito ? ` Foto: ${prox.arbitro_foto_credito}.` : "");
   }
   tabla("#t-arb", [{ k: "arbitro", h: "Árbitro", l: 1 }, { k: "pj", h: "PJ" }, { k: "g", h: "G" }, { k: "e", h: "E" }, { k: "p", h: "P" }, { k: "gf", h: "GF" }, { k: "gc", h: "GC" }, { k: "pts_p", h: "Pts/p", f: v => v.toLocaleString("es-AR", { minimumFractionDigits: 2 }) }, { k: "am_p", h: "Amar./p", f: v => v.toLocaleString("es-AR", { minimumFractionDigits: 2 }) }, { k: "ro", h: "Rojas" }],
