@@ -105,13 +105,6 @@
 .accesos b { font-size: 15px; }
 .accesos span { font-size: 12.5px; color: var(--muted); }
 
-.prox-card { display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--ink); background: var(--panel); border: 2px solid var(--verde); border-radius: 12px; padding: 16px 18px; }
-.prox-card:hover { box-shadow: 0 6px 18px rgba(11,94,48,.18); }
-.prox-card .eti { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--verde-txt); }
-.prox-card .vs { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4.5vw, 40px); text-transform: uppercase; line-height: 1; }
-.prox-card .cuando { color: var(--muted); font-size: 14px; }
-.prox-card .fw { font-weight: 700; }
-.prox-card .lee { color: var(--verde-txt); font-weight: 800; font-size: 13.5px; margin-top: 4px; }
 
 .sec-t { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 3px solid var(--verde); padding-bottom: 6px; }
 .sec-t h2 { font-family: var(--display); font-weight: 800; font-size: 28px; text-transform: uppercase; }

@@ -130,18 +130,64 @@ export function initCartel() {
   setInterval(() => { ni += 1 + Math.floor(Math.random() * (NOMBRES.length - 1)); hi += 1 + Math.floor(Math.random() * 5); mostrar(); }, 7000);
 }
 
+// Próximo partido con reloj en cuenta regresiva. El horario de la planilla/calendario es hora argentina (UTC−3).
 function proximoCard() {
-  const box = $("#inicio-prox"); if (!box) return;
-  if (!prox) { box.hidden = true; return; }
+  const a = $("#prox-p"); if (!a || !prox) return;
   const loc = prox.cond === "L" ? "Ferro" : prox.rival, vis = prox.cond === "L" ? prox.rival : "Ferro";
-  const a = el("a", "prox-card"); a.href = "#/partido";
-  a.append(el("div", "eti", `Próximo partido · Fecha ${prox.fecha}`), el("div", "vs", `${loc} vs ${vis}`));
-  const cuando = prox.dia ? fechaLarga(prox.dia).replace("-", "\u2011") + (prox.hora ? ` · ${prox.hora} hs` : "") : "A confirmar";
-  a.append(el("div", "cuando", cuando + (prox.estadio ? ` · ${prox.estadio}` : "")));
+  a.append(el("div", "eti", `Próximo partido · Fecha ${prox.fecha} · ${prox.cond === "L" ? "en Caballito" : "de visitante"}`));
+  const vs = el("div", "pp-vs"); [loc, "vs", vis].forEach((t, i) => vs.append(el("span", i === 1 ? "pp-x" : "pp-n" + (t === "Ferro" ? " fe" : ""), t))); a.append(vs);
+
+  const cuerpo = el("div", "pp-c");
+  // Reloj (cronómetro): el anillo muestra cuánto queda de la última semana antes del partido; las agujas giran hacia atrás.
+  const svg = S("svg", { viewBox: "0 0 120 132", class: "pp-reloj", "aria-hidden": "true" });
+  S("rect", { x: 52, y: 2, width: 16, height: 9, rx: 2, class: "rj-bot" }, svg);
+  S("rect", { x: 56, y: 10, width: 8, height: 8, class: "rj-bot" }, svg);
+  S("rect", { x: 94, y: 22, width: 12, height: 7, rx: 2, transform: "rotate(45 100 25.5)", class: "rj-bot" }, svg);
+  S("circle", { cx: 60, cy: 72, r: 54, class: "rj-caja" }, svg);
+  S("circle", { cx: 60, cy: 72, r: 46, class: "rj-pista" }, svg);
+  const C = 2 * Math.PI * 46;
+  const arco = S("circle", { cx: 60, cy: 72, r: 46, class: "rj-arco", "stroke-dasharray": `${C} ${C}`, "stroke-dashoffset": 0, transform: "rotate(-90 60 72)" }, svg);
+  for (let i = 0; i < 12; i++) { const an = i * Math.PI / 6, r1 = i % 3 ? 36 : 32; S("line", { x1: 60 + Math.sin(an) * r1, y1: 72 - Math.cos(an) * r1, x2: 60 + Math.sin(an) * 40, y2: 72 - Math.cos(an) * 40, class: "rj-marca" }, svg); }
+  const agM = S("line", { x1: 60, y1: 72, x2: 60, y2: 44, class: "rj-agm" }, svg);
+  const agS = S("line", { x1: 60, y1: 80, x2: 60, y2: 36, class: "rj-ags" }, svg);
+  S("circle", { cx: 60, cy: 72, r: 4, class: "rj-eje" }, svg);
+  cuerpo.append(svg);
+
+  const der = el("div", "pp-d");
+  const faltan = el("div", "pp-falta", "Faltan");
+  const dig = el("div", "pp-dig"); const U = {};
+  [["d", "días"], ["h", "horas"], ["m", "min"], ["s", "seg"]].forEach(([k, l]) => { const c = el("div", "pp-u"); U[k] = el("b", "num", "–"); c.append(U[k], el("span", null, l)); dig.append(c); });
+  const est = el("div", "pp-est");
+  der.append(faltan, dig, est); cuerpo.append(der); a.append(cuerpo);
+
+  const cuando = prox.dia ? fechaLarga(prox.dia).replace("-", "‑") + (prox.hora ? ` · ${prox.hora} hs` : " · horario a confirmar") : "Día a confirmar";
+  a.append(el("div", "pp-cuando", cuando + (prox.estadio ? ` · ${prox.estadio}` : "")));
   const W = DATA.fw;
-  if (W && previaAlDia) { const [gl, gv] = W.cond === "L" ? [W.gf, W.gc] : [W.gc, W.gf]; a.append(el("div", "fw", `Pronóstico FW: ${gl}-${gv}`)); }
+  if (W && previaAlDia) { const [gl, gv] = W.cond === "L" ? [W.gf, W.gc] : [W.gc, W.gf]; a.append(el("div", "pp-fw", `Pronóstico FW: ${loc} ${gl}-${gv} ${vis}`)); }
   a.append(el("span", "lee", "Ver la previa completa →"));
-  box.append(a);
+  a.setAttribute("aria-label", `Próximo partido, fecha ${prox.fecha}: ${loc} contra ${vis}. ${cuando}. Ver la previa.`);
+  a.hidden = false;
+
+  const hm = /^(\d{1,2}):(\d{2})$/.exec(prox.hora || "");
+  const obj = prox.dia ? new Date(`${prox.dia}T${hm ? hm[1].padStart(2, "0") + ":" + hm[2] : "00:00"}:00-03:00`).getTime() : NaN;
+  if (isNaN(obj)) { dig.hidden = true; faltan.textContent = "Cuando se confirme el día, acá va la cuenta regresiva."; return; }
+  if (!hm) est.textContent = "Cuenta hasta el día del partido: el horario todavía no está confirmado.";
+  const SEMANA = 7 * 864e5, dos = n => String(n).padStart(2, "0");
+  let timer;
+  const tic = () => {
+    const ms = obj - Date.now();
+    if (ms <= 0) {
+      dig.hidden = true; clearInterval(timer); arco.setAttribute("stroke-dashoffset", C);
+      faltan.textContent = ms > -2.5 * 3600e3 ? "¡Se está jugando! 💚" : "Ya se jugó";
+      est.textContent = ms > -2.5 * 3600e3 ? "Dale Ferro." : "Los números se actualizan cuando FerroWeb publique la síntesis.";
+      a.classList.add("en-juego"); return;
+    }
+    const t = Math.floor(ms / 1000), d = Math.floor(t / 86400), h = Math.floor(t % 86400 / 3600), m = Math.floor(t % 3600 / 60), s = t % 60;
+    U.d.textContent = d; U.h.textContent = dos(h); U.m.textContent = dos(m); U.s.textContent = dos(s);
+    arco.setAttribute("stroke-dashoffset", C * (1 - Math.min(ms, SEMANA) / SEMANA));
+    agS.setAttribute("transform", `rotate(${s * 6} 60 72)`); agM.setAttribute("transform", `rotate(${m * 6} 60 72)`);
+  };
+  tic(); timer = setInterval(tic, 1000);
 }
 
 function ultimoResultado() {
@@ -149,7 +195,7 @@ function ultimoResultado() {
   const vis = ult.condicion !== "Local";
   const [nl, gl, nv, gv] = vis ? [ult.rival, ult.gc, "Ferro", ult.gf] : ["Ferro", ult.gf, ult.rival, ult.gc];
   const ver = ult.gf > ult.gc ? "Ganamos" : ult.gf === ult.gc ? "Empatamos" : "Perdimos";
-  a.append(el("div", "eti", `Último resultado · Fecha ${ult.fecha} · ${vis ? "de visitante" : "en Caballito"}`));
+  a.append(el("div", "eti", `Último partido · Fecha ${ult.fecha} · ${vis ? "de visitante" : "en Caballito"}`));
   const m = el("div", "ur-m");
   const eq = (n, g, fe) => { const d = el("div", "ur-eq" + (fe ? " fe" : "")); d.append(el("span", "ur-n", n), el("b", "ur-g num", String(g))); return d; };
   m.append(eq(nl, gl, nl === "Ferro"), el("span", "ur-x", "–"), eq(nv, gv, nv === "Ferro")); a.append(m);
@@ -157,7 +203,7 @@ function ultimoResultado() {
   if (ult.goleadores && ult.goleadores !== "—") pie.append(el("span", null, "⚽ " + ult.goleadores.replace(/(\d+)(pt|st)/g, "$1' $2")));
   if (ferroT) pie.append(el("span", null, `Quedamos ${ferroT.pos}° con ${ferroT.pts} puntos`));
   a.append(pie, el("span", "lee", "Ver todos los resultados →"));
-  a.setAttribute("aria-label", `Último resultado: ${nl} ${gl}, ${nv} ${gv}. ${ver}.`);
+  a.setAttribute("aria-label", `Último partido: ${nl} ${gl}, ${nv} ${gv}. ${ver}.`);
   a.hidden = false;
 }
 
