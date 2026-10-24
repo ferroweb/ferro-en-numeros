@@ -44,6 +44,9 @@ const conocidos = dj.jugadores.map(j => j.jugador);
 const ALIAS_JUG = Object.fromEntries(Object.entries(leer("datos-fuente/alias-jugadores.json", {})).filter(([k]) => !k.startsWith("_")));   // homónimos: «García F.» → «García»
 const nuevos = [];
 
+// síntesis sin cambios, amonestados ni expulsados en ninguno de los dos equipos (típico de la que se publica antes del partido)
+const sinMovimientos = (s) => ["local", "visitante"].every(k => { const e = s.eventos?.[k] ?? {}; return !(e.cambios?.length || e.amonestados?.length || e.expulsados?.length); });
+
 async function incorporar({ view, fecha, rival, n, nota = "" }) {
   const html = await bajarSintesis(view);
   const s0 = parseSintesis(html);
@@ -84,6 +87,13 @@ async function main() {
     const cal = (dprox.calendario?.proximos ?? []).find(x => !partidos.some(p => p.fecha === x.fecha) && mismoEquipo(x.rival, oponente));
     const fecha = cal?.fecha ?? (aviso(`No encontré «${oponente}» en el calendario; asumo la fecha ${Math.max(...partidos.map(p => p.fecha)) + 1}`), Math.max(...partidos.map(p => p.fecha)) + 1);
     if (partidos.some(p => p.fecha === fecha)) { aviso(`La fecha ${fecha} ya estaba cargada; se ignora la síntesis ${view}`); continue; }
+    // FerroWeb a veces publica la síntesis ANTES del partido (formación con 0-0, sin cambios ni tarjetas).
+    // No se carga nada hasta que pasaron 2 h del inicio según el calendario, y nunca una síntesis sin cambios ni tarjetas de Ferro con 0-0.
+    if (cal?.dia) {
+      const inicio = new Date(`${cal.dia}T${cal.hora || "00:00"}:00-03:00`).getTime();
+      if (Date.now() < inicio + 2 * 3600e3) { console.log(`· la síntesis ${view} (F${fecha}) es previa al partido (${cal.dia} ${cal.hora ?? ""}): no se carga todavía`); break; }
+    }
+    if (s.gl === 0 && s.gv === 0 && sinMovimientos(s)) { aviso(`La síntesis ${view} (F${fecha}) tiene 0-0 sin cambios ni tarjetas: parece previa al partido; no se carga`); break; }
     const n = Math.max(...partidos.map(p => p.n)) + 1;
     try {
       const r = await incorporar({ view, fecha, rival, n });
