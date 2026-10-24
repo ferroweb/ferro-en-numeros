@@ -88,9 +88,9 @@ async function main() {
     const fecha = cal?.fecha ?? (aviso(`No encontré «${oponente}» en el calendario; asumo la fecha ${Math.max(...partidos.map(p => p.fecha)) + 1}`), Math.max(...partidos.map(p => p.fecha)) + 1);
     if (partidos.some(p => p.fecha === fecha)) { aviso(`La fecha ${fecha} ya estaba cargada; se ignora la síntesis ${view}`); continue; }
     // FerroWeb a veces publica la síntesis ANTES del partido (formación con 0-0, sin cambios ni tarjetas).
-    // No se carga nada hasta que pasaron 2 h del inicio según el calendario, y nunca una síntesis sin cambios ni tarjetas de Ferro con 0-0.
+    // No se carga nada hasta que pasaron 2 h del inicio según el calendario, y nunca una 0-0 sin cambios ni tarjetas de ninguno de los dos equipos.
     if (cal?.dia) {
-      const inicio = new Date(`${cal.dia}T${cal.hora || "00:00"}:00-03:00`).getTime();
+      const inicio = new Date(`${cal.dia}T${cal.hora || "23:59"}:00-03:00`).getTime();   // sin hora: se espera al día siguiente
       if (Date.now() < inicio + 2 * 3600e3) { console.log(`· la síntesis ${view} (F${fecha}) es previa al partido (${cal.dia} ${cal.hora ?? ""}): no se carga todavía`); break; }
     }
     if (s.gl === 0 && s.gv === 0 && sinMovimientos(s)) { aviso(`La síntesis ${view} (F${fecha}) tiene 0-0 sin cambios ni tarjetas: parece previa al partido; no se carga`); break; }
