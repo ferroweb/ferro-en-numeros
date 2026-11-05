@@ -38,7 +38,55 @@
 {
 "id": 7065,
 "titulo": "La Pandilla le saca el título a River",
-"texto": "Con goles de Alfredo Borgnia y Bernardo Gandulla, Ferro le ganó a River en Caballito. Independiente ganó esa misma fecha y River se quedó afuera de la pelea por el campeonato."
+"texto": "Con goles de Alfredo Borgnia y Bernardo Gandulla, Ferro le ganó a River en Caballito. Independiente ganó esa misma fecha y River se quedó afuera de la pelea por el campeonato.",
+"desarrollo": [
+"El campeonato de Primera de 1938 lo jugaron 17 equipos y se definió en un mano a mano entre Independiente y River. El domingo 6 de noviembre, por la fecha 28, al Millonario le tocó cruzarse con la Pandilla en plena pelea.",
+"Ferro ganó 2 a 1 y uno de los goles fue de Bernardo Gandulla. Ese mismo día Independiente ganó lo suyo, y quienes reconstruyeron aquella temporada marcan esa caída como el tropiezo que prácticamente dejó a River sin título.",
+"Al final la diferencia fue de dos puntos, justo lo que valía un triunfo: Independiente salió campeón con 53 y River terminó segundo con 51, los dos en 32 partidos. El goleador fue Arsenio Erico, del Rojo, con 43 goles. Ferro cerró el año con 26 puntos: 9 victorias, 8 empates y 15 derrotas en 32 partidos.",
+"¿Y Gandulla? En 1939 se fue a Vasco da Gama, estuvo poco tiempo y en 1940 pasó a Boca; en 1944 volvió a Ferro. En Brasil quedó la versión de que «gandula», como le dicen allá al alcanzapelotas, viene de su apellido, aunque los propios medios brasileños la cuentan como leyenda."
+],
+"fuentes": [
+{
+"nombre": "RSSSF: Argentina 1938 (resultados por fecha)",
+"url": "https://rsssf.org/tablesa/arg38.html"
+},
+{
+"nombre": "RSSSF: Bernardo José Gandulla, goles en la liga argentina",
+"url": "https://rsssf.org/players/gandulladata.html"
+},
+{
+"nombre": "Fútbol Argentino: Crónicas y Estadísticas 1938 (historical-lineups.com)",
+"url": "https://www.historical-lineups.com/wp-content/uploads/2019/11/1938.pdf"
+},
+{
+"nombre": "Wikipedia (en): 1938 Argentine Primera División",
+"url": "https://en.wikipedia.org/wiki/1938_Argentine_Primera_Divisi%C3%B3n"
+},
+{
+"nombre": "Pasión Granate: Campeonato de Primera A 1938",
+"url": "https://pasiongranate.com.ar/campeonato-de-primera-a-1938/"
+},
+{
+"nombre": "Torito Casale: 1938 en el fútbol argentino",
+"url": "https://viejocasale.medium.com/1938-en-el-futbol-argentino-80808aea7f91"
+},
+{
+"nombre": "Wikipedia (en): Bernardo Gandulla",
+"url": "https://en.wikipedia.org/wiki/Bernardo_Gandulla"
+},
+{
+"nombre": "NETVASCO: Vasco relembra nascimento do argentino Gandulla",
+"url": "https://www.netvasco.com.br/n/308807/vasco-relembra-nascimento-do-argentino-gandulla-ha-106-anos"
+},
+{
+"nombre": "Lance!: Por que o gandula tem esse nome no Brasil?",
+"url": "https://www.lance.com.br/lancepedia/por-que-o-gandula-tem-esse-nome-no-brasil.html"
+},
+{
+"nombre": "LaFerropedia: 1938, la Pandilla elimina a River",
+"url": "https://laferropedia.com/1938-la-pandilla-elimina-a-river/"
+}
+]
 }
 ],
 "11-07": [
