@@ -147,6 +147,12 @@ export function armar({ textos, lfp, personas, archivo, correcciones, anioHoy = 
       torneo: torneoCorto(pg.torneo), fecha: pg.fecha_torneo || null, view: pg.view });
   }
 
+  // 3b) si la historia es de un partido que tiene crónica en FerroWeb (mismo día y año), la fuente principal es la crónica
+  for (const D of Object.values(DIAS)) for (const h of D.historias) {
+    const p = D.partidos.find(x => x.anio === h.anio);
+    if (p) h.cronica = `https://www.ferroweb.com.ar/v1/?mod=futbol&sub=cronica&view=${p.view}`;
+  }
+
   // 4) orden, recortes y balance
   for (const [k, D] of Object.entries(DIAS)) {
     D.historias.sort((a, b) => a.anio - b.anio);

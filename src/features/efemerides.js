@@ -44,7 +44,7 @@ function historia(h, grande, k) {
   if (h.foto) c.append(figura(h));
   c.append(el("p", null, h.texto));
   if (h.camiseta) c.append(chipCamiseta(h.camiseta));
-  const f = el("p", "ef-fuente"); f.append("Dato: ", enlace(h.url, "LaFerropedia")); c.append(f);
+  c.append(fuente(h));
   const acc = el("div", "ef-acc");
   const b = el("button", "ef-btn", h.desarrollo ? "Leer el desarrollo →" : "Ver el día completo →"); b.type = "button";
   b.addEventListener("click", () => abrirDia(k, h)); acc.append(b, botonPlaca(k));
@@ -52,6 +52,14 @@ function historia(h, grande, k) {
   return c;
 }
 
+// Fuente: si el partido tiene crónica en Ferroweb, es la principal; LaFerropedia queda como «más en».
+function fuente(h, extra = []) {
+  const f = el("p", "ef-fuente");
+  if (h.cronica) { f.append("Fuente: ", enlace(h.cronica, "crónica de Ferroweb"), " · más en ", enlace(h.url, "LaFerropedia")); }
+  else f.append("Dato: ", enlace(h.url, "LaFerropedia"));
+  extra.forEach(x => { f.append(" · ", enlace(x.url, x.nombre)); });
+  return f;
+}
 const COLOR_CAM = { Verde: "verde", Blanca: "blanca", Negra: "negra", Violeta: "violeta", Rosa: "rosa", Naranja: "naranja", "Bordó": "bordo" };
 function chipCamiseta(cm) {
   const p = el("p", "ef-cam"); const i = el("i", "ef-cam-c " + (COLOR_CAM[cm.color] || "")); i.setAttribute("aria-hidden", "true");
@@ -81,9 +89,7 @@ function abrirDia(k, h) {
   if (h.foto) c.append(figura(h));
   (h.desarrollo || [h.texto]).forEach(t => c.append(el("p", null, t)));
   if (h.camiseta) c.append(chipCamiseta(h.camiseta));
-  const f = el("p", "ef-fuente"); f.append("Dato: ", enlace(h.url, "LaFerropedia"));
-  (h.fuentes || []).forEach(x => { f.append(" · ", enlace(x.url, x.nombre)); });
-  c.append(f);
+  c.append(fuente(h, h.fuentes || []));
   const R = resumenDia(k, D);
   if (R.length) { c.append(el("h4", null, `Además, un ${diaLargo(k)}`)); const ul = el("ul", "ef-lista ef-des"); R.forEach(t => ul.append(el("li", null, t))); c.append(ul); }
   const acc = el("div", "ef-acc"); acc.append(botonPlaca(k));
