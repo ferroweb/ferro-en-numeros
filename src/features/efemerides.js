@@ -28,6 +28,10 @@ function mover(k, delta) {
   const [m, d] = k.split("-").map(Number); const f = new Date(Date.UTC(2024, m - 1, d + delta));   // 2024: bisiesto, incluye el 29/2
   return `${String(f.getUTCMonth() + 1).padStart(2, "0")}-${String(f.getUTCDate()).padStart(2, "0")}`;
 }
+const pl = (n, a, b) => `${n} ${n === 1 ? a : b}`;
+// Años en los que hubo partido ese día: «2009 y 2015» o «2010 a 2018». No se dice «cada»: no hubo partido todos los años.
+function anios(D) { const A = [...new Set(D.partidos.map(p => p.anio))].sort((a, b) => a - b); return A.length === 1 ? String(A[0]) : A.length === 2 ? `${A[0]} y ${A[1]}` : `${A[0]} a ${A.at(-1)}`; }
+const balanceTxt = (k, D) => { const b = D.balance; return `${b.pj === 1 ? "El único partido" : `Los ${b.pj} partidos`} de Ferro un ${diaLargo(k)} con síntesis de FerroWeb (${anios(D)}): ${pl(b.g, "ganado", "ganados")}, ${pl(b.e, "empatado", "empatados")} y ${pl(b.p, "perdido", "perdidos")}; goles: ${b.gf} a favor y ${b.gc} en contra.`; };
 const marcador = (p) => p.local ? `Ferro ${p.gf}-${p.gc} ${p.rival}` : `${p.rival} ${p.gc}-${p.gf} Ferro`;
 const penales = (p) => p.pen ? ` (${p.pen.f > p.pen.r ? "ganó" : "perdió"} ${p.pen.f}-${p.pen.r} por penales)` : "";
 function enlace(href, texto) { const a = el("a", null, texto); a.href = href; a.target = "_blank"; a.rel = "noopener"; return a; }
@@ -48,7 +52,7 @@ function historia(h, grande, k) {
 // ---------- desarrollo (usa el diálogo #des de los hallazgos) ----------
 function resumenDia(k, D) {
   const out = [];
-  if (D.partidos) { const b = D.balance; out.push(`Cada ${diaLargo(k)} desde ${b.desde}, en partidos con síntesis de FerroWeb: ${b.pj} ${b.pj === 1 ? "partido" : "partidos"}, ${b.g} ${b.g === 1 ? "ganado" : "ganados"}, ${b.e} ${b.e === 1 ? "empatado" : "empatados"} y ${b.p} ${b.p === 1 ? "perdido" : "perdidos"} (goles: ${b.gf} a favor y ${b.gc} en contra).`); }
+  if (D.partidos) out.push(balanceTxt(k, D));
   (D.nacimientos || []).slice(0, 2).forEach(n => out.push(`Nació ${n.nombre} (${n.anio})${n.cumpliria ? `, que hoy cumpliría ${n.cumpliria}` : ""}. ${n.texto || ""}`.trim()));
   (D.debuts || []).slice(0, 2).forEach(d => out.push(`Debutó ${d.nombre} (${d.anio}): ${d.texto}`));
   (D.despedidas || []).slice(0, 1).forEach(d => out.push(`Último partido de ${d.nombre} con la verde (${d.anio}): ${d.texto}`));
@@ -81,14 +85,15 @@ function armarPlaca(k) {
   const h = D.historias && D.historias[0];
   if (h) { const c = el("div", "card ef-pc"); c.append(el("div", "ef-pa", String(h.anio)), el("div", "t", h.titulo), el("div", "d", h.texto)); P.append(c); }
   if (D.partidos) {
-    const b = D.balance, c = el("div", "card"); c.append(el("div", "t", `Ferro cada ${diaLargo(k)} desde ${b.desde}`));
-    const t = el("div", "tiles"); [["partidos", b.pj], ["ganados", b.g], ["empatados", b.e], ["perdidos", b.p]].forEach(([l, v]) => { const x = el("div", "tile"); x.append(el("b", null, String(v)), el("span", null, l)); t.append(x); });
+    const b = D.balance, c = el("div", "card"); c.append(el("div", "t", `${b.pj === 1 ? "El único partido" : `Los ${b.pj} partidos`} de Ferro un ${diaLargo(k)} (${anios(D)})`));
+    const t = el("div", "tiles"); [[b.g, b.g === 1 ? "ganado" : "ganados"], [b.e, b.e === 1 ? "empatado" : "empatados"], [b.p, b.p === 1 ? "perdido" : "perdidos"], [`${b.gf}-${b.gc}`, "goles a favor y en contra"]].forEach(([v, l]) => { const x = el("div", "tile"); x.append(el("b", null, String(v)), el("span", null, l)); t.append(x); });
     c.append(t); P.append(c);
   }
   const n = D.nacimientos && D.nacimientos[0];
   if (n && P.children.length < 4) { const c = el("div", "card"); c.append(el("div", "t", `Nació ${n.nombre} (${n.anio})`)); if (n.texto) c.append(el("div", "d", n.texto + (n.cumpliria ? ` Hoy cumpliría ${n.cumpliria}.` : ""))); P.append(c); }
   const d = D.debuts && D.debuts[0];
   if (d && P.children.length < 5) { const c = el("div", "card"); c.append(el("div", "t", `Debutó ${d.nombre} (${d.anio})`), el("div", "d", d.texto)); P.append(c); }
+  if (P.children.length <= 3) P.classList.add("pocas");   // pocas tarjetas: letra más grande, para no dejar media placa vacía
   const pie = el("div", "pn-pie"); pie.append(el("div", "px", "Ferro en números · Ferroweb")); P.append(pie);
   document.body.append(P); return P;
 }
@@ -123,7 +128,7 @@ function listaPersonas(titulo, items, verbo, extra) {
 function partidos(D) {
   const box = el("div", "ef-bloque");
   const b = D.balance;
-  box.append(el("p", "nota", `Partidos con síntesis en FerroWeb jugados un ${diaLargo(actual)}, desde 2006. El primero que hay es de ${b.desde}.`));
+  box.append(el("p", "nota", `${balanceTxt(actual, D)} El archivo de síntesis de FerroWeb empieza en 2006.`));
   const k = el("div", "ef-bal");
   [["Partidos", b.pj], ["Ganados", b.g], ["Empatados", b.e], ["Perdidos", b.p], ["Goles", `${b.gf}-${b.gc}`]].forEach(([l, v]) => {
     const c = el("div", "kpi"); c.append(el("div", "l", l), el("div", "v", String(v))); k.append(c);
@@ -150,7 +155,7 @@ function dibujarPagina(k) {
     const c = el("div", "caja"); c.append(el("h3", null, `La historia del ${diaLargo(k)}`));
     D.historias.forEach((h, i) => c.append(historia(h, i === 0, k))); box.append(c);
   }
-  if (D.partidos) { const c = el("div", "caja"); c.append(el("h3", null, `Ferro, cada ${diaLargo(k)}`)); c.append(partidos(D)); box.append(c); limitar(c.querySelector(".ef-part"), 5); }
+  if (D.partidos) { const c = el("div", "caja"); c.append(el("h3", null, `Ferro, los ${diaLargo(k)}`)); c.append(partidos(D)); box.append(c); limitar(c.querySelector(".ef-part"), 5); }
   const gente = el("div", "caja"); gente.append(el("h3", null, `Cumpleaños, debuts y despedidas del ${diaLargo(k)}`));
   let hay = false;
   if (D.nacimientos) {
@@ -189,8 +194,8 @@ function dibujarInicio() {
   else { const acc = el("div", "ef-acc"); acc.append(botonPlaca(k)); box.append(acc); }
   const ul = el("ul", "ef-lista ef-mini");
   if (D.partidos) {
-    const b = D.balance, p = D.partidos[0];
-    const li = el("li"); li.append(el("b", null, `Cada ${diaLargo(k)} desde ${b.desde}: `), `${b.pj} ${b.pj === 1 ? "partido" : "partidos"}, ${b.g} ${b.g === 1 ? "ganado" : "ganados"}, ${b.e} ${b.e === 1 ? "empatado" : "empatados"} y ${b.p} ${b.p === 1 ? "perdido" : "perdidos"}. El último: `, enlace(SINTESIS + p.view, `${marcador(p)} (${p.anio})`), ".");
+    const p = D.partidos[0];
+    const li = el("li"); li.append(balanceTxt(k, D), " El último: ", enlace(SINTESIS + p.view, `${marcador(p)} (${p.anio})`), ".");
     ul.append(li);
   }
   const n = D.nacimientos && D.nacimientos[0];

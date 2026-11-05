@@ -54,3 +54,5 @@
 .placa-ef .ef-pa { font-size: 64px; font-weight: 900; color: #0b5a32; line-height: 1; margin-bottom: 6px; }
 .placa-ef .ef-pc .t { font-size: 40px; }
 .placa-ef .ef-pc .d { font-size: 26px; }
+.placa-ef.pocas .ef-pc .t { font-size: 50px; } .placa-ef.pocas .ef-pc .d { font-size: 32px; } .placa-ef.pocas .ef-pa { font-size: 84px; }
+.placa-ef.pocas .card { padding: 34px 36px; } .placa-ef.pocas .tile b { font-size: 34px; } .placa-ef.pocas .tile span { font-size: 19px; }
