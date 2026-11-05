@@ -31,7 +31,22 @@
 {
 "id": 7049,
 "titulo": "Tres goles en 25 minutos",
-"texto": "2-1 a Racing, subcampeón del Metropolitano, por el Nacional 72. Los tres goles cayeron en los primeros 25 minutos. Uno fue de cabeza de Cacho Saccardi, el segundo de su carrera."
+"texto": "2-1 a Racing, subcampeón del Metropolitano, por el Nacional 72. Los tres goles cayeron en los primeros 25 minutos. Uno fue de cabeza de Cacho Saccardi, el segundo de su carrera.",
+"desarrollo": [
+"Ferro llegó a la fecha 5 del Nacional 72 sin haber ganado todavía. En las cuatro anteriores sumó tres empates (0-0 con Estudiantes en La Plata, 1-1 con Belgrano y 0-0 con Desamparados en San Juan) y una derrota, 2-1 en el clásico con Vélez.",
+"Enfrente estaba Racing, que venía de terminar segundo en el Metropolitano, detrás de San Lorenzo. Ese día el partido se definió enseguida: los tres goles llegaron en los primeros 25 minutos y uno fue un cabezazo de Cacho Saccardi, el segundo de su carrera. El volante terminaría jugando 401 partidos con la verde, con 48 goles.",
+"El triunfo cortó la racha, pero no alcanzó para pelear arriba. Ferro cerró la primera fase con 4 victorias, 4 empates y 5 derrotas en 13 partidos, 20 goles a favor y 20 en contra: 12 puntos. El título se lo llevó San Lorenzo, invicto, que le ganó la final a River 1-0."
+],
+"fuentes": [
+{
+"nombre": "Wikipedia: Campeonato Nacional 1972 (Argentina)",
+"url": "https://es.wikipedia.org/wiki/Campeonato_Nacional_1972_(Argentina)"
+},
+{
+"nombre": "Wikipedia (en): 1972 Argentine Primera División",
+"url": "https://en.wikipedia.org/wiki/1972_Argentine_Primera_Divisi%C3%B3n"
+}
+]
 }
 ],
 "11-06": [
