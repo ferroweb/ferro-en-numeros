@@ -115,7 +115,18 @@
 {
 "id": 7167,
 "titulo": "El primero del Polaco",
-"texto": "Rodrigo Mazur, de las inferiores, hizo su primer gol en Primera: 1-0 a Gimnasia de Mendoza en Caballito. El equipo de Marcelo Broggi se aseguró un lugar en la pelea por el ascenso."
+"texto": "Rodrigo Mazur, de las inferiores, hizo su primer gol en Primera: 1-0 a Gimnasia de Mendoza en Caballito. El equipo de Marcelo Broggi se aseguró un lugar en la pelea por el ascenso.",
+"camiseta": {
+"color": "Verde",
+"modelo": "titular verde KDY 2015",
+"fuente": "Fotos de la crónica de Ferroweb"
+},
+"foto": {
+"archivo": "11-08.jpg",
+"epigrafe": "El festejo del único gol del partido, el 1-0 a Gimnasia de Mendoza.",
+"credito": "Ferroweb",
+"original": "https://www.ferroweb.com.ar/v1/futbol/img/T2015_F41_039.jpg"
+}
 }
 ],
 "11-09": [

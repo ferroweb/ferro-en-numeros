@@ -91,6 +91,9 @@ export function armar({ textos, lfp, personas, archivo, correcciones, anioHoy = 
     const h = { anio, titulo: t.titulo, texto: t.texto, url: e.url };
     // «desarrollo»: párrafos más largos (los escribe la tarea diaria con al menos dos fuentes, citadas en «fuentes»)
     if (Array.isArray(t.desarrollo) && t.desarrollo.length) { h.desarrollo = t.desarrollo; if (Array.isArray(t.fuentes)) h.fuentes = t.fuentes; }
+    // camiseta y foto del partido (si la historia es de un partido con fotos: imagen en public/img/efemerides/)
+    if (t.camiseta) h.camiseta = t.camiseta;
+    if (t.foto) h.foto = t.foto;
     dia(k).historias.push(h);
   }
 

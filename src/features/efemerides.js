@@ -40,13 +40,28 @@ function enlace(href, texto) { const a = el("a", null, texto); a.href = href; a.
 function historia(h, grande, k) {
   const c = el("article", "ef-h" + (grande ? " grande" : ""));
   const cab = el("div", "ef-anio"); cab.append(el("b", null, String(h.anio)), el("span", null, haceAnios(h.anio)));
-  c.append(cab, el("h4", null, h.titulo), el("p", null, h.texto));
+  c.append(cab, el("h4", null, h.titulo));
+  if (h.foto) c.append(figura(h));
+  c.append(el("p", null, h.texto));
+  if (h.camiseta) c.append(chipCamiseta(h.camiseta));
   const f = el("p", "ef-fuente"); f.append("Dato: ", enlace(h.url, "LaFerropedia")); c.append(f);
   const acc = el("div", "ef-acc");
   const b = el("button", "ef-btn", h.desarrollo ? "Leer el desarrollo →" : "Ver el día completo →"); b.type = "button";
   b.addEventListener("click", () => abrirDia(k, h)); acc.append(b, botonPlaca(k));
   c.append(acc);
   return c;
+}
+
+const COLOR_CAM = { Verde: "verde", Blanca: "blanca", Negra: "negra", Violeta: "violeta", Rosa: "rosa", Naranja: "naranja", "Bordó": "bordo" };
+function chipCamiseta(cm) {
+  const p = el("p", "ef-cam"); const i = el("i", "ef-cam-c " + (COLOR_CAM[cm.color] || "")); i.setAttribute("aria-hidden", "true");
+  p.append(i, el("b", null, "Ese día Ferro jugó con la " + cm.color.toLowerCase()), cm.modelo ? ` (${cm.modelo})` : "");
+  return p;
+}
+function figura(h) {
+  const fg = el("figure", "ef-foto"); const im = el("img"); im.src = `${import.meta.env.BASE_URL}img/efemerides/${h.foto.archivo}`; im.alt = h.foto.epigrafe || h.titulo; im.loading = "lazy";
+  const cap = el("figcaption"); cap.append((h.foto.epigrafe ? h.foto.epigrafe + " " : "") + "Foto: " + (h.foto.credito || "Ferroweb") + ".");
+  fg.append(im, cap); return fg;
 }
 
 // ---------- desarrollo (usa el diálogo #des de los hallazgos) ----------
@@ -63,7 +78,9 @@ function abrirDia(k, h) {
   const D = datos.dias[k], dlg = $("#des"), c = $("#des-c"); c.textContent = "";
   $("#des-tg").textContent = `Un día como hoy · ${diaLargo(k)} de ${h.anio}`;
   $("#des-t").textContent = h.titulo;
+  if (h.foto) c.append(figura(h));
   (h.desarrollo || [h.texto]).forEach(t => c.append(el("p", null, t)));
+  if (h.camiseta) c.append(chipCamiseta(h.camiseta));
   const f = el("p", "ef-fuente"); f.append("Dato: ", enlace(h.url, "LaFerropedia"));
   (h.fuentes || []).forEach(x => { f.append(" · ", enlace(x.url, x.nombre)); });
   c.append(f);
@@ -83,17 +100,23 @@ function armarPlaca(k) {
   izq.append(el("span", "eti", "FERRO EN NÚMEROS"), el("h1", null, "Un día como hoy"), el("div", "f", diaLargo(k) + " · Hablemos de Ferro"));
   const lg = document.querySelector(".fwlogo"); cab.append(izq); if (lg) { const im = el("img"); im.src = lg.src; cab.append(im); } P.append(cab);
   const h = D.historias && D.historias[0];
-  if (h) { const c = el("div", "card ef-pc"); c.append(el("div", "ef-pa", String(h.anio)), el("div", "t", h.titulo), el("div", "d", h.texto)); P.append(c); }
+  if (h) {
+    const c = el("div", "card ef-pc");
+    if (h.foto) { const im = el("img", "ef-pf"); im.src = `${import.meta.env.BASE_URL}img/efemerides/${h.foto.archivo}`; c.append(im); }
+    c.append(el("div", "ef-pa", String(h.anio)), el("div", "t", h.titulo), el("div", "d", h.texto));
+    if (h.camiseta) c.append(el("div", "ef-pcam", `Ese día Ferro jugó con la ${h.camiseta.color.toLowerCase()}.`));
+    P.append(c);
+  }
   if (D.partidos) {
     const b = D.balance, c = el("div", "card"); c.append(el("div", "t", `${b.pj === 1 ? "El único partido" : `Los ${b.pj} partidos`} de Ferro un ${diaLargo(k)} (${anios(D)})`));
     const t = el("div", "tiles"); [[b.g, b.g === 1 ? "ganado" : "ganados"], [b.e, b.e === 1 ? "empatado" : "empatados"], [b.p, b.p === 1 ? "perdido" : "perdidos"], [`${b.gf}-${b.gc}`, "goles a favor y en contra"]].forEach(([v, l]) => { const x = el("div", "tile"); x.append(el("b", null, String(v)), el("span", null, l)); t.append(x); });
     c.append(t); P.append(c);
   }
   const n = D.nacimientos && D.nacimientos[0];
-  if (n && P.children.length < 4) { const c = el("div", "card"); c.append(el("div", "t", `Nació ${n.nombre} (${n.anio})`)); if (n.texto) c.append(el("div", "d", n.texto + (n.cumpliria ? ` Hoy cumpliría ${n.cumpliria}.` : ""))); P.append(c); }
+  if (n && !(h && h.foto) && P.children.length < 4) { const c = el("div", "card"); c.append(el("div", "t", `Nació ${n.nombre} (${n.anio})`)); if (n.texto) c.append(el("div", "d", n.texto + (n.cumpliria ? ` Hoy cumpliría ${n.cumpliria}.` : ""))); P.append(c); }
   const d = D.debuts && D.debuts[0];
-  if (d && P.children.length < 5) { const c = el("div", "card"); c.append(el("div", "t", `Debutó ${d.nombre} (${d.anio})`), el("div", "d", d.texto)); P.append(c); }
-  if (P.children.length <= 3) P.classList.add("pocas");   // pocas tarjetas: letra más grande, para no dejar media placa vacía
+  if (d && !(h && h.foto) && P.children.length < 5) { const c = el("div", "card"); c.append(el("div", "t", `Debutó ${d.nombre} (${d.anio})`), el("div", "d", d.texto)); P.append(c); }
+  if (P.children.length <= 3 && !(h && h.foto)) P.classList.add("pocas");   // pocas tarjetas: letra más grande, para no dejar media placa vacía
   const pie = el("div", "pn-pie"); pie.append(el("div", "px", "Ferro en números · Ferroweb")); P.append(pie);
   document.body.append(P); return P;
 }
