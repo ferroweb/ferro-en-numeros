@@ -38,7 +38,8 @@ datos-fuente/               insumos y correcciones de los scripts (NO se publica
   efemerides-textos/MM.json «Un día como hoy»: una historia por día escrita con voz propia (nunca copiada) a partir de
                             una efeméride de LaFerropedia (campo id = nota original, tiene que ser del mismo día)
   laferropedia/             efemerides.json (bajada por el workflow «Efemérides de LaFerropedia») y personas.json
-                            (fichas: nacimiento, fallecimiento, debut, último partido). LaFerropedia autorizó su uso.
+                            (fichas: nacimiento, fallecimiento, debut, último partido), ajustes-personas.json (correcciones a las
+                            fichas, con motivo y fuentes). LaFerropedia autorizó su uso.
 scripts/                    actualización automática (Node 22, sin dependencias)
   actualizar.mjs            orquestador
   lib/ferroweb.mjs          lee y parsea las síntesis de FerroWeb

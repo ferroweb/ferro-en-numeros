@@ -2,7 +2,8 @@
 // Fuentes:
 //   · datos-fuente/efemerides-textos/MM.json  historias escritas por la redacción (voz propia) a partir de las
 //     efemérides de LaFerropedia; cada una cita el id de la nota original, que tiene que ser del mismo día.
-//   · datos-fuente/laferropedia/personas.json fichas de jugadores y DT (nacimiento, fallecimiento, debut, último partido).
+//   · datos-fuente/laferropedia/personas.json fichas de jugadores y DT (nacimiento, fallecimiento, debut, último partido),
+//     corregidas con datos-fuente/laferropedia/ajustes-personas.json (cada ajuste con «motivo» y fuentes).
 //   · datos-fuente/archivo-ferroweb.json      síntesis de FerroWeb 2006-hoy (resultado y día), con correcciones.json.
 // LaFerropedia autorizó a Ferroweb a usar su información; los textos no copian los suyos y enlazan la nota original.
 // Uso: node scripts/efemerides.mjs   (no baja nada: trabaja con lo que ya está en datos-fuente/)
@@ -69,6 +70,14 @@ export function leerTitulo(t) {
 }
 function torneoCorto(t) {
   return (t || "").replace(/^Torneo\s+(Torneo\s+)?/i, "").replace(/\s+/g, " ").trim();
+}
+
+// Correcciones a las fichas (datos-fuente/laferropedia/ajustes-personas.json, clave = url de la ficha, con «motivo»).
+export function ajustar(personas, ajustes) {
+  const usados = new Set();
+  const r = personas.map(p => { const a = ajustes[p.url]; if (!a) return p; usados.add(p.url); const { motivo, ...resto } = a; return { ...p, ...resto }; });
+  for (const u of Object.keys(ajustes)) if (!usados.has(u)) avisos.push(`ajuste sin ficha: ${u}`);
+  return r;
 }
 
 // ---------- armado ----------
@@ -164,7 +173,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const dias = armar({
     textos,
     lfp: R("datos-fuente/laferropedia/efemerides.json").efemerides,
-    personas: R("datos-fuente/laferropedia/personas.json").personas,
+    personas: ajustar(R("datos-fuente/laferropedia/personas.json").personas, R("datos-fuente/laferropedia/ajustes-personas.json")),
     archivo: R("datos-fuente/archivo-ferroweb.json").paginas,
     correcciones: R("datos-fuente/correcciones.json"),
   });
