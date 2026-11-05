@@ -9,6 +9,7 @@ const MAX_POR_GRUPO = 6;
 
 // Destinos fijos: herramientas y secciones, con sinónimos para que se encuentren como las nombra la gente.
 const DESTINOS = [
+  ["Un día como hoy: efemérides de Ferro", "#/datos/efemerides", "efemerides aniversario historia cumpleanos nacio debut murio fallecio dia fecha hoy se cumplen anos laferropedia", "📅"],
   ["Tabla de posiciones", "#/equipo/tabla", "posiciones clasificacion grupo puntos reducido", "🏆"],
   ["Resultados partido por partido", "#/equipo/resultados", "fixture partidos resultados fechas sintesis", "🗓️"],
   ["Goles por franja y mapa de minutos, 2026 contra 2025", "#/equipo/goles", "goles a favor en contra recibidos hechos franja cuarto de hora minutos calor grafico comparacion", "⚽"],

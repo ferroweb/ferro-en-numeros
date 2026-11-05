@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test scripts/test/parser.test.mjs scripts/test/calculos.test.mjs scripts/test/editorial.test.mjs scripts/test/redaccion.test.mjs",
+    "test": "node --test scripts/test/parser.test.mjs scripts/test/calculos.test.mjs scripts/test/editorial.test.mjs scripts/test/redaccion.test.mjs scripts/test/efemerides.test.mjs",
     "datos:actualizar": "node scripts/actualizar.mjs",
     "datos:verificar": "node scripts/verificar.mjs"
   },

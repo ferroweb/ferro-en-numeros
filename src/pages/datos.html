@@ -6,6 +6,10 @@
   <div class="hall" id="hall"></div>
   <button class="mas" id="mas" type="button">Ver todos</button>
 </div>
+<div class="tab" data-tab="efemerides" data-label="Un día como hoy" data-desc="Qué pasó en la historia de Ferro cada día del año: partidos, debuts, cumpleaños y despedidas.">
+  <div class="ef-nav"><button type="button" id="ef-ant" class="chip" aria-label="Día anterior">←</button><label class="ef-sel-l"><span class="sr">Elegí el día</span><select id="ef-sel"></select></label><button type="button" id="ef-sig" class="chip" aria-label="Día siguiente">→</button><button type="button" id="ef-hoy" class="chip">Hoy</button><h2 class="ef-dia" id="ef-dia" aria-live="polite"></h2></div>
+  <div class="ef-cont" id="ef-cont"></div>
+</div>
 <div class="tab" data-tab="ultima-vez" data-label="La última vez que…" data-desc="¿Cuándo fue la última vez que goleamos, que dimos vuelta un partido o que nos comimos tres?">
 <p class="nota" id="ult-p">Se recalcula después de cada partido, con todas las temporadas cargadas.</p>
   <div class="ult" id="ult"></div>
@@ -23,6 +27,7 @@
     <li><b>Formato del torneo:</b> Cadena 3.</li>
     <li><b>Trayectorias de los jugadores:</b> Sofascore (los años son aproximados).</li>
     <li><b>Designación de árbitros:</b> AFA, publicada por Solo Ascenso.</li>
+    <li><b>Un día como hoy:</b> efemérides y fichas de jugadores y DT de <a href="https://laferropedia.com" target="_blank" rel="noopener">LaFerropedia</a>, que nos autorizó a usar su información (los textos son nuestros y cada historia enlaza la nota original), y partidos de las síntesis de Ferroweb desde 2006.</li>
   </ul>
   <h3>Cómo se calcula</h3>
   <ul>

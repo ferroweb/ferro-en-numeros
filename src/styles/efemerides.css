@@ -1,0 +1,33 @@
+/* «Un día como hoy» (Inicio y Hallazgos y datos → Un día como hoy) */
+.efem { margin: 18px 0 8px; }
+.efem .sec-t { margin-bottom: 12px; flex-wrap: wrap; }
+.efem .sec-t h2 { font-size: clamp(22px, 4vw, 28px); }
+.efem .sec-t h2 span { color: var(--verde-txt); }
+.ef-h { border-left: 4px solid var(--verde); padding: 4px 0 4px 14px; margin: 12px 0; }
+.ef-h.grande { border-left-width: 6px; }
+.ef-anio { display: flex; align-items: baseline; gap: 10px; }
+.ef-anio b { font-family: var(--display); font-weight: 800; font-size: 34px; line-height: 1; color: var(--verde-txt); font-variant-numeric: tabular-nums; }
+.ef-h.grande .ef-anio b { font-size: 44px; }
+.ef-anio span { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ef-h h4 { font-family: var(--display); font-weight: 800; font-size: 22px; text-transform: uppercase; line-height: 1.05; margin: 6px 0 4px; }
+.ef-h.grande h4 { font-size: clamp(24px, 4vw, 30px); }
+.ef-h p { margin: 0; max-width: 70ch; }
+.ef-h .ef-fuente { margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+.ef-h .ef-fuente a, .ef-lista a, .ef-tambien a { color: var(--verde-txt); }
+.ef-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ef-lista li { min-width: 0; }
+.ef-mini { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; font-size: 14.5px; }
+.ef-pt b, .ef-part b { font-variant-numeric: tabular-nums; }
+.ef-px { font-size: 13px; color: var(--muted); }
+.ef-c { color: var(--muted); }
+.ef-bloque + .ef-bloque { margin-top: 14px; }
+.ef-tambien { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.ef-part li { display: flex; gap: 10px; align-items: flex-start; }
+.ef-part .pill { flex: none; margin-top: 2px; }
+.ef-bal { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+@media (max-width: 520px) { .ef-bal { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ef-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
+.ef-nav select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.ef-dia { width: 100%; font-family: var(--display); font-weight: 800; font-size: clamp(28px, 5vw, 40px); text-transform: uppercase; margin: 4px 0 0; }
+.ef-cont { display: grid; gap: 14px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

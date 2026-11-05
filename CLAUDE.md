@@ -35,6 +35,10 @@ datos-fuente/               insumos y correcciones de los scripts (NO se publica
   alias-equipos.json        nombres de clubes que FerroWeb escribe distinto según la temporada
   estado.json · pedidos-ia.json · pedidos-atendidos.json
   EDITORIAL.md              instrucciones de la tarea con Claude (previa y hallazgos)
+  efemerides-textos/MM.json «Un día como hoy»: una historia por día escrita con voz propia (nunca copiada) a partir de
+                            una efeméride de LaFerropedia (campo id = nota original, tiene que ser del mismo día)
+  laferropedia/             efemerides.json (bajada por el workflow «Efemérides de LaFerropedia») y personas.json
+                            (fichas: nacimiento, fallecimiento, debut, último partido). LaFerropedia autorizó su uso.
 scripts/                    actualización automática (Node 22, sin dependencias)
   actualizar.mjs            orquestador
   lib/ferroweb.mjs          lee y parsea las síntesis de FerroWeb
@@ -45,6 +49,7 @@ scripts/                    actualización automática (Node 22, sin dependencia
   lib/redaccion.mjs         planilla de la redacción (árbitro, horario, pedidos para la IA)
   lib/editorial.mjs         validador de la parte editorial + historial del pronóstico FW
   lib/texto.mjs             normalización y comparación de nombres (tolera tipeos)
+  efemerides.mjs            arma public/data/efemerides.json (historias + fichas + partidos de FerroWeb por día)
   validar-editorial.mjs · verificar.mjs · verificar-editorial.mjs   (ver §7)
   test/                     pruebas con síntesis reales (fixtures/) y datos armados a mano
 src/
