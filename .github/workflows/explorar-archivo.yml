@@ -1,6 +1,6 @@
 name: Explorar archivo de FerroWeb
 
-# Una sola vez (o a mano): recorre las síntesis viejas de FerroWeb y guarda el inventario en datos-fuente/archivo-ferroweb.json.
+# A mano: recorre síntesis de FerroWeb (hoy 800 a 700: fechas de 2025 y 2026 para «Un día como hoy») y guarda el inventario en datos-fuente/archivo-ferroweb.json.
 # No toca los datos del sitio.
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 22
       - name: Recorrer el archivo
-        run: node scripts/explorar-archivo.mjs 700 1
+        run: node scripts/explorar-archivo.mjs 800 700
       - name: Guardar el inventario
         run: |
           git config user.name "ferro-en-numeros-bot"

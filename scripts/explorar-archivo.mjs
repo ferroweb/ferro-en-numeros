@@ -1,8 +1,8 @@
 // Inventario del archivo de síntesis de FerroWeb: recorre las páginas anteriores a las ya cargadas y anota qué partido es
 // cada una (encabezado, fecha y torneo si aparecen). No cambia ningún dato del sitio: deja el resultado en
 // datos-fuente/archivo-ferroweb.json para decidir qué temporadas incorporar en scripts/lib/temporadas.mjs.
-// Uso: node scripts/explorar-archivo.mjs [desde=700] [hasta=1]   (v2: suma fecha, torneo y día desde la crónica)
-import { writeFileSync } from "node:fs";
+// Uso: node scripts/explorar-archivo.mjs [desde=700] [hasta=1]   (v2: suma fecha, torneo y día desde la crónica; v3: se suma al inventario existente)
+import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { bajarSintesis, BASE } from "./lib/ferroweb.mjs";
 
 // La crónica comparte el número con la síntesis y trae el encabezado «1ª Fecha del Nacional B Apertura 2006 ¦ Jugada el día 07.08.06».
@@ -40,6 +40,11 @@ for (let view = desde; view >= hasta; view--) {
   if (view % 25 === 0) console.log(`… ${view}: ${cab ? limpiar(cab[1]) : "(sin síntesis)"} · ${out.at(-1).torneo ?? "?"} ${out.at(-1).dia ?? ""}`);
   await new Promise(r => setTimeout(r, 300));     // pedidos espaciados: no cargar el servidor de FerroWeb
 }
-const con = out.filter(x => x.sintesis);
-writeFileSync(new URL("../datos-fuente/archivo-ferroweb.json", import.meta.url), JSON.stringify({ generado: new Date().toISOString(), desde, hasta, con_sintesis: con.length, sin_sintesis: vacias, paginas: out }, null, 0));
+// Se suma a lo que ya había (v3): las páginas recorridas reemplazan a las mismas del inventario anterior.
+const ARCH = new URL("../datos-fuente/archivo-ferroweb.json", import.meta.url);
+const previo = existsSync(ARCH) ? JSON.parse(readFileSync(ARCH, "utf8")).paginas || [] : [];
+const vistas = new Set(out.map(x => x.view));
+const paginas = [...out, ...previo.filter(x => !vistas.has(x.view))].sort((a, b) => b.view - a.view);
+const con = paginas.filter(x => x.sintesis);
+writeFileSync(ARCH, JSON.stringify({ generado: new Date().toISOString(), desde: paginas[0].view, hasta: paginas.at(-1).view, con_sintesis: con.length, sin_sintesis: paginas.filter(x => !x.sintesis).length, paginas }, null, 0));
 console.log(`Listo: ${con.length} síntesis encontradas entre ${hasta} y ${desde}; ${vacias} páginas sin síntesis.`);
