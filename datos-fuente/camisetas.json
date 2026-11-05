@@ -1,0 +1,350 @@
+{
+ "descripcion": "Camiseta que usó Ferro en cada partido. Se identifica mirando las fotos de la crónica de FerroWeb y se controla contra los totales por camiseta y temporada de Piel de Oeste (pieldeoeste.com.ar/pdo_web, sección Camisetas).",
+ "temporadas": {
+  "2025": {
+   "control": "Coincide con Piel de Oeste en partidos y en ganados, empatados y perdidos de las 4 camisetas (revisado el 5/11/2026).",
+   "partidos": [
+    {
+     "fecha": 1,
+     "view": 725,
+     "rival": "Güemes",
+     "cond": "L",
+     "gf": 0,
+     "gc": 0,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 2,
+     "view": 726,
+     "rival": "San Martin (Tucumán)",
+     "cond": "V",
+     "gf": 0,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 3,
+     "view": 727,
+     "rival": "Tristán Suárez",
+     "cond": "L",
+     "gf": 0,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 4,
+     "view": 728,
+     "rival": "Gimnasia y Tiro (Salta)",
+     "cond": "V",
+     "gf": 2,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 5,
+     "view": 729,
+     "rival": "Deportivo Maipú (Mendoza)",
+     "cond": "L",
+     "gf": 2,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 6,
+     "view": 730,
+     "rival": "Deportivo Madryn",
+     "cond": "V",
+     "gf": 0,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 7,
+     "view": 731,
+     "rival": "Alvarado",
+     "cond": "L",
+     "gf": 0,
+     "gc": 0,
+     "camiseta": "Bordó",
+     "modelo": "Alternativa Bordó Lyon 2025"
+    },
+    {
+     "fecha": 8,
+     "view": 732,
+     "rival": "All Boys",
+     "cond": "V",
+     "gf": 1,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 9,
+     "view": 733,
+     "rival": "Arsenal de Sarandí",
+     "cond": "L",
+     "gf": 2,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 10,
+     "view": 734,
+     "rival": "Colegiales",
+     "cond": "V",
+     "gf": 0,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 11,
+     "view": 735,
+     "rival": "Atlanta",
+     "cond": "L",
+     "gf": 0,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 12,
+     "view": 736,
+     "rival": "Racing de Córdoba",
+     "cond": "V",
+     "gf": 0,
+     "gc": 4,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 13,
+     "view": 737,
+     "rival": "Quilmes A.C.",
+     "cond": "L",
+     "gf": 1,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 14,
+     "view": 738,
+     "rival": "San Miguel",
+     "cond": "V",
+     "gf": 0,
+     "gc": 2,
+     "camiseta": "Bordó",
+     "modelo": "Alternativa Bordó Lyon 2025"
+    },
+    {
+     "fecha": 15,
+     "view": 739,
+     "rival": "Almagro",
+     "cond": "L",
+     "gf": 1,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 16,
+     "view": 740,
+     "rival": "Los Andes",
+     "cond": "L",
+     "gf": 2,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 17,
+     "view": 741,
+     "rival": "Patronato (Paraná)",
+     "cond": "V",
+     "gf": 0,
+     "gc": 3,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 18,
+     "view": 742,
+     "rival": "Atlético Güemes (SdE)",
+     "cond": "V",
+     "gf": 1,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 19,
+     "view": 743,
+     "rival": "San Martín (Tucumán)",
+     "cond": "L",
+     "gf": 0,
+     "gc": 2,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 20,
+     "view": 744,
+     "rival": "Tristán Suárez",
+     "cond": "V",
+     "gf": 1,
+     "gc": 1,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 21,
+     "view": 745,
+     "rival": "Gimnasia y Tiro (Salta)",
+     "cond": "L",
+     "gf": 0,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 22,
+     "view": 746,
+     "rival": "Deportivo Maipú (Mendoza)",
+     "cond": "V",
+     "gf": 1,
+     "gc": 2,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 23,
+     "view": 747,
+     "rival": "Deportivo Madryn",
+     "cond": "L",
+     "gf": 1,
+     "gc": 1,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 24,
+     "view": 748,
+     "rival": "Alvarado",
+     "cond": "V",
+     "gf": 0,
+     "gc": 3,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 25,
+     "view": 749,
+     "rival": "All Boys",
+     "cond": "L",
+     "gf": 0,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 26,
+     "view": 750,
+     "rival": "Arsenal (Sarandí)",
+     "cond": "V",
+     "gf": 0,
+     "gc": 2,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 27,
+     "view": 751,
+     "rival": "Colegiales",
+     "cond": "L",
+     "gf": 1,
+     "gc": 0,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 28,
+     "view": 752,
+     "rival": "Atlanta",
+     "cond": "V",
+     "gf": 1,
+     "gc": 2,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 29,
+     "view": 753,
+     "rival": "Racing de Córdoba",
+     "cond": "L",
+     "gf": 2,
+     "gc": 2,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 30,
+     "view": 754,
+     "rival": "Quilmes A.C.",
+     "cond": "V",
+     "gf": 0,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 31,
+     "view": 755,
+     "rival": "San Miguel",
+     "cond": "L",
+     "gf": 0,
+     "gc": 1,
+     "camiseta": "Blanca",
+     "modelo": "Suplente Blanca Lyon 2025"
+    },
+    {
+     "fecha": 32,
+     "view": 756,
+     "rival": "Almagro",
+     "cond": "V",
+     "gf": 1,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 33,
+     "view": 757,
+     "rival": "Los Andes",
+     "cond": "V",
+     "gf": 1,
+     "gc": 0,
+     "camiseta": "Verde",
+     "modelo": "Titular Verde Lyon 2025"
+    },
+    {
+     "fecha": 34,
+     "view": 758,
+     "rival": "Patronato (Paraná)",
+     "cond": "L",
+     "gf": 3,
+     "gc": 1,
+     "camiseta": "Rosa",
+     "modelo": "Alternativa II Rosa Lyon 2025"
+    }
+   ]
+  }
+ }
+}
