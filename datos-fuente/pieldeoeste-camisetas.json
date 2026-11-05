@@ -1,0 +1,942 @@
+{
+ "fuente": "Piel de Oeste, pieldeoeste.com.ar/pdo_web, sección Camisetas, leído el 5/11/2026 (datos desde 2006). Efectividad = % de puntos sumados sobre los posibles.",
+ "color": {
+  "Verde": [
+   564,
+   184,
+   180,
+   200,
+   43.3
+  ],
+  "Blanca": [
+   141,
+   51,
+   46,
+   44,
+   47.0
+  ],
+  "Negra": [
+   8,
+   2,
+   3,
+   3,
+   37.5
+  ],
+  "Violeta": [
+   9,
+   4,
+   4,
+   1,
+   59.3
+  ],
+  "Rosa": [
+   5,
+   3,
+   1,
+   1,
+   66.7
+  ],
+  "Naranja": [
+   7,
+   3,
+   3,
+   1,
+   57.1
+  ],
+  "Bordó": [
+   2,
+   0,
+   1,
+   1,
+   16.7
+  ]
+ },
+ "marca": {
+  "Reusch": [
+   154,
+   48,
+   47,
+   59,
+   41.3
+  ],
+  "Kappa": [
+   128,
+   36,
+   49,
+   43,
+   40.9
+  ],
+  "Joma": [
+   94,
+   33,
+   34,
+   27,
+   47.2
+  ],
+  "KDY": [
+   72,
+   21,
+   29,
+   22,
+   42.6
+  ],
+  "Signia": [
+   24,
+   7,
+   5,
+   12,
+   36.1
+  ],
+  "Givova": [
+   35,
+   13,
+   7,
+   15,
+   43.8
+  ],
+  "Lyon": [
+   229,
+   89,
+   67,
+   73,
+   48.6
+  ]
+ },
+ "total": [
+  736,
+  247,
+  238,
+  251,
+  44.3
+ ],
+ "camisetas_3pj": [
+  [
+   "Titular Verde Reusch 2006",
+   48,
+   38.9
+  ],
+  [
+   "Suplente Blanca Reusch 2006",
+   4,
+   16.7
+  ],
+  [
+   "Titular Verde Reusch 2007",
+   24,
+   40.3
+  ],
+  [
+   "Titular Verde Reusch 2008",
+   31,
+   44.1
+  ],
+  [
+   "Suplente Verde Reusch 2008",
+   7,
+   52.4
+  ],
+  [
+   "Titular Verde Reusch 2009",
+   33,
+   41.4
+  ],
+  [
+   "Suplente Blanca Reusch 2009",
+   5,
+   53.3
+  ],
+  [
+   "Titular Verde Kappa 2010",
+   32,
+   41.7
+  ],
+  [
+   "Suplente Blanca Kappa 2010",
+   6,
+   33.3
+  ],
+  [
+   "Titular Verde Kappa 2011",
+   35,
+   46.7
+  ],
+  [
+   "Suplente Blanca Kappa 2011",
+   4,
+   66.7
+  ],
+  [
+   "Titular Verde Kappa 2012",
+   46,
+   34.1
+  ],
+  [
+   "Suplente Blanca Kappa 2012",
+   5,
+   46.7
+  ],
+  [
+   "Titular Verde Joma 2013",
+   14,
+   54.8
+  ],
+  [
+   "Suplente Blanca Joma 2013",
+   19,
+   50.9
+  ],
+  [
+   "Titular Verde Joma 2014",
+   55,
+   46.7
+  ],
+  [
+   "Suplente Blanca Joma 2014",
+   6,
+   22.2
+  ],
+  [
+   "Titular Verde KDY 2015",
+   26,
+   41.0
+  ],
+  [
+   "Titular Verde KDY 2016",
+   29,
+   41.4
+  ],
+  [
+   "Suplente Blanca KDY 2016",
+   6,
+   38.9
+  ],
+  [
+   "Alternativa Violeta KDY 2016",
+   9,
+   59.3
+  ],
+  [
+   "Titular Verde Signia 2017",
+   17,
+   35.3
+  ],
+  [
+   "Suplente Blanca Signia 2017",
+   7,
+   38.1
+  ],
+  [
+   "Titular Verde Givova 2018",
+   27,
+   43.2
+  ],
+  [
+   "Suplente Blanca Givova 2018",
+   8,
+   45.8
+  ],
+  [
+   "Titular Verde Lyon 2019",
+   9,
+   63.0
+  ],
+  [
+   "Titular Verde Lyon 2020",
+   14,
+   40.5
+  ],
+  [
+   "Suplente Negra Lyon 2020",
+   4,
+   33.3
+  ],
+  [
+   "Titular Verde Lyon 2021",
+   8,
+   45.8
+  ],
+  [
+   "Suplente Blanca Lyon 2021",
+   20,
+   58.3
+  ],
+  [
+   "Titular Verde Lyon 2022",
+   25,
+   48.0
+  ],
+  [
+   "Suplente Blanca Lyon 2022",
+   11,
+   36.4
+  ],
+  [
+   "Titular Verde Lyon 2023",
+   30,
+   47.8
+  ],
+  [
+   "Suplente Blanca Lyon 2023",
+   3,
+   44.4
+  ],
+  [
+   "Alternativa Verde Lyon 2023",
+   3,
+   44.4
+  ],
+  [
+   "Titular Verde Lyon 2024",
+   19,
+   35.1
+  ],
+  [
+   "Suplente Blanca Lyon 2024",
+   11,
+   54.5
+  ],
+  [
+   "Alternativa Naranja Lyon 2024",
+   7,
+   57.1
+  ],
+  [
+   "Titular Verde Lyon 2025",
+   22,
+   48.5
+  ],
+  [
+   "Suplente Blanca Lyon 2025",
+   9,
+   18.5
+  ],
+  [
+   "Titular Verde Lyon 2026",
+   8,
+   66.7
+  ],
+  [
+   "Suplente Blanca Lyon 2026",
+   15,
+   71.1
+  ]
+ ],
+ "hasta_2025": {
+  "camisetas": [
+   {
+    "n": "Titular Verde Reusch 2006",
+    "pj": 48,
+    "g": 13,
+    "e": 17,
+    "p": 18,
+    "color": "Verde",
+    "marca": "Reusch",
+    "anio": 2006
+   },
+   {
+    "n": "Suplente Blanca Reusch 2006",
+    "pj": 4,
+    "g": 0,
+    "e": 2,
+    "p": 2,
+    "color": "Blanca",
+    "marca": "Reusch",
+    "anio": 2006
+   },
+   {
+    "n": "Titular Verde Reusch 2007",
+    "pj": 24,
+    "g": 7,
+    "e": 8,
+    "p": 9,
+    "color": "Verde",
+    "marca": "Reusch",
+    "anio": 2007
+   },
+   {
+    "n": "Suplente Negra Reusch 2007",
+    "pj": 2,
+    "g": 1,
+    "e": 0,
+    "p": 1,
+    "color": "Negra",
+    "marca": "Reusch",
+    "anio": 2007
+   },
+   {
+    "n": "Titular Verde Reusch 2008",
+    "pj": 31,
+    "g": 12,
+    "e": 5,
+    "p": 14,
+    "color": "Verde",
+    "marca": "Reusch",
+    "anio": 2008
+   },
+   {
+    "n": "Suplente Verde Reusch 2008",
+    "pj": 7,
+    "g": 3,
+    "e": 2,
+    "p": 2,
+    "color": "Verde",
+    "marca": "Reusch",
+    "anio": 2008
+   },
+   {
+    "n": "Titular Verde Reusch 2009",
+    "pj": 33,
+    "g": 10,
+    "e": 11,
+    "p": 12,
+    "color": "Verde",
+    "marca": "Reusch",
+    "anio": 2009
+   },
+   {
+    "n": "Suplente Blanca Reusch 2009",
+    "pj": 5,
+    "g": 2,
+    "e": 2,
+    "p": 1,
+    "color": "Blanca",
+    "marca": "Reusch",
+    "anio": 2009
+   },
+   {
+    "n": "Titular Verde Kappa 2010",
+    "pj": 32,
+    "g": 10,
+    "e": 10,
+    "p": 12,
+    "color": "Verde",
+    "marca": "Kappa",
+    "anio": 2010
+   },
+   {
+    "n": "Suplente Blanca Kappa 2010",
+    "pj": 6,
+    "g": 1,
+    "e": 3,
+    "p": 2,
+    "color": "Blanca",
+    "marca": "Kappa",
+    "anio": 2010
+   },
+   {
+    "n": "Titular Verde Kappa 2011",
+    "pj": 35,
+    "g": 12,
+    "e": 13,
+    "p": 10,
+    "color": "Verde",
+    "marca": "Kappa",
+    "anio": 2011
+   },
+   {
+    "n": "Suplente Blanca Kappa 2011",
+    "pj": 4,
+    "g": 2,
+    "e": 2,
+    "p": 0,
+    "color": "Blanca",
+    "marca": "Kappa",
+    "anio": 2011
+   },
+   {
+    "n": "Titular Verde Kappa 2012",
+    "pj": 46,
+    "g": 9,
+    "e": 20,
+    "p": 17,
+    "color": "Verde",
+    "marca": "Kappa",
+    "anio": 2012
+   },
+   {
+    "n": "Suplente Blanca Kappa 2012",
+    "pj": 5,
+    "g": 2,
+    "e": 1,
+    "p": 2,
+    "color": "Blanca",
+    "marca": "Kappa",
+    "anio": 2012
+   },
+   {
+    "n": "Titular Verde Joma 2013",
+    "pj": 14,
+    "g": 6,
+    "e": 5,
+    "p": 3,
+    "color": "Verde",
+    "marca": "Joma",
+    "anio": 2013
+   },
+   {
+    "n": "Suplente Blanca Joma 2013",
+    "pj": 19,
+    "g": 7,
+    "e": 8,
+    "p": 4,
+    "color": "Blanca",
+    "marca": "Joma",
+    "anio": 2013
+   },
+   {
+    "n": "Titular Verde Joma 2014",
+    "pj": 55,
+    "g": 19,
+    "e": 20,
+    "p": 16,
+    "color": "Verde",
+    "marca": "Joma",
+    "anio": 2014
+   },
+   {
+    "n": "Suplente Blanca Joma 2014",
+    "pj": 6,
+    "g": 1,
+    "e": 1,
+    "p": 4,
+    "color": "Blanca",
+    "marca": "Joma",
+    "anio": 2014
+   },
+   {
+    "n": "Titular Verde KDY 2015",
+    "pj": 26,
+    "g": 8,
+    "e": 8,
+    "p": 10,
+    "color": "Verde",
+    "marca": "KDY",
+    "anio": 2015
+   },
+   {
+    "n": "Suplente Blanca KDY 2015",
+    "pj": 1,
+    "g": 0,
+    "e": 0,
+    "p": 1,
+    "color": "Blanca",
+    "marca": "KDY",
+    "anio": 2015
+   },
+   {
+    "n": "Alternativa Negra KDY 2015",
+    "pj": 1,
+    "g": 0,
+    "e": 1,
+    "p": 0,
+    "color": "Negra",
+    "marca": "KDY",
+    "anio": 2015
+   },
+   {
+    "n": "Titular Verde KDY 2016",
+    "pj": 29,
+    "g": 8,
+    "e": 12,
+    "p": 9,
+    "color": "Verde",
+    "marca": "KDY",
+    "anio": 2016
+   },
+   {
+    "n": "Suplente Blanca KDY 2016",
+    "pj": 6,
+    "g": 1,
+    "e": 4,
+    "p": 1,
+    "color": "Blanca",
+    "marca": "KDY",
+    "anio": 2016
+   },
+   {
+    "n": "Alternativa Violeta KDY 2016",
+    "pj": 9,
+    "g": 4,
+    "e": 4,
+    "p": 1,
+    "color": "Violeta",
+    "marca": "KDY",
+    "anio": 2016
+   },
+   {
+    "n": "Titular Verde Signia 2017",
+    "pj": 17,
+    "g": 5,
+    "e": 3,
+    "p": 9,
+    "color": "Verde",
+    "marca": "Signia",
+    "anio": 2017
+   },
+   {
+    "n": "Suplente Blanca Signia 2017",
+    "pj": 7,
+    "g": 2,
+    "e": 2,
+    "p": 3,
+    "color": "Blanca",
+    "marca": "Signia",
+    "anio": 2017
+   },
+   {
+    "n": "Titular Verde Givova 2018",
+    "pj": 27,
+    "g": 10,
+    "e": 5,
+    "p": 12,
+    "color": "Verde",
+    "marca": "Givova",
+    "anio": 2018
+   },
+   {
+    "n": "Suplente Blanca Givova 2018",
+    "pj": 8,
+    "g": 3,
+    "e": 2,
+    "p": 3,
+    "color": "Blanca",
+    "marca": "Givova",
+    "anio": 2018
+   },
+   {
+    "n": "Titular Verde Lyon 2019",
+    "pj": 9,
+    "g": 5,
+    "e": 2,
+    "p": 2,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2019
+   },
+   {
+    "n": "Suplente Blanca Lyon 2019",
+    "pj": 1,
+    "g": 1,
+    "e": 0,
+    "p": 0,
+    "color": "Blanca",
+    "marca": "Lyon",
+    "anio": 2019
+   },
+   {
+    "n": "Titular Verde Lyon 2020",
+    "pj": 14,
+    "g": 5,
+    "e": 2,
+    "p": 7,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2020
+   },
+   {
+    "n": "Suplente Negra Lyon 2020",
+    "pj": 4,
+    "g": 1,
+    "e": 1,
+    "p": 2,
+    "color": "Negra",
+    "marca": "Lyon",
+    "anio": 2020
+   },
+   {
+    "n": "Titular Verde Lyon 2021",
+    "pj": 8,
+    "g": 3,
+    "e": 2,
+    "p": 3,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2021
+   },
+   {
+    "n": "Suplente Blanca Lyon 2021",
+    "pj": 20,
+    "g": 9,
+    "e": 8,
+    "p": 3,
+    "color": "Blanca",
+    "marca": "Lyon",
+    "anio": 2021
+   },
+   {
+    "n": "Alternativa Rosa Lyon 2021",
+    "pj": 1,
+    "g": 1,
+    "e": 0,
+    "p": 0,
+    "color": "Rosa",
+    "marca": "Lyon",
+    "anio": 2021
+   },
+   {
+    "n": "Titular Verde Lyon 2022",
+    "pj": 25,
+    "g": 10,
+    "e": 6,
+    "p": 9,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2022
+   },
+   {
+    "n": "Suplente Blanca Lyon 2022",
+    "pj": 11,
+    "g": 3,
+    "e": 3,
+    "p": 5,
+    "color": "Blanca",
+    "marca": "Lyon",
+    "anio": 2022
+   },
+   {
+    "n": "Alternativa Verde Lyon 2022",
+    "pj": 1,
+    "g": 0,
+    "e": 1,
+    "p": 0,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2022
+   },
+   {
+    "n": "Alternativa II Rosa Lyon 2022",
+    "pj": 1,
+    "g": 0,
+    "e": 1,
+    "p": 0,
+    "color": "Rosa",
+    "marca": "Lyon",
+    "anio": 2022
+   },
+   {
+    "n": "Titular Verde Lyon 2023",
+    "pj": 30,
+    "g": 11,
+    "e": 10,
+    "p": 9,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2023
+   },
+   {
+    "n": "Suplente Blanca Lyon 2023",
+    "pj": 3,
+    "g": 1,
+    "e": 1,
+    "p": 1,
+    "color": "Blanca",
+    "marca": "Lyon",
+    "anio": 2023
+   },
+   {
+    "n": "Alternativa Verde Lyon 2023",
+    "pj": 3,
+    "g": 1,
+    "e": 1,
+    "p": 1,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2023
+   },
+   {
+    "n": "Alternativa II Rosa Lyon 2023",
+    "pj": 1,
+    "g": 1,
+    "e": 0,
+    "p": 0,
+    "color": "Rosa",
+    "marca": "Lyon",
+    "anio": 2023
+   },
+   {
+    "n": "Titular Verde Lyon 2024",
+    "pj": 19,
+    "g": 4,
+    "e": 8,
+    "p": 7,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2024
+   },
+   {
+    "n": "Suplente Blanca Lyon 2024",
+    "pj": 11,
+    "g": 5,
+    "e": 3,
+    "p": 3,
+    "color": "Blanca",
+    "marca": "Lyon",
+    "anio": 2024
+   },
+   {
+    "n": "Alternativa Naranja Lyon 2024",
+    "pj": 7,
+    "g": 3,
+    "e": 3,
+    "p": 1,
+    "color": "Naranja",
+    "marca": "Lyon",
+    "anio": 2024
+   },
+   {
+    "n": "Alternativa II Rosa Lyon 2024",
+    "pj": 1,
+    "g": 0,
+    "e": 0,
+    "p": 1,
+    "color": "Rosa",
+    "marca": "Lyon",
+    "anio": 2024
+   },
+   {
+    "n": "Titular Verde Lyon 2025",
+    "pj": 22,
+    "g": 8,
+    "e": 8,
+    "p": 6,
+    "color": "Verde",
+    "marca": "Lyon",
+    "anio": 2025
+   },
+   {
+    "n": "Suplente Blanca Lyon 2025",
+    "pj": 9,
+    "g": 1,
+    "e": 2,
+    "p": 6,
+    "color": "Blanca",
+    "marca": "Lyon",
+    "anio": 2025
+   },
+   {
+    "n": "Alternativa Bordó Lyon 2025",
+    "pj": 2,
+    "g": 0,
+    "e": 1,
+    "p": 1,
+    "color": "Bordó",
+    "marca": "Lyon",
+    "anio": 2025
+   },
+   {
+    "n": "Alternativa II Rosa Lyon 2025",
+    "pj": 1,
+    "g": 1,
+    "e": 0,
+    "p": 0,
+    "color": "Rosa",
+    "marca": "Lyon",
+    "anio": 2025
+   }
+  ],
+  "color": {
+   "Verde": [
+    555,
+    179,
+    179,
+    197,
+    43.0
+   ],
+   "Blanca": [
+    126,
+    41,
+    44,
+    41,
+    44.2
+   ],
+   "Negra": [
+    7,
+    2,
+    2,
+    3,
+    38.1
+   ],
+   "Violeta": [
+    9,
+    4,
+    4,
+    1,
+    59.3
+   ],
+   "Rosa": [
+    5,
+    3,
+    1,
+    1,
+    66.7
+   ],
+   "Naranja": [
+    7,
+    3,
+    3,
+    1,
+    57.1
+   ],
+   "Bordó": [
+    2,
+    0,
+    1,
+    1,
+    16.7
+   ]
+  },
+  "marca": {
+   "Reusch": [
+    154,
+    48,
+    47,
+    59,
+    41.3
+   ],
+   "Kappa": [
+    128,
+    36,
+    49,
+    43,
+    40.9
+   ],
+   "Joma": [
+    94,
+    33,
+    34,
+    27,
+    47.2
+   ],
+   "KDY": [
+    72,
+    21,
+    29,
+    22,
+    42.6
+   ],
+   "Signia": [
+    24,
+    7,
+    5,
+    12,
+    36.1
+   ],
+   "Givova": [
+    35,
+    13,
+    7,
+    15,
+    43.8
+   ],
+   "Lyon": [
+    204,
+    74,
+    63,
+    67,
+    46.6
+   ]
+  },
+  "total": 711,
+  "nota": "Camiseta por camiseta (51 camisetas, 2006-2025), leído el 5/11/2026. 2026 se excluye: Piel de Oeste no tiene la temporada completa."
+ }
+}
