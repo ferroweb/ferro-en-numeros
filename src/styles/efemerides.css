@@ -42,3 +42,15 @@
 .ef-dia { width: 100%; font-family: var(--display); font-weight: 800; font-size: clamp(28px, 5vw, 40px); text-transform: uppercase; margin: 4px 0 0; }
 .ef-cont { display: grid; gap: 14px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ef-acc { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 10px; }
+.ef-btn { background: none; border: 0; padding: 0; font: inherit; font-weight: 700; font-size: 14px; color: var(--verde-txt); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.efem .ef-btn { color: var(--marcador-ink); }
+.ef-wa { background: #25d366; color: #073b1e; font-weight: 800; font-size: 14px; padding: 7px 14px; border-radius: 999px; border: 0; cursor: pointer; font-family: inherit; }
+.ef-wa:disabled { opacity: .6; cursor: wait; }
+.ef-wa-msg { display: block; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.efem .ef-wa-msg { color: var(--marcador-dim); }
+.ef-des { margin-top: 6px; } .ef-des li { font-size: 14px; }
+/* placa (fuera de pantalla, 1080x1350) */
+.placa-ef .ef-pa { font-size: 64px; font-weight: 900; color: #0b5a32; line-height: 1; margin-bottom: 6px; }
+.placa-ef .ef-pc .t { font-size: 40px; }
+.placa-ef .ef-pc .d { font-size: 26px; }

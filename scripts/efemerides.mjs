@@ -88,7 +88,10 @@ export function armar({ textos, lfp, personas, archivo, correcciones, anioHoy = 
     if (e.dia !== k) { avisos.push(`historia ${k}: la nota ${t.id} es del ${e.dia}`); continue; }
     const anio = +(e.titulo.match(/^(\d{4})/) || [])[1];
     if (!anio) { avisos.push(`historia ${k}: la nota ${t.id} no dice el año`); continue; }
-    dia(k).historias.push({ anio, titulo: t.titulo, texto: t.texto, url: e.url });
+    const h = { anio, titulo: t.titulo, texto: t.texto, url: e.url };
+    // «desarrollo»: párrafos más largos (los escribe la tarea diaria con al menos dos fuentes, citadas en «fuentes»)
+    if (Array.isArray(t.desarrollo) && t.desarrollo.length) { h.desarrollo = t.desarrollo; if (Array.isArray(t.fuentes)) h.fuentes = t.fuentes; }
+    dia(k).historias.push(h);
   }
 
   // 2) personas

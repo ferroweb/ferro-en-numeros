@@ -2,6 +2,7 @@
 // Los datos (public/data/efemerides.json) los arma scripts/efemerides.mjs; acá solo se dibujan.
 // El archivo se pide recién cuando hace falta, para no demorar la carga del sitio.
 import { $, el, limitar } from "../lib/dom.js";
+import { cargarHtml2canvas } from "../lib/html2canvas.js";
 
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 const SINTESIS = "http://www.ferroweb.com.ar/v1/?mod=futbol&sub=sintesis&view=";
@@ -32,12 +33,78 @@ const penales = (p) => p.pen ? ` (${p.pen.f > p.pen.r ? "ganó" : "perdió"} ${p
 function enlace(href, texto) { const a = el("a", null, texto); a.href = href; a.target = "_blank"; a.rel = "noopener"; return a; }
 
 // ---------- piezas ----------
-function historia(h, grande) {
+function historia(h, grande, k) {
   const c = el("article", "ef-h" + (grande ? " grande" : ""));
   const cab = el("div", "ef-anio"); cab.append(el("b", null, String(h.anio)), el("span", null, haceAnios(h.anio)));
   c.append(cab, el("h4", null, h.titulo), el("p", null, h.texto));
   const f = el("p", "ef-fuente"); f.append("Dato: ", enlace(h.url, "LaFerropedia")); c.append(f);
+  const acc = el("div", "ef-acc");
+  const b = el("button", "ef-btn", h.desarrollo ? "Leer el desarrollo →" : "Ver el día completo →"); b.type = "button";
+  b.addEventListener("click", () => abrirDia(k, h)); acc.append(b, botonPlaca(k));
+  c.append(acc);
   return c;
+}
+
+// ---------- desarrollo (usa el diálogo #des de los hallazgos) ----------
+function resumenDia(k, D) {
+  const out = [];
+  if (D.partidos) { const b = D.balance; out.push(`Cada ${diaLargo(k)} desde ${b.desde}, en partidos con síntesis de FerroWeb: ${b.pj} ${b.pj === 1 ? "partido" : "partidos"}, ${b.g} ${b.g === 1 ? "ganado" : "ganados"}, ${b.e} ${b.e === 1 ? "empatado" : "empatados"} y ${b.p} ${b.p === 1 ? "perdido" : "perdidos"} (goles: ${b.gf} a favor y ${b.gc} en contra).`); }
+  (D.nacimientos || []).slice(0, 2).forEach(n => out.push(`Nació ${n.nombre} (${n.anio})${n.cumpliria ? `, que hoy cumpliría ${n.cumpliria}` : ""}. ${n.texto || ""}`.trim()));
+  (D.debuts || []).slice(0, 2).forEach(d => out.push(`Debutó ${d.nombre} (${d.anio}): ${d.texto}`));
+  (D.despedidas || []).slice(0, 1).forEach(d => out.push(`Último partido de ${d.nombre} con la verde (${d.anio}): ${d.texto}`));
+  (D.fallecimientos || []).slice(0, 2).forEach(f => out.push(`Nos dejó ${f.nombre} (${f.anio}). ${f.texto || ""}`.trim()));
+  return out;
+}
+function abrirDia(k, h) {
+  const D = datos.dias[k], dlg = $("#des"), c = $("#des-c"); c.textContent = "";
+  $("#des-tg").textContent = `Un día como hoy · ${diaLargo(k)} de ${h.anio}`;
+  $("#des-t").textContent = h.titulo;
+  (h.desarrollo || [h.texto]).forEach(t => c.append(el("p", null, t)));
+  const f = el("p", "ef-fuente"); f.append("Dato: ", enlace(h.url, "LaFerropedia"));
+  (h.fuentes || []).forEach(x => { f.append(" · ", enlace(x.url, x.nombre)); });
+  c.append(f);
+  const R = resumenDia(k, D);
+  if (R.length) { c.append(el("h4", null, `Además, un ${diaLargo(k)}`)); const ul = el("ul", "ef-lista ef-des"); R.forEach(t => ul.append(el("li", null, t))); c.append(ul); }
+  const acc = el("div", "ef-acc"); acc.append(botonPlaca(k));
+  const a = el("a", "ef-btn", "Ver todo el día →"); a.href = `#/datos/efemerides/${k}`; a.addEventListener("click", () => dlg.close()); acc.append(a);
+  c.append(acc);
+  if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+  c.scrollTop = 0;
+}
+
+// ---------- placa para WhatsApp (solo datos: sin fuentes ni links, como todas las placas) ----------
+function armarPlaca(k) {
+  const D = datos.dias[k];
+  const P = el("div", "placa-n placa-ef"); const cab = el("div", "pc"); const izq = el("div");
+  izq.append(el("span", "eti", "FERRO EN NÚMEROS"), el("h1", null, "Un día como hoy"), el("div", "f", diaLargo(k) + " · Hablemos de Ferro"));
+  const lg = document.querySelector(".fwlogo"); cab.append(izq); if (lg) { const im = el("img"); im.src = lg.src; cab.append(im); } P.append(cab);
+  const h = D.historias && D.historias[0];
+  if (h) { const c = el("div", "card ef-pc"); c.append(el("div", "ef-pa", String(h.anio)), el("div", "t", h.titulo), el("div", "d", h.texto)); P.append(c); }
+  if (D.partidos) {
+    const b = D.balance, c = el("div", "card"); c.append(el("div", "t", `Ferro cada ${diaLargo(k)} desde ${b.desde}`));
+    const t = el("div", "tiles"); [["partidos", b.pj], ["ganados", b.g], ["empatados", b.e], ["perdidos", b.p]].forEach(([l, v]) => { const x = el("div", "tile"); x.append(el("b", null, String(v)), el("span", null, l)); t.append(x); });
+    c.append(t); P.append(c);
+  }
+  const n = D.nacimientos && D.nacimientos[0];
+  if (n && P.children.length < 4) { const c = el("div", "card"); c.append(el("div", "t", `Nació ${n.nombre} (${n.anio})`)); if (n.texto) c.append(el("div", "d", n.texto + (n.cumpliria ? ` Hoy cumpliría ${n.cumpliria}.` : ""))); P.append(c); }
+  const d = D.debuts && D.debuts[0];
+  if (d && P.children.length < 5) { const c = el("div", "card"); c.append(el("div", "t", `Debutó ${d.nombre} (${d.anio})`), el("div", "d", d.texto)); P.append(c); }
+  const pie = el("div", "pn-pie"); pie.append(el("div", "px", "Ferro en números · Ferroweb")); P.append(pie);
+  document.body.append(P); return P;
+}
+function botonPlaca(k) {
+  const w = el("span", "ef-wa-w"); const b = el("button", "ef-wa", "📲 Placa para WhatsApp"); b.type = "button"; const msg = el("span", "ef-wa-msg"); msg.setAttribute("role", "status");
+  b.addEventListener("click", async () => {
+    msg.textContent = "Armando la placa…"; b.disabled = true;
+    try {
+      await cargarHtml2canvas(); const P = armarPlaca(k); const cv = await window.html2canvas(P, { scale: 1, backgroundColor: null, useCORS: true }); P.remove();
+      const blob = await new Promise(r => cv.toBlob(r, "image/png")); const file = new File([blob], `ferro-un-dia-como-hoy-${k}.png`, { type: "image/png" });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text: `💚 Un día como hoy en Ferro · ${diaLargo(k)}` }); msg.textContent = ""; }
+      else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name; document.body.append(a); a.click(); a.remove(); msg.textContent = "Se descargó la placa: adjuntala en WhatsApp. (Desde el celu se comparte directo.)"; }
+    } catch (e) { msg.textContent = e && e.name === "AbortError" ? "" : "No se pudo armar la placa. Probá de nuevo."; }
+    b.disabled = false;
+  });
+  w.append(b, msg); return w;
 }
 function persona(x, verbo) {
   const li = el("li", "ef-p");
@@ -81,7 +148,7 @@ function dibujarPagina(k) {
   const box = $("#ef-cont"); box.textContent = "";
   if (D.historias) {
     const c = el("div", "caja"); c.append(el("h3", null, `La historia del ${diaLargo(k)}`));
-    D.historias.forEach((h, i) => c.append(historia(h, i === 0))); box.append(c);
+    D.historias.forEach((h, i) => c.append(historia(h, i === 0, k))); box.append(c);
   }
   if (D.partidos) { const c = el("div", "caja"); c.append(el("h3", null, `Ferro, cada ${diaLargo(k)}`)); c.append(partidos(D)); box.append(c); limitar(c.querySelector(".ef-part"), 5); }
   const gente = el("div", "caja"); gente.append(el("h3", null, `Cumpleaños, debuts y despedidas del ${diaLargo(k)}`));
@@ -118,7 +185,8 @@ function dibujarInicio() {
   const k = hoyBA().clave, D = datos.dias[k]; if (!D) return;
   const box = $("#efem-l"); box.textContent = "";
   $("#efem-f").textContent = diaLargo(k);
-  if (D.historias) box.append(historia(D.historias[0], true));
+  if (D.historias) box.append(historia(D.historias[0], true, k));
+  else { const acc = el("div", "ef-acc"); acc.append(botonPlaca(k)); box.append(acc); }
   const ul = el("ul", "ef-lista ef-mini");
   if (D.partidos) {
     const b = D.balance, p = D.partidos[0];
