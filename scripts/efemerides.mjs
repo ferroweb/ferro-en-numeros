@@ -15,15 +15,9 @@ const ANIO_HOY = +(process.env.EFEM_ANIO || new Date().getFullYear());
 const avisos = [];
 
 // ---------- personas (LaFerropedia) ----------
-export function nombreCorto(n) {
-  const p = n.trim().split(/\s+/);
-  if (p.length <= 2) return n.trim();
-  // «Juan Domingo Antonio Rocchia» → «Juan Domingo Antonio Rocchia» se lee largo: primer nombre + apellido(s) final(es)
-  const part = new Set(["de", "del", "la", "las", "los", "da", "dos", "van", "von"]);
-  let ap = [p.at(-1)]; let i = p.length - 2;
-  while (i > 0 && part.has(p[i].toLowerCase())) { ap.unshift(p[i]); i--; }
-  return p[0] + " " + ap.join(" ");
-}
+// Se muestra el nombre completo de la ficha: acortarlo rompe los apellidos compuestos («Mac Allister», «Santa Cruz»,
+// «Collado Solari»), y no hay forma segura de saber cuál es el apellido con el que se lo conoce.
+export function nombreCorto(n) { return n.replace(/\s+/g, " ").trim(); }
 const PUESTOS = { arquero: "Arquero", defensor: "Defensor", mediocampista: "Mediocampista", delantero: "Delantero" };
 function puesto(p) {
   if (!p.puesto) return null;
@@ -37,8 +31,9 @@ export function resumenJugador(p, rk) {
   const pu = puesto(p);
   let x = p.arquero ? `Atajó ${plural(p.pj, "partido", "partidos")} con la verde` : `Jugó ${plural(p.pj, "partido", "partidos")} con la verde${p.goles ? ` e hizo ${plural(p.goles, "gol", "goles")}` : ""}`;
   x = (pu && !p.arquero ? pu + ". " : "") + x + ".";
-  if (rk.pj[p.url] && rk.pj[p.url] <= 20) x += ` Es el ${rk.pj[p.url]}° con más partidos en la historia del club.`;
-  else if (rk.gol[p.url] && rk.gol[p.url] <= 20) x += ` Es el ${rk.gol[p.url]}° goleador histórico del club.`;
+  const comp = (lista, v) => lista.filter(q => q === v).length > 1 ? " (compartido)" : "";
+  if (rk.pj[p.url] && rk.pj[p.url] <= 20) x += ` Es el ${rk.pj[p.url]}°${comp(rk.pjs, p.pj)} con más partidos en la historia del club.`;
+  else if (rk.gol[p.url] && rk.gol[p.url] <= 20) x += ` Es el ${rk.gol[p.url]}°${comp(rk.gols, p.goles)} goleador histórico del club.`;
   if (p.dt) x += " También fue DT de Ferro.";
   return x;
 }
@@ -98,7 +93,7 @@ export function armar({ textos, lfp, personas, archivo, correcciones, anioHoy = 
 
   // 2) personas
   const conPj = personas.filter(p => p.pj > 0);
-  const rk = { pj: {}, gol: {} };
+  const rk = { pj: {}, gol: {}, pjs: conPj.map(p => p.pj), gols: conPj.filter(p => !p.arquero).map(p => p.goles) };
   [...conPj].sort((a, b) => b.pj - a.pj).forEach((p, i, L) => { rk.pj[p.url] = L.findIndex(q => q.pj === p.pj) + 1; });
   [...conPj].filter(p => !p.arquero && p.goles > 0).sort((a, b) => b.goles - a.goles).forEach((p, i, L) => { rk.gol[p.url] = L.findIndex(q => q.goles === p.goles) + 1; });
   const cuenta = (p) => (p.pj || 0) + (p.dt ? 40 : 0);   // para ordenar: un DT pesa como un jugador con 40 partidos

@@ -1,32 +1,212 @@
 {
-"11-01": [{"id": 14797, "titulo": "Quince sin perder", "texto": "3-0 a San Lorenzo con goles de Dante Lugo, Ernesto Juárez y el Cochero Berón: el equipo de Scalise llegó a 15 partidos invicto. San Lorenzo, igual, salió campeón esa tarde."}],
-"11-02": [{"id": 6937, "titulo": "En casa, pero de visitante", "texto": "Argentinos, sin cancha, hizo de local en Caballito y Ferro le ganó 2-0 con goles de Oscar Acosta y Crocco, peleando el Metropolitano 83 a 11 fechas del final."}],
-"11-03": [{"id": 14814, "titulo": "Cacho y el Beto, un miércoles en Córdoba", "texto": "2-1 al Racing cordobés por la fecha 21 del Metro 82, con goles de Gerónimo Saccardi y Alberto Márcico."}],
-"11-04": [{"id": 6981, "titulo": "Doblete del Gallego al futuro campeón", "texto": "Duelo entre el Ferro de Timoteo y el River del Bambino Veira, que terminó campeón: 2-0 para Ferro con dos goles del Gallego González."}],
-"11-05": [{"id": 7049, "titulo": "Tres goles en 25 minutos", "texto": "2-1 a Racing, subcampeón del Metropolitano, por el Nacional 72. Los tres goles llegaron en el primer cuarto de hora largo. Uno fue de cabeza de Cacho Saccardi, el segundo de su carrera."}],
-"11-06": [{"id": 7065, "titulo": "La Pandilla le saca el título a River", "texto": "Con goles de Alfredo Borgnia y Bernardo Gandulla, Ferro le ganó a River en Caballito. Independiente ganó esa misma fecha y River se quedó afuera de la pelea por el campeonato."}],
-"11-07": [{"id": 7138, "titulo": "Arranque soñado en el minitorneo", "texto": "4-1 a All Boys en cancha de River en la primera fecha del torneo Campeonato de la B, que daba pase a una promoción con los de Primera. Goles de Micó, Vidal y dos de Weber."}],
-"11-08": [{"id": 7167, "titulo": "El primero del Polaco", "texto": "Rodrigo Mazur, de las inferiores, hizo su primer gol en Primera: 1-0 a Gimnasia de Mendoza en Caballito. El equipo de Marcelo Broggi se aseguró un lugar en la pelea por el ascenso."}],
-"11-09": [{"id": 14874, "titulo": "Cinco al hilo y punteros", "texto": "2-0 a Deportivo Armenio con goles del Pupi Salmerón y Federico Rúgolo. Quinta victoria seguida: 30 puntos e igualado con All Boys en la cima de la Primera B."}],
-"11-10": [{"id": 14880, "titulo": "Campeón contra campeón", "texto": "El campeón del Nacional 83, el Estudiantes de Manera, visitó al campeón del 82. 0-0. Uno de los rivales clásicos del Ferro de Griguol en los primeros 80."}],
-"11-11": [{"id": 7223, "titulo": "Llega Don Victorio", "texto": "Victorio Spinetto debutó con un 2-1 a Independiente Rivadavia, con goles del Goma Vidal y Pedro Patti. Dirigió 130 partidos: 49 ganados, 38 empatados y 43 perdidos."}],
-"11-12": [{"id": 7316, "titulo": "Ordenadito ante el campeón", "texto": "El River de Merlo llegó puntero a Caballito, con Comizzo, Batista y Batistuta. Ferro aguantó el 0-0 y terminó sexto ese torneo."}],
-"11-13": [{"id": 7337, "titulo": "Primer paso hacia la A", "texto": "En el Reclasificatorio por la vuelta a Primera, 2-1 a Atlanta en cancha de San Lorenzo, con goles de Carbone y Colangelo."}],
-"11-14": [{"id": 7353, "titulo": "Gana el campeón", "texto": "2-1 a Platense en Caballito: Cúper abrió de penal tras falta a Cañete, empató Cabral y Crocco hizo el del triunfo."}],
-"11-15": [{"id": 7378, "titulo": "Primeros, antes de las finales", "texto": "Un mes antes de las finales del Nacional 81, 2-0 a River en Caballito con goles de Cañete y Márcico. Ferro quedó primero en su grupo, aun con Saccardi expulsado."}],
-"11-16": [{"id": 7396, "titulo": "Triunfazo en el Monumental", "texto": "River, campeón y con delanteros de lujo, perdió 3-1: gol de Armando Pérez, otro de Alfredo Runzer desde 30 metros y uno en contra del arquero Agustín Fumero."}],
-"11-17": [{"id": 15009, "titulo": "Empate en el Ducó", "texto": "0-0 con San Lorenzo, que hacía de local en la cancha de Huracán. Griguol en un banco, Nano Areán en el otro."}],
-"11-18": [{"id": 7426, "titulo": "Soñando con la tercera estrella", "texto": "Argentinos empató con San Lorenzo y Ferro le ganó 1-0 a Atlanta con gol de Esteban González. Seguía en carrera por el Metropolitano 84."}],
-"11-19": [{"id": 7466, "titulo": "Ganar afuera, ya en Primera", "texto": "Primera victoria de visitante después del ascenso: 2-1 a Juventud Antoniana en Salta, con goles de Rubén Rota y Julio Apariente."}],
-"11-20": [{"id": 7499, "titulo": "Lo dio vuelta en Liniers", "texto": "Arrancó perdiendo con un gol en contra de Osvaldo Diez y lo dio vuelta con un cabezazo de Joel Gauna y un remate de Raúl Barrionuevo: 2-1 a Vélez."}],
-"11-21": [{"id": 7508, "titulo": "Afuera Almirante Brown", "texto": "En el Reducido por la vuelta a Primera, 3-2 a Almirante Brown con goles de Héctor Arregui, Miguel Ángel Micó y Carlos Vidal. Faltaban tres partidos para el ascenso."}],
-"11-22": [{"id": 7536, "titulo": "Patrignani le gana a Varallo", "texto": "Primer triunfo ante Boca en el profesionalismo: 2-1 con goles de Villagra y Emeal. Patrignani le atajó un penal a Pancho Varallo: se puso de espaldas y se dio vuelta justo cuando le pateaban."}],
-"11-23": [{"id": 15091, "titulo": "Locales sin cancha", "texto": "Derrota 2-1 con Sportivo Buenos Aires, que hacía de local en cancha de River porque no tenía estadio. Jugaba con camiseta a rayas azules y blancas."}],
-"11-24": [{"id": 7580, "titulo": "Por el Metro también", "texto": "Campeón del Nacional y peleando el Metropolitano con Argentinos y Estudiantes: 1-0 a Huracán en Parque Patricios con gol de Márcico, en un partido dificilísimo."}],
-"11-25": [{"id": 7594, "titulo": "Weber gana un duelo directo", "texto": "1-0 a Arsenal con gol de Jorge Weber, rival directo por un lugar en el torneo Reclasificación, donde se definían los dos ascensos a Primera."}],
-"11-26": [{"id": 7602, "titulo": "Volvió Ferro", "texto": "Primer gran triunfo de vuelta en Primera: 3-2 a Estudiantes en La Plata, con goles de Fernando Donaires, Rubén Rojas y Julio Apariente. En Estudiantes jugaba un joven Tata Brown."}],
-"11-27": [{"id": 7612, "titulo": "Cinco, doce años después", "texto": "5-1 a Huracán de Corrientes con dos goles de Gustavo Reggi, dos de Diego Bustos y uno del Gomita Vidal. Ferro no hacía cinco goles desde mayo de 1984."}],
-"11-28": [{"id": 7624, "titulo": "Se escapó en la Bombonera", "texto": "La Pandilla ganaba 2-0 con dos cabezazos, de Gandulla y Borgnia. Pero Cherro descontó y Varallo hizo dos, uno de penal: 3-2 para Boca."}],
-"11-29": [{"id": 7634, "titulo": "Debuta Marchesini", "texto": "3-1 a San Lorenzo por el Nacional 81. Sin haber ido nunca al banco, Víctor Marchesini entró por el Cabezón Cúper para hacer dupla con el Burro Rocchia."}],
-"11-30": [{"id": 7685, "titulo": "A un paso de Primera", "texto": "3-1 a Central Córdoba en Rosario, con dos goles de Pastorini y uno de Garabal. Ferro quedó a un triunfo del ascenso, pero lo tuvo que definir en un Reducido."}]
+"11-01": [
+{
+"id": 14797,
+"titulo": "Quince sin perder",
+"texto": "3-0 a San Lorenzo con goles de Dante Lugo, Ernesto Juárez y el Cochero Berón: el equipo de Scalise llegó a 15 partidos invicto. San Lorenzo, igual, salió campeón esa tarde."
+}
+],
+"11-02": [
+{
+"id": 6937,
+"titulo": "En casa, pero de visitante",
+"texto": "Argentinos, sin cancha, hizo de local en Caballito y Ferro le ganó 2-0 con goles de Oscar Acosta y Crocco, peleando el Metropolitano 83 a 11 fechas del final."
+}
+],
+"11-03": [
+{
+"id": 14814,
+"titulo": "Cacho y el Beto, un miércoles en Córdoba",
+"texto": "2-1 al Racing cordobés por la fecha 21 del Metro 82, con goles de Gerónimo Saccardi y Alberto Márcico."
+}
+],
+"11-04": [
+{
+"id": 6981,
+"titulo": "Doblete del Gallego al futuro campeón",
+"texto": "Duelo entre el Ferro de Timoteo y el River del Bambino Veira, que terminó campeón: 2-0 para Ferro con dos goles del Gallego González."
+}
+],
+"11-05": [
+{
+"id": 7049,
+"titulo": "Tres goles en 25 minutos",
+"texto": "2-1 a Racing, subcampeón del Metropolitano, por el Nacional 72. Los tres goles cayeron en los primeros 25 minutos. Uno fue de cabeza de Cacho Saccardi, el segundo de su carrera."
+}
+],
+"11-06": [
+{
+"id": 7065,
+"titulo": "La Pandilla le saca el título a River",
+"texto": "Con goles de Alfredo Borgnia y Bernardo Gandulla, Ferro le ganó a River en Caballito. Independiente ganó esa misma fecha y River se quedó afuera de la pelea por el campeonato."
+}
+],
+"11-07": [
+{
+"id": 7138,
+"titulo": "Arranque soñado en el minitorneo",
+"texto": "4-1 a All Boys en cancha de River en la primera fecha del torneo Campeonato de la B, que daba pase a una promoción con los de Primera. Goles de Micó, Vidal y dos de Weber."
+}
+],
+"11-08": [
+{
+"id": 7167,
+"titulo": "El primero del Polaco",
+"texto": "Rodrigo Mazur, de las inferiores, hizo su primer gol en Primera: 1-0 a Gimnasia de Mendoza en Caballito. El equipo de Marcelo Broggi se aseguró un lugar en la pelea por el ascenso."
+}
+],
+"11-09": [
+{
+"id": 14874,
+"titulo": "Cinco al hilo y punteros",
+"texto": "2-0 a Deportivo Armenio con goles del Pupi Salmerón y Federico Rúgolo. Quinta victoria seguida: 30 puntos e igualado con All Boys en la cima de la Primera B."
+}
+],
+"11-10": [
+{
+"id": 14880,
+"titulo": "Campeón contra campeón",
+"texto": "El campeón del Nacional 83, el Estudiantes de Manera, visitó al campeón del 82. 0-0. Uno de los rivales clásicos del Ferro de Griguol en los primeros 80."
+}
+],
+"11-11": [
+{
+"id": 7223,
+"titulo": "Llega Don Victorio",
+"texto": "Victorio Spinetto debutó con un 2-1 a Independiente Rivadavia, con goles del Goma Vidal y Pedro Patti. Dirigió 130 partidos: 49 ganados, 38 empatados y 43 perdidos."
+}
+],
+"11-12": [
+{
+"id": 7316,
+"titulo": "El cero ante el puntero",
+"texto": "El River de Merlo llegó puntero a Caballito, con Comizzo, Batista y Batistuta. Ferro se plantó bien parado y no le dejó hacer goles: 0-0. Ese torneo terminó sexto."
+}
+],
+"11-13": [
+{
+"id": 7337,
+"titulo": "Primer paso hacia la A",
+"texto": "En el Reclasificatorio por la vuelta a Primera, 2-1 a Atlanta en cancha de San Lorenzo, con goles de Carbone y Colangelo."
+}
+],
+"11-14": [
+{
+"id": 7353,
+"titulo": "Platense, de atrás para adelante",
+"texto": "2-1 a Platense en Caballito: Cúper abrió de penal tras falta a Cañete, empató Cabral y Crocco hizo el del triunfo."
+}
+],
+"11-15": [
+{
+"id": 7378,
+"titulo": "Primeros en el grupo",
+"texto": "Un mes antes de las finales del Nacional 81, Ferro le ganó a River en Caballito con goles de Cañete y Márcico, y quedó primero en su grupo, aun con Saccardi expulsado."
+}
+],
+"11-16": [
+{
+"id": 7396,
+"titulo": "Tres goles en el Monumental",
+"texto": "River, campeón y con delanteros de lujo, perdió 3-1: gol de Armando Pérez, otro de Alfredo Runzer desde 30 metros y uno en contra del arquero Agustín Fumero."
+}
+],
+"11-17": [
+{
+"id": 15009,
+"titulo": "Empate en el Ducó",
+"texto": "0-0 con San Lorenzo, que hacía de local en la cancha de Huracán. Griguol en un banco, Nano Areán en el otro."
+}
+],
+"11-18": [
+{
+"id": 7426,
+"titulo": "Atentos a la tabla",
+"texto": "Argentinos empató con San Lorenzo y Ferro le ganó 1-0 a Atlanta con gol de Esteban González. Seguía en carrera por el Metropolitano 84."
+}
+],
+"11-19": [
+{
+"id": 7466,
+"titulo": "Ganar afuera, ya en Primera",
+"texto": "Primera victoria de visitante después del ascenso: 2-1 a Juventud Antoniana en Salta, con goles de Rubén Rota y Julio Apariente."
+}
+],
+"11-20": [
+{
+"id": 7499,
+"titulo": "Lo dio vuelta en Liniers",
+"texto": "Arrancó perdiendo con un gol en contra de Osvaldo Diez y lo dio vuelta con un cabezazo de Joel Gauna y un remate de Raúl Barrionuevo: 2-1 a Vélez."
+}
+],
+"11-21": [
+{
+"id": 7508,
+"titulo": "Afuera Almirante Brown",
+"texto": "En el Reducido por la vuelta a Primera, 3-2 a Almirante Brown con goles de Héctor Arregui, Miguel Ángel Micó y Carlos Vidal. Faltaban tres partidos para el ascenso."
+}
+],
+"11-22": [
+{
+"id": 7536,
+"titulo": "Patrignani le gana a Varallo",
+"texto": "Primer triunfo ante Boca en el profesionalismo: 2-1 con goles de Villagra y Emeal. Patrignani le atajó un penal a Pancho Varallo: se puso de espaldas y se dio vuelta justo cuando le pateaban."
+}
+],
+"11-23": [
+{
+"id": 15091,
+"titulo": "Locales sin cancha",
+"texto": "Derrota 2-1 con Sportivo Buenos Aires, que hacía de local en cancha de River porque no tenía estadio. Jugaba con camiseta a rayas azules y blancas."
+}
+],
+"11-24": [
+{
+"id": 7580,
+"titulo": "Por el Metro también",
+"texto": "Campeón del Nacional y peleando el Metropolitano con Argentinos y Estudiantes: 1-0 a Huracán en Parque Patricios con gol de Márcico, en un partido dificilísimo."
+}
+],
+"11-25": [
+{
+"id": 7594,
+"titulo": "Weber gana un duelo directo",
+"texto": "1-0 a Arsenal con gol de Jorge Weber, rival directo por un lugar en el torneo Reclasificación, donde se definían los dos ascensos a Primera."
+}
+],
+"11-26": [
+{
+"id": 7602,
+"titulo": "Primera alegría grande en la A",
+"texto": "Primer gran triunfo de vuelta en Primera: 3-2 a Estudiantes en La Plata, con goles de Fernando Donaires, Rubén Rojas y Julio Apariente. En Estudiantes jugaba un joven Tata Brown."
+}
+],
+"11-27": [
+{
+"id": 7612,
+"titulo": "Cinco, doce años después",
+"texto": "5-1 a Huracán de Corrientes con dos goles de Gustavo Reggi, dos de Diego Bustos y uno del Gomita Vidal. Ferro no hacía cinco goles desde mayo de 1984."
+}
+],
+"11-28": [
+{
+"id": 7624,
+"titulo": "Se escapó en la Bombonera",
+"texto": "La Pandilla ganaba 2-0 con dos cabezazos, de Gandulla y Borgnia. Pero Cherro descontó y Varallo hizo dos, uno de penal: 3-2 para Boca."
+}
+],
+"11-29": [
+{
+"id": 7634,
+"titulo": "Debuta Marchesini",
+"texto": "3-1 a San Lorenzo por el Nacional 81. Sin haber ido nunca al banco, Víctor Marchesini entró por el Cabezón Cúper para hacer dupla con el Burro Rocchia."
+}
+],
+"11-30": [
+{
+"id": 7685,
+"titulo": "A un paso de Primera",
+"texto": "3-1 a Central Córdoba en Rosario, con dos goles de Pastorini y uno de Garabal. Ferro quedó a un triunfo del ascenso, pero lo tuvo que definir en un Reducido."
+}
+]
 }

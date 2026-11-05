@@ -1,33 +1,219 @@
 {
-"07-01": [{"id": 11904, "titulo": "Se termina el Mundial y Ferro acelera", "texto": "Después de dos meses de parate por el Mundial, volvió la Primera B y Ferro le ganó 2-0 a Tigre en Caballito, con goles de la Chancha Arregui y Crocco. Quedó segundo, a dos puntos de Almirante Brown."}],
-"07-02": [{"id": 11943, "titulo": "Locales en Liniers", "texto": "Jugando como local en la cancha de Vélez, el Ferro de Timoteo le ganó 2-0 al Central de Ángel Zof: tiro libre del Burro Rocchia y gol del Negro Apariente a dos del final."}],
-"07-03": [{"id": 11953, "titulo": "Dieciséis fechas sin perder", "texto": "2-1 a Barracas Central en su cancha de Olavarría y Luna, con los dos goles de Antonio Ganduglia, que hizo 12 ese año. Ferro seguía invicto en el torneo de 1927."}],
-"07-04": [{"id": 11970, "titulo": "La Pandilla, a puro gol", "texto": "3-2 a San Lorenzo con goles de Raúl Emeal y dos de Juan José Maril, en un torneo en el que Ferro promedió 2,3 goles por partido. Terminó con diez por una expulsión."}],
-"07-05": [{"id": 11995, "titulo": "Golpe a un rival directo", "texto": "Unión era candidato a pelear el ascenso con Ferro. En Caballito, por la fecha 14 de la B de 1958, ganó Ferro 2-0 con goles de Omar Méndez y Rubén Pizarro."}],
-"07-06": [{"id": 12031, "titulo": "Bienvenido, calendario europeo", "texto": "Primera fecha del primer torneo con calendario a la europea: 1-1 con Talleres en casa, con muchos campeones del 84 en cancha y un gol en contra de Carlos Díaz apenas empezado el partido."}],
-"07-07": [{"id": 12041, "titulo": "Aguantar también es jugar", "texto": "Con Tata Brown en el banco, 0-0 con Estudiantes en Caseros en la ida de la promoción entre la B Nacional y la Primera B. Dos líneas de cuatro para cuidar la ventaja deportiva."}],
-"07-08": [{"id": 12059, "titulo": "Dos al Globo", "texto": "2-0 a Huracán en Caballito por el Metro 84, con goles del Fino Cañete y Palito Brandoni. En la vuelta, en Parque Patricios, Ferro volvió a ganar, 1-0."}],
-"07-09": [{"id": 12073, "titulo": "Barisio, dueño del récord", "texto": "4-0 a Instituto con dos goles del Negro Juárez, uno de Márcico y otro de Rocchia. Esa tarde Carlos Barisio superó los 769 minutos con la valla invicta de Amadeo Carrizo y el récord pasó a ser suyo."}],
-"07-10": [{"id": 12082, "titulo": "Afuera desde los doce pasos", "texto": "0-0 con Independiente en Caballito y definición por penales para ir a la última fase: 4-2 para el Rojo. Goyén le atajó a Fantaguzzi y Carlos Arregui erró el suyo."}],
-"07-11": [{"id": 12087, "titulo": "Cinco en La Plata", "texto": "5-1 a Gimnasia de visitante, con dos goles de Felipe Ribaudo, dos de Juan Pastorini y uno del Cochero Berón. Ferro quedó tercero, detrás de River, Boca y Vélez."}],
-"07-12": [{"id": 12135, "titulo": "Traspié antes de la rueda final", "texto": "Ya clasificado a la rueda campeonato, Ferro perdió 1-0 en casa con Tigre en la última fecha de la primera fase de la B de 1969."}],
-"07-13": [{"id": 12160, "titulo": "Timoteo y el Toto", "texto": "0-0 con el Racing del Toto Lorenzo por la fecha 30 del Metro 80. El Ferro de Griguol venía de perder con Platense y empatar con Boca."}],
-"07-14": [{"id": 12175, "titulo": "El campeón no frena", "texto": "Desde la vuelta olímpica del Nacional, Ferro no había perdido. En Córdoba, 2-0 a Instituto con goles del Beto Márcico y de Carlos Arregui con el tiempo cumplido."}],
-"07-15": [{"id": 12188, "titulo": "Golpe de timón en La Plata", "texto": "Venía de dos derrotas y le hizo cuatro a Estudiantes en La Plata: dos de Salvador Calvanese y uno de Ernesto Juárez y José Bolaña. 4-1."}],
-"07-16": [{"id": 12262, "titulo": "Del 1-5 al 4-1", "texto": "Una semana después del 5-1 en Avellaneda, Ferro goleó 4-1 a Rosario Central en casa con goles de Rafael López, Mario Sciarra, Julio Salvucci y Raúl Barrionuevo."}],
-"07-17": [{"id": 12299, "titulo": "Doblete de un half", "texto": "2-1 a Estudiantil Porteño con dos goles del half Santos Barberá, que jugó 128 partidos en Ferro entre 1915 y 1921 y después salió campeón con Huracán."}],
-"07-18": [{"id": 12337, "titulo": "Gol olímpico del Fino", "texto": "Primera fecha del Metro 82 y 1-1 en Córdoba con Talleres. El gol del flamante campeón fue de Adolfino Cañete, directo de córner, ante Chocolate Baley."}],
-"07-19": [{"id": 12357, "titulo": "Barisio sigue sin recibir goles", "texto": "1-0 a Racing en cancha de Vélez con gol del Fino Cañete, para no perderle pisada a Boca. El arco de Carlos Barisio seguía en cero y el récord se estiraba."}],
-"07-20": [{"id": 12363, "titulo": "Clásicos de los primeros tiempos", "texto": "Vélez ganó 2-0 de local el clásico del Oeste. Hasta ese día se habían jugado 8 partidos entre los dos, y Ferro había ganado solo 2."}],
-"07-21": [{"id": 12387, "titulo": "Ante el campeón de América", "texto": "Derrota 2-1 con Estudiantes de La Plata: cabezazo de Echecopar, empate de Raúl Noguera y otro cabezazo de la Bruja Verón para el triunfo pincharrata."}],
-"07-22": [{"id": 12410, "titulo": "Cinco al hilo", "texto": "1-0 a Rosario Central en Caballito: un remate de Márcico rebotó en José Di Leo y se metió ante Carnevali. Quinto triunfo seguido del campeón en el Metro 84."}],
-"07-23": [{"id": 12435, "titulo": "Luraschi ataja uno, no el otro", "texto": "Oscar Luraschi le atajó un penal a René Housemann y el Goma Vidal puso el 1-0, pero Huracán lo dio vuelta en el segundo tiempo con otro penal, de Dante Sanabria: 1-2."}],
-"07-24": [{"id": 12460, "titulo": "Debutan los hijos de los cracks", "texto": "Claudio Vidal, el Gomita, y Raúl Cristian Chaparro, Chaparrito, jugaron su primer partido en Ferro, en el debut de Miguel Micó como DT. 1-1 con Boca, con gol de Mario Pobersnik."}],
-"07-25": [{"id": 12468, "titulo": "Peleando un lugar arriba", "texto": "Derrota 3-2 con All Boys de visitante, con goles de Miguel Micó y Carlos Itri. Ferro buscaba meterse entre los ocho primeros de la B para jugar la zona Campeonato."}],
-"07-26": [{"id": 12500, "titulo": "Duelo de punteros en la Isla Maciel", "texto": "San Telmo y Ferro, primero y segundo de la primera fase de la B de 1969, se cruzaron en la rueda Campeonato. Ganó San Telmo, 1-0."}],
-"07-27": [{"id": 12522, "titulo": "Despegue nocturno", "texto": "Seis fechas sin ganar se cortaron con un 3-0 a Temperley, de noche en Caballito: Claudio Crocco y dos del Beto Márcico. El Ferro de Timoteo empezaba a subir en la tabla."}],
-"07-28": [{"id": 12544, "titulo": "Regalo de aniversario", "texto": "Al día siguiente del cumpleaños del club, 4-0 a Vélez en Liniers: Cucciuffo en contra tras centro de Garré, Papelito Crocco, el Cabezón Acosta y Noremberg."}],
-"07-29": [{"id": 12567, "titulo": "Seis victorias en fila", "texto": "3-1 a Independiente en Avellaneda con goles de José Luis Carrizo, Beto Márcico y Oscar Acosta. El campeón del Nacional 84 no paraba de ganar en el Metropolitano."}],
-"07-30": [{"id": 12583, "titulo": "Acento brasileño", "texto": "3-1 a Estudiantes en el Templo. Un brasileño abrió el marcador para la visita, Paulinho de Almeida, y otro cerró la cuenta para Ferro, Rudymar Gómez Machado. Los otros: Lugo y Garabal."}],
-"07-31": [{"id": 12593, "titulo": "Catorce meses después", "texto": "0-2 con Racing en Caballito: era la primera vez desde mayo de 1937 que Ferro no hacía goles, y eso que jugó La Pandilla completa, con Maril, Borgnia, Sarlanga, Gandulla y Emeal."}]
+"07-01": [
+{
+"id": 11904,
+"titulo": "Se termina el Mundial y Ferro acelera",
+"texto": "Después de dos meses de parate por el Mundial, volvió la Primera B y Ferro le ganó 2-0 a Tigre en Caballito, con goles de la Chancha Arregui y Crocco. Quedó segundo, a dos puntos de Almirante Brown."
+}
+],
+"07-02": [
+{
+"id": 11943,
+"titulo": "Locales en Liniers",
+"texto": "Jugando como local en la cancha de Vélez, el Ferro de Timoteo le ganó 2-0 al Central de Ángel Zof: tiro libre del Burro Rocchia y gol del Negro Apariente a dos del final."
+}
+],
+"07-03": [
+{
+"id": 11953,
+"titulo": "Dieciséis fechas sin perder",
+"texto": "2-1 a Barracas Central en su cancha de Olavarría y Luna, con los dos goles de Antonio Ganduglia, que hizo 12 ese año. Ferro seguía invicto en el torneo de 1927."
+}
+],
+"07-04": [
+{
+"id": 11970,
+"titulo": "La Pandilla, a puro gol",
+"texto": "3-2 a San Lorenzo con goles de Raúl Emeal y dos de Juan José Maril, en un torneo en el que Ferro promedió 2,3 goles por partido. Terminó con diez por una expulsión."
+}
+],
+"07-05": [
+{
+"id": 11995,
+"titulo": "Golpe a un rival directo",
+"texto": "Unión era candidato a pelear el ascenso con Ferro. En Caballito, por la fecha 14 de la B de 1958, ganó Ferro 2-0 con goles de Omar Méndez y Rubén Pizarro."
+}
+],
+"07-06": [
+{
+"id": 12031,
+"titulo": "Bienvenido, calendario europeo",
+"texto": "Primera fecha del primer torneo con calendario a la europea: 1-1 con Talleres en casa, con muchos campeones del 84 en cancha y un gol en contra de Carlos Díaz apenas empezado el partido."
+}
+],
+"07-07": [
+{
+"id": 12041,
+"titulo": "Aguantar también es jugar",
+"texto": "Con Tata Brown en el banco, 0-0 con Estudiantes en Caseros en la ida de la promoción entre la B Nacional y la Primera B. Dos líneas de cuatro para cuidar la ventaja deportiva."
+}
+],
+"07-08": [
+{
+"id": 12059,
+"titulo": "Dos al Globo",
+"texto": "2-0 a Huracán en Caballito por el Metro 84, con goles del Fino Cañete y Palito Brandoni. En la vuelta, en Parque Patricios, Ferro volvió a ganar, 1-0."
+}
+],
+"07-09": [
+{
+"id": 12073,
+"titulo": "Barisio, el del récord",
+"texto": "4-0 a Instituto con dos goles del Negro Juárez, uno de Márcico y otro de Rocchia. Esa tarde Carlos Barisio se quedó con el récord de valla invicta del fútbol argentino."
+}
+],
+"07-10": [
+{
+"id": 12082,
+"titulo": "Afuera desde los doce pasos",
+"texto": "0-0 con Independiente en Caballito y definición por penales para ir a la última fase: 4-2 para el Rojo. Goyén le atajó a Fantaguzzi y Carlos Arregui erró el suyo."
+}
+],
+"07-11": [
+{
+"id": 12087,
+"titulo": "Cinco en La Plata",
+"texto": "5-1 a Gimnasia de visitante, con dos goles de Felipe Ribaudo, dos de Juan Pastorini y uno del Cochero Berón. Ferro quedó tercero, detrás de River, Boca y Vélez."
+}
+],
+"07-12": [
+{
+"id": 12135,
+"titulo": "Traspié antes de la rueda final",
+"texto": "Ya clasificado a la rueda campeonato, Ferro perdió 1-0 en casa con Tigre en la última fecha de la primera fase de la B de 1969."
+}
+],
+"07-13": [
+{
+"id": 12160,
+"titulo": "Timoteo y el Toto",
+"texto": "0-0 con el Racing del Toto Lorenzo por la fecha 30 del Metro 80. El Ferro de Griguol venía de perder con Platense y empatar con Boca."
+}
+],
+"07-14": [
+{
+"id": 12175,
+"titulo": "El campeón no frena",
+"texto": "Desde la vuelta olímpica del Nacional, Ferro no había perdido. En Córdoba, 2-0 a Instituto con goles del Beto Márcico y de Carlos Arregui con el tiempo cumplido."
+}
+],
+"07-15": [
+{
+"id": 12188,
+"titulo": "Golpe de timón en La Plata",
+"texto": "Venía de dos derrotas y le hizo cuatro a Estudiantes en La Plata: dos de Salvador Calvanese y uno de Ernesto Juárez y José Bolaña. 4-1."
+}
+],
+"07-16": [
+{
+"id": 12262,
+"titulo": "Del 1-5 al 4-1",
+"texto": "Una semana después del 5-1 en Avellaneda, Ferro goleó 4-1 a Rosario Central en casa con goles de Rafael López, Mario Sciarra, Julio Salvucci y Raúl Barrionuevo."
+}
+],
+"07-17": [
+{
+"id": 12299,
+"titulo": "Doblete de un half",
+"texto": "2-1 a Estudiantil Porteño con dos goles del half Santos Barberá, que jugó 128 partidos en Ferro entre 1915 y 1921 y después salió campeón con Huracán."
+}
+],
+"07-18": [
+{
+"id": 12337,
+"titulo": "Olímpico en Córdoba",
+"texto": "Primera fecha del Metro 82 y 1-1 en Córdoba con Talleres. El gol del flamante campeón fue de Adolfino Cañete, directo de córner, ante Chocolate Baley."
+}
+],
+"07-19": [
+{
+"id": 12357,
+"titulo": "Barisio sigue sin recibir goles",
+"texto": "1-0 a Racing en cancha de Vélez con gol del Fino Cañete, para no perderle pisada a Boca. El arco de Carlos Barisio seguía en cero y el récord se estiraba."
+}
+],
+"07-20": [
+{
+"id": 12363,
+"titulo": "Clásicos de los primeros tiempos",
+"texto": "Vélez ganó 2-0 de local el clásico del Oeste. Hasta ese día se habían jugado 8 partidos entre los dos, y Ferro había ganado solo 2."
+}
+],
+"07-21": [
+{
+"id": 12387,
+"titulo": "Ante el campeón de América",
+"texto": "Derrota 2-1 con Estudiantes de La Plata: cabezazo de Echecopar, empate de Raúl Noguera y otro cabezazo de la Bruja Verón para el triunfo pincharrata."
+}
+],
+"07-22": [
+{
+"id": 12410,
+"titulo": "Cinco al hilo",
+"texto": "1-0 a Rosario Central en Caballito: un remate de Márcico rebotó en José Di Leo y se metió ante Carnevali. Quinto triunfo seguido del campeón en el Metro 84."
+}
+],
+"07-23": [
+{
+"id": 12435,
+"titulo": "Luraschi ataja uno, no el otro",
+"texto": "Oscar Luraschi le atajó un penal a René Housemann y el Goma Vidal puso el 1-0, pero Huracán lo dio vuelta en el segundo tiempo con otro penal, de Dante Sanabria: 1-2."
+}
+],
+"07-24": [
+{
+"id": 12460,
+"titulo": "Debutan los hijos de los cracks",
+"texto": "Claudio Vidal, el Gomita, y Raúl Cristian Chaparro, Chaparrito, jugaron su primer partido en Ferro, en el debut de Miguel Micó como DT. 1-1 con Boca, con gol de Mario Pobersnik."
+}
+],
+"07-25": [
+{
+"id": 12468,
+"titulo": "Peleando un lugar arriba",
+"texto": "Derrota 3-2 con All Boys de visitante, con goles de Miguel Micó y Carlos Itri. Ferro buscaba meterse entre los ocho primeros de la B para jugar la zona Campeonato."
+}
+],
+"07-26": [
+{
+"id": 12500,
+"titulo": "Duelo de punteros en la Isla Maciel",
+"texto": "San Telmo y Ferro, primero y segundo de la primera fase de la B de 1969, se cruzaron en la rueda Campeonato. Ganó San Telmo, 1-0."
+}
+],
+"07-27": [
+{
+"id": 12522,
+"titulo": "Despegue nocturno",
+"texto": "Seis fechas sin ganar se cortaron con un 3-0 a Temperley, de noche en Caballito: Claudio Crocco y dos del Beto Márcico. El Ferro de Timoteo empezaba a subir en la tabla."
+}
+],
+"07-28": [
+{
+"id": 12544,
+"titulo": "Regalo de aniversario",
+"texto": "Al día siguiente del cumpleaños del club, 4-0 a Vélez en Liniers: Cucciuffo en contra tras centro de Garré, Papelito Crocco, el Cabezón Acosta y Noremberg."
+}
+],
+"07-29": [
+{
+"id": 12567,
+"titulo": "Seis victorias en fila",
+"texto": "3-1 a Independiente en Avellaneda con goles de José Luis Carrizo, Beto Márcico y Oscar Acosta. El campeón del Nacional 84 no paraba de ganar en el Metropolitano."
+}
+],
+"07-30": [
+{
+"id": 12583,
+"titulo": "Acento brasileño",
+"texto": "3-1 a Estudiantes en el Templo. Un brasileño abrió el marcador para la visita, Paulinho de Almeida, y otro cerró la cuenta para Ferro, Rudymar Gómez Machado. Los otros: Lugo y Garabal."
+}
+],
+"07-31": [
+{
+"id": 12593,
+"titulo": "Catorce meses después",
+"texto": "0-2 con Racing en Caballito: era la primera vez desde mayo de 1937 que Ferro no hacía goles, y eso que jugó La Pandilla completa, con Maril, Borgnia, Sarlanga, Gandulla y Emeal."
+}
+]
 }

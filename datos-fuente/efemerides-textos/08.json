@@ -1,33 +1,219 @@
 {
-"08-01": [{"id": 12643, "titulo": "Chau, tablones", "texto": "2-0 a Santamarina con goles de José Vizcarra e Israel Coll. Fue el último partido antes de desmontar los históricos tablones de la tribuna local. Unos meses después, el mismo rival fue el de la semifinal por el ascenso."}],
-"08-02": [{"id": 12660, "titulo": "El final de Faldutti", "texto": "Empate sobre la hora con Atlanta, con goles de Antonio Garabal y Orlando Benedetto, y último partido de Antonio Faldutti como técnico: 51 partidos, incluido el ascenso del año anterior."}],
-"08-03": [{"id": 15833, "titulo": "El primer gol verdolaga en la Selección", "texto": "Argentina 3, Yugoslavia 1, en cancha de River. Los dos primeros fueron de Francisco Sponda: el primer jugador de Ferro que hizo un gol con la camiseta de la Selección."}],
-"08-04": [{"id": 12693, "titulo": "Dos a Quilmes, de pizarrón", "texto": "Cabezazo de Nano Gandulla tras pase de Miguel Garavano y remate esquinado de Raúl Villagra a centro de Nilo Odriozola: 2-0 a Quilmes."}],
-"08-05": [{"id": 12703, "titulo": "Revancha en el Azteca... casi", "texto": "Gira por México: un día después de perder 2-1, Ferro volvió a enfrentar al América y empató 1-1 con un remate cruzado de Cacho Saccardi a los 61 minutos."}],
-"08-06": [{"id": 12770, "titulo": "El Doctor llega con un golazo", "texto": "Teophilus Khumalo, el primer sudafricano en jugar en el fútbol argentino, debutó con un zurdazo desde un ángulo imposible apenas empezado el partido. 1-1 con Independiente en la fecha 1 del Apertura 95."}],
-"08-07": [{"id": 12809, "titulo": "Tres de Rojitas en Floresta", "texto": "4-1 a All Boys con un gol de Carlos Arregui y tres de Rubén Alejandro Rojas, que hizo 8 en ese Metropolitano, su mejor torneo en Ferro. En total: 25 goles en 95 partidos."}],
-"08-08": [{"id": 12829, "titulo": "Sin Rocchia, patea Juárez", "texto": "Con Rocchia suspendido, el penal por falta a Crocco lo pateó el Negro Juárez. Después llegó el gol del Fino Cañete y fue 2-1 a Rosario Central en Caballito."}],
-"08-09": [{"id": 12868, "titulo": "Locales en el Bajo Flores", "texto": "Primera fecha del Apertura 98, de mañana y en cancha de San Lorenzo: derrota 4-2 con el Boca multicampeón. Ariel Giacone y Leonel Martens descontaron cuando ya perdía 4-0."}],
-"08-10": [{"id": 12885, "titulo": "Con diez y dado vuelta", "texto": "Unión ganaba con gol de Pitarch y enseguida expulsaron al Burro Rocchia. No importó: empató Crocco y en el segundo tiempo Carlitos Arregui y Rojas lo dieron vuelta. 3-1."}],
-"08-11": [{"id": 12899, "titulo": "Cancha llena para Boca", "texto": "0-0 con Boca en Caballito y recaudación récord: 135.578 pesos. Ese torneo terminó con Ferro en la B: 6 partidos ganados en 30."}],
-"08-12": [{"id": 12934, "titulo": "Una tarde con Roma en el arco", "texto": "Derrota 3-2 en La Boca con goles de Alberto Linares y Ricardo Fox, expulsado a un minuto del final. El arquero de Ferro esa tarde fue Antonio Roma."}],
-"08-13": [{"id": 12953, "titulo": "Llega el Loco Bianchi", "texto": "Adrián Bianchi, que venía de Vélez, debutó en el 0-0 con Estudiantes en la primera fecha del torneo 1989/90. Jugó 79 partidos e hizo 9 goles hasta 1992."}],
-"08-14": [{"id": 12984, "titulo": "Veintiuna sin perder", "texto": "3-1 a Palermo en Caballito, con dos goles de Ruggiero Franchelli y uno de Juan Vigliola. Quinta victoria seguida e invicto estirado a 21 fechas."}],
-"08-15": [{"id": 13064, "titulo": "Subcampeones del Metro 81", "texto": "3-0 a Platense en Saavedra en la última fecha, con goles de Julio Jiménez, Mario Gómez y el Burro Rocchia. Segundo detrás del Boca de Maradona: la mejor campaña del club hasta ahí. Y lo mejor estaba por venir."}],
-"08-16": [{"id": 13104, "titulo": "De visitante también se gana", "texto": "Después del 5-1 a All Boys, 2-0 a Quilmes de visitante, con goles de Héctor Berón y Rubén Pizarro. El ascenso de 1958 se acercaba."}],
-"08-17": [{"id": 13118, "titulo": "Vuelve el fútbol después del Mundial", "texto": "Terminada la primera Copa del Mundo, Ferro reanudó el torneo con un 1-0 a Defensores de Almagro, con gol de Enrique Gainzarain. Era el último campeonato amateur."}],
-"08-18": [{"id": 13163, "titulo": "Una tarde complicada", "texto": "Derrota 4-2 con San Lorenzo, el campeón de ese año. Joaquín Corvetto hizo el último gol del partido en una temporada que terminó con Ferro en la B."}],
-"08-19": [{"id": 13184, "titulo": "Tres al vecino", "texto": "3-0 a Vélez: remate desde afuera de Joaquín Corvetto, tiro de Ricardo Gugliermetti que se le pasó por abajo al arquero y cabezazo de Rodolfo Danza."}],
-"08-20": [{"id": 13237, "titulo": "Fluminense también cae", "texto": "1-0 a Fluminense en Caballito por la Libertadores 85. Otra vez el Gallego González: cuatro goles en tres partidos de Copa."}],
-"08-21": [{"id": 13311, "titulo": "Golazo de 40 metros al campeón", "texto": "2-0 a River en su cancha, con un tiro libre de 40 metros de Hortensio Pellizzari y un gol de Vicente González. Ferro jugó todo el segundo tiempo con uno más."}],
-"08-22": [{"id": 13354, "titulo": "Veintiocho partidos después", "texto": "El campeón del Nacional 82 llevaba 28 partidos sin perder hasta que Independiente lo goleó 5-0 en Avellaneda. Alguna vez tenía que pasar."}],
-"08-23": [{"id": 13372, "titulo": "Los cinco de Agnolin", "texto": "5-1 a All Boys con los cinco goles de Luciano Agnolin, el máximo goleador de la historia del Ascenso. Jugó en Ferro una sola temporada: 28 goles en 30 partidos."}],
-"08-24": [{"id": 13402, "titulo": "Itabel, por duplicado en el clásico", "texto": "2-1 a Vélez con los dos goles del recién llegado Leonardo Fabián Itabel, uno en cada tiempo. Adrián Bianchi, de Vélez, se fue expulsado."}],
-"08-25": [{"id": 13417, "titulo": "Clásico ganado, a las trompadas", "texto": "2-0 en Liniers con dos goles de Pedro Cacheiro. A 4 minutos del final, José Pérez y Alfredo Bermúdez se fueron a las manos y los dos se fueron expulsados."}],
-"08-26": [{"id": 13453, "titulo": "Primera de Faraone", "texto": "2-0 a Villa Dálmine con goles del Burro Rocchia y Enrique Lanza, en el segundo partido de Carmelo Faraone como DT. Con él empezó el camino de vuelta a Primera."}],
-"08-27": [{"id": 13486, "titulo": "Suescún y una lluvia de rojas", "texto": "1-0 a Estudiantes con gol de Fabián Suescún a los 14 del segundo tiempo. Después se fueron expulsados Roberto Trotta, el Sapo Ottero y el Indio Molina."}],
-"08-28": [{"id": 13512, "titulo": "La primera en La Boca", "texto": "Cabezazo de Raúl Emeal a centro de Juan Maril y otro de Jaime Sarlanga: la primera victoria de Ferro como visitante de Boca en Primera."}],
-"08-29": [{"id": 13576, "titulo": "Danza lo gana de cabeza", "texto": "Abrió Francisco Páez y Lanús lo dio vuelta. Rodolfo Danza lo empató antes del descanso y a 12 del final, de cabeza, puso el 3-2."}],
-"08-30": [{"id": 13592, "titulo": "El último gol de Corvetto", "texto": "1-0 a Los Andes con gol de Joaquín Corvetto, a los 33 años. Fue el último de los 26 que hizo en 218 partidos con la verde."}],
-"08-31": [{"id": 13615, "titulo": "La Chancha se la clava al Pato", "texto": "Última fecha del Metro 80 en el Monumental: tremendo tiro libre de Héctor Ángel Arregui ante el Pato Fillol. River, campeón desde hacía varias fechas, ganó 2-1."}]
+"08-01": [
+{
+"id": 12643,
+"titulo": "Chau, tablones",
+"texto": "2-0 a Santamarina con goles de José Vizcarra e Israel Coll. Fue el último partido antes de desmontar los históricos tablones de la tribuna local. Unos meses después, el mismo rival fue el de la semifinal por el ascenso."
+}
+],
+"08-02": [
+{
+"id": 12660,
+"titulo": "El final de Faldutti",
+"texto": "Empate sobre la hora con Atlanta, con goles de Antonio Garabal y Orlando Benedetto, y último partido de Antonio Faldutti como técnico: 51 partidos, incluido el ascenso del año anterior."
+}
+],
+"08-03": [
+{
+"id": 15833,
+"titulo": "El primer gol verdolaga en la Selección",
+"texto": "Argentina 3, Yugoslavia 1, en cancha de River. Los dos primeros fueron de Francisco Sponda: el primer jugador de Ferro que hizo un gol con la camiseta de la Selección."
+}
+],
+"08-04": [
+{
+"id": 12693,
+"titulo": "Dos a Quilmes, de pizarrón",
+"texto": "Cabezazo de Nano Gandulla tras pase de Miguel Garavano y remate esquinado de Raúl Villagra a centro de Nilo Odriozola: 2-0 a Quilmes."
+}
+],
+"08-05": [
+{
+"id": 12703,
+"titulo": "Revancha en el Azteca... casi",
+"texto": "Gira por México: un día después de perder 2-1, Ferro volvió a enfrentar al América y empató 1-1 con un remate cruzado de Cacho Saccardi a los 61 minutos."
+}
+],
+"08-06": [
+{
+"id": 12770,
+"titulo": "El Doctor llega con un golazo",
+"texto": "Teophilus Khumalo, el primer sudafricano en jugar en el fútbol argentino, debutó con un zurdazo cruzado, casi sin ángulo, apenas empezado el partido. 1-1 con Independiente en la fecha 1 del Apertura 95."
+}
+],
+"08-07": [
+{
+"id": 12809,
+"titulo": "Tres de Rojitas en Floresta",
+"texto": "4-1 a All Boys con un gol de Carlos Arregui y tres de Rubén Alejandro Rojas, que hizo 8 en ese Metropolitano, su mejor torneo en Ferro. En total: 25 goles en 95 partidos."
+}
+],
+"08-08": [
+{
+"id": 12829,
+"titulo": "Sin Rocchia, patea Juárez",
+"texto": "Con Rocchia suspendido, el penal por falta a Crocco lo pateó el Negro Juárez. Después llegó el gol del Fino Cañete y fue 2-1 a Rosario Central en Caballito."
+}
+],
+"08-09": [
+{
+"id": 12868,
+"titulo": "Locales en el Bajo Flores",
+"texto": "Primera fecha del Apertura 98, de mañana y en cancha de San Lorenzo: derrota 4-2 con el Boca multicampeón. Ariel Giacone y Leonel Martens descontaron cuando ya perdía 4-0."
+}
+],
+"08-10": [
+{
+"id": 12885,
+"titulo": "Con diez y dado vuelta",
+"texto": "Unión ganaba con gol de Pitarch y enseguida expulsaron al Burro Rocchia. No importó: empató Crocco y en el segundo tiempo Carlitos Arregui y Rojas lo dieron vuelta. 3-1."
+}
+],
+"08-11": [
+{
+"id": 12899,
+"titulo": "Cancha llena para Boca",
+"texto": "0-0 con Boca en Caballito y recaudación récord: 135.578 pesos. Ese torneo terminó con Ferro en la B: 6 partidos ganados en 30."
+}
+],
+"08-12": [
+{
+"id": 12934,
+"titulo": "Una tarde con Roma en el arco",
+"texto": "Derrota 3-2 en La Boca con goles de Alberto Linares y Ricardo Fox, expulsado a un minuto del final. El arquero de Ferro esa tarde fue Antonio Roma."
+}
+],
+"08-13": [
+{
+"id": 12953,
+"titulo": "Llega el Loco Bianchi",
+"texto": "Adrián Bianchi, que venía de Vélez, debutó en el 0-0 con Estudiantes en la primera fecha del torneo 1989/90. Jugó 79 partidos e hizo 9 goles hasta 1992."
+}
+],
+"08-14": [
+{
+"id": 12984,
+"titulo": "Veintiuna sin perder",
+"texto": "3-1 a Palermo en Caballito, con dos goles de Ruggiero Franchelli y uno de Juan Vigliola. Quinta victoria seguida e invicto estirado a 21 fechas."
+}
+],
+"08-15": [
+{
+"id": 13064,
+"titulo": "Subcampeones del Metro 81",
+"texto": "3-0 a Platense en la última fecha, con goles de Julio Jiménez, Mario Gómez y el Burro Rocchia. Segundo detrás del Boca de Maradona: la mejor campaña del club hasta ahí. Y lo mejor estaba por venir."
+}
+],
+"08-16": [
+{
+"id": 13104,
+"titulo": "De visitante también se gana",
+"texto": "Después del 5-1 a All Boys, 2-0 a Quilmes de visitante, con goles de Héctor Berón y Rubén Pizarro. El ascenso de 1958 se acercaba."
+}
+],
+"08-17": [
+{
+"id": 13118,
+"titulo": "Vuelve el fútbol después del Mundial",
+"texto": "Terminada la primera Copa del Mundo, Ferro reanudó el torneo con un 1-0 a Defensores de Almagro, con gol de Enrique Gainzarain. Era el último campeonato amateur."
+}
+],
+"08-18": [
+{
+"id": 13163,
+"titulo": "Una tarde complicada",
+"texto": "Derrota 4-2 con San Lorenzo, el campeón de ese año. Joaquín Corvetto hizo el último gol del partido en una temporada que terminó con Ferro en la B."
+}
+],
+"08-19": [
+{
+"id": 13184,
+"titulo": "Tres al vecino",
+"texto": "3-0 a Vélez: remate desde afuera de Joaquín Corvetto, tiro de Ricardo Gugliermetti que se le pasó por abajo al arquero y cabezazo de Rodolfo Danza."
+}
+],
+"08-20": [
+{
+"id": 13237,
+"titulo": "Fluminense también cae",
+"texto": "1-0 a Fluminense en Caballito por la Libertadores 85. Otra vez el Gallego González: cuatro goles en tres partidos de Copa."
+}
+],
+"08-21": [
+{
+"id": 13311,
+"titulo": "Golazo de 40 metros al campeón",
+"texto": "2-0 a River en su cancha, con un tiro libre de 40 metros de Hortensio Pellizzari y un gol de Vicente González. Ferro jugó todo el segundo tiempo con uno más."
+}
+],
+"08-22": [
+{
+"id": 13354,
+"titulo": "Veintiocho partidos después",
+"texto": "El campeón del Nacional 82 llevaba 28 partidos sin perder hasta que Independiente lo goleó 5-0 en Avellaneda. Alguna vez tenía que pasar."
+}
+],
+"08-23": [
+{
+"id": 13372,
+"titulo": "Los cinco de Agnolin",
+"texto": "5-1 a All Boys con los cinco goles de Luciano Agnolin, el máximo goleador de la historia del Ascenso. Jugó en Ferro una sola temporada: 28 goles en 30 partidos."
+}
+],
+"08-24": [
+{
+"id": 13402,
+"titulo": "Itabel, por duplicado en el clásico",
+"texto": "2-1 a Vélez con los dos goles del recién llegado Leonardo Fabián Itabel, uno en cada tiempo. Adrián Bianchi, de Vélez, se fue expulsado."
+}
+],
+"08-25": [
+{
+"id": 13417,
+"titulo": "Clásico ganado, a las trompadas",
+"texto": "2-0 en Liniers con dos goles de Pedro Cacheiro. A 4 minutos del final, José Pérez y Alfredo Bermúdez se fueron a las manos y los dos se fueron expulsados."
+}
+],
+"08-26": [
+{
+"id": 13453,
+"titulo": "Primera de Faraone",
+"texto": "2-0 a Villa Dálmine con goles del Burro Rocchia y Enrique Lanza, en el segundo partido de Carmelo Faraone como DT. Con él empezó el camino de vuelta a Primera."
+}
+],
+"08-27": [
+{
+"id": 13486,
+"titulo": "Suescún y una lluvia de rojas",
+"texto": "1-0 a Estudiantes con gol de Fabián Suescún a los 14 del segundo tiempo. Después se fueron expulsados Roberto Trotta, el Sapo Ottero y el Indio Molina."
+}
+],
+"08-28": [
+{
+"id": 13512,
+"titulo": "La primera en La Boca",
+"texto": "Cabezazo de Raúl Emeal a centro de Juan Maril y otro de Jaime Sarlanga: la primera victoria de Ferro como visitante de Boca en Primera."
+}
+],
+"08-29": [
+{
+"id": 13576,
+"titulo": "Danza lo gana de cabeza",
+"texto": "Abrió Francisco Páez y Lanús lo dio vuelta. Rodolfo Danza lo empató antes del descanso y a 12 del final, de cabeza, puso el 3-2."
+}
+],
+"08-30": [
+{
+"id": 13592,
+"titulo": "Corvetto se despide con gol",
+"texto": "1-0 a Los Andes con gol de Joaquín Corvetto, a los 33 años. Fue el último de los 26 que hizo en 218 partidos con la verde."
+}
+],
+"08-31": [
+{
+"id": 13615,
+"titulo": "La Chancha se la clava al Pato",
+"texto": "Última fecha del Metro 80 en el Monumental: tremendo tiro libre de Héctor Ángel Arregui ante el Pato Fillol. River, campeón desde hacía varias fechas, ganó 2-1."
+}
+]
 }

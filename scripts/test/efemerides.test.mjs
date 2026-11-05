@@ -21,10 +21,9 @@ test("resultadoDe mira el partido desde Ferro", () => {
   assert.equal(resultadoDe("Racing 0-Ferro"), null);
 });
 
-test("nombreCorto acorta los nombres largos", () => {
-  assert.equal(nombreCorto("Juan Domingo Antonio Rocchia"), "Juan Rocchia");
-  assert.equal(nombreCorto("Alejandro Sabella"), "Alejandro Sabella");
-  assert.equal(nombreCorto("Juan Carlos de la Fuente"), "Juan de la Fuente");
+test("nombreCorto no rompe apellidos compuestos", () => {
+  assert.equal(nombreCorto("Carlos Javier Mac Allister"), "Carlos Javier Mac Allister");
+  assert.equal(nombreCorto(" Eduardo  Collado Solari "), "Eduardo Collado Solari");
 });
 
 test("armar: historias del mismo día, cumpliría solo con fallecimiento, balance y corrección", () => {

@@ -1,30 +1,198 @@
 {
-"02-01": [{"id": 8496, "titulo": "Un punto que vale la punta", "texto": "1-1 con Laferrere y gol de Cristian Tula. Al equipo de Raimundo le alcanzó para seguir primero en la primera fase de la B Metropolitana."}],
-"02-02": [{"id": 8498, "titulo": "Cinco goles a 2.850 metros", "texto": "Invicto y con cuatro triunfos en Colombia, Ferro llegó a Quito y le ganó 5-3 a El Nacional en el Atahualpa. Parisi y el Burro Rocchia hicieron dos cada uno; el otro, Osvaldo Gutiérrez."}],
-"02-03": [{"id": 8511, "titulo": "Chau Brasil, con victoria", "texto": "3-1 a un Flamengo de Caxias do Sul para cerrar la gira brasileña: 7 partidos, 4 ganados y 3 perdidos."}],
-"02-05": [{"id": 8543, "titulo": "Un arranque engañoso", "texto": "Ferro abrió el Clausura con un 4-0 a Platense: dos del Bocha Biazotti, uno de Pobersnik y otro de Pepe Forte. La campaña, después, no estuvo a la altura del estreno."}],
-"02-06": [{"id": 8556, "titulo": "Primera alegría con Perazzo", "texto": "2-1 a Douglas Haig en Caballito, con goles de Luis Salmerón y Leandro Díaz. Fue el primer triunfo del Torneo Transición 2016, después del empate del debut."}],
-"02-07": [{"id": 8562, "titulo": "Pretemporada en el Centenario", "texto": "Preparando la vuelta a Primera, Ferro igualó 1-1 con Nacional en el estadio donde se jugó la final del Mundial 1930."}],
-"02-08": [{"id": 8570, "titulo": "Salvados por Perego", "texto": "2-0 a Quilmes en cancha de Liniers Sport Club y permanencia asegurada en la Primera de la Asociación Amateurs. Los dos goles fueron de Rodolfo Perego."}],
-"02-09": [{"id": 8607, "titulo": "Llega Vegetti", "texto": "0-0 con Boca Unidos en Corrientes y primer partido de Pablo Vegetti con la verde. Hizo 6 goles en 18 partidos y se fue, sorpresivamente, a Gimnasia de La Plata."}],
-"02-10": [{"id": 8619, "titulo": "El día que llegó Timoteo", "texto": "2-2 con Tigre en Victoria, con goles de Cacho Saccardi y la Chancha Arregui. Parecía una fecha 1 más del Metropolitano 1980: era el primer partido de Carlos Griguol y el comienzo del ciclo más exitoso de la historia del club."}],
-"02-11": [{"id": 8640, "titulo": "Se terminó la sequía", "texto": "Cuatro partidos sin convertir hasta que Osvaldo Miranda le dio el 1-0 a Ferro sobre Gimnasia de Jujuy en Caballito. Venía de una racha de 4 goles en 14 partidos."}],
-"02-12": [{"id": 8644, "titulo": "La Chancha marca el camino", "texto": "4-0 a Arsenal, con tres goles de Héctor Arregui y uno del Burro Rocchia: primer triunfo en la Primera B de 1978, la que devolvió a Ferro a Primera."}],
-"02-13": [{"id": 8660, "titulo": "Visita europea en Caballito", "texto": "Ferro 1, Slovan Bratislava 1, con gol de Mario Pobersnik. El equipo eslovaco es el único rival europeo con el que jugó Ferro."}],
-"02-14": [{"id": 8662, "titulo": "Arranca la marcha del campeón", "texto": "Primera fecha del Nacional 82: 1-0 a Unión en Caballito con gol de Miguel Juárez, que sería el goleador del torneo. 22 fechas después, Timoteo y su equipo eran campeones invictos."}],
-"02-15": [{"id": 8678, "titulo": "El clásico que se ganó en un escritorio", "texto": "En la cancha fue 2-2 con Vélez, después de ir perdiendo 2-0. Pero Vélez incluyó mal al delantero Mario Finarolli y la AFA le terminó dando el partido a Ferro."}],
-"02-16": [{"id": 8696, "titulo": "Lucho Sosa, por duplicado", "texto": "Puntero pero golpeado por la derrota con Almirante Brown, Ferro le ganó 2-0 a Argentino de Rosario en Caballito, por la fecha 26 de la Primera B. Los dos goles fueron de Luis Sosa."}],
-"02-17": [{"id": 8702, "titulo": "La primera de Timoteo", "texto": "Segundo partido de Griguol en el banco y primer triunfo: 2-1 a Independiente en Caballito, con goles de Apariente, que además erró un penal, y de Rubén Rojas."}],
-"02-18": [{"id": 8710, "titulo": "Cacho arranca con goleada", "texto": "El Ferro de Saccardi abrió el Clausura con un 4-1 a Gimnasia en Jujuy: dos de Diego Bustos, uno del uruguayo Víctor López y otro de Beto Yaqué."}],
-"02-19": [{"id": 15667, "titulo": "El campeón se presenta con cuatro", "texto": "Primera fecha del Nacional 84 y 4-1 a Platense de visitante: dos penales de Beto Márcico, uno de cabeza de Oscar Acosta y otro del Fino Cañete. El torneo terminaría con Ferro campeón."}],
-"02-20": [{"id": 8727, "titulo": "Empate con el campeón ecuatoriano", "texto": "Amistoso en el estadio Capwell de Guayaquil: 1-1 con Emelec, que acababa de salir campeón de Ecuador. Empató el Bocha Biazotti de penal, por una falta a Pepe Forte."}],
-"02-21": [{"id": 8736, "titulo": "Nadie lo para", "texto": "Segunda fecha del Nacional 82 y 3-0 a Estudiantes en Santiago del Estero, con goles de Rafael Herrera, Beto Márcico y el Negro Juárez."}],
-"02-22": [{"id": 8771, "titulo": "Medio ascenso en el bolsillo", "texto": "0-0 con Platense en Vicente López y primera fase de la Primera B ganada. Con eso, Ferro se aseguró medio campeonato y la vuelta a la B Nacional."}],
-"02-23": [{"id": 8810, "titulo": "Cuatro en la Bombonera", "texto": "Dos veces abajo y 4-2 final ante Boca: dos de Rocchia (uno de penal), un tiro libre de Cacho Saccardi y otro de Osvaldo Gutiérrez. Es la única vez que Ferro le hizo cuatro goles a Boca en la Bombonera."}],
-"02-24": [{"id": 8818, "titulo": "Marchesini sobre la hora", "texto": "1-0 al recién ascendido Deportivo Español por el Nacional 85, con gol de cabeza de Marchesini a 4 minutos del final. Ferro terminaría ganando su grupo."}],
-"02-25": [{"id": 8858, "titulo": "La misma receta, otra vez", "texto": "Mismo resultado, mismo goleador, misma cancha: 1-0 en Caballito con gol de Osvaldo Miranda, esta vez a Boca Unidos. La semana anterior había sido a Gimnasia de Jujuy."}],
-"02-26": [{"id": 8881, "titulo": "Dos de dos", "texto": "Segundo triunfo en el Nacional 84: 2-0 a Altos Hornos Zapla con goles de Beto Márcico y del Fino Cañete. El primer punto que cedió el futuro campeón llegó recién en la fecha siguiente."}],
-"02-27": [{"id": 8900, "titulo": "Cuando no salía nada", "texto": "Con Rocchia y Brandoni en el banco, derrota 3-0 con Talleres en Caballito y ocho partidos sin ganar. El alivio llegó la semana siguiente."}],
-"02-28": [{"id": 8910, "titulo": "Esta vez fueron solo tres", "texto": "San Lorenzo de Mar del Plata, que en 1976 se había llevado diez goles de Caballito, perdió 3-2 contra el futuro campeón del Nacional 82. Goles de Saccardi, Juárez y Crocco."}],
-"02-29": [{"id": 18029, "titulo": "Se corta la racha en Tandil", "texto": "Tres victorias seguidas y derrota con Santamarina en Tandil, por la fecha 5 del Torneo Transición del Nacional B. El técnico era Walter Perazzo."}]
+"02-01": [
+{
+"id": 8496,
+"titulo": "Un punto que vale la punta",
+"texto": "1-1 con Laferrere y gol de Cristian Tula. Al equipo de Raimundo le alcanzó para seguir primero en la primera fase de la B Metropolitana."
+}
+],
+"02-02": [
+{
+"id": 8498,
+"titulo": "Cinco goles en Quito",
+"texto": "Invicto y con cuatro triunfos en Colombia, Ferro llegó a Quito y le ganó 5-3 a El Nacional en el Atahualpa. Parisi y el Burro Rocchia hicieron dos cada uno; el otro, Osvaldo Gutiérrez."
+}
+],
+"02-03": [
+{
+"id": 8511,
+"titulo": "Chau Brasil, con victoria",
+"texto": "3-1 a un Flamengo de Caxias do Sul para cerrar la gira brasileña: 7 partidos, 4 ganados y 3 perdidos."
+}
+],
+"02-05": [
+{
+"id": 8543,
+"titulo": "Un arranque engañoso",
+"texto": "Ferro abrió el Clausura con un 4-0 a Platense: dos del Bocha Biazotti, uno de Pobersnik y otro de Pepe Forte. La campaña, después, no estuvo a la altura del estreno."
+}
+],
+"02-06": [
+{
+"id": 8556,
+"titulo": "Primera alegría con Perazzo",
+"texto": "2-1 a Douglas Haig en Caballito, con goles de Luis Salmerón y Leandro Díaz. Fue el primer triunfo del Torneo Transición 2016, después del empate del debut."
+}
+],
+"02-07": [
+{
+"id": 8562,
+"titulo": "Pretemporada en el Centenario",
+"texto": "Preparando la vuelta a Primera, Ferro igualó 1-1 con Nacional en el estadio donde se jugó la final del Mundial 1930."
+}
+],
+"02-08": [
+{
+"id": 8570,
+"titulo": "Salvados por Perego",
+"texto": "2-0 a Quilmes en cancha de Liniers Sport Club y permanencia asegurada en la Primera de la Asociación Amateurs. Los dos goles fueron de Rodolfo Perego."
+}
+],
+"02-09": [
+{
+"id": 8607,
+"titulo": "Llega Vegetti",
+"texto": "0-0 con Boca Unidos en Corrientes y primer partido de Pablo Vegetti con la verde. Hizo 6 goles en 18 partidos y se fue, sorpresivamente, a Gimnasia de La Plata."
+}
+],
+"02-10": [
+{
+"id": 8619,
+"titulo": "El día que llegó Timoteo",
+"texto": "2-2 con Tigre en Victoria, con goles de Cacho Saccardi y la Chancha Arregui. Parecía una fecha 1 más del Metropolitano 1980: era el primer partido de Carlos Griguol y el comienzo del ciclo más exitoso de la historia del club."
+}
+],
+"02-11": [
+{
+"id": 8640,
+"titulo": "Se terminó la sequía",
+"texto": "Cuatro partidos sin convertir hasta que Osvaldo Miranda le dio el 1-0 a Ferro sobre Gimnasia de Jujuy en Caballito. Venía de una racha de 4 goles en 14 partidos."
+}
+],
+"02-12": [
+{
+"id": 8644,
+"titulo": "La Chancha marca el camino",
+"texto": "4-0 a Arsenal, con tres goles de Héctor Arregui y uno del Burro Rocchia: primer triunfo en la Primera B de 1978, la que devolvió a Ferro a Primera."
+}
+],
+"02-13": [
+{
+"id": 8660,
+"titulo": "Visita europea en Caballito",
+"texto": "Ferro 1, Slovan Bratislava 1, con gol de Mario Pobersnik. El equipo eslovaco es el único rival europeo con el que jugó Ferro."
+}
+],
+"02-14": [
+{
+"id": 8662,
+"titulo": "Arranca la marcha del campeón",
+"texto": "Primera fecha del Nacional 82: 1-0 a Unión en Caballito con gol de Miguel Juárez, que sería el goleador del torneo. 22 fechas después, Timoteo y su equipo eran campeones invictos."
+}
+],
+"02-15": [
+{
+"id": 8678,
+"titulo": "El clásico que se ganó en un escritorio",
+"texto": "En la cancha fue 2-2 con Vélez, después de ir perdiendo 2-0. Pero Vélez incluyó mal al delantero Mario Finarolli y la AFA le terminó dando el partido a Ferro."
+}
+],
+"02-16": [
+{
+"id": 8696,
+"titulo": "Lucho Sosa, por duplicado",
+"texto": "Puntero pero golpeado por la derrota con Almirante Brown, Ferro le ganó 2-0 a Argentino de Rosario en Caballito, por la fecha 26 de la Primera B. Los dos goles fueron de Luis Sosa."
+}
+],
+"02-17": [
+{
+"id": 8702,
+"titulo": "La primera de Timoteo",
+"texto": "Segundo partido de Griguol en el banco y primer triunfo: 2-1 a Independiente en Caballito, con goles de Apariente, que además erró un penal, y de Rubén Rojas."
+}
+],
+"02-18": [
+{
+"id": 8710,
+"titulo": "Cacho arranca con goleada",
+"texto": "El Ferro de Saccardi abrió el Clausura con un 4-1 a Gimnasia en Jujuy: dos de Diego Bustos, uno del uruguayo Víctor López y otro de Beto Yaqué."
+}
+],
+"02-19": [
+{
+"id": 15667,
+"titulo": "El campeón se presenta con cuatro",
+"texto": "Primera fecha del Nacional 84 y 4-1 a Platense de visitante: dos penales de Beto Márcico, uno de cabeza de Oscar Acosta y otro del Fino Cañete. El torneo terminaría con Ferro campeón."
+}
+],
+"02-20": [
+{
+"id": 8727,
+"titulo": "Empate con el campeón ecuatoriano",
+"texto": "Amistoso en el estadio Capwell de Guayaquil: 1-1 con Emelec, que acababa de salir campeón de Ecuador. Empató el Bocha Biazotti de penal, por una falta a Pepe Forte."
+}
+],
+"02-21": [
+{
+"id": 8736,
+"titulo": "Nadie lo para",
+"texto": "Segunda fecha del Nacional 82 y 3-0 a Estudiantes en Santiago del Estero, con goles de Rafael Herrera, Beto Márcico y el Negro Juárez."
+}
+],
+"02-22": [
+{
+"id": 8771,
+"titulo": "Medio ascenso en el bolsillo",
+"texto": "0-0 con Platense en Vicente López y primera fase de la Primera B ganada. Con eso, Ferro se aseguró medio campeonato y la vuelta a la B Nacional."
+}
+],
+"02-23": [
+{
+"id": 8810,
+"titulo": "Cuatro en la Bombonera",
+"texto": "Dos veces abajo y 4-2 final ante Boca: dos de Rocchia (uno de penal), un tiro libre de Cacho Saccardi y otro de Osvaldo Gutiérrez. Es la única vez que Ferro le hizo cuatro goles a Boca en la Bombonera."
+}
+],
+"02-24": [
+{
+"id": 8818,
+"titulo": "Marchesini sobre la hora",
+"texto": "1-0 al recién ascendido Deportivo Español por el Nacional 85, con gol de cabeza de Marchesini a 4 minutos del final. Ferro terminaría ganando su grupo."
+}
+],
+"02-25": [
+{
+"id": 8858,
+"titulo": "La misma receta, otra vez",
+"texto": "Mismo resultado, mismo goleador, misma cancha: 1-0 en Caballito con gol de Osvaldo Miranda, esta vez a Boca Unidos. La semana anterior había sido a Gimnasia de Jujuy."
+}
+],
+"02-26": [
+{
+"id": 8881,
+"titulo": "Dos de dos",
+"texto": "Segundo triunfo en el Nacional 84: 2-0 a Altos Hornos Zapla con goles de Beto Márcico y del Fino Cañete. El primer punto que cedió el futuro campeón llegó recién en la fecha siguiente."
+}
+],
+"02-27": [
+{
+"id": 8900,
+"titulo": "Cuando no salía nada",
+"texto": "Con Rocchia y Brandoni en el banco, derrota 3-0 con Talleres en Caballito y ocho partidos sin ganar. El alivio llegó la semana siguiente."
+}
+],
+"02-28": [
+{
+"id": 8910,
+"titulo": "Esta vez fueron solo tres",
+"texto": "San Lorenzo de Mar del Plata, que en 1976 se había llevado diez goles de Caballito, perdió 3-2 contra el futuro campeón del Nacional 82. Goles de Saccardi, Juárez y Crocco."
+}
+],
+"02-29": [
+{
+"id": 18029,
+"titulo": "Se corta la racha en Tandil",
+"texto": "Tres victorias seguidas y derrota con Santamarina en Tandil, por la fecha 5 del Torneo Transición del Nacional B. El técnico era Walter Perazzo."
+}
+]
 }

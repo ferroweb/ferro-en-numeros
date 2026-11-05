@@ -1,32 +1,212 @@
 {
-"06-01": [{"id": 11205, "titulo": "Mandra da un respiro", "texto": "1-0 a Lanús en el Templo con gol de Martín Mandra: Cacho Saccardi en un banco, Mario Gómez en el otro. Ferro volvía a ganar después de cuatro fechas."}],
-"06-02": [{"id": 11220, "titulo": "Primera sonrisa del año, ante River", "texto": "Alberto Piovano tiró el centro desde el suelo y Juan Alison la empujó: 1-0 a River, el primer triunfo de Ferro en 1946."}],
-"06-03": [{"id": 11267, "titulo": "Récord de boletería", "texto": "Templo lleno para recibir al River de Amadeo Carrizo y Walter Gómez: 98.000 pesos de recaudación, la más alta de la fecha. Terminó 0-0."}],
-"06-04": [{"id": 11273, "titulo": "Arriba con los grandes", "texto": "1-0 a Huracán de visitante con gol de José Larrañaga y Ferro quedó como uno de los tres punteros del campeonato de 1931, junto con River y Gimnasia."}],
-"06-05": [{"id": 11310, "titulo": "La primera temporada sin Timoteo", "texto": "Derrota 1-0 con Racing en Caballito para cerrar un torneo con solo 7 victorias en 38 partidos. En el banco estaba el Burro Rocchia, como DT interino."}],
-"06-06": [{"id": 11344, "titulo": "El primer clásico del Oeste", "texto": "Vélez ganó 5-0 en Caballito el primer clásico entre los dos. Hasta 2000 se jugaron 155: Vélez ganó 61 y Ferro 48. De local, Ferro ganó 29 y perdió 21."}],
-"06-07": [{"id": 11373, "titulo": "Racing afuera", "texto": "Con el 1-0 de la ida en Avellaneda, a Ferro le alcanzó un 0-0 en Caballito para eliminar a Racing en el reducido de postemporada que daba un lugar en la Libertadores."}],
-"06-08": [{"id": 11390, "titulo": "Tres al subcampeón", "texto": "3-1 a Banfield, que el año anterior había estado muy cerca del título. Goles de Ángel Omarini, Antonio García y Ángel Aguilar."}],
-"06-09": [{"id": 11412, "titulo": "Gol de Ferro... contra Ferro", "texto": "Tarde negra ante Rosario Central en el Templo: 0-5. El primero lo hizo el propio arquero, Oscar Ferro, en contra. Hubo hasta un gol de rabona del Chacho Coudet."}],
-"06-10": [{"id": 11439, "titulo": "Clásico de época", "texto": "0-0 entre el flamante campeón del Nacional y Argentinos, que ganaría el Metropolitano 84. En ese torneo Ferro terminó segundo, a un punto."}],
-"06-11": [{"id": 11448, "titulo": "Cara a cara con La Máquina", "texto": "La mayor recaudación de la fecha fue en Caballito: 19.750 pesos para ver a Ferro con el River de La Máquina. José Lazcano abrió con un remate fuerte y empató Juan Muñoz."}],
-"06-12": [{"id": 11492, "titulo": "Gracias, Maestro", "texto": "Último partido de Carlos Griguol en Ferro: derrota 2-1 con Newell's. Fueron 580 partidos en dos etapas, con 217 victorias entre torneos locales y Copa Libertadores."}],
-"06-13": [{"id": 11528, "titulo": "Un 4-4 rumbo a la final", "texto": "Tras el 4-0 de la ida, 4-4 en Córdoba con Talleres: tres goles de Miguel Juárez y uno en contra de Rafael Pavón. El equipo de Timoteo ya estaba en la final del Nacional 82."}],
-"06-14": [{"id": 11543, "titulo": "Victoria ante La Máquina", "texto": "2-1 en el Monumental: Raúl Natino abrió el marcador y, tras el empate de Juan Muñoz, el paraguayo Delfín Benítez Cáceres la peinó para el triunfo. River fue campeón ese año."}],
-"06-15": [{"id": 11556, "titulo": "Revancha en la Copa", "texto": "Eliminado por Quilmes, Ferro pasó a la Rueda Perdedores de la Copa Competencia y le ganó 3-0 a Argentinos con goles de Félix Dolhagaray y Carlos Novo."}],
-"06-16": [{"id": 11578, "titulo": "La última vez que le ganamos a River", "texto": "3-2 en el Monumental: Ferro se puso 2-0 con un penal de Duré y un gol de Sava, River descontó con Gallardo y Solari, y un penal de Luciano Nicotra a 7 del final selló la victoria."}],
-"06-17": [{"id": 11602, "titulo": "Justo antes y justo después", "texto": "3-0 a Atlanta en Caballito: Juan Sotelo marcó en el último minuto del primer tiempo, y Julio Apariente y el Burro Rocchia en los primeros del segundo."}],
-"06-18": [{"id": 11615, "titulo": "Le ganamos a Timoteo", "texto": "1-0 en Caballito al Gimnasia de Griguol, que peleaba el campeonato, con gol de Carucha Lagorio, que años después jugó en Ferro. En el banco verdolaga estaba Rodolfo Motta."}],
-"06-19": [{"id": 11652, "titulo": "Dos de dos con Cañete", "texto": "Otro 1-0, ahora a San Lorenzo, con gol del paraguayo Adolfino Cañete a 7 minutos del final. El Metro 83 arrancaba con dos victorias."}],
-"06-20": [{"id": 11671, "titulo": "Primera final, por la mañana", "texto": "0-0 con Quilmes en la ida de la final del Nacional 82: Basigalup; Mario Gómez (Sotelo), Cúper, Rocchia, Garré; Carlos Arregui, Saccardi, Cañete; Crocco (Jiménez), Márcico y Juárez."}],
-"06-21": [{"id": 11697, "titulo": "Una trituradora en el clásico", "texto": "3-0 a Vélez con goles de Palito Brandoni y dos del Fino Cañete. Con una defensa impasable, Carlos Barisio empezaba a construir su récord de valla invicta."}],
-"06-22": [{"id": 11721, "titulo": "Tres de Lulú", "texto": "3-0 a Temperley, rumbo al ascenso, con tres goles de Rubén Emilio Fernández, Lulú. Con la verde hizo 25 goles en 45 partidos."}],
-"06-23": [{"id": 11749, "titulo": "Batacazo en Córdoba", "texto": "Ferro le ganó a Instituto en su cancha con goles de Jorge Pereyra Díaz, Sebastián Navarro y el Pupi Salmerón, y le quitó el ascenso directo, que se quedó River."}],
-"06-24": [{"id": 11761, "titulo": "Navarro Montoya, goleador de Ferro", "texto": "2-0 a Vélez con un Beto Márcico inolvidable: definió un mano a mano y tiró un córner que el arquero Navarro Montoya, al querer sacarla con los puños, metió en su propio arco."}],
-"06-25": [{"id": 11787, "titulo": "Un lunes sobre la hora", "texto": "Racing de Córdoba ganaba con gol temprano del Pato Gasparini y Héctor Cúper lo empató de penal a 6 minutos del final: 1-1 en barrio Nueva Italia."}],
-"06-26": [{"id": 11798, "titulo": "Sponda descuenta al final", "texto": "Derrota 2-1 en Lanús, con los dos goles locales de Anselmo Pintado. El de Ferro llegó al final: un remate cruzado de Francisco Sponda tras un rechazo."}],
-"06-27": [{"id": 11823, "titulo": "Campeones por primera vez", "texto": "2-0 a Quilmes en la vuelta de la final del Nacional 82, con goles de Juan Domingo Antonio Rocchia y Miguel Ángel Juárez. Ferro campeón por primera vez en su historia. Caballito fue una fiesta."}],
-"06-28": [{"id": 11839, "titulo": "Empate con un futuro campeón de América", "texto": "1-1 con Independiente, que puso algunos suplentes y dos meses después ganó la Libertadores. El gol de Ferro fue un penal de Juan Pastorini."}],
-"06-29": [{"id": 11851, "titulo": "Junín corta el invicto", "texto": "Doce partidos sin perder hasta la derrota 3-1 con Sarmiento, con gol de Ernesto Juárez. En el ascenso de 1958, Ferro ganó 21 partidos y perdió solo 5."}],
-"06-30": [{"id": 11863, "titulo": "Un 0-0 cada cinco años", "texto": "0-0 con Banfield en cancha de Talleres de Remedios de Escalada. Era el primer empate sin goles desde diciembre de 1935, con River en Caballito."}]
+"06-01": [
+{
+"id": 11205,
+"titulo": "Mandra da un respiro",
+"texto": "1-0 a Lanús en el Templo con gol de Martín Mandra: Cacho Saccardi en un banco, Mario Gómez en el otro. Ferro volvía a ganar después de cuatro fechas."
+}
+],
+"06-02": [
+{
+"id": 11220,
+"titulo": "Primera sonrisa del año, ante River",
+"texto": "Alberto Piovano tiró el centro desde el suelo y Juan Alison la empujó: 1-0 a River, el primer triunfo de Ferro en 1946."
+}
+],
+"06-03": [
+{
+"id": 11267,
+"titulo": "Récord de boletería",
+"texto": "Templo lleno para recibir al River de Amadeo Carrizo y Walter Gómez: 98.000 pesos de recaudación, la más alta de la fecha. Terminó 0-0."
+}
+],
+"06-04": [
+{
+"id": 11273,
+"titulo": "Arriba con los grandes",
+"texto": "1-0 a Huracán de visitante con gol de José Larrañaga y Ferro quedó como uno de los tres punteros del campeonato de 1931, junto con River y Gimnasia."
+}
+],
+"06-05": [
+{
+"id": 11310,
+"titulo": "La primera temporada sin Timoteo",
+"texto": "Derrota 1-0 con Racing en Caballito para cerrar un torneo con solo 7 victorias en 38 partidos. En el banco estaba el Burro Rocchia, como DT interino."
+}
+],
+"06-06": [
+{
+"id": 11344,
+"titulo": "El primer clásico del Oeste",
+"texto": "Vélez ganó 5-0 en Caballito el primer clásico entre los dos. Hasta 2000 se jugaron 155: Vélez ganó 61 y Ferro 48. De local, Ferro ganó 29 y perdió 21."
+}
+],
+"06-07": [
+{
+"id": 11373,
+"titulo": "Racing afuera",
+"texto": "Con el 1-0 de la ida en Avellaneda, a Ferro le alcanzó un 0-0 en Caballito para eliminar a Racing en el reducido de postemporada que daba un lugar en la Libertadores."
+}
+],
+"06-08": [
+{
+"id": 11390,
+"titulo": "Tres al subcampeón",
+"texto": "3-1 a Banfield, que el año anterior había estado muy cerca del título. Goles de Ángel Omarini, Antonio García y Ángel Aguilar."
+}
+],
+"06-09": [
+{
+"id": 11412,
+"titulo": "Gol de Ferro... contra Ferro",
+"texto": "Tarde negra ante Rosario Central en el Templo: 0-5. El primero lo hizo el propio arquero, Oscar Ferro, en contra. Hubo hasta un gol de rabona del Chacho Coudet."
+}
+],
+"06-10": [
+{
+"id": 11439,
+"titulo": "Clásico de época",
+"texto": "0-0 entre el flamante campeón del Nacional y Argentinos, que ganaría el Metropolitano 84. En ese torneo Ferro terminó segundo, a un punto."
+}
+],
+"06-11": [
+{
+"id": 11448,
+"titulo": "Cara a cara con La Máquina",
+"texto": "Ninguna cancha recaudó más esa fecha que Caballito: 19.750 pesos para ver a Ferro con el River de La Máquina. José Lazcano abrió con un remate fuerte y empató Juan Muñoz."
+}
+],
+"06-12": [
+{
+"id": 11492,
+"titulo": "Gracias, Maestro",
+"texto": "Último partido de Carlos Griguol en Ferro: derrota 2-1 con Newell's. Fueron 580 partidos en dos etapas, con 217 victorias entre torneos locales y Copa Libertadores."
+}
+],
+"06-13": [
+{
+"id": 11528,
+"titulo": "Un 4-4 rumbo a la final",
+"texto": "Tras el 4-0 de la ida, 4-4 en Córdoba con Talleres: tres goles de Miguel Juárez y uno en contra de Rafael Pavón. El equipo de Timoteo ya estaba en la final del Nacional 82."
+}
+],
+"06-14": [
+{
+"id": 11543,
+"titulo": "Victoria ante La Máquina",
+"texto": "2-1 en el Monumental: Raúl Natino abrió el marcador y, tras el empate de Juan Muñoz, el paraguayo Delfín Benítez Cáceres la peinó para el triunfo. River fue campeón ese año."
+}
+],
+"06-15": [
+{
+"id": 11556,
+"titulo": "Revancha en la Copa",
+"texto": "Eliminado por Quilmes, Ferro pasó a la Rueda Perdedores de la Copa Competencia y le ganó 3-0 a Argentinos con goles de Félix Dolhagaray y Carlos Novo."
+}
+],
+"06-16": [
+{
+"id": 11578,
+"titulo": "La última vez que le ganamos a River",
+"texto": "3-2 en el Monumental: Ferro se puso 2-0 con un penal de Duré y un gol de Sava, River descontó con Gallardo y Solari, y un penal de Luciano Nicotra a 7 del final selló la victoria."
+}
+],
+"06-17": [
+{
+"id": 11602,
+"titulo": "Justo antes y justo después",
+"texto": "3-0 a Atlanta en Caballito: Juan Sotelo marcó en el último minuto del primer tiempo, y Julio Apariente y el Burro Rocchia en los primeros del segundo."
+}
+],
+"06-18": [
+{
+"id": 11615,
+"titulo": "Le ganamos a Timoteo",
+"texto": "1-0 en Caballito al Gimnasia de Griguol, que peleaba el campeonato, con gol de Carucha Lagorio, que años después jugó en Ferro. En el banco verdolaga estaba Rodolfo Motta."
+}
+],
+"06-19": [
+{
+"id": 11652,
+"titulo": "Dos de dos con Cañete",
+"texto": "Otro 1-0, ahora a San Lorenzo, con gol del paraguayo Adolfino Cañete a 7 minutos del final. El Metro 83 arrancaba con dos victorias."
+}
+],
+"06-20": [
+{
+"id": 11671,
+"titulo": "Primera final, por la mañana",
+"texto": "0-0 con Quilmes en la ida de la final del Nacional 82: Basigalup; Mario Gómez (Sotelo), Cúper, Rocchia, Garré; Carlos Arregui, Saccardi, Cañete; Crocco (Jiménez), Márcico y Juárez."
+}
+],
+"06-21": [
+{
+"id": 11697,
+"titulo": "Una trituradora en el clásico",
+"texto": "3-0 a Vélez con goles de Palito Brandoni y dos del Fino Cañete. Con una defensa impasable, Carlos Barisio empezaba a construir su récord de valla invicta."
+}
+],
+"06-22": [
+{
+"id": 11721,
+"titulo": "Tres de Lulú",
+"texto": "3-0 a Temperley, rumbo al ascenso, con tres goles de Rubén Emilio Fernández, Lulú. Con la verde hizo 25 goles en 45 partidos."
+}
+],
+"06-23": [
+{
+"id": 11749,
+"titulo": "Batacazo en Córdoba",
+"texto": "Ferro le ganó a Instituto en su cancha con goles de Jorge Pereyra Díaz, Sebastián Navarro y el Pupi Salmerón, y le quitó el ascenso directo, que se quedó River."
+}
+],
+"06-24": [
+{
+"id": 11761,
+"titulo": "Navarro Montoya, goleador de Ferro",
+"texto": "2-0 a Vélez con un Beto Márcico inolvidable: definió un mano a mano y tiró un córner que el arquero Navarro Montoya, al querer sacarla con los puños, metió en su propio arco."
+}
+],
+"06-25": [
+{
+"id": 11787,
+"titulo": "Un lunes sobre la hora",
+"texto": "Racing de Córdoba ganaba con gol temprano del Pato Gasparini y Héctor Cúper lo empató de penal a 6 minutos del final: 1-1 en barrio Nueva Italia."
+}
+],
+"06-26": [
+{
+"id": 11798,
+"titulo": "Sponda descuenta al final",
+"texto": "Derrota 2-1 en Lanús, con los dos goles locales de Anselmo Pintado. El de Ferro llegó al final: un remate cruzado de Francisco Sponda tras un rechazo."
+}
+],
+"06-27": [
+{
+"id": 11823,
+"titulo": "Campeones por primera vez",
+"texto": "2-0 a Quilmes en la vuelta de la final del Nacional 82, con goles de Juan Domingo Antonio Rocchia y Miguel Ángel Juárez. Ferro campeón por primera vez en su historia. Caballito fue una fiesta."
+}
+],
+"06-28": [
+{
+"id": 11839,
+"titulo": "Empate con un futuro campeón de América",
+"texto": "1-1 con Independiente, que puso algunos suplentes y dos meses después ganó la Libertadores. El gol de Ferro fue un penal de Juan Pastorini."
+}
+],
+"06-29": [
+{
+"id": 11851,
+"titulo": "Junín corta el invicto",
+"texto": "Doce partidos sin perder hasta la derrota 3-1 con Sarmiento, con gol de Ernesto Juárez. En el ascenso de 1958, Ferro ganó 21 partidos y perdió solo 5."
+}
+],
+"06-30": [
+{
+"id": 11863,
+"titulo": "Un 0-0 cada cinco años",
+"texto": "0-0 con Banfield en cancha de Talleres de Remedios de Escalada. Era el primer empate sin goles desde diciembre de 1935, con River en Caballito."
+}
+]
 }

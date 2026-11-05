@@ -1,33 +1,219 @@
 {
-"05-01": [{"id": 10459, "titulo": "Ferrocarril contra ferrocarril", "texto": "Ferro Carril Oeste 4, Ferrocarril Sud 2: dos goles de Raúl Bergara y uno de Ramón Lamique y Eugenio Moggio, que además erró un penal. Los del Sud jugaban con camiseta verde y marrón."}],
-"05-02": [{"id": 10485, "titulo": "Un tren sin frenos", "texto": "3-0 a Atlético Concepción en Tucumán, con dos goles del Negro Juárez y uno de Cacho Saccardi. Quinta victoria seguida rumbo al título del Nacional 82."}],
-"05-03": [{"id": 10510, "titulo": "Mano a mano con Boca", "texto": "0-0 con el Boca que pelearía el Metro 81 hasta el final. Formó así: Barisio; Gómez, Cúper, Sotelo, Garré; Arregui, Saccardi, Cañete; Crocco, Jiménez y Juárez. ¿Cuántos sabías de memoria?"}],
-"05-04": [{"id": 10532, "titulo": "El gol de Oscar Acosta en el Monumental", "texto": "Gambeteó a cinco y se la cruzó al Pato Fillol para empatar el gol de Francescoli. Después Héctor Cúper puso el 2-1 para Ferro, en la segunda fase del Nacional 83."}],
-"05-05": [{"id": 10555, "titulo": "Media docena a Atlanta", "texto": "6-1 en Caballito: dos de Nicolás Infante, dos de Miguel Bravo y uno de Francisco Sponda y Ángel Sobrino. Quinta victoria en ocho fechas."}],
-"05-06": [{"id": 10583, "titulo": "Perder y hacer millonarios a otros", "texto": "En el último partido de la fecha, Racing de Córdoba le ganó 2-1 a Ferro y con ese resultado sus jugadores acertaron el Prode. El gol verdolaga fue de cabeza de Cúper."}],
-"05-07": [{"id": 10599, "titulo": "Así se presentó el Goma", "texto": "Tenía 17 años y su primer gol como profesional fue a River, de cabeza, contra Amadeo Carrizo. 1-0 en Caballito. Carlos Alberto Vidal, el Goma."}],
-"05-08": [{"id": 10614, "titulo": "Una alegría en un año duro", "texto": "Tiro libre de la Chancha Arregui a los 68 minutos y 1-0 al Boca del Toto Lorenzo, que jugaba con suplentes por la Libertadores. Ese año terminó con el descenso."}],
-"05-09": [{"id": 10647, "titulo": "Un pie en la final", "texto": "1-0 a Talleres en la ida de la semifinal del Nacional 84. La vuelta se jugó una semana después en el Chateau Carreras."}],
-"05-10": [{"id": 10696, "titulo": "Golea el campeón", "texto": "4-0 a Unión de San Vicente, con goles de Crocco, Saccardi y dos del Negro Juárez. A la semana siguiente le hizo cuatro a Independiente."}],
-"05-11": [{"id": 10679, "titulo": "El aviso de Español", "texto": "Ya ganador de la Primera B, Ferro perdió 1-0 con Español en el Bajo Flores. Cuarenta días después, el mismo rival le quitó el ascenso en la final."}],
-"05-12": [{"id": 10708, "titulo": "La tarde de De la Mata", "texto": "En Avellaneda, el insider de Independiente, Vicente De la Mata, le hizo dos goles a Ferro, uno de tiro libre. Descontó José Liztherm."}],
-"05-13": [{"id": 10745, "titulo": "Regalo de cumpleaños del Beto", "texto": "El día de su cumpleaños, Alberto Márcico hizo el gol del 1-0 a Newell's por el Metro 84. Tres días después, Ferro jugaba la vuelta de la semifinal del Nacional."}],
-"05-14": [{"id": 10790, "titulo": "Se termina el invicto", "texto": "Seis fechas sin perder hasta la visita a Newell's: 3-1 para los rosarinos. Alberto Piovano hizo el empate transitorio. En la fecha siguiente, en Caballito, Ferro se recuperó."}],
-"05-15": [{"id": 10835, "titulo": "Clásico ganado con estilo", "texto": "Un cabezazo de Víctor Marchesini y una sutileza de Miguel Vargas le dieron el clásico a Ferro ante el Vélez campeón, que ese día atajó con Docabo en lugar de Chilavert."}],
-"05-16": [{"id": 10845, "titulo": "Con el tiempo cumplido", "texto": "Después de cuatro empates, 2-1 a Independiente: Carlos Lara lo empató de cabeza y Héctor Hugo Torres, con el tiempo casi cumplido, lo dio vuelta."}],
-"05-17": [{"id": 10877, "titulo": "Garré le clava un tiro libre a Fillol", "texto": "Tras el 0-0 de la ida, 2-1 en el alargue y Racing afuera de la Liguilla. Abrió el Ciruja Garré de tiro libre ante el Pato Fillol, empató Medina Bello y lo cerró Carpecho Fernández."}],
-"05-18": [{"id": 10885, "titulo": "Un final de película", "texto": "1-0 a River con gol de Lorenzo Nappi. En el cierre pasó de todo: cada equipo erró un penal y a Ferro le expulsaron al back Pedro Girolá."}],
-"05-19": [{"id": 10913, "titulo": "Se termina la defensa del título", "texto": "2-2 con Estudiantes en Caballito, tras el 0-1 de la ida: Ferro quedó afuera del Nacional 83 en la tercera fase. Estudiantes terminó siendo el campeón."}],
-"05-20": [{"id": 10933, "titulo": "Calentando para la final", "texto": "Días antes de la final del Nacional en River, 5-0 a Unión en Santa Fe por el Metro: dos del Beto Márcico y uno de Oscar Acosta, Marchesini y Beto Gargini."}],
-"05-21": [{"id": 10962, "titulo": "Tres goles en 37 minutos", "texto": "El Racing cordobés hizo tres goles casi seguidos y descontaron Fantaguzzi y Agonil: 3-2. El equipo de Timoteo terminó 18° ese torneo."}],
-"05-22": [{"id": 10974, "titulo": "Se cae el invicto en Rosario", "texto": "Candidato al ascenso, Ferro perdió 1-0 con Argentino de Rosario en la tercera fecha y el rival quedó primero en la zona B de Segunda División."}],
-"05-23": [{"id": 11013, "titulo": "A 11 minutos del empate", "texto": "Perdía 2-0 en la Bombonera y lo igualó con goles de Osvaldo Gutiérrez y uno en contra de Ovide. Pero Juanchi Taverna le dio el 3-2 a Boca."}],
-"05-24": [{"id": 11039, "titulo": "La Gloria", "texto": "El partido más importante de la historia: 3-0 a River en el Monumental en la primera final del Nacional 84. Goles de Cañete, Noremberg y el Beto Márcico de penal, todos en el primer tiempo. Fútbol perfecto."}],
-"05-25": [{"id": 11064, "titulo": "La tarde de Tojo", "texto": "3-0 al Boca que terminó campeón: Miguel Tojo abrió con un remate cruzado, Felipe Ribaudo empalmó un pase de Ángel Marcos y Tojo cerró con asistencia de Ribaudo."}],
-"05-26": [{"id": 11092, "titulo": "Primer puesto con baile", "texto": "5-0 a Armenio con dos de Jaime Molfeso y uno de Eugenio Klein, Cristian Tula y Gastón Tosi. Ferro se aseguró el primer puesto de la Primera B y fue al minitorneo por el ascenso."}],
-"05-27": [{"id": 11107, "titulo": "Entre dos finales", "texto": "Tres días después del 3-0 a River y tres antes de la vuelta, Ferro jugó por el Metro con suplentes, del Oso Ferrero en el arco a Seguir, Tarzia y Piazzalonga. Perdió 1-0 con Temperley."}],
-"05-28": [{"id": 11124, "titulo": "Triunfo con gusto a poco", "texto": "2-0 a Instituto con goles de Oscar Acosta y Luifa Artime, pero no alcanzó: Ferro fue al Torneo Clasificación, que daba otra chance de llegar a la Libertadores."}],
-"05-29": [{"id": 11147, "titulo": "Tres a los salteños", "texto": "3-2 a Gimnasia y Tiro con goles de Víctor López, el Gordo Cordon y el Bocha Biazotti, en el último torneo de Griguol como técnico de Ferro."}],
-"05-30": [{"id": 11184, "titulo": "¡Campeones!", "texto": "Después del baile en el Monumental, cabezazo de Adolfino Cañete a los 2 minutos y 1-0 a River. El partido se suspendió a los 70 por incidentes de los visitantes. Ferro, campeón del Nacional 84. Noche gloriosa."}],
-"05-31": [{"id": 11253, "titulo": "El último gol antes del récord", "texto": "2-1 a San Lorenzo con goles de Crocco y Rocchia en el último minuto. El Gringo Scotta hizo el último gol que recibió Barisio antes de su récord de valla invicta."}]
+"05-01": [
+{
+"id": 10459,
+"titulo": "Ferrocarril contra ferrocarril",
+"texto": "Ferro Carril Oeste 4, Ferrocarril Sud 2: dos goles de Raúl Bergara y uno de Ramón Lamique y Eugenio Moggio, que además erró un penal. Los del Sud jugaban con camiseta verde y marrón."
+}
+],
+"05-02": [
+{
+"id": 10485,
+"titulo": "Un tren sin frenos",
+"texto": "3-0 a Atlético Concepción en Tucumán, con dos goles del Negro Juárez y uno de Cacho Saccardi. Quinta victoria seguida rumbo al título del Nacional 82."
+}
+],
+"05-03": [
+{
+"id": 10510,
+"titulo": "Mano a mano con Boca",
+"texto": "0-0 con el Boca que pelearía el Metro 81 hasta el final. Formó así: Barisio; Gómez, Cúper, Sotelo, Garré; Arregui, Saccardi, Cañete; Crocco, Jiménez y Juárez. ¿Cuántos sabías de memoria?"
+}
+],
+"05-04": [
+{
+"id": 10532,
+"titulo": "El gol de Oscar Acosta en el Monumental",
+"texto": "Gambeteó a cinco y se la cruzó al Pato Fillol para empatar el gol de Francescoli. Después Héctor Cúper puso el 2-1 para Ferro, en la segunda fase del Nacional 83."
+}
+],
+"05-05": [
+{
+"id": 10555,
+"titulo": "Media docena a Atlanta",
+"texto": "6-1 en Caballito: dos de Nicolás Infante, dos de Miguel Bravo y uno de Francisco Sponda y Ángel Sobrino. Quinta victoria en ocho fechas."
+}
+],
+"05-06": [
+{
+"id": 10583,
+"titulo": "Perder y hacer millonarios a otros",
+"texto": "En el último partido de la fecha, Racing de Córdoba le ganó 2-1 a Ferro y con ese resultado sus jugadores acertaron el Prode. El gol verdolaga fue de cabeza de Cúper."
+}
+],
+"05-07": [
+{
+"id": 10599,
+"titulo": "Así se presentó el Goma",
+"texto": "Tenía 17 años y su primer gol como profesional fue a River, de cabeza, contra Amadeo Carrizo. 1-0 en Caballito. Carlos Alberto Vidal, el Goma."
+}
+],
+"05-08": [
+{
+"id": 10614,
+"titulo": "Una alegría en un año duro",
+"texto": "Tiro libre de la Chancha Arregui a los 68 minutos y 1-0 al Boca del Toto Lorenzo, que jugaba con suplentes por la Libertadores. Ese año terminó con el descenso."
+}
+],
+"05-09": [
+{
+"id": 10647,
+"titulo": "Media final en el bolsillo",
+"texto": "1-0 a Talleres en la ida de la semifinal del Nacional 84. La vuelta se jugó una semana después en el Chateau Carreras."
+}
+],
+"05-10": [
+{
+"id": 10696,
+"titulo": "Cuatro a Unión de San Vicente",
+"texto": "4-0 a Unión de San Vicente, con goles de Crocco, Saccardi y dos del Negro Juárez. A la semana siguiente le hizo cuatro a Independiente."
+}
+],
+"05-11": [
+{
+"id": 10679,
+"titulo": "El aviso de Español",
+"texto": "Ya ganador de la Primera B, Ferro perdió 1-0 con Español en el Bajo Flores. Cuarenta días después, el mismo rival le quitó el ascenso en la final."
+}
+],
+"05-12": [
+{
+"id": 10708,
+"titulo": "De la Mata, por partida doble",
+"texto": "En Avellaneda, el insider de Independiente, Vicente De la Mata, le hizo dos goles a Ferro, uno de tiro libre. Descontó José Liztherm."
+}
+],
+"05-13": [
+{
+"id": 10745,
+"titulo": "Regalo de cumpleaños del Beto",
+"texto": "El día de su cumpleaños, Alberto Márcico hizo el gol del 1-0 a Newell's por el Metro 84. Tres días después, Ferro jugaba la vuelta de la semifinal del Nacional."
+}
+],
+"05-14": [
+{
+"id": 10790,
+"titulo": "Se termina el invicto",
+"texto": "Seis fechas sin perder hasta la visita a Newell's: 3-1 para los rosarinos. Alberto Piovano hizo el empate transitorio. En la fecha siguiente, en Caballito, Ferro se recuperó."
+}
+],
+"05-15": [
+{
+"id": 10835,
+"titulo": "Clásico ganado con estilo",
+"texto": "Un cabezazo de Víctor Marchesini y una sutileza de Miguel Vargas le dieron el clásico a Ferro ante el Vélez campeón, que ese día atajó con Docabo en lugar de Chilavert."
+}
+],
+"05-16": [
+{
+"id": 10845,
+"titulo": "Con el tiempo cumplido",
+"texto": "Después de cuatro empates, 2-1 a Independiente: Carlos Lara lo empató de cabeza y Héctor Hugo Torres, con el tiempo casi cumplido, lo dio vuelta."
+}
+],
+"05-17": [
+{
+"id": 10877,
+"titulo": "Garré le clava un tiro libre a Fillol",
+"texto": "Tras el 0-0 de la ida, 2-1 en el alargue y Racing afuera de la Liguilla. Abrió el Ciruja Garré de tiro libre ante el Pato Fillol, empató Medina Bello y lo cerró Carpecho Fernández."
+}
+],
+"05-18": [
+{
+"id": 10885,
+"titulo": "Un final de película",
+"texto": "1-0 a River con gol de Lorenzo Nappi. En el cierre pasó de todo: cada equipo erró un penal y a Ferro le expulsaron al back Pedro Girolá."
+}
+],
+"05-19": [
+{
+"id": 10913,
+"titulo": "Se termina la defensa del título",
+"texto": "2-2 con Estudiantes en Caballito, tras el 0-1 de la ida: Ferro quedó afuera del Nacional 83 en la tercera fase. Estudiantes terminó siendo el campeón."
+}
+],
+"05-20": [
+{
+"id": 10933,
+"titulo": "Calentando para la final",
+"texto": "Días antes de la final del Nacional en River, 5-0 a Unión en Santa Fe por el Metro: dos del Beto Márcico y uno de Oscar Acosta, Marchesini y Beto Gargini."
+}
+],
+"05-21": [
+{
+"id": 10962,
+"titulo": "Tres goles en 37 minutos",
+"texto": "El Racing cordobés hizo tres goles casi seguidos y descontaron Fantaguzzi y Agonil: 3-2. El equipo de Timoteo terminó 18° ese torneo."
+}
+],
+"05-22": [
+{
+"id": 10974,
+"titulo": "Se cae el invicto en Rosario",
+"texto": "Candidato al ascenso, Ferro perdió 1-0 con Argentino de Rosario en la tercera fecha y el rival quedó primero en la zona B de Segunda División."
+}
+],
+"05-23": [
+{
+"id": 11013,
+"titulo": "A 11 minutos del empate",
+"texto": "Perdía 2-0 en la Bombonera y lo igualó con goles de Osvaldo Gutiérrez y uno en contra de Ovide. Pero Juanchi Taverna le dio el 3-2 a Boca."
+}
+],
+"05-24": [
+{
+"id": 11039,
+"titulo": "La noche del Monumental",
+"texto": "Primera final del Nacional 84 y River en su casa: 3-0 para Ferro, con goles de Cañete, Noremberg y Márcico de penal, los tres antes del descanso. Para muchos, el partido más grande de la historia verdolaga, jugado de memoria."
+}
+],
+"05-25": [
+{
+"id": 11064,
+"titulo": "La tarde de Tojo",
+"texto": "3-0 al Boca que terminó campeón: Miguel Tojo abrió con un remate cruzado, Felipe Ribaudo empalmó un pase de Ángel Marcos y Tojo cerró con asistencia de Ribaudo."
+}
+],
+"05-26": [
+{
+"id": 11092,
+"titulo": "Primer puesto con baile",
+"texto": "5-0 a Armenio con dos de Jaime Molfeso y uno de Eugenio Klein, Cristian Tula y Gastón Tosi. Ferro se aseguró el primer puesto de la Primera B y fue al minitorneo por el ascenso."
+}
+],
+"05-27": [
+{
+"id": 11107,
+"titulo": "Entre dos finales",
+"texto": "Tres días después del 3-0 a River y tres antes de la vuelta, Ferro jugó por el Metro con suplentes, del Oso Ferrero en el arco a Seguir, Tarzia y Piazzalonga. Perdió 1-0 con Temperley."
+}
+],
+"05-28": [
+{
+"id": 11124,
+"titulo": "Triunfo con gusto a poco",
+"texto": "2-0 a Instituto con goles de Oscar Acosta y Luifa Artime, pero no alcanzó: Ferro fue al Torneo Clasificación, que daba otra chance de llegar a la Libertadores."
+}
+],
+"05-29": [
+{
+"id": 11147,
+"titulo": "Tres a los salteños",
+"texto": "3-2 a Gimnasia y Tiro con goles de Víctor López, el Gordo Cordon y el Bocha Biazotti, en el último torneo de Griguol como técnico de Ferro."
+}
+],
+"05-30": [
+{
+"id": 11184,
+"titulo": "La segunda estrella",
+"texto": "Con el 3-0 de la ida en el bolsillo, alcanzó un cabezazo de Adolfino Cañete a los 2 minutos: 1-0 a River y Ferro campeón del Nacional 84. El partido no llegó al final: se suspendió a los 70 por incidentes provocados por la gente de River."
+}
+],
+"05-31": [
+{
+"id": 11253,
+"titulo": "El último gol antes del récord",
+"texto": "2-1 a San Lorenzo con goles de Crocco y Rocchia en el último minuto. El Gringo Scotta hizo el último gol que recibió Barisio antes de su récord de valla invicta."
+}
+]
 }

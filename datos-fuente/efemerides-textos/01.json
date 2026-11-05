@@ -1,25 +1,163 @@
 {
-"01-02": [{"id": 8216, "titulo": "Cuando el partido terminó a las piñas", "texto": "River ganaba 3-0 en el cierre de la temporada 1920 cuando los backs Alberto Pini y Santos Barberá la emprendieron contra el árbitro Lorenzo Martínez. Expulsados los dos y partido suspendido: el final de temporada más caliente que se recuerde."}],
-"01-03": [{"id": 8224, "titulo": "Un torneo que no quería terminar", "texto": "El primer campeonato profesional, el de 1931, recién se cerró en 1932. Ese día, en Caballito, Ferro igualó 2-2 con Vélez: Sciarra abrió el marcador y Pellizzari empató al atrapar un rebote."}],
-"01-06": [{"id": 8241, "titulo": "Despedida del primer año profesional", "texto": "Última fecha del campeonato de 1931, jugada ya en 1932: derrota 3-2 en Avellaneda contra Racing. Francisco Sponda y Enrique Gainzarain firmaron los goles verdolagas del cierre."}],
-"01-07": [{"id": 8253, "titulo": "La primera valija del profesionalismo", "texto": "Viaje a Córdoba para enfrentar a Belgrano en la ronda final de la Copa Beccar Varela: el primero del club en la era profesional. Se perdió 4-1 y el gol de Ferro lo hizo un cordobés, Nicolás Infante."}],
-"01-08": [{"id": 8261, "titulo": "Adiós al amateurismo con un 3-0", "texto": "Ferro 3, Argentino de Banfield 0, por la fecha 31 del campeonato de 1930. Goles de Salvador D'Alessandro, José Luis Fernández y José Blanco. Fue la última victoria verdolaga de la era amateur."}],
-"01-09": [{"id": 8265, "titulo": "Primera vez en Brasil, primera victoria", "texto": "Ferro estrenó el pasaporte brasileño ganándole 1-0 al Inter de Porto Alegre, campeón gaúcho, en el estadio Eucaliptos, que dos años antes había sido sede del Mundial 1950."}],
-"01-13": [{"id": 8274, "titulo": "Campeón en Cali", "texto": "De gira por Colombia, Ferro le ganó 2-0 a la selección del Valle del Cauca y se quedó con el torneo Alcaldía de Cali. Juárez y Garabal pusieron los goles; la vuelta trajo una copa en la valija."}],
-"01-14": [{"id": 8281, "titulo": "La Selección tenía acento de Caballito", "texto": "Héctor Cúper y Oscar Garré, titulares en la Argentina de Bilardo que le ganó 1-0 a India por la Copa Nehru. Dos campeones del Ferro de Timoteo en el once nacional."}],
-"01-15": [{"id": 8284, "titulo": "El campeón termina la tarea", "texto": "Para completar el Metropolitano 82, Ferro, ya campeón del Nacional, igualó 1-1 en casa con Racing: abrió el Fino Cañete y Víctor Marchetti lo empató cerca del final."}],
-"01-16": [{"id": 8292, "titulo": "El inicio de una gira de película", "texto": "En Bogotá, 2-1 a Independiente Santa Fe con goles del Goma Vidal y de Gutiérrez. Fue el primer partido de una gira por Colombia y Ecuador que salió redonda."}],
-"01-17": [{"id": 8327, "titulo": "Cuatro de los nuestros en la Selección", "texto": "Por primera vez, cuatro jugadores de Ferro fueron titulares a la vez en la Argentina: Cúper, Garré, Carlitos Arregui y Beto Márcico. Fue 1-1 con Polonia, en la India, por la Copa Nehru."}],
-"01-18": [{"id": 8329, "titulo": "Verano salteño con sabor a copa", "texto": "Con Mario Gómez en el banco, Ferro le ganó 1-0 a Central Norte (penal de Strahman) después de haber vencido a Juventud Antoniana: campeón del torneo de verano en Salta."}],
-"01-19": [{"id": 8346, "titulo": "Debut con gol", "texto": "Luis Fabián Artime se estrenó con la verde y esa misma tarde hizo el gol del 1-0 a Deportivo Español en Caballito. El equipo de Timoteo venía de tres fechas sin ganar."}],
-"01-20": [{"id": 8360, "titulo": "El pase que se pagó con tablones", "texto": "Ferro y Boca firmaron el pase de Arcadio López. ¿Cómo se pagó? En parte, con las tribunas de madera de Boca, que se mudaron a Caballito y pasaron a formar parte de nuestra cancha."}],
-"01-21": [{"id": 8362, "titulo": "Visita al Centenario", "texto": "Tras dos años sin partidos internacionales, Ferro cruzó el charco y perdió 1-0 en el estadio Centenario de Montevideo. La revancha llegaría en diciembre, en otro amistoso en Uruguay."}],
-"01-22": [{"id": 8372, "titulo": "Primer cruce con Venezuela", "texto": "Amistoso inédito con el Caracas FC, que se preparaba para la Libertadores: 1-0 para Ferro con gol de Jonatan Schunke, a centro de Buffarini."}],
-"01-23": [{"id": 8380, "titulo": "La gira sigue sumando", "texto": "En el estadio Pascual Guerrero, 1-0 al Deportivo Cali con penal de Osvaldo Gutiérrez. Otra victoria en la gira sudamericana que había arrancado en Bogotá una semana antes."}],
-"01-26": [{"id": 8419, "titulo": "Marchesini apaga la Bombonera", "texto": "Boca le ganaba 1-0 al Ferro de Timoteo con gol de Graciani hasta que, a 9 minutos del final, Víctor Hugo Marchesini lo empató de cabeza. Hizo 18 goles en 284 partidos con la verde."}],
-"01-27": [{"id": 8431, "titulo": "Siete en Santa Cruz do Sul", "texto": "Escala de la gira por Rio Grande do Sul y paliza: 7-1 al Futebol Clube Santa Cruz, subcampeón del torneo estadual."}],
-"01-28": [{"id": 8443, "titulo": "El comienzo de una racha para olvidar", "texto": "Derrota 2-0 con Newell's en Rosario en la reanudación del torneo 1988/89. Fue el primero de 10 partidos seguidos sin ganar, en una temporada que terminó con Ferro antepenúltimo."}],
-"01-29": [{"id": 8465, "titulo": "Ferro contra una selección", "texto": "En Curazao, de vuelta de la gira colombiana, Ferro le ganó 2-1 a la selección de las Antillas Holandesas, que se preparaba para sus primeras competencias oficiales."}],
-"01-30": [{"id": 8453, "titulo": "Cancelarich ataja un penal y no alcanza", "texto": "En la Bombonera, Cancelarich le contuvo un penal a Rinaldi, pero un tiro libre de Ángel Hoyos le dio el 1-0 al Boca de Menotti sobre el Ferro del Zurdo López."}],
-"01-31": [{"id": 8461, "titulo": "Tercero en Córdoba", "texto": "Cuadrangular en cancha de Belgrano: después de caer 4-3 con Instituto, Ferro le ganó 2-1 a Atlanta por el tercer puesto con goles de Héctor Arregui y Rocchia."}]
+"01-02": [
+{
+"id": 8216,
+"titulo": "Cuando el partido terminó a las piñas",
+"texto": "River ganaba 3-0 en el cierre de la temporada 1920 cuando los backs Alberto Pini y Santos Barberá la emprendieron contra el árbitro Lorenzo Martínez. Expulsados los dos y partido suspendido: el final de temporada más caliente que se recuerde."
+}
+],
+"01-03": [
+{
+"id": 8224,
+"titulo": "Un torneo que no quería terminar",
+"texto": "El primer campeonato profesional, el de 1931, recién se cerró en 1932. Ese día, en Caballito, Ferro igualó 2-2 con Vélez: Sciarra abrió el marcador y Pellizzari empató al atrapar un rebote."
+}
+],
+"01-06": [
+{
+"id": 8241,
+"titulo": "Despedida del primer año profesional",
+"texto": "Última fecha del campeonato de 1931, jugada ya en 1932: derrota 3-2 en Avellaneda contra Racing. Francisco Sponda y Enrique Gainzarain firmaron los goles verdolagas del cierre."
+}
+],
+"01-07": [
+{
+"id": 8253,
+"titulo": "La primera valija del profesionalismo",
+"texto": "Viaje a Córdoba para enfrentar a Belgrano en la ronda final de la Copa Beccar Varela: el primero del club en la era profesional. Se perdió 4-1 y el gol de Ferro lo hizo un cordobés, Nicolás Infante."
+}
+],
+"01-08": [
+{
+"id": 8261,
+"titulo": "Adiós al amateurismo con un 3-0",
+"texto": "Ferro 3, Argentino de Banfield 0, por la fecha 31 del campeonato de 1930. Goles de Salvador D'Alessandro, José Luis Fernández y José Blanco. Fue la última victoria verdolaga de la era amateur."
+}
+],
+"01-09": [
+{
+"id": 8265,
+"titulo": "Primera vez en Brasil, primera victoria",
+"texto": "Ferro estrenó el pasaporte brasileño ganándole 1-0 al Inter de Porto Alegre, campeón gaúcho. Escenario con historia: el estadio Eucaliptos, una de las canchas del Mundial 1950."
+}
+],
+"01-13": [
+{
+"id": 8274,
+"titulo": "Campeón en Cali",
+"texto": "De gira por Colombia, Ferro le ganó 2-0 a la selección del Valle del Cauca y se quedó con el torneo Alcaldía de Cali. Juárez y Garabal pusieron los goles; la vuelta trajo una copa en la valija."
+}
+],
+"01-14": [
+{
+"id": 8281,
+"titulo": "La Selección tenía acento de Caballito",
+"texto": "Héctor Cúper y Oscar Garré, titulares en la Argentina de Bilardo que le ganó 1-0 a India por la Copa Nehru. Dos campeones del Ferro de Timoteo en el once nacional."
+}
+],
+"01-15": [
+{
+"id": 8284,
+"titulo": "El campeón termina la tarea",
+"texto": "Para completar el Metropolitano 82, Ferro, ya campeón del Nacional, igualó 1-1 en casa con Racing: abrió el Fino Cañete y Víctor Marchetti lo empató cerca del final."
+}
+],
+"01-16": [
+{
+"id": 8292,
+"titulo": "El inicio de una gira de película",
+"texto": "En Bogotá, 2-1 a Independiente Santa Fe con goles del Goma Vidal y de Gutiérrez. Fue el primer partido de una gira por Colombia y Ecuador que salió redonda."
+}
+],
+"01-17": [
+{
+"id": 8327,
+"titulo": "Cuatro de los nuestros en la Selección",
+"texto": "Por primera vez, cuatro jugadores de Ferro fueron titulares a la vez en la Argentina: Cúper, Garré, Carlitos Arregui y Beto Márcico. Fue 1-1 con Polonia, en la India, por la Copa Nehru."
+}
+],
+"01-18": [
+{
+"id": 8329,
+"titulo": "Verano salteño con sabor a copa",
+"texto": "Con Mario Gómez en el banco, Ferro le ganó 1-0 a Central Norte (penal de Strahman) después de haber vencido a Juventud Antoniana: campeón del torneo de verano en Salta."
+}
+],
+"01-19": [
+{
+"id": 8346,
+"titulo": "Debut con gol",
+"texto": "Luis Fabián Artime se estrenó con la verde y esa misma tarde hizo el gol del 1-0 a Deportivo Español en Caballito. El equipo de Timoteo venía de tres fechas sin ganar."
+}
+],
+"01-20": [
+{
+"id": 8360,
+"titulo": "El pase que se pagó con tablones",
+"texto": "Ferro y Boca firmaron el pase de Arcadio López. ¿Cómo se pagó? En parte, con las tribunas de madera de Boca, que se mudaron a Caballito y pasaron a formar parte de nuestra cancha."
+}
+],
+"01-21": [
+{
+"id": 8362,
+"titulo": "Visita al Centenario",
+"texto": "Tras dos años sin partidos internacionales, Ferro cruzó el charco y perdió 1-0 en el estadio Centenario de Montevideo. La revancha llegaría en diciembre, en otro amistoso en Uruguay."
+}
+],
+"01-22": [
+{
+"id": 8372,
+"titulo": "Primer cruce con Venezuela",
+"texto": "Amistoso inédito con el Caracas FC, que se preparaba para la Libertadores: 1-0 para Ferro con gol de Jonatan Schunke, a centro de Buffarini."
+}
+],
+"01-23": [
+{
+"id": 8380,
+"titulo": "La gira sigue sumando",
+"texto": "En el estadio Pascual Guerrero, 1-0 al Deportivo Cali con penal de Osvaldo Gutiérrez. Otra victoria en la gira sudamericana que había arrancado en Bogotá una semana antes."
+}
+],
+"01-26": [
+{
+"id": 8419,
+"titulo": "Marchesini apaga la Bombonera",
+"texto": "Boca le ganaba 1-0 al Ferro de Timoteo con gol de Graciani hasta que, a 9 minutos del final, Víctor Hugo Marchesini lo empató de cabeza. Hizo 18 goles en 284 partidos con la verde."
+}
+],
+"01-27": [
+{
+"id": 8431,
+"titulo": "Siete en Santa Cruz do Sul",
+"texto": "Escala de la gira por Rio Grande do Sul y paliza: 7-1 al Futebol Clube Santa Cruz, subcampeón del torneo estadual."
+}
+],
+"01-28": [
+{
+"id": 8443,
+"titulo": "El comienzo de una racha para olvidar",
+"texto": "Derrota 2-0 con Newell's en Rosario en la reanudación del torneo 1988/89. Fue el primero de 10 partidos seguidos sin ganar, en una temporada que terminó con Ferro antepenúltimo."
+}
+],
+"01-29": [
+{
+"id": 8465,
+"titulo": "Ferro contra una selección",
+"texto": "En Curazao, de vuelta de la gira colombiana, Ferro le ganó 2-1 a la selección de las Antillas Holandesas, que se preparaba para sus primeras competencias oficiales."
+}
+],
+"01-30": [
+{
+"id": 8453,
+"titulo": "Cancelarich ataja un penal y no alcanza",
+"texto": "En la Bombonera, Cancelarich le contuvo un penal a Rinaldi, pero un tiro libre de Ángel Hoyos le dio el 1-0 al Boca de Menotti sobre el Ferro del Zurdo López."
+}
+],
+"01-31": [
+{
+"id": 8461,
+"titulo": "Tercero en Córdoba",
+"texto": "Cuadrangular en cancha de Belgrano: después de caer 4-3 con Instituto, Ferro le ganó 2-1 a Atlanta por el tercer puesto con goles de Héctor Arregui y Rocchia."
+}
+]
 }
