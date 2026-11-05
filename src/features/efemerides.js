@@ -55,7 +55,7 @@ function historia(h, grande, k) {
 const COLOR_CAM = { Verde: "verde", Blanca: "blanca", Negra: "negra", Violeta: "violeta", Rosa: "rosa", Naranja: "naranja", "Bordó": "bordo" };
 function chipCamiseta(cm) {
   const p = el("p", "ef-cam"); const i = el("i", "ef-cam-c " + (COLOR_CAM[cm.color] || "")); i.setAttribute("aria-hidden", "true");
-  p.append(i, el("b", null, "Ese día Ferro jugó con la " + cm.color.toLowerCase()), cm.modelo ? ` (${cm.modelo})` : "");
+  p.append(i, el("b", null, "Ese día Ferro jugó con la " + cm.color.toLowerCase()));
   return p;
 }
 function figura(h) {
