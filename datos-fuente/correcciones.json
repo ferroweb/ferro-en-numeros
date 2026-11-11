@@ -31,5 +31,15 @@
     "gl": 0,
     "gv": 1,
     "motivo": "2022 F30 Gimnasia (Jujuy)-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista el gol de Murillo (18' ST) y la crónica dice «Gimnasia y Esgrima (Jujuy) 0 - 1 Ferro Carril Oeste». El resultado real fue 0-1 (revisado el 6/11/2026). Lo usan «Un día como hoy» y el control de camisetas."
+  },
+  "543": {
+    "gl": 3,
+    "gv": 2,
+    "motivo": "2019/20 F2 Independiente Rivadavia-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista 3 goles de Independiente Rivadavia (Viguet, Navas, Klusener) y 2 de Ferro (Tesuri, Pulicastro), y la crónica dice «Ferro perdió en Mendoza 3-2». El resultado real fue 3-2 (revisado el 11/11/2026)."
+  },
+  "560": {
+    "gl": 0,
+    "gv": 1,
+    "motivo": "2019/20 F19 Mitre (SdE)-Ferro: el encabezado de FerroWeb dice 0-0 y la síntesis no lista goles, pero la crónica dice «Mitre (Santiago del Estero) 0 - 1 Ferro Carril Oeste» y «Ferro consiguió el triunfo». El resultado real fue 0-1 (revisado el 11/11/2026)."
   }
 }
