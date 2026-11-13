@@ -248,7 +248,17 @@
 {
 "id": 7337,
 "titulo": "Primer paso hacia la A",
-"texto": "En el Reclasificatorio por la vuelta a Primera, 2-1 a Atlanta en cancha de San Lorenzo, con goles de Carbone y Colangelo."
+"texto": "En el Reclasificatorio por la vuelta a Primera, 2-1 a Atlanta en cancha de San Lorenzo, con goles de Carbone y Colangelo.",
+"desarrollo": [
+"En 1948 Ferro estaba en Segunda y peleaba la vuelta a Primera en la ronda final del torneo. Arrancó esa etapa con un empate y en la segunda fecha, en la cancha de San Lorenzo, le ganó 2-1 a Atlanta.",
+"Ese también fue el año de la huelga de los futbolistas profesionales, y al final la vuelta no se ganó con un resultado: en 1949 Ferro jugó otra vez en la máxima categoría, y no llegó solo. Lo acompañó Atlanta, el mismo rival al que le había ganado aquel 13 de noviembre: los dos que se cruzaron en cancha de San Lorenzo terminaron subiendo juntos."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1948 // Contra Atlanta, en Boedo, por el ascenso", "url": "https://laferropedia.com/1948-contra-atlanta-en-boedo-por-el-ascenso/"},
+{"nombre": "RSSSF: Argentina Second Level 1948 (zonas, ronda final y nota sobre la huelga)", "url": "https://rsssf.org/tablesa/arg2-48.html"},
+{"nombre": "Historical Lineups: Primera División 1948 (la huelga de jugadores)", "url": "https://www.historical-lineups.com/wp-content/uploads/2019/11/1948.pdf"},
+{"nombre": "Historical Lineups: Primera División 1949 (Atlanta y Ferro, desde Segunda, en Primera)", "url": "https://www.historical-lineups.com/wp-content/uploads/2019/11/1949.pdf"}
+]
 }
 ],
 "11-14": [
