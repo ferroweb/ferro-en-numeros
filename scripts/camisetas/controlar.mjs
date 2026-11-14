@@ -11,8 +11,10 @@ const A = R("datos-fuente/archivo-ferroweb.json").paginas.filter(x => x.sintesis
 const C = R("datos-fuente/correcciones.json");
 const nuestro = {}, filas = [];
 for (const p of A) {
-  const t = leerTitulo(p.titulo); if (!t) { console.log("sin resultado:", p.view, p.titulo); continue; }
-  const c = C[p.view]; if (c && c.gl != null) { t.gf = t.local ? c.gl : c.gv; t.gc = t.local ? c.gv : c.gl; }
+  const c = C[p.view];
+  // Título sin resultado («San Martín . - . Ferro»): se arma con el resultado de correcciones.json, si lo hay.
+  const t = leerTitulo(p.titulo) || (c && c.gl != null ? leerTitulo((p.titulo || "").replace(/\s\.\s*-\s*\.\s/, ` ${c.gl} - ${c.gv} `)) : null);
+  if (!t) { console.log("sin resultado:", p.view, p.titulo); continue; } if (c && c.gl != null) { t.gf = t.local ? c.gl : c.gv; t.gc = t.local ? c.gv : c.gl; }
   const res = t.gf > t.gc ? "G" : t.gf < t.gc ? "P" : "E"; const cam = mapa[p.view] || "?";
   const a = (nuestro[cam] ||= [0, 0, 0, 0]); a[0]++; a[" GEP".indexOf(res)]++;
   filas.push({ fecha: p.fecha_torneo, view: p.view, dia: p.dia, rival: t.rival, cond: t.local ? "L" : "V", gf: t.gf, gc: t.gc, res, camiseta: cam, torneo: p.torneo });

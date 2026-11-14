@@ -41,5 +41,60 @@
     "gl": 0,
     "gv": 1,
     "motivo": "2019/20 F19 Mitre (SdE)-Ferro: el encabezado de FerroWeb dice 0-0 y la síntesis no lista goles, pero la crónica dice «Mitre (Santiago del Estero) 0 - 1 Ferro Carril Oeste» y «Ferro consiguió el triunfo». El resultado real fue 0-1 (revisado el 11/11/2026)."
+  },
+  "373": {
+    "gl": 3,
+    "gv": 0,
+    "motivo": "2014 F22 San Martín (SJ)-Ferro: el encabezado de FerroWeb no trae resultado («. - .»), pero la síntesis lista los 3 goles de San Martín (López, Figueroa, Milano) y la crónica dice «San Martín de San Juan 3 - 0 Ferro Carril Oeste». El resultado real fue 3-0 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "320": {
+    "gl": 1,
+    "gv": 0,
+    "motivo": "2013/14 F15 Ferro-San Martín (SJ): el encabezado de FerroWeb dice 0-0, pero la síntesis lista el gol de Correa (15' ST) y la crónica dice «Ferro Carril Oeste 1 - 0 San Martín de San Juan». El resultado real fue 1-0 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "323": {
+    "gl": 1,
+    "gv": 0,
+    "motivo": "2013/14 F18 Ferro-Defensa y Justicia: el encabezado de FerroWeb dice 0-0, pero la síntesis lista el gol de Vera (38' ST) y la crónica dice «Ferro Carril Oeste 1 - 0 Defensa y Justicia». El resultado real fue 1-0 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "339": {
+    "gl": 0,
+    "gv": 1,
+    "motivo": "2013/14 F10 (rueda 2) Ferro-Unión: el encabezado de FerroWeb dice 0-0, pero la síntesis lista el gol de Sánchez (4' ST) para Unión y la crónica dice «Ferro Carril Oeste 0 - 1 Unión de Santa Fe». El resultado real fue 0-1 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "358": {
+    "gl": 0,
+    "gv": 1,
+    "motivo": "2014 F7 Ferro-Aldosivi: el encabezado de FerroWeb dice 0-0, pero la síntesis lista el gol de Carranza (38' ST) para Aldosivi y la crónica dice «Ferro Carril Oeste 0 - 1 Aldosivi (Mar del Plata)». El resultado real fue 0-1 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "375": {
+    "gl": 1,
+    "gv": 3,
+    "motivo": "2015 F2 Villa Dálmine-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Pérez para Dálmine y Bazán (2) y Salmerón para Ferro, y la crónica dice «Villa Dálmine 1 - 3 Ferro Carril Oeste». El resultado real fue 1-3 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "400": {
+    "gl": 1,
+    "gv": 1,
+    "motivo": "2015 Ferro-Villa Dálmine: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Frontini y Nouet y la crónica dice «Ferro Carril Oeste 1 - 1 Villa Dálmine». El resultado real fue 1-1 (revisado el 14/11/2026)."
+  },
+  "416": {
+    "gl": 3,
+    "gv": 2,
+    "motivo": "2015 Ferro-Sportivo Belgrano: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Salmerón (2) y Vizcarra para Ferro y Aróstegui (2) para Sportivo, y la crónica dice «Ferro Carril Oeste 3 - 2 Sportivo Belgrano». El resultado real fue 3-2 (revisado el 14/11/2026). Lo usa el control de camisetas."
+  },
+  "418": {
+    "gl": 1,
+    "gv": 1,
+    "motivo": "2015 Ferro-Los Andes: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Bazán y Noriega y la crónica dice «Ferro Carril Oeste 1 - 1 Los Andes». El resultado real fue 1-1 (revisado el 14/11/2026)."
+  },
+  "431": {
+    "gl": 2,
+    "gv": 2,
+    "motivo": "2016 Ferro-Brown de Adrogué: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Salmerón y Vernetti para Ferro y Chávez y Soto para Brown, y la crónica dice «Ferro Carril Oeste 2 - 2 Brown de Adrogué». El resultado real fue 2-2 (revisado el 14/11/2026)."
+  },
+  "459": {
+    "gl": 1,
+    "gv": 1,
+    "motivo": "2016/17 Crucero del Norte-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Iriberri (penal) para Crucero y Castillejos para Ferro, y la crónica dice «Crucero del Norte (Misiones) 1 - 1 Ferro Carril Oeste». El resultado real fue 1-1 (revisado el 14/11/2026)."
   }
 }
