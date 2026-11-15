@@ -27,8 +27,8 @@ function puesto(p) {
 }
 const plural = (n, s, pl) => `${n} ${n === 1 ? s : pl}`;
 // Cómo se nombra al club en los textos (pedido de Gaby, 15/11/2026): «el Verdolaga» casi siempre, y para no repetir,
-// Ferro, el Oeste o el equipo de Caballito. Nunca «la verde». Se elige fijo por persona para que no cambie en cada corrida.
-const APODOS = ["el Verdolaga", "el Verdolaga", "Ferro", "el Oeste", "el equipo de Caballito"];
+// Ferro, Oeste o el equipo de Caballito. Nunca «la verde». Se elige fijo por persona para que no cambie en cada corrida.
+const APODOS = ["el Verdolaga", "el Verdolaga", "Ferro", "Oeste", "el equipo de Caballito"];
 export const apodo = (clave = "") => { let h = 0; for (const c of String(clave)) h = (h * 31 + c.codePointAt(0)) >>> 0; return APODOS[h % APODOS.length]; };
 export function resumenJugador(p, rk) {
   if (!p.pj) return p.dt ? "Fue director técnico de Ferro." : null;

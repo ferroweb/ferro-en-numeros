@@ -22,7 +22,7 @@ export function initCarasConocidas() {
   $("#cc-caja").hidden = false;
   $("#cc-n").textContent = `Cruzamos la trayectoria de los dos planteles (datos de ${C.fuente}; años aproximados). Ex compañeros, ex nuestros y clubes en los que coincidieron.`;
   const yy = (d, h) => d && h && d !== h ? `${d}-${String(h).slice(2)}` : (d || h || "");
-  const FR = ["Si la mete, que no lo grite. Es lo mínimo.", "Conoce el vestuario, el Oeste y nuestras mañas. Atención.", "Vuelve a cruzarse con nosotros. Que nos extrañe un ratito más.", "La ley del ex no perdona. Que esta vez sí perdone."];
+  const FR = ["Si la mete, que no lo grite. Es lo mínimo.", "Conoce Oeste, el vestuario y nuestras mañas. Atención.", "Vuelve a cruzarse con nosotros. Que nos extrañe un ratito más.", "La ley del ex no perdona. Que esta vez sí perdone."];
   const ex = $("#cc-ex");
   if (!C.ex_ferro.length) $("#cc-exw").hidden = true;
   C.ex_ferro.forEach((x, i) => { const d = el("div"); d.append(el("b", null, x.jugador), el("span", null, `Jugó en Ferro ${yy(x.desde, x.hasta)}${x.nota ? " (" + x.nota + ")" : ""}. ${FR[i % FR.length]}`)); ex.append(d); });
