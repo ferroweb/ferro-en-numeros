@@ -55,7 +55,7 @@ function resumenDia(k, D) {
   if (D.partidos) out.push(balanceTxt(k, D));
   (D.nacimientos || []).slice(0, 2).forEach(n => out.push(`Nació ${n.nombre} (${n.anio})${n.cumpliria ? `, que hoy cumpliría ${n.cumpliria}` : ""}. ${n.texto || ""}`.trim()));
   (D.debuts || []).slice(0, 2).forEach(d => out.push(`Debutó ${d.nombre} (${d.anio}): ${d.texto}`));
-  (D.despedidas || []).slice(0, 1).forEach(d => out.push(`Último partido de ${d.nombre} con la verde (${d.anio}): ${d.texto}`));
+  (D.despedidas || []).slice(0, 1).forEach(d => out.push(`Último partido de ${d.nombre} (${d.anio}): ${d.texto}`));
   (D.fallecimientos || []).slice(0, 2).forEach(f => out.push(`Nos dejó ${f.nombre} (${f.anio}). ${f.texto || ""}`.trim()));
   return out;
 }
@@ -168,7 +168,7 @@ function dibujarPagina(k) {
     gente.append(listaPersonas("Nacieron", D.nacimientos, "", extra));
   }
   if (D.debuts) { hay = true; gente.append(listaPersonas("Debutaron", D.debuts, "")); }
-  if (D.despedidas) { hay = true; gente.append(listaPersonas("Jugaron su último partido con la verde", D.despedidas, "")); }
+  if (D.despedidas) { hay = true; gente.append(listaPersonas("Jugaron su último partido en el Verdolaga", D.despedidas, "")); }
   if (D.fallecimientos) { hay = true; gente.append(listaPersonas("Nos dejaron", D.fallecimientos, "")); }
   if (hay) { gente.append(el("p", "nota", "Partidos, goles y fechas según las fichas de LaFerropedia.")); box.append(gente); }
 }

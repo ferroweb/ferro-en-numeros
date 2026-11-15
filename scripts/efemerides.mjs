@@ -26,15 +26,19 @@ function puesto(p) {
   return PUESTOS[(g || "").toLowerCase()] || null;
 }
 const plural = (n, s, pl) => `${n} ${n === 1 ? s : pl}`;
+// Cómo se nombra al club en los textos (pedido de Gaby, 15/11/2026): «el Verdolaga» casi siempre, y para no repetir,
+// Ferro, el Oeste o el equipo de Caballito. Nunca «la verde». Se elige fijo por persona para que no cambie en cada corrida.
+const APODOS = ["el Verdolaga", "el Verdolaga", "Ferro", "el Oeste", "el equipo de Caballito"];
+export const apodo = (clave = "") => { let h = 0; for (const c of String(clave)) h = (h * 31 + c.codePointAt(0)) >>> 0; return APODOS[h % APODOS.length]; };
 export function resumenJugador(p, rk) {
   if (!p.pj) return p.dt ? "Fue director técnico de Ferro." : null;
   const pu = puesto(p);
-  let x = p.arquero ? `Atajó ${plural(p.pj, "partido", "partidos")} con la verde` : `Jugó ${plural(p.pj, "partido", "partidos")} con la verde${p.goles ? ` e hizo ${plural(p.goles, "gol", "goles")}` : ""}`;
+  let x = p.arquero ? `Atajó ${plural(p.pj, "partido", "partidos")} con ${apodo(p.url)}` : `Jugó ${plural(p.pj, "partido", "partidos")} con ${apodo(p.url)}${p.goles ? ` e hizo ${plural(p.goles, "gol", "goles")}` : ""}`;
   x = (pu && !p.arquero ? pu + ". " : "") + x + ".";
   const comp = (lista, v) => lista.filter(q => q === v).length > 1 ? " (compartido)" : "";
   if (rk.pj[p.url] && rk.pj[p.url] <= 20) x += ` Es el ${rk.pj[p.url]}°${comp(rk.pjs, p.pj)} con más partidos en la historia del club.`;
   else if (rk.gol[p.url] && rk.gol[p.url] <= 20) x += ` Es el ${rk.gol[p.url]}°${comp(rk.gols, p.goles)} goleador histórico del club.`;
-  if (p.dt) x += " También fue DT de Ferro.";
+  if (p.dt) x += " También fue su director técnico.";
   return x;
 }
 // «Ferro 1-San Lorenzo 3» → G/E/P desde el lado de Ferro (null si no se entiende)
@@ -117,13 +121,13 @@ export function armar({ textos, lfp, personas, archivo, correcciones, anioHoy = 
     }
     if (p.pj >= 50 && p.debut) {
       const [a, m, d] = p.debut.fecha.split("-"); const r = resultadoDe(p.debut.partido);
-      let x = `${p.debut.partido ? p.debut.partido + ". " : ""}Fue el primero de sus ${p.pj} partidos con la verde.`;
-      if (r === "P" && p.pj >= 100) x = `${p.debut.partido}. Arrancó perdiendo, pero se quedó para ${p.pj} partidos con la verde.`;
+      let x = `${p.debut.partido ? p.debut.partido + ". " : ""}Fue el primero de sus ${p.pj} partidos con ${apodo(p.url + "d")}.`;
+      if (r === "P" && p.pj >= 100) x = `${p.debut.partido}. Arrancó perdiendo, pero se quedó para ${p.pj} partidos con ${apodo(p.url + "d")}.`;
       dia(`${m}-${d}`).debuts.push({ anio: +a, nombre: nom, texto: x, url: p.url, peso: p.pj });
     }
     if (p.pj >= 100 && p.ultimo) {
       const [a, m, d] = p.ultimo.fecha.split("-");
-      dia(`${m}-${d}`).despedidas.push({ anio: +a, nombre: nom, texto: `${p.ultimo.partido ? p.ultimo.partido + ". " : ""}Cerró una historia de ${p.pj} partidos con la verde.`, url: p.url, peso: p.pj });
+      dia(`${m}-${d}`).despedidas.push({ anio: +a, nombre: nom, texto: `${p.ultimo.partido ? p.ultimo.partido + ". " : ""}Cerró una historia de ${p.pj} partidos con ${apodo(p.url + "u")}.`, url: p.url, peso: p.pj });
     }
     if (p.dt && !p.pj && p.debut && p.ultimo && p.debut.fecha !== p.ultimo.fecha) {
       const [a, m, d] = p.debut.fecha.split("-");
