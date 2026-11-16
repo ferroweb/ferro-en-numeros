@@ -101,5 +101,20 @@
     "gl": 1,
     "gv": 1,
     "motivo": "2016/17 Crucero del Norte-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Iriberri (penal) para Crucero y Castillejos para Ferro, y la crónica dice «Crucero del Norte (Misiones) 1 - 1 Ferro Carril Oeste». El resultado real fue 1-1 (revisado el 14/11/2026)."
+  },
+  "159": {
+    "gl": 1,
+    "gv": 0,
+    "motivo": "2009/10 F11 (rueda 1) Gimnasia y Esgrima (Jujuy)-Ferro: el encabezado de FerroWeb dice 1-1, pero la síntesis lista solo el gol de Gimnasia (Iuvalé, 22 PT) y ninguno de Ferro, y la crónica dice que «el lobo jujeño le ganó por la diferencia mínima» y habla de «la derrota frente a Gimnasia». RSSSF también da 1-0. El resultado real fue 1-0 (revisado el 16/11/2026). Lo usa el control de camisetas."
+  },
+  "194": {
+    "gl": 1,
+    "gv": 1,
+    "motivo": "2010/11 F7 (rueda 1) San Martín de Tucumán-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Saavedra y Carballo y la crónica dice «1 - 1». El resultado real fue 1-1 (revisado el 16/11/2026). Lo usa el control de camisetas."
+  },
+  "201": {
+    "gl": 1,
+    "gv": 1,
+    "motivo": "2010/11 F14 (rueda 1) Independiente Rivadavia-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Velázquez y Carballo y la crónica dice «1 - 1» («empató 1 a 1 en Mendoza»). El resultado real fue 1-1 (revisado el 16/11/2026). Lo usa el control de camisetas."
   }
 }
