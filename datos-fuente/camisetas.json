@@ -3,6 +3,7 @@
  "temporadas": {
   "2007/08": {
    "control": "NO CIERRA del todo. Las Reusch 2007 se usaron desde el 2/11/2007 (Instituto, view 77, primer partido con el logo violeta de La Nueva) hasta el final: 26 partidos, igual que Piel de Oeste. La Suplente Negra Reusch 2007 coincide (2: 1G 0E 1P, Aldosivi y Defensa y Justicia). La verde coincide en partidos pero difiere en uno: nuestro conteo da 24 (8G 7E 9P) y la Titular Verde Reusch 2007 tiene 24 (7G 8E 9P), la diferencia es un triunfo nuestro que Piel de Oeste tiene como empate (o un error que no pudimos ubicar). Revisamos las síntesis de los 8 triunfos con la verde (Platense, Ben Hur, Belgrano, Godoy Cruz, Unión, CAI, Instituto y Talleres) y los goles coinciden con el resultado; RSSSF (rsssf.org/tablesa/arg2-08.html) también da los 38 resultados igual que nosotros (13G 12E 13P en la temporada, con Talleres 1-1). También revisamos más fotos de los empates anteriores al 77 (66, 69, 70, 71 y 72: todos con la camiseta vieja) y de los triunfos posteriores (94, 96, 97: con la nueva), así que la frontera no explica la diferencia. Lo más probable es un error de Piel de Oeste; no se forzó nada. Los 12 primeros partidos (hasta el 26/10/2007: 4G 5E 3P) se jugaron con la verde de 2006/07 y se asignan a la Titular Verde Reusch 2006, que se controla al hacer 2006/07 (Reusch 2006: verde 48: 13G 17E 18P; blanca 4: 0G 2E 2P). Para llegar a esto hubo que corregir un resultado de FerroWeb: F18 de la rueda 1, Talleres 1-1 (el encabezado dice 0-1) (revisado el 17/11/2026).",
+   "pendiente_verificacion": true,
    "partidos": [
     {
      "fecha": 2,
@@ -1291,6 +1292,7 @@
   },
   "2010/11": {
    "control": "NO CIERRA del todo. Coincide en partidos por color (Titular Verde Kappa 2010: 32; Suplente Blanca Kappa 2010: 6) y la blanca coincide en ganados, empatados y perdidos (1G 3E 2P). La verde difiere en un partido: nuestro conteo da 10G 11E 11P y Piel de Oeste 10G 10E 12P (modelo 2010, controlado del 1/8/2010 al 31/7/2011). Revisamos las crónicas de los 11 empates con la verde y todas confirman el empate (dos, 194 y 201, eran 1-1 aunque FerroWeb diga 0-0 en el encabezado; se corrigieron en correcciones.json); Statscrew también da a Ferro 11G 14E 13P en la temporada, igual que FerroWeb. Lo más probable es que Piel de Oeste cuente como derrota un empate; no se forzó nada (revisado el 16/11/2026).",
+   "pendiente_verificacion": true,
    "partidos": [
     {
      "fecha": 1,
@@ -4140,6 +4142,7 @@
   },
   "2016/17": {
    "control": "NO CIERRA del todo con Piel de Oeste (ventana 1/8/2016-31/7/2017, modelo 2016). Coinciden la Suplente Blanca KDY 2016 (6: 1G 4E 1P) y la Alternativa Violeta KDY 2016 (9: 4G 4E 1P), pero en verde contamos 30 partidos (8G 13E 9P) y la Titular Verde KDY 2016 tiene 29 (8G 12E 9P): sobra un empate en verde. Las fotos muestran verde en los 30 (13 empates), así que no se forzó nada. Posible explicación, a confirmar al hacer 2016 y 2015: que Piel de Oeste cuente ese empate con una camiseta KDY 2015: sus tres modelos 2015 suman 28 partidos (8G 9E 11P; la Titular Verde sola, 26: 8G 8E 10P), y los partidos desde el 1/11/2015 hasta el torneo 2016 inclusive dan 27 (8G 8E 11P), así que a la KDY 2015 le falta justo un empate, que puede ser de antes en 2015 o de esta temporada. Al hacer 2015 y 2016 (13/11/2026) esa explicación se descartó: la KDY 2015 cierra exacta del 18/10/2015 al final del torneo 2016 (28: 8G 9E 11P), así que el empate de más en verde sigue sin explicar. Incluye la Copa Argentina con Olimpo (revisado el 12/11/2026).",
+   "pendiente_verificacion": true,
    "partidos": [
     {
      "fecha": 1,
