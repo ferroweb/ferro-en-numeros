@@ -116,5 +116,15 @@
     "gl": 1,
     "gv": 1,
     "motivo": "2010/11 F14 (rueda 1) Independiente Rivadavia-Ferro: el encabezado de FerroWeb dice 0-0, pero la síntesis lista los goles de Velázquez y Carballo y la crónica dice «1 - 1» («empató 1 a 1 en Mendoza»). El resultado real fue 1-1 (revisado el 16/11/2026). Lo usa el control de camisetas."
+  },
+  "83": {
+    "gl": 1,
+    "gv": 1,
+    "motivo": "2007/08 F18 (rueda 1) Talleres (Córdoba)-Ferro: el encabezado de FerroWeb dice 0-1, pero la síntesis lista el gol de Cuevas (12 ST) para Talleres y el de González (29 PT) para Ferro, y la crónica dice «Talleres Cba. 1 - 1 Ferro Carril Oeste» («no pudo ante Talleres empatando 1 a 1»). El resultado real fue 1-1 (revisado el 17/11/2026). Lo usa el control de camisetas."
+  },
+  "121": {
+    "gl": 2,
+    "gv": 1,
+    "motivo": "2008/09 F15 (rueda 1) Atlético Tucumán-Ferro: el encabezado de la síntesis dice 1-1, pero lista para Atlético el gol en contra de Ferreyra (33 PT) y el de Azconzábal (30 ST), y para Ferro el de Tonetto (16 PT); la crónica dice «Atletico Tucumán 2 - 1 Ferro Carril Oeste» («Ferro cayó en Tucumán ante Atlético por 2 a 1»). El resultado real fue 2-1 (revisado el 17/11/2026). Lo usa el control de camisetas."
   }
 }
