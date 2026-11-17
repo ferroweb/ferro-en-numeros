@@ -329,7 +329,19 @@
 {
 "id": 15009,
 "titulo": "Empate en el Ducó",
-"texto": "0-0 con San Lorenzo, que hacía de local en la cancha de Huracán. Griguol en un banco, Nano Areán en el otro."
+"texto": "0-0 con San Lorenzo, que hacía de local en la cancha de Huracán. Griguol en un banco, Nano Areán en el otro.",
+"desarrollo": [
+"El Apertura 1991 se jugó a una sola rueda: 20 equipos, 19 fechas. El domingo 17 de noviembre a Ferro le tocaba visitar a San Lorenzo, que seguía sin cancha propia. El Ciclón había jugado su último partido en el Viejo Gasómetro en diciembre de 1979 y desde entonces hacía de local en estadios prestados. Esa vez le tocó el de Huracán, y ahí el Verdolaga, con Carlos Timoteo Griguol en el banco, sacó un 0-0.",
+"El campeonato fue para River. San Lorenzo terminó tercero con 22 puntos y se metió en el octogonal, adonde iban los que quedaron del segundo al quinto puesto y que era el camino a la otra plaza para la Libertadores 1993. Oeste cerró décimo entre 20 equipos, con 19 puntos: tres menos que San Lorenzo."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1991 // Empate con San Lorenzo en Huracán", "url": "https://laferropedia.com/1991-empate-con-san-lorenzo-en-huracan/"},
+{"nombre": "RSSSF: Argentina 1991/92 (fixture y tabla del Apertura)", "url": "https://rsssf.org/tablesa/arg92.html"},
+{"nombre": "Wikipedia (en): 1991–92 Argentine Primera División", "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_Argentine_Primera_Divisi%C3%B3n"},
+{"nombre": "Wikipedia (en): Estadio Gasómetro", "url": "https://en.wikipedia.org/wiki/Estadio_Gas%C3%B3metro"},
+{"nombre": "442 Perfil: San Lorenzo celebró la histórica vuelta a Boedo (1/7/2019)", "url": "https://442.perfil.com/2019-07-01-673715-san-lorenzo-celebro-la-historica-vuelta-a-boedo/"},
+{"nombre": "Wikipedia (en): Carlos Timoteo Griguol", "url": "https://en.wikipedia.org/wiki/Carlos_Timoteo_Griguol"}
+]
 }
 ],
 "11-18": [
