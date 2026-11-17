@@ -2,7 +2,7 @@
  "descripcion": "Camiseta que usó Ferro en cada partido. Se identifica mirando las fotos de la crónica de FerroWeb y se controla contra los totales por camiseta y temporada de Piel de Oeste (pieldeoeste.com.ar/pdo_web, sección Camisetas).",
  "temporadas": {
   "2007/08": {
-   "control": "NO CIERRA del todo. Las Reusch 2007 se usaron desde el 2/11/2007 (Instituto, view 77, primer partido con el logo violeta de La Nueva) hasta el final: 26 partidos, igual que Piel de Oeste. La Suplente Negra Reusch 2007 coincide (2: 1G 0E 1P, Aldosivi y Defensa y Justicia). La verde coincide en partidos pero difiere en uno: nuestro conteo da 24 (8G 7E 9P) y la Titular Verde Reusch 2007 tiene 24 (7G 8E 9P), la diferencia es un triunfo nuestro que Piel de Oeste tiene como empate (o un error que no pudimos ubicar). Revisamos las síntesis de los 8 triunfos con la verde (Platense, Ben Hur, Belgrano, Godoy Cruz, Unión, CAI, Instituto y Talleres) y los goles coinciden con el resultado; no se forzó nada (RSSSF no se pudo consultar). Los 12 primeros partidos (hasta el 26/10/2007: 4G 5E 3P) se jugaron con la verde de 2006/07 y se asignan a la Titular Verde Reusch 2006, que se controla al hacer 2006/07 (Reusch 2006: verde 48: 13G 17E 18P; blanca 4: 0G 2E 2P). Para llegar a esto hubo que corregir un resultado de FerroWeb: F18 de la rueda 1, Talleres 1-1 (el encabezado dice 0-1) (revisado el 17/11/2026).",
+   "control": "NO CIERRA del todo. Las Reusch 2007 se usaron desde el 2/11/2007 (Instituto, view 77, primer partido con el logo violeta de La Nueva) hasta el final: 26 partidos, igual que Piel de Oeste. La Suplente Negra Reusch 2007 coincide (2: 1G 0E 1P, Aldosivi y Defensa y Justicia). La verde coincide en partidos pero difiere en uno: nuestro conteo da 24 (8G 7E 9P) y la Titular Verde Reusch 2007 tiene 24 (7G 8E 9P), la diferencia es un triunfo nuestro que Piel de Oeste tiene como empate (o un error que no pudimos ubicar). Revisamos las síntesis de los 8 triunfos con la verde (Platense, Ben Hur, Belgrano, Godoy Cruz, Unión, CAI, Instituto y Talleres) y los goles coinciden con el resultado; RSSSF (rsssf.org/tablesa/arg2-08.html) también da los 38 resultados igual que nosotros (13G 12E 13P en la temporada, con Talleres 1-1). También revisamos más fotos de los empates anteriores al 77 (66, 69, 70, 71 y 72: todos con la camiseta vieja) y de los triunfos posteriores (94, 96, 97: con la nueva), así que la frontera no explica la diferencia. Lo más probable es un error de Piel de Oeste; no se forzó nada. Los 12 primeros partidos (hasta el 26/10/2007: 4G 5E 3P) se jugaron con la verde de 2006/07 y se asignan a la Titular Verde Reusch 2006, que se controla al hacer 2006/07 (Reusch 2006: verde 48: 13G 17E 18P; blanca 4: 0G 2E 2P). Para llegar a esto hubo que corregir un resultado de FerroWeb: F18 de la rueda 1, Talleres 1-1 (el encabezado dice 0-1) (revisado el 17/11/2026).",
    "partidos": [
     {
      "fecha": 2,
@@ -203,7 +203,7 @@
      "gc": 1,
      "camiseta": "Verde",
      "modelo": "Titular Verde Reusch 2007",
-     "nota": "El encabezado de FerroWeb dice 0-1, pero fue 1-1 (gol de González para Ferro y de Cuevas para Talleres, según la síntesis y la crónica). Corregido en correcciones.json."
+     "nota": "El encabezado de FerroWeb dice 0-1, pero fue 1-1 (gol de González para Ferro y de Cuevas para Talleres, según la síntesis y la crónica; RSSSF también da 1-1). Corregido en correcciones.json."
     },
     {
      "fecha": 1,
@@ -429,7 +429,7 @@
    ]
   },
   "2008/09": {
-   "control": "Coincide con Piel de Oeste en partidos y en ganados, empatados y perdidos por color y por modelo para la Reusch 2008 (modelo 2008, controlado del 1/7/2008 al 31/7/2009): Titular Verde Reusch 2008 (31: 12G 5E 14P) y Suplente Verde Reusch 2008 (7: 3G 2E 2P), que es la verde a aros verdes y blancos (por color lo controla controlar.mjs; por modelo, a mano). Para cerrar hubo que corregir un resultado de FerroWeb: F15 de la rueda 1, Atlético Tucumán 2-1 (el encabezado de la síntesis dice 1-1) (revisado el 17/11/2026).",
+   "control": "Coincide con Piel de Oeste en partidos y en ganados, empatados y perdidos por color y por modelo para la Reusch 2008 (modelo 2008, controlado del 1/7/2008 al 31/7/2009): Titular Verde Reusch 2008 (31: 12G 5E 14P) y Suplente Verde Reusch 2008 (7: 3G 2E 2P), que es la verde a aros verdes y blancos (por color lo controla controlar.mjs; por modelo, a mano). Para cerrar hubo que corregir un resultado de FerroWeb: F15 de la rueda 1, Atlético Tucumán 2-1 (el encabezado de la síntesis dice 1-1; la síntesis, la crónica y RSSSF dicen 2-1). RSSSF da a Ferro 15G 7E 16P en la temporada, igual que nuestro conteo (revisado el 17/11/2026).",
    "partidos": [
     {
      "fecha": 1,
@@ -597,7 +597,7 @@
      "gc": 2,
      "camiseta": "Verde",
      "modelo": "Titular Verde Reusch 2008",
-     "nota": "El encabezado de la síntesis dice 1-1, pero Ferro perdió 2-1 (gol en contra de Ferreyra y de Azconzábal; Tonetto para Ferro), como dice la crónica. Corregido en correcciones.json; con ese resultado cierra con Piel de Oeste."
+     "nota": "El encabezado de la síntesis dice 1-1, pero Ferro perdió 2-1 (gol en contra de Ferreyra y de Azconzábal; Tonetto para Ferro), como dicen la crónica y RSSSF. Corregido en correcciones.json; con ese resultado cierra con Piel de Oeste."
     },
     {
      "fecha": 16,
