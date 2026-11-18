@@ -348,7 +348,18 @@
 {
 "id": 7426,
 "titulo": "Atentos a la tabla",
-"texto": "Argentinos empató con San Lorenzo y Ferro le ganó 1-0 a Atlanta con gol de Esteban González. Seguía en carrera por el Metropolitano 84."
+"texto": "Argentinos empató con San Lorenzo y Ferro le ganó 1-0 a Atlanta con gol de Esteban González. Seguía en carrera por el Metropolitano 84.",
+"desarrollo": [
+"A esa altura de 1984 el Verdolaga ya tenía el Nacional guardado: a River le había ganado la final 3-0 y 1-0. El Metropolitano era otra historia, bastante más larga. Lo jugaban 19 equipos, 36 partidos cada uno, y el que le peleaba la punta era Argentinos Juniors.",
+"El domingo 18 de noviembre tocaba Atlanta. Lo resolvió Esteban González, que le hizo el gol a Raúl Domínguez, y con ese 1-0 Ferro se llevó los dos puntos. Ese mismo día San Lorenzo y Argentinos empataron 2-2, así que en la fecha le sacó un punto al Bicho.",
+"No alcanzó por un pelo. Argentinos dio la vuelta con 51 puntos y Oeste quedó segundo con 50, después de 19 triunfos, 12 empates y 5 derrotas, con apenas 18 goles recibidos en los 36 partidos. Atlanta terminó último, con 24 puntos."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1984 // Soñando con la tercera estrella", "url": "https://laferropedia.com/1984-sonando-con-la-tercera-estrella/"},
+{"nombre": "Historical Lineups: Argentina 1984 (Nacional y Metropolitano, partido por partido)", "url": "https://www.historical-lineups.com/wp-content/uploads/2019/11/1984.pdf"},
+{"nombre": "Estadísticas CASLA: Metropolitano 1984", "url": "https://estadisticascasla.com/torneo/metropolitano-1984"},
+{"nombre": "Wikipedia (en): 1984 Argentine Primera División (espejo doc.surf)", "url": "https://www.doc.surf/wiki/1984-argentine-primera-division"}
+]
 }
 ],
 "11-19": [
