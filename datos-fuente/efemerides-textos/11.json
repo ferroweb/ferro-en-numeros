@@ -366,7 +366,20 @@
 {
 "id": 7466,
 "titulo": "Ganar afuera, ya en Primera",
-"texto": "Primera victoria de visitante después del ascenso: 2-1 a Juventud Antoniana en Salta, con goles de Rubén Rota y Julio Apariente."
+"texto": "Nacional 78, quinta fecha: Ferro se trajo de Salta un 2-1 sobre Juventud Antoniana, su primer triunfo afuera en Primera desde el regreso. Los goles fueron de Rubén Rota y Julio Apariente.",
+"desarrollo": [
+"El Verdolaga venía de ganar la Primera B 1978 y casi sin respiro le tocó estrenarse en el Nacional, que arrancaba en noviembre y le hacía lugar al campeón de la B. Cayó en la Zona A, ocho equipos que se cruzaban ida y vuelta: Talleres, Racing, Newell's, Estudiantes, All Boys, Atlético Ledesma, Juventud Antoniana y Ferro. A la ronda siguiente pasaban solo los dos primeros.",
+"La quinta fecha, el domingo 19 de noviembre, lo mandó a Salta. Rubén Rota y Julio Apariente metieron los goles del 2-1, y fue la primera victoria de visitante del equipo de Caballito en ese Nacional. La anterior había sido en Tigre, 4-2 el 28 de octubre, pero todavía por la B y con el ascenso ya asegurado.",
+"La revancha se jugó el 13 de diciembre y Ferro volvió a ganar, 2-0. Para pelear arriba no alcanzó: terminó quinto de ocho en la zona, con 15 puntos en 14 partidos (6 triunfos, 3 empates y 5 derrotas, cuando ganar daba dos puntos). El Nacional se lo quedó Independiente."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1978 // De visita y en Primera", "url": "https://laferropedia.com/1978-de-visita-y-en-primera/"},
+{"nombre": "RSSSF: Argentina 1978 (Nacional, zona A partido por partido)", "url": "https://rsssf.org/tablesa/arg78.html"},
+{"nombre": "RSSSF: Argentina Second Level 1978 (Primera B)", "url": "https://rsssf.org/tablesa/arg2-78.html"},
+{"nombre": "Wikipedia (es): Campeonato Nacional 1978 (Argentina)", "url": "https://es.wikipedia.org/wiki/Campeonato_Nacional_1978_(Argentina)"},
+{"nombre": "Wikipedia (en): 1978 Argentine Primera División (espejo IPFS)", "url": "https://ipfs.aleph.im/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/1978_Argentine_Primera_Division.html"},
+{"nombre": "Juventud Antoniana (blog): Juventud en los Nacionales II", "url": "https://juveantoniana.blogspot.com/2017/02/juventud-en-los-nacionales-ii.html"}
+]
 }
 ],
 "11-20": [
