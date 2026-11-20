@@ -385,8 +385,22 @@
 "11-20": [
 {
 "id": 7499,
-"titulo": "Lo dio vuelta en Liniers",
-"texto": "Arrancó perdiendo con un gol en contra de Osvaldo Diez y lo dio vuelta con un cabezazo de Joel Gauna y un remate de Raúl Barrionuevo: 2-1 a Vélez."
+"titulo": "Lo dio vuelta en el clásico del Oeste",
+"texto": "Vélez se puso arriba con un gol en contra de Osvaldo Diez, pero Joel Gauna empató de cabeza y Raúl Barrionuevo firmó el 2-1 para Ferro.",
+"desarrollo": [
+"En 1949 Ferro estaba otra vez en Primera, aunque el lugar no se lo había ganado en la cancha. La Segunda de 1948 se frenó por la huelga de los futbolistas y quedó sin terminar, y la AFA les devolvió la categoría a Atlanta y al Verdolaga.",
+"El clásico con Vélez de la fecha 31 se jugó el domingo 20 de noviembre en la cancha de San Lorenzo, con Vélez de local. El partido arrancó torcido: el primer gol lo hizo Osvaldo Diez, de Ferro, en su propio arco. Después apareció Gauna para la igualdad y el que lo terminó de dar vuelta fue Barrionuevo.",
+"No era la primera alegría del año contra Vélez. En la ida, el 7 de agosto y como local, Ferro ya le había ganado 2-0.",
+"El campeonato, en cambio, se le hizo cuesta arriba. Cerró con 29 puntos en 34 partidos (10 triunfos, 9 empates y 15 derrotas, cuando ganar daba dos), tres más que Huracán y Lanús, que se tuvieron que jugar el descenso. El título se lo llevó Racing."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1949 // Clásico para Ferro", "url": "https://laferropedia.com/1949-clasico-para-ferro/"},
+{"nombre": "RSSSF: Argentina 1949 (fixture y tabla)", "url": "https://rsssf.org/tablesa/arg49.html"},
+{"nombre": "Fútbol Argentino: Crónicas y Estadísticas, AFA 1ª División 1949 (historical-lineups.com)", "url": "https://www.historical-lineups.com/wp-content/uploads/2019/11/1949.pdf"},
+{"nombre": "RSSSF: Ferrocarril Oeste v. Vélez Sarsfield, historial", "url": "https://rsssf.org/tablesf/ferrovelez.html"},
+{"nombre": "RSSSF: Argentina Second Level 1948", "url": "https://rsssf.org/tablesa/arg2-48.html"},
+{"nombre": "Wikipedia (en): 1949 Argentine Primera División", "url": "https://en.wikipedia.org/wiki/1949_Argentine_Primera_Divisi%C3%B3n"}
+]
 }
 ],
 "11-21": [
