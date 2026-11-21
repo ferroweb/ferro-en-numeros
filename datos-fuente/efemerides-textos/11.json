@@ -406,8 +406,26 @@
 "11-21": [
 {
 "id": 7508,
-"titulo": "Afuera Almirante Brown",
-"texto": "En el Reducido por la vuelta a Primera, 3-2 a Almirante Brown con goles de Héctor Arregui, Miguel Ángel Micó y Carlos Vidal. Faltaban tres partidos para el ascenso."
+"titulo": "Un escalón más hacia Primera",
+"texto": "En la rueda final de la B, rumbo al ascenso, Ferro le ganó 3-2 a Almirante Brown con goles de Héctor Arregui, Miguel Ángel Micó y Carlos Vidal.",
+"desarrollo": [
+"Ferro venía de dos años de frustración. En 1968 había perdido la categoría después de jugar el Reclasificatorio, y en 1969 ganó la Primera B pero igual no le alcanzó para subir.",
+"En 1970 la B se definió en dos tramos: una primera rueda larga y después una rueda final entre los de arriba, y los dos primeros de ahí iban al Reclasificatorio a jugarse el lugar contra equipos de Primera. Ese 21 de noviembre Ferro le ganó 3-2 justamente a Almirante Brown, que al final fue el otro que se ganó ese boleto.",
+"El Reclasificatorio se jugó en diciembre y en canchas neutrales, con Antonio Imbelloni como técnico del Verdolaga. Fueron tres partidos y tres triunfos: 3-0 a Colón en la cancha de Unión, 3-1 de nuevo a Brown en la de Argentinos y 4-0 a Quilmes en la de Huracán. Hizo diez goles y le hicieron uno solo.",
+"Con eso, el equipo de Caballito volvió a Primera para 1971. Quilmes se fue al descenso y Brown, que no sumó ningún punto en esos tres partidos, se quedó en la B."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1970 // Pasa Almirante camino al ascenso", "url": "https://laferropedia.com/1970-pasa-almirante-camino-al-ascenso/"},
+{"nombre": "RSSSF: Argentina Second Level 1970", "url": "https://rsssf.org/tablesa/arg2-70.html"},
+{"nombre": "RSSSF: Final Tables Argentina Second Level 1935-2006/2007", "url": "https://rsssf.org/tablesa/arg2hist.html"},
+{"nombre": "RSSSF: Argentina Second Level Champions", "url": "https://rsssf.org/tablesa/arg2champ.html"},
+{"nombre": "RSSSF: Argentina 1970 (Primera División y Reclasificatorio)", "url": "https://rsssf.org/tablesa/arg70.html"},
+{"nombre": "El Litoral: Colón y Almirante Brown, historial", "url": "https://www.ellitoral.com/actualidad-sabalera/colon-almirante-brown-historial-goleada-inolvidable-batman-buttice_0_YKpgH35eAe.html"},
+{"nombre": "Wikipedia (en): 1970 Argentine Primera División", "url": "https://en.wikipedia.org/wiki/1970_Argentine_Primera_Divisi%C3%B3n"},
+{"nombre": "Wikipedia (en): Ferro Carril Oeste", "url": "https://en.wikipedia.org/wiki/Ferro_Carril_Oeste"},
+{"nombre": "Fútbol Argentino: Crónicas y Estadísticas, AFA 1ª División 1970 (historical-lineups.com)", "url": "https://www.historical-lineups.com/wp-content/uploads/2019/11/1970.pdf"},
+{"nombre": "Wikipedia (en): Antonio Imbelloni", "url": "https://en.wikipedia.org/wiki/Antonio_Imbelloni"}
+]
 }
 ],
 "11-22": [
