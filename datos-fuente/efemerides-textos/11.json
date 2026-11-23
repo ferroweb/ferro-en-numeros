@@ -455,7 +455,18 @@
 {
 "id": 15091,
 "titulo": "Locales sin cancha",
-"texto": "Derrota 2-1 con Sportivo Buenos Aires, que hacía de local en cancha de River porque no tenía estadio. Jugaba con camiseta a rayas azules y blancas."
+"texto": "Derrota 2-1 con Sportivo Buenos Aires, que hacía de local en cancha de River porque no tenía estadio. Jugaba con camiseta a rayas azules y blancas.",
+"desarrollo": [
+"El de 1930 fue un torneo maratónico: la Primera juntó a 36 equipos, todos contra todos a una sola rueda. Arrancó el 23 de marzo y se terminó de jugar recién el 12 de abril de 1931.",
+"El 23 de noviembre se jugaba la fecha 25 de las 35, y a Ferro le tocó visitar a Sportivo Buenos Aires en la cancha de River. Perdió 2 a 1.",
+"Al final de la temporada el Verdolaga quedó en la mitad de la tabla: 18.º entre 36, con 34 de los 70 puntos que jugó (13 partidos ganados, 8 empatados y 14 perdidos). Sportivo Buenos Aires terminó 11.º con 41 puntos, y el campeón fue Boca, con 61."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1930 // Derrota en River", "url": "https://laferropedia.com/1930-derrota-en-river/"},
+{"nombre": "RSSSF: Argentina 1930", "url": "https://rsssf.org/tablesa/arg30.html"},
+{"nombre": "RSSSF: Final Tables Argentina 1921-1930", "url": "https://rsssf.org/tablesa/arghist-ama1920s.html"},
+{"nombre": "Wikipedia (en): 1930 Argentine Primera División", "url": "https://en.wikipedia.org/wiki/1930_Argentine_Primera_Divisi%C3%B3n"}
+]
 }
 ],
 "11-24": [
