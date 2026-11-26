@@ -513,7 +513,23 @@
 {
 "id": 7602,
 "titulo": "Primera alegría grande en la A",
-"texto": "Primer gran triunfo de vuelta en Primera: 3-2 a Estudiantes en La Plata, con goles de Fernando Donaires, Rubén Rojas y Julio Apariente. En Estudiantes jugaba un joven Tata Brown."
+"texto": "Primer gran triunfo de vuelta en Primera: 3-2 a Estudiantes en La Plata, con goles de Fernando Donaires, Rubén Rojas y Julio Apariente. En Estudiantes jugaba un joven Tata Brown.",
+"desarrollo": [
+"El golpe de 1977 había sido duro. Ferro terminó 23°, último de 23, y se fue a la B. El castigo duró poco: en 1978 el Verdolaga salió campeón de la B y, ese mismo año, ya estaba jugando el Nacional contra los de Primera.",
+"Le tocó una zona de ocho con Talleres, Racing, Newell’s, Ledesma, Estudiantes, All Boys y Juventud Antoniana. El 26 de noviembre visitó a Estudiantes y le ganó 3-2. En aquel equipo platense ya jugaba de central José Luis Brown, el Tata, que el 10 de noviembre había cumplido 22 años y en 1986 iba a ser campeón del mundo con la Selección.",
+"Oeste cerró la zona quinto, con 15 puntos en 14 partidos (seis triunfos, tres empates y cinco derrotas), y no le alcanzó. A los cuartos de final pasaron Talleres y Racing. Estudiantes quedó sexto, con 10 puntos, los mismos que All Boys. Aquel Nacional terminó en las manos de Independiente."
+],
+"fuentes": [
+{"nombre": "LaFerropedia: 1978 // Volvió Ferro", "url": "https://laferropedia.com/1978-volvio-ferro/"},
+{"nombre": "RSSSF: Argentina 1978", "url": "https://rsssf.org/tablesa/arg78.html"},
+{"nombre": "RSSSF: Argentina Second Level 1978", "url": "https://rsssf.org/tablesa/arg2-78.html"},
+{"nombre": "RSSSF: Argentina 1977", "url": "https://rsssf.org/tablesa/arg77.html"},
+{"nombre": "Wikipedia (en): 1978 Argentine Primera División", "url": "https://en.wikipedia.org/wiki/1978_Argentine_Primera_Divisi%C3%B3n"},
+{"nombre": "Wikipedia (en): Ferro Carril Oeste", "url": "https://en.wikipedia.org/wiki/Ferro_Carril_Oeste"},
+{"nombre": "Wikipedia (en): José Luis Brown", "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_Brown"},
+{"nombre": "Crónica: A los 62 años, murió el «Tata» Brown (12/8/2019)", "url": "https://www.cronica.com.ar/info-general/Murio-el-Tata-Brown-20190812-0144.html"},
+{"nombre": "FIFA: Fallece José Luis Brown, campeón mundial con Argentina (13/8/2019)", "url": "https://inside.fifa.com/es/news/fallece-jose-luis-brown-campeon-mundial-con-argentina"}
+]
 }
 ],
 "11-27": [

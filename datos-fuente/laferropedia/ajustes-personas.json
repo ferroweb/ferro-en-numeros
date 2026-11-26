@@ -6,5 +6,10 @@
   "https://laferropedia.com/persona/bernardo-gandulla/": {
     "fallecimiento": "1999-07-06",
     "motivo": "La ficha dice 7/7/1999. Murió el 6/7/1999 según Wikipedia en inglés (en.wikipedia.org/wiki/Bernardo_Gandulla) y RSSSF (rsssf.org/players/gandulladata.html: «died 06.07.1999»)."
+  },
+  "https://laferropedia.com/persona/jose-luis-brown/": {
+    "nacimiento": "1956-11-10",
+    "fallecimiento": "2019-08-12",
+    "motivo": "La ficha dice que nació el 11/11/1956 y no tiene el fallecimiento. Según Wikipedia en inglés (en.wikipedia.org/wiki/José_Luis_Brown) y Crónica (cronica.com.ar, 12/8/2019, «A los 62 años, murió el Tata Brown»), nació el 10/11/1956 en Ranchos y murió el 12/8/2019; Wikipedia da La Plata como lugar de la muerte. FIFA (inside.fifa.com, 13/8/2019) confirma la muerte el lunes 12 de agosto."
   }
 }
